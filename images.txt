@@ -1,0 +1,189 @@
+//Graphics & Desig//
+style="--banner-background-color:rgb(11,58,35);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415227/graphics-design-mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415203/graphics-design-desktop.png')"
+
+
+Logo & Brand Identity
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/431c7d880582a199f5b240dde2694206-1626594004536/Logo%20_%20Brand%20Identity_B_2x.png"
+
+Web & App Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/431c7d880582a199f5b240dde2694206-1626594004528/Web%20_%20App_2x.png"
+
+Art & Illustration
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498456/Art%20_Illustration_2x.png"
+
+Marketing Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498477/Social_Media_2x.png"
+
+Gaming
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498464/Gaming_2x.png"
+
+Visual Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/431c7d880582a199f5b240dde2694206-1626594004546/Visual%20Design_2x.png"
+
+Print Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/75513a77da804a4b04cf63c5231e5fe2-1627366825531/print_design_2x.png"
+
+Packaging & Covers
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498470/Packaging_Labels_2x.png"
+
+Architecture & Building Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/a8ae03c1e91eac597223cdcdc1dd5b21-1626601242964/Architecture%20_%20Building%20%20Design.png"
+
+Product & Characters Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/431c7d880582a199f5b240dde2694206-1626594004535/Product%20_%20Characters%20Design_2x.png"
+
+Fashion & Merchandise
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498453/Fashion_Merchandise_2x.png"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/fa22b92aed2d9e4e17b63c7af717aa24-1626178498458/Misc_2x.png"
+
+
+//Digital Marketing//
+style="--banner-background-color:rgb(190,82,114);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415224/digital-marketing-mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415207/digital-marketing-desktop.png')"
+
+
+Search
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/a523607ea55cc9551ec824d8f9acc9bb-1626176887661/Search.png"
+
+Social
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/a523607ea55cc9551ec824d8f9acc9bb-1626176887653/Social.png"
+
+Methods & Techniques
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/f1cbffb45726b34c005f3481d9ca816c-1627306546310/bucket123.png"
+
+Analytics & Strategy
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/e6cd6d1d9520b1c9bc80207316aeb233-1626164752590/Analytics.png"
+
+Industry & Purpose-Specific
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/a523607ea55cc9551ec824d8f9acc9bb-1626176887646/Industry.png"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/ab745d738939315cf08475f01f9ffb22-1626176803359/Content.png"
+
+
+Writing & Translation
+style="--banner-background-color:rgb(37,66,0);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/42593ecc6f1e40fd735892b99f001ea4-1631622804535/writing%20_%20translation%20mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/42593ecc6f1e40fd735892b99f001ea4-1631622804534/writing%20_%20translation.png')"
+
+
+Content Writing & Editing
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562836/Content%20Writing%20_%20Editing.jpg"
+
+Career Writing
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562831/Career%20Writing.jpg"
+
+Storytelling
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562842/Storytelling.jpg"
+
+Business Copy
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562832/Business%20Copy.jpg"
+
+Translation & Transcription
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562832/Translation%20_%20Transcription.jpg"
+
+Sales & Marketing Copy
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562832/Sales%20_%20Marketing%20Copy.jpg"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/2c84ceda4abc75e1cfb21aac999ab50b-1677674562823/Miscellaneous.jpg"
+
+
+//Video & Animation//
+style="--banner-background-color:rgb(77,23,39);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/569b8839e6ed3fd68051b3e4e230b061-1631622638078/Video%20_%20Animation%20mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/0f6552319e77504dc5f59479b7ad83f1-1631622668242/Video%20_%20Animation.png')"
+
+
+Editing & Post-Production
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/db9a26d5b822890f6b4e7f91b878ab19-1631622451064/Video%20Editing%20_%20Post-Production.png"
+
+Animation
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/db9a26d5b822890f6b4e7f91b878ab19-1631622451068/Animation.png"
+
+Social & Marketing Videos
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/db9a26d5b822890f6b4e7f91b878ab19-1631622451072/Social%20_%20Marketing%20Videos.png"
+
+Product & Explainer Videos
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/db9a26d5b822890f6b4e7f91b878ab19-1631622451054/Product%20_%20Explainer%20Videos.png"
+
+Tutorials & Education
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/db9a26d5b822890f6b4e7f91b878ab19-1631622451058/Tutorials%20_%20Education.png"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dcce9a72fbcb1ffb72d2d9197ad82b7b-1653910695322/Misc_Bucket.png"
+
+
+//Music & Audio//
+style="--banner-background-color:rgb(77,23,39);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415212/music-audio-mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415210/music-audio-desktop.png')"
+
+
+Music Production & Writing
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/5d6a6b5b12ca229dcadc1f2e71f8a1f9-1627195918477/Music%20Production%20_%20Writing_2x.png"
+
+Audio Engineering & Post Production
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/d37592402739ccf208635c8ae0097837-1626180772440/bucket%20image_2x.png"
+
+Voice Over & Streaming
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/d37592402739ccf208635c8ae0097837-1626180772450/Voice%20Over%20_%20Streaming_2x.png"
+
+Lessons & Transcription
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/e879c801a903522f3c8500ef2a2d9566-1626180978582/Lessons_2x.png"
+
+DJing
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/d37592402739ccf208635c8ae0097837-1626180772449/DJing_2x.png"
+
+Sound Design
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/d37592402739ccf208635c8ae0097837-1626180772447/Misc_2x.png"
+
+
+//Programming & Tech//
+style="--banner-background-color:rgb(47,13,5);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415219/programming-tech-mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/3f1b7ea10295936b6846bcff0afd38cf-1626595415213/programming-tech-desktop.png')"
+
+
+Websites
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/c51dbf5c160dac9bd067442911e65d16-1626181910216/Website%20Development_2x.png"
+
+Website Platforms
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/ec2395caac72b3cbd2095b55ec57f5cc-1668105999293/Website%20Platforms.png"
+
+Application Development
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/c51dbf5c160dac9bd067442911e65d16-1626181910215/Application%20Development_2x.png"
+
+Support & Cybersecurity
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/c51dbf5c160dac9bd067442911e65d16-1626181910194/Support_Cybersecurity_2x.png"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/c51dbf5c160dac9bd067442911e65d16-1626181910196/Miscellaneous_2x.png"
+
+
+//Photography//
+style="--banner-background-color:rgb(104,114,0);--mobile-background-img:url('https://fiverr-res.cloudinary.com/f_auto,q_auto/v1/attachments/generic_asset/asset/c52347160cac9c4350bb1e231c43b839-1670435699920/Photography_375px%20%284%29.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/f_auto,q_auto/v1/attachments/generic_asset/asset/6cfb74384980745012dafa107bce0ddb-1671115341470/Photography_1312px.png')"
+
+
+Product
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/da770a3c353d099f6871a4c84052ea94-1668498789843/Product.jpg"
+
+People
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/daaa8dde9e86edee5ac4d18c0f76f6a7-1668498864421/People.jpg"
+
+Commercial
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/830805d0f649d3ced6ac00a988c3979c-1668498928608/Commercial.jpg"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/5b25dc21df0437e0682ed75b1ad283ec-1668499007637/Misc.jpg"
+
+
+//Business//
+style="--banner-background-color:rgb(104,114,1);--mobile-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dfda78b6f6a73b6a9994070c056c0271-1631623279968/Business%20mobile.png');--desktop-background-img:url('https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dfda78b6f6a73b6a9994070c056c0271-1631623279971/Business.png')"
+
+
+Business
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dfda78b6f6a73b6a9994070c056c0271-1631623279984/Business_B.png"
+
+General and Administrative
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dfda78b6f6a73b6a9994070c056c0271-1631623279990/General%20and%20Administrative.png"
+
+Sales & Customer Care
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dfda78b6f6a73b6a9994070c056c0271-1631623279988/Sales%20_%20Customer%20Care.png"
+
+Miscellaneous
+src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/dfda78b6f6a73b6a9994070c056c0271-1631623279984/Miscellaneous.png"
+
