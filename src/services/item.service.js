@@ -67,9 +67,9 @@ function _filterItems(filterBy, items) {
     let items = utilService.loadFromStorage(KEY)
     if (!items || !items.length) {
         items = [
-            _createItem('Hammer'),
-            _createItem('Saw'),
-            _createItem('Wrench'),
+            _createItem('I will polish your personal statement and program application'),
+            _createItem('I will proofread accurately your german text in only 24 hours'),
+            _createItem('I will proofread and edit any word count within 24 hours'),
         ]
         utilService.saveToStorage(KEY, items)
     }

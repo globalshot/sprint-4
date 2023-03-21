@@ -1,0 +1,34 @@
+.gig-preview {
+    margin: 10px;
+    border: 1px solid #e4e5e7;
+    width: 332px;
+}
+
+.user-preview {
+    height: 54px;
+}
+
+.title {
+    text-align: center;
+    height: 43px;
+    color: #222325;
+}
+
+.title h2 {
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.price-container {
+    text-align: right;
+    border-top: 1px solid #efeff0;
+    color: $secondary-clr-light;
+    padding: 10px 12px;
+    font-size: 10px;
+}
+
+.price-container .price {
+    color: #404145;
+    font-size: 18px;
+    padding-left: 6px;
+}
