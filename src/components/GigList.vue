@@ -1,5 +1,5 @@
 <template>
-    <ul class="gig-list flex">
+    <ul class="gig-list flex wrap">
         <GigPreview 
         v-for="gig in gigs" 
         :key="gig.id" 
