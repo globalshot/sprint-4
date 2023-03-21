@@ -1,0 +1,135 @@
+/** @format */
+
+.hero-container {
+  position: relative;
+  height: 42.5em;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -5;
+  }
+
+  & .search-container {
+    flex-direction: column;
+    grid-column: 2;
+    color: $tertiary-clr-light;
+    line-height: 1.2;
+    align-self: center;
+
+    h1 {
+      max-width: 650px;
+      font-size: 3rem;
+      line-height: 56px;
+      font-weight: bold;
+      //   font-family: domainDisplay, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+    .fancy-word {
+      font-style: italic;
+      font-family: Domain-Display-Medium-Italic;
+      font-weight: 600;
+    }
+
+    .el-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      white-space: nowrap;
+      cursor: pointer;
+      text-align: center;
+      box-sizing: border-box;
+      outline: 0;
+      transition: 0.1s;
+      padding: 12px 24px;
+      background-color: $primary-clr;
+      border: 1px solid $primary-clr;
+      border-radius: 0 4px 4px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      height: 48px;
+
+      span {
+        font-family: "Macan-light";
+        color: $tertiary-clr-light;
+      }
+    }
+
+    .hero-search {
+      margin: 24px 0;
+      height: 3rem;
+      max-width: 650px;
+      background-color: $tertiary-clr-light;
+      border-radius: 4px 4px 4px 4px;
+    }
+
+    .search-icon {
+      //   display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      color: $secondary-clr-light;
+      border-radius: 4px 0 0 4px;
+      width: 41px;
+      padding-top: 3px;
+    }
+
+    .input-container {
+      width: 100%;
+
+      input {
+        flex: 1;
+        border: 0;
+        font-size: 16px;
+        width: 100%;
+      }
+    }
+
+    .categories {
+      flex-wrap: wrap;
+      text-decoration: none;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+
+      div {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid white;
+        border-radius: 2.5rem;
+        padding: 1px 12px 0;
+        font-size: 0.875rem;
+        line-height: 24px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .hero-info {
+    align-self: center;
+    justify-content: end;
+    position: relative;
+    top: -70px;
+    
+    p {
+      color: $tertiary-clr-light;
+      position: absolute;
+    }
+
+    span {
+        font-weight: 600;
+    }
+    .rate {
+        // position: absolute;
+        font-weight: 400;
+        font-size: .75em;
+        margin-inline-end: 9.5em;
+        top: -16px;
+        color: $primary-clr;
+    }
+  }
+}

@@ -2,6 +2,11 @@
   display: grid;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 .flex {
   display: flex;
 }
@@ -38,8 +43,13 @@
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .flex.wrap {
   flex-wrap: wrap;
+=======
+.max-width-container{
+  padding-inline: 32px;
+>>>>>>> cd7656fb768d8ac62364a4b390c18450bcea9b05
 }
 
 // List

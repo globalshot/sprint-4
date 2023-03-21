@@ -1,3 +1,5 @@
+/** @format */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 
 html {
-  font-family: $font1
+  font-family: $font1;
 }
 
 body {
@@ -14,13 +16,21 @@ body {
 
 ul,
 p {
-  margin: 0;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
-ul{
+ul {
   list-style: none;
-} 
+}
 
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
 
 h1,
 h2,
@@ -38,5 +48,11 @@ a {
   font-size: inherit;
   cursor: auto;
 }
+<<<<<<< HEAD
+=======
 
+.fiverr-header {
+  background-color: #fff;//suppose to be var, idk how to call it
+}
 
+>>>>>>> 1c3b0bb6d7be61ee503edc33ff0c4bbc87aabae3

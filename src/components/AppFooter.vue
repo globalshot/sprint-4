@@ -1,1 +1,3 @@
-<template><footer>test</footer></template>
+<template>
+    <footer>test</footer>
+</template>

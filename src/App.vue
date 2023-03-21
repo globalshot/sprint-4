@@ -2,7 +2,7 @@
     <Header></Header>
     <user-msg />
     <div class="main-layout">
-        <p>app vue</p>
+        <!-- <p>app vue</p> -->
         <router-view />
     </div>
     <Footer></Footer>
