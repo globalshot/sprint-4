@@ -1,11 +1,11 @@
 .c-btn {
     background-color: transparent;
-    border: 1px solid $clr3;
+    border: 1px solid $secondary-clr;
     padding: rem(10px) rem(20px);
     font-family: $font1;
     font-size: 1rem;
     border-radius: rem(5px);
-    color: $txt-clr;
+    color: $secondary-clr-light;
     cursor: pointer;
     display: block;
     width: max-content;
@@ -24,7 +24,7 @@
 .c-input {
     padding: rem(10px);
     border-radius: rem(5px);
-    border: 1px solid $clr3;
+    border: 1px solid $secondary-clr;
     font-family: $font1;
     font-size: 1rem;
 }
