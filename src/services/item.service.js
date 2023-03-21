@@ -2,6 +2,9 @@ import { httpService } from "./http.service"
 import { storageService } from "./storage.service"
 import { utilService } from "./util.service"
 
+// const fs = require('fs')
+// const gigs = require('../../data/gig.json')
+
 export const itemService = {
     query,
     getById,
@@ -13,7 +16,7 @@ export const itemService = {
 const KEY = 'items_db'
 const API = 'item/'
 
-function query(filterBy) {
+function query(filterBy = '') {
     return storageService
         .query(KEY)
         .then((items) => _filterItems(filterBy, items))
@@ -74,9 +77,10 @@ function _filterItems(filterBy, items) {
     function _createItem(name) {
         return {
             _id: utilService.makeId(),
-            name: name,
+            title: name,
             price: utilService.getRandomIntInc(10, 100),
-            imgUrl: `src/assets/imgs/${name}.png`
+            // imgUrl: `src/assets/imgs/${name}.png`
         }
     }
 })()
+
