@@ -1,6 +1,7 @@
 <template>
     <user-msg />
     <div class="main-layout">
+        <p>test</p>
         <router-view />
     </div>
 </template>

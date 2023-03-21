@@ -13,5 +13,12 @@
 
 // COMPONENTS
 @import 'components/user-msg';
+@import 'components/main-header';
+@import 'components/hero';
+@import 'components/footer';
+@import 'components/gig-details';
+@import 'components/gig-list';
 
 // VIEWS
+@import 'views/home';
+@import 'views/about';

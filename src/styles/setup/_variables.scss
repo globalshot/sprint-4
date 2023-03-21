@@ -1,10 +1,19 @@
 /** @format */
 
 // COLORS
-$primary-color: #1dbf73;
-$secondary-color: #222325;
-$secondary-color-light: #4b4f56;
-$tertiary-color: #f2f2f2;
+$primary-clr: #1dbf73;
+//this is actually green
+$primary-clr-light: #f1fdf7;
+
+$secondary-clr: #222325;
+$secondary-clr-light: #62646a;
+
+$tertiary-clr: #f2f2f2;
+$tertiary-clr-light: #ffffff;
+$tertiary-clr-dark: #f5f5f5;
+
+$success-clr: #1dbf73;
+$danger-clr: #bf1d1d;
 
 // LAYOUT
 $layoutPadding: 40px;
@@ -23,3 +32,5 @@ $padded-break-normal: $break-normal + $layoutPadding * 2;
 $padded-break-wide: $break-wide + $layoutPadding * 2;
 
 $font1: Roboto-Regular, sans-serif;
+
+
