@@ -1,0 +1,1 @@
+<template><p>details</p></template>

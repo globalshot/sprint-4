@@ -1,0 +1,1 @@
+<template><footer>test</footer></template>
