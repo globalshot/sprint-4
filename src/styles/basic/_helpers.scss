@@ -2,6 +2,11 @@
   display: grid;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 .flex {
   display: flex;
 }
@@ -36,6 +41,10 @@
 
 .flex.justify-between {
   justify-content: space-between;
+}
+
+.max-width-container{
+  padding-inline: 32px;
 }
 
 // List

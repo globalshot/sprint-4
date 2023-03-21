@@ -1,0 +1,35 @@
+//there no position, in home page, its fixed
+//first background is transparent, till move
+//second layer in home page, looks like its display none, 
+//looks like its default hidden, and class shown gets added
+div.main-header {
+    z-index: 2999;
+    width: 100%;
+}
+//somehow they pushed things to the end, without space-between
+.btn-nav{
+    margin-block-end: 15px;
+}
+
+.nav-with-space {//looks like its justr margin change
+    margin-block-start: 16px;
+}
+
+.fiverr-nav {
+    margin-block-start: 32px;
+}
+
+.fiverr-search{//idk if good
+    visibility: hidden;
+    &-show{
+        visibility: visible;
+    }
+}
+
+header.header-transparent {//suppose to be in helpers?
+    background-color: transparent;
+}
+
+
+//in list, its sticky the another filter
+
