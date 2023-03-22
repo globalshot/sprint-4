@@ -49,7 +49,37 @@ a {
   cursor: auto;
 }
 
-.fiverr-header {
-  background-color: #fff;//suppose to be var, idk how to call it
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+textarea {
+  background-color: #fff;
+  border: 1px solid #c5c6c9;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #404145;
+  font: inherit;
+  padding: 8px 12px;
+  resize: none;
+  transition: .15s ease-in-out;
+  width: 100%;
 }
 
+.fiverr-header {
+  background-color: #fff; //suppose to be var, idk how to call it
+}
+
+.bgc-white {
+  background-color: white;
+}
