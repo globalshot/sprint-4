@@ -1,0 +1,26 @@
+
+.gig-page{
+    max-width: 1304px;
+    padding: 32px;//suppose to be class with this, global class, the inline at least
+    margin-inline: auto;
+}
+
+.gig-page .main{
+    flex-grow: 1;
+}
+
+.gig-page.flex{
+    flex-direction: row-reverse
+}
+
+.gig-page .side-bar{//delete this 100% no questions
+    width: 412.55px;
+}
+
+.seller-photo{
+    margin-inline-end: 16px;
+}
+
+.seller-stats >*{
+    margin-inline-end: 8px;
+}
