@@ -1,9 +1,5 @@
-/** @format */
 
-//there no position, in home page, its fixed
-//first background is transparent, till move
-//second layer in home page, looks like its display none,
-//looks like its default hidden, and class shown gets added
+
 div.main-header {
   z-index: 2999;
   width: 100%;
@@ -153,5 +149,3 @@ header.header-transparent {
   text-shadow: none;
   border-radius: 0 4px 4px 0;
 }
-
-//in list, its sticky the another filter

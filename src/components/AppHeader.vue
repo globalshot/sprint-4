@@ -78,7 +78,7 @@
         </nav>
       </div>
     </header>
-    <div class="main-layout full bgc-white" :style="{ 'display': isDoubleScrolled ? 'grid' : 'none' }">
+    <div class="main-layout full bgc-white" :style="{'display': isHome}">
       <p>testing</p>
     </div>
   </div>
@@ -108,12 +108,16 @@ export default {
 
       this.isScrolled = scrollTop > boxHeight;
       this.isDoubleScrolled = scrollTop > boxHeight2;
-    }
+    },
+    
   },
   computed: {
     isHomePage() {
       return this.$route.path === '/';
     },
+    isHome(){
+      return this.isHomePage? (this.isDoubleScrolled? 'grid': 'none') : 'grid'
+    }
   }
 };
 </script>
