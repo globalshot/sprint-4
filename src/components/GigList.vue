@@ -20,9 +20,17 @@ export default {
         components: {
                 GigPreview
         },
-        created() { },
+        created() { 
+            this.filterBy.tag = (this.$route.query.tag)
+            console.log(this.filterBy.tag);
+            this.$emit('filterBy', { ...this.filterBy })
+        },
         data() {
-                return {}
+                return {
+                    filterBy: {
+                        tag: ''
+                    }
+                }
         },
         methods: {},
         computed: {},

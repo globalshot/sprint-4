@@ -2,7 +2,11 @@ import { itemService } from "../../services/item.service"
 
 export default {
     state: {
-        gigs: []
+        gigs: [],
+        filterBy: {
+            txt: '',
+            tag: '',
+        },
     },
     getters: {
         gigs({ gigs, filter }) {
@@ -15,9 +19,9 @@ export default {
         },
     },
     actions: {
-        loadGigs({ commit }, { filter }) {
-            // console.log(filter)
-            return itemService.query(filter)
+        loadGigs({ commit }, { filterBy }) {
+            console.log(filterBy)
+            return itemService.query(filterBy)
                 .then(gigs => {
                     console.log(gigs)
                     commit({ type: 'setGigs', gigs })
