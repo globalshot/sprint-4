@@ -3,11 +3,12 @@
 .hero-container {
   position: relative;
   height: 42.5em;
+  margin-block-end: -80px;
 
   .hero-pos-container {
     position: absolute;
     display: grid;
-    top: 0;
+    top: -80px;
     width: 100%;
     height: 100%;
   }
