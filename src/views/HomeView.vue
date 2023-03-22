@@ -8,9 +8,9 @@
                 <h1>Popuar professional serfices</h1>
                 <div class="gallery-container">
 
-                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 4"
+                    <vueper-slides class="no-shadow"  :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 4"
                         :dragging-distance="200" :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" />
+                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" @click.prevent/>
                     </vueper-slides>
 
                     <!-- 
@@ -522,7 +522,10 @@ export default {
                     <span>Add talent to AI</span>
                     <h4>AI Artists</h4>
                 </div>
-                </RouterLink>`
+                </RouterLink>`,
+                props: {
+                    allow: 'click',
+                }
             },
             {
                 title: 'Slide #2',
