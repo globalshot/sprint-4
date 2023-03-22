@@ -18,30 +18,7 @@
     width: 20%;
     padding: 16px;
 
-    .subcategory-warper {
-      position: relative;
-      height: 345px;
-      display: flex;
-      flex-direction: column;
-      color: $tertiary-clr-light;
-      margin-inline-end: 3%;
-      width: 100%;
-      border-radius: 4px;
-      padding: 16px;
-      cursor: pointer;
-
-      span {
-        font-size: 14px;
-        padding-block-end: 0.5em;
-        //   text-align: center;
-      }
-
-      h4 {
-        color: white;
-        // text-align: center;
-        font-size: 23px;
-      }
-    }
+    
   }
 }
 
