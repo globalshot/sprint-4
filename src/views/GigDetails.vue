@@ -10,14 +10,14 @@
                             <li>sub category</li>
                         </ul>
                     </nav>
-                    <h1 class="text-display-3">{{ gig.title }}</h1><!--size suppose to be 28px-->
+                    <h1 class="text-display-3">{{ this.gig.title }}</h1><!--size suppose to be 28px-->
 
 
                     <div class="seller-overview">
                         <div class="flex">
                             <div class="seller-photo">img</div>
                             <div class="seller-stats"><!--idk if to call it stats-->
-                                <RouterLink to="">{{ gig.owner.fullname }}</RouterLink><!--when we will have users-->
+                                <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink><!--when we will have users-->
                                 <span>{{ gig.owner.level }}</span> |
                                 <span class="color-yellow">
                                     <span><!--v-for for the mount of stars--></span>
@@ -68,7 +68,7 @@
                             </div>
                             <div class="user-profile-label flex">
                                 <div class="username-line flex">
-                                    <RouterLink>{{ gig.owner.fullname }}</RouterLink><!--add route to his profile-->
+                                    <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink><!--add route to his profile-->
                                     <div class="status-indicator">
                                         <span class="circle-icon">online/offline</span><!--todo this-->
                                     </div>
@@ -110,14 +110,14 @@
             <section class="portfolio-external-wrapper">
                 <section class="porfilio-presence">
                     <div class="presence-header flex">
-                        <RouterLink>link to the porfilios</RouterLink>
+                        <RouterLink to="/">link to the porfilios</RouterLink>
                         <div>the question mark svg</div>
                         <span>the new svg(ping one)</span>
                     </div>
                     <ul class="grid"><!--idk if there grid class-->
                         <!--first image is 2x2, other 4 are 1x1-->
                     </ul>
-                    <RouterLink>more projects</RouterLink><!--add link ofc-->
+                    <RouterLink to="/">more projects</RouterLink><!--add link ofc-->
                 </section>
             </section>
 
@@ -351,6 +351,7 @@ export default {
         itemService.getById(id)
             .then(gig => {
                 this.gig = gig
+                console.log(gig);
             })
 
 
