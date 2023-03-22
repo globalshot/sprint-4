@@ -1,7 +1,30 @@
 .gig-list {
     max-width: 1400px;
-    grid-template-columns: repeat(4,1fr);
+    // grid-template-columns: repeat(4,1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(0rem, 16.8rem));
     grid-gap: 32px;
     min-height: 370px;
     margin-top: 16px;
+    
+
+
+    @include for-small-layout {
+        grid-template-columns: repeat(1,1fr);
+      }
+
+    @include for-medium-layout {
+        grid-template-columns: repeat(3,1fr);
+      }
+    
+      @include for-normal-layout {
+        grid-template-columns: repeat(4,1fr);
+      }
+    
+      @include for-wide-layout {
+        grid-template-columns: repeat(4,1fr);
+      }
+    
+      @include for-ultra-wide-layout {
+        grid-template-columns: repeat(4,1fr);
+      }
 }

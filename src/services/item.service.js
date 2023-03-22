@@ -60,7 +60,7 @@ function _filterItems(filterBy, items) {
         if (!regex.test(item.name)) return false
 
         if (filterBy.tag) {
-            if(!item.tags.includes(filterBy.tag)) return false
+            if (!item.tags.includes(filterBy.tag)) return false
         }
 
 
@@ -73,14 +73,20 @@ function _filterItems(filterBy, items) {
     let items = utilService.loadFromStorage(KEY)
     if (!items || !items.length) {
         items = [
-            _createItem('I will polish your personal statement and program application', ["logo-design", "artisitic", "proffesional", "accessible"]),
-            _createItem('I will proofread accurately your german text in only 24 hours', ["logo-design", "artisitic", "proffesional", "accessible"]),
-            _createItem('I will proofread and edit any word count within 24 hours', ["artisitic", "proffesional", "accessible"]),
+            _createItem('I will polish your personal statement and program application', ["logo-design", "website-design", "graphics-design"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["logo-design", "ai-services"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["word-press", "logo-design","writing"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["programming-tech", "data"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["data", "marketing"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["business", "marketing"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["lifestyle", "music"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["video", "music"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["video", "graphics-design", "photography"]),
         ]
         utilService.saveToStorage(KEY, items)
     }
 
-    function _createItem(name,tags) {
+    function _createItem(name, tags) {
         return {
             _id: utilService.makeId(),
             title: name,
@@ -91,7 +97,7 @@ function _filterItems(filterBy, items) {
                 imgUrl: "url",
                 level: "basic/premium",
                 rate: utilService.getRandomIntInc(3, 5)
-              },
+            },
             daysToMake: utilService.getRandomIntInc(2, 7),
             description: "Make unique logo...",
             imgUrl: "",

@@ -30,18 +30,18 @@
                 </div>
                 <div class="categories flex">
                     Popular:
-<<<<<<< HEAD
-                    <div class="category">website Design</div>
-                    <div class="category">WordPress</div>
-                    <div class="category">Logo Design</div>
-                    <div class="category">AI Services</div>
-=======
-                    <RouterLink to="/gig?tag=logo-design"><div class="category flex">Logo Design</div></RouterLink>
-                    <div class="category flex">website Design</div>
-                    <div class="category flex">WordPress</div>
-                    <div class="category flex">Logo Design</div>
-                    <div class="category flex">AI Services</div>
->>>>>>> 9552d09535e042b53fc056f27cc272f65fc01221
+                    <RouterLink to="/gig?tag=website-design">
+                        <div class="category flex">Website Design</div>
+                    </RouterLink>
+                    <RouterLink to="/gig?tag=word-press">
+                        <div class="category flex">WordPress</div>
+                    </RouterLink>
+                    <RouterLink to="/gig?tag=logo-design">
+                        <div class="category flex">Logo Design</div>
+                    </RouterLink>
+                    <RouterLink to="/gig?tag=ai-services">
+                        <div class="category flex">AI Services</div>
+                    </RouterLink>
                 </div>
                 <div class="hero-info flex">
                     <p class="rate">
