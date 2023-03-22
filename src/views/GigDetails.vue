@@ -1,7 +1,42 @@
 <template>
     <div class="main-container">
         <div class="gig-page flex"><!--suppose to be 2 colums, will make soon-->
-            <div class="sticky-outer-wraper side-bar">hehe side bar</div>
+            <div class="sticky-outer-wrapper side-bar">
+                <div class="sticky-inner-wrapper inner-sticky">
+                    <aside class="sidbar-contect">
+                        <div class="package-tabs triple">
+                            <!--triple input radio-->
+                            <div class="nav-container flex">
+                                <!--triple label with package types-->
+                            </div>
+                            <div><!--id class-->
+                                <div class="package-content">
+                                    <header class="header-default">
+                                        <h3 class="flex">
+                                            bla
+                                            <div class="price-wrapper">price</div>
+                                        </h3>
+                                        <p>words</p>
+                                    </header>
+                                    <article>
+                                        <div class="additional-info flex">
+                                            <div>class for delivery</div>
+                                            <div>class for revision</div>
+                                        </div>
+                                        <ul class="features">
+                                            <!--v-for the features-->
+                                        </ul>
+                                    </article>
+                                </div>
+                                <footer class="tab-footer flex">
+                                    <button>to pay</button>
+                                </footer>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
             <div class="main">
                 <div class="gig-overview">
                     <nav>
@@ -10,14 +45,14 @@
                             <li>sub category</li>
                         </ul>
                     </nav>
-                    <h1 class="text-display-3">{{ gig.title }}</h1><!--size suppose to be 28px-->
+                    <h1 class="text-display-3">{{ this.gig.title }}</h1><!--size suppose to be 28px-->
 
 
                     <div class="seller-overview">
                         <div class="flex">
                             <div class="seller-photo">img</div>
                             <div class="seller-stats"><!--idk if to call it stats-->
-                                <RouterLink to="">{{ gig.owner.fullname }}</RouterLink><!--when we will have users-->
+                                <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink><!--when we will have users-->
                                 <span>{{ gig.owner.level }}</span> |
                                 <span class="color-yellow">
                                     <span><!--v-for for the mount of stars--></span>
@@ -68,7 +103,7 @@
                             </div>
                             <div class="user-profile-label flex">
                                 <div class="username-line flex">
-                                    <RouterLink>{{ gig.owner.fullname }}</RouterLink><!--add route to his profile-->
+                                    <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink><!--add route to his profile-->
                                     <div class="status-indicator">
                                         <span class="circle-icon">online/offline</span><!--todo this-->
                                     </div>
@@ -110,14 +145,14 @@
             <section class="portfolio-external-wrapper">
                 <section class="porfilio-presence">
                     <div class="presence-header flex">
-                        <RouterLink>link to the porfilios</RouterLink>
+                        <RouterLink to="/">link to the porfilios</RouterLink>
                         <div>the question mark svg</div>
                         <span>the new svg(ping one)</span>
                     </div>
                     <ul class="grid"><!--idk if there grid class-->
                         <!--first image is 2x2, other 4 are 1x1-->
                     </ul>
-                    <RouterLink>more projects</RouterLink><!--add link ofc-->
+                    <RouterLink to="/">more projects</RouterLink><!--add link ofc-->
                 </section>
             </section>
 
@@ -351,6 +386,7 @@ export default {
         itemService.getById(id)
             .then(gig => {
                 this.gig = gig
+                console.log(gig);
             })
 
 
