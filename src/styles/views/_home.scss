@@ -111,11 +111,111 @@
   }
 }
 
-.svg-graphic-design {
+.svg-graphic {
   .cls-4 {
     fill: none;
     stroke: #4d535b;
     stroke-miterlimit: 10;
     stroke-width: 2px;
+  }
+}
+
+.svg-writing {
+  .cls-5 {
+    fill: none;
+    stroke: #4d535b;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+}
+
+.svg-sound {
+  .cls-4 {
+    fill: none;
+    stroke: #4d535b;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+}
+
+.svg-tech {
+  .cls-4 {
+    fill: none;
+    stroke: #4d535b;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+}
+
+.svg-lifestyle {
+  .cls-4 {
+    fill: none;
+    stroke: #4d535b;
+    stroke-miterlimit: 10;
+  }
+
+  .cls-4 {
+    stroke-width: 2.1px;
+  }
+}
+.svg-business {
+  .cls-2 {
+    fill: #fff;
+  }
+}
+
+.icons {
+  display: grid;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 55px;
+
+  .flex div {
+    width: 100%;
+    height: 100%;
+  }
+
+  span {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-family: $font1;
+
+    &.flex::after {
+      content: "";
+      position: absolute;
+      top: 60px;
+      right: 35%;
+      transform-origin: center;
+      padding: 0 0 8px;
+      width: 48px;
+      border-bottom: 2px solid $grey-txt-light;
+      transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+      transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
+      transform: scaleX(1);
+
+    }
+    &:hover::after {
+      transform: scaleX(1.75);
+      border-bottom: 2px solid $primary-clr;
+    }
+  }
+
+  span:not(.flex) {
+    display: flex;
+    // width: 60px;
+    margin-bottom: 16px;
+    height: 60px;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: Macan-light;
+    color: $secondary-clr-dark;
+    line-height: 26px;
   }
 }
