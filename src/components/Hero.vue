@@ -30,10 +30,10 @@
                 </div>
                 <div class="categories flex">
                     Popular:
-                    <div class="category flex">website Design</div>
-                    <div class="category flex">WordPress</div>
-                    <div class="category flex">Logo Design</div>
-                    <div class="category flex">AI Services</div>
+                    <div class="category">website Design</div>
+                    <div class="category">WordPress</div>
+                    <div class="category">Logo Design</div>
+                    <div class="category">AI Services</div>
                 </div>
                 <div class="hero-info flex">
                     <p class="rate">
