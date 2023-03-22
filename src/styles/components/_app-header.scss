@@ -6,30 +6,63 @@ div.main-header {
     z-index: 2999;
     width: 100%;
 }
-//somehow they pushed things to the end, without space-between
-.btn-nav{
-    margin-block-end: 15px;
+
+.fiverr-header{
+    transition: background-color .25s ease;
+    nav.header-row {
+        height: 80px;
+    } 
 }
 
-.nav-with-space {//looks like its justr margin change
-    margin-block-start: 16px;
+//somehow they pushed things to the end, without space-between
+.btn-nav {
+    margin-inline-end: 15px;
+}
+
+.nav-with-space {
+    //looks like its justr margin change
+    margin-inline-start: 16px;
 }
 
 .fiverr-nav {
-    margin-block-start: 32px;
+    margin-inline-start: 32px;
+    justify-content: flex-end;
+    // flex-grow: 1;
 }
 
-.fiverr-search{//idk if good
+.fiverr-search {
+    //idk if good
     visibility: hidden;
-    &-show{
+    // &-anim   ated{
+
+    // }
+    &-show {
         visibility: visible;
     }
 }
 
-header.header-transparent {//suppose to be in helpers?
+div.fiverr-nav ul {
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}
+
+div.fiverr-nav ul li {
+    padding-inline-end: 20px;
+}
+
+.header-row-wrapper {
+    //so much bad name ik, but soon i change
+    align-items: center;
+    // justify-content: space-between;
+    // align-content: space-between;
+    flex-wrap: wrap;
+}
+
+header.header-transparent {
+    //suppose to be in helpers?
     background-color: transparent;
 }
 
 
 //in list, its sticky the another filter
-

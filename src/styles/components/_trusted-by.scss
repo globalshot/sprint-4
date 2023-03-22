@@ -1,8 +1,10 @@
 /** @format */
 
 .trusted {
-    color: $grey-txt;
-background-color: $tertiary-clr-dark2;
+  // grid-row: 3;
+  color: $grey-txt;
+  background-color: $tertiary-clr-dark2;
+  margin-block-end: 96px;
 
   .logos {
     align-items: center;

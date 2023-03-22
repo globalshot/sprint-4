@@ -1,0 +1,121 @@
+/** @format */
+.type-card {
+  h1 {
+    padding-bottom: 24px;
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+
+.gallery-container {
+  position: relative;
+  display: flex;
+  height: 100%;
+  white-space: nowrap;
+  margin-block-end: 96px;
+
+  .subcategory-warper {
+    position: relative;
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+    color: $tertiary-clr-light;
+    margin-inline-end: 3%;
+    width: 18%;
+    border-radius: 4px;
+    padding: 16px;
+    cursor: pointer;
+
+    span {
+      font-size: 14px;
+      padding-block-end: 0.5em;
+      //   text-align: center;
+    }
+
+    h4 {
+      // text-align: center;
+      font-size: 23px;
+    }
+  }
+}
+
+.selling-proposition-wrapper {
+  background-color: $primary-clr-light;
+
+  .selling-proposition {
+    padding-block-end: 96px;
+    padding-block-start: 96px;
+  }
+
+  .selling-container {
+    position: relative;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    > * {
+      padding: 0 1em;
+    }
+  }
+
+  .selling-video {
+    padding: 0 16px;
+    // flex-basis: 53.3%;
+    // max-width: 53.3%;
+    img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+
+  .selling-info {
+    padding-inline-end: 11%;
+    // flex-basis: 46.66667%;
+    // max-width: 70%;
+
+    .flex {
+      align-items: center;
+    }
+
+    li {
+      padding-block-end: 1.5em;
+    }
+
+    h2 {
+      font-weight: 800;
+      font-style: bolder;
+      font-size: 2em;
+      line-height: 120%;
+      padding-block-end: 0.3em;
+      color: $secondary-clr-dark;
+    }
+
+    span {
+      display: block;
+      width: 24px;
+      height: 24px;
+      margin-inline-end: 0.825em;
+
+      > * {
+        fill: $secondary-clr-light;
+        float: left;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    p {
+      color: $secondary-clr-light;
+    }
+  }
+}
+
+.svg-graphic-design {
+  .cls-4 {
+    fill: none;
+    stroke: #4d535b;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+  }
+}

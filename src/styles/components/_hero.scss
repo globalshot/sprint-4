@@ -3,6 +3,16 @@
 .hero-container {
   position: relative;
   height: 42.5em;
+  margin-block-end: -80px;
+
+  .hero-pos-container {
+    position: absolute;
+    display: grid;
+    top: -80px;
+    width: 100%;
+    height: 100%;
+  }
+
   img {
     position: absolute;
     width: 100%;
@@ -57,6 +67,7 @@
     }
 
     .hero-search {
+      // position: relative;
       margin: 24px 0;
       height: 3rem;
       max-width: 650px;
@@ -66,6 +77,7 @@
 
     .search-icon {
       //   display: flex;
+      
       align-items: center;
       justify-content: center;
       background-color: #fff;
@@ -110,10 +122,9 @@
   }
 
   & .hero-info {
-    align-self: center;
     justify-content: end;
     position: relative;
-    top: -70px;
+    top: 150px;
     
     p {
       color: $tertiary-clr-light;
