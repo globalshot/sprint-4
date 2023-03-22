@@ -79,7 +79,23 @@ function _filterItems(filterBy, items) {
             _id: utilService.makeId(),
             title: name,
             price: utilService.getRandomIntInc(10, 100),
-            // imgUrl: `src/assets/imgs/${name}.png`
+            owner: {
+                _id: "u101",
+                fullname: "Dudu Da",
+                imgUrl: "url",
+                level: "basic/premium",
+                rate: utilService.getRandomIntInc(3, 5)
+              },
+            daysToMake: utilService.getRandomIntInc(2, 7),
+            description: "Make unique logo...",
+            imgUrl: "",
+            tags: [
+                "logo-design",
+                "artisitic",
+                "proffesional",
+                "accessible"
+              ],
+            likedByUsers: ['mini-user'] // for user-wishlist : use $in
         }
     }
 })()

@@ -1,5 +1,6 @@
 <template>
-    <ul class="gig-list flex wrap">
+
+    <ul class="gig-list grid">
         <GigPreview 
         v-for="gig in gigs" 
         :key="gig.id" 
@@ -27,6 +28,12 @@ export default {
         computed: {},
         components: {
         GigPreview,
-    }
+    },
+    
+
 }
 </script>
+
+
+  
+  
