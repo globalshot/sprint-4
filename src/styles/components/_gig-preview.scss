@@ -14,9 +14,6 @@
     justify-self: center;
   }
 
-  @include for-medium-layout {
-    justify-self: center;
-  }
 }
 
 .gig-preview:hover .title .long-text {
