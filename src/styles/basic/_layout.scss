@@ -11,6 +11,16 @@
     grid-column: 1 / -1;
   }
 
+
+
+  @include for-mobile-layout {
+    grid-template-columns: 24px 1fr 24px;
+  }
+
+  @include for-small-layout {
+    grid-template-columns: 30px 1fr 30px;
+  }
+
   @include for-medium-layout {
     grid-template-columns: 30px 1fr 30px;
   }

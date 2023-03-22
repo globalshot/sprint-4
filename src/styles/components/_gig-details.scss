@@ -1,26 +1,45 @@
+/** @format */
 
-.gig-page{
-    max-width: 1304px;
-    padding: 32px;//suppose to be class with this, global class, the inline at least
-    margin-inline: auto;
-}
 
-.gig-page .main{
+
+.gig-page {
+  //   border: 2px solid red;
+  max-width: 1304px;
+  //   padding: 32px; //suppose to be class with this, global class, the inline at least
+  margin-inline: auto;
+  position: relative;
+
+  .main {
     flex-grow: 1;
+  }
+
+  .gig-packages-form {
+    position: relative;
+  }
+
+  .gig-packages-table {
+    position: sticky;
+    top: 53px;
+    width: 35%;
+    background-color: #fff;
+    align-self: flex-start;
+    overflow-y: auto;
+    border: 2px solid blue;
+  }
+
+  .sticky-outer-wrapper {
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid $grey-txt-lighter;
+    background: #fff;
+    width: 100%;
+  }
 }
 
-.gig-page.flex{
-    flex-direction: row-reverse
+.seller-photo {
+  margin-inline-end: 16px;
 }
 
-.gig-page .side-bar{//delete this 100% no questions
-    width: 412.55px;
-}
-
-.seller-photo{
-    margin-inline-end: 16px;
-}
-
-.seller-stats >*{
-    margin-inline-end: 8px;
+.seller-stats > * {
+  margin-inline-end: 8px;
 }

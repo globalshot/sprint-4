@@ -1,87 +1,99 @@
-.gig-preview {
-    box-sizing: border-box;
-    border: 1px solid #e4e5e7;
-    width: 100%;
-    max-width: 310px;
+/** @format */
 
+.gig-preview {
+  box-sizing: border-box;
+  border: 1px solid #e4e5e7;
+  width: 100%;
+  max-width: 310px;
+
+  @include for-mobile-layout {
+    justify-self: center;
+  }
+
+  @include for-small-layout {
+    justify-self: center;
+  }
+
+  @include for-medium-layout {
+    justify-self: center;
+  }
 }
 
 .gig-preview:hover .title .long-text {
-    color: $primary-clr;
+  color: $primary-clr;
 }
 
 .user-preview {
-    height: 54px;
+  height: 54px;
 }
 
 .user-profile {
-    height: 54px;
-    align-items: center;
-    padding: 12px 12px 8px;
+  height: 54px;
+  align-items: center;
+  padding: 12px 12px 8px;
 }
 
 .user-profile img {
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
 }
 
 .user-name {
-    color: $secondary-clr-dark;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 8px;
+  color: $secondary-clr-dark;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 8px;
 }
 
 .title {
-    text-align: center;
-    height: 43px;
-    color: #222325;
-    margin-top: 5px;
-    padding: 0px 12px 5px;
-    font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-align: center;
+  height: 43px;
+  color: #222325;
+  margin-top: 5px;
+  padding: 0px 12px 5px;
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .title .long-text {
-    font-size: 16px;
-    word-wrap: break-word;
-    text-align: left;
+  font-size: 16px;
+  word-wrap: break-word;
+  text-align: left;
 }
 
 .price-container {
-    text-align: right;
-    border-top: 1px solid #efeff0;
-    color: $secondary-clr-light;
-    padding: 10px 12px;
-    font-size: 10px;
-    justify-content: space-between;
+  text-align: right;
+  border-top: 1px solid #efeff0;
+  color: $secondary-clr-light;
+  padding: 10px 12px;
+  font-size: 10px;
+  justify-content: space-between;
 }
 
 .price-container .price {
-    color: #404145;
-    font-size: 18px;
-    padding-left: 6px;
+  color: #404145;
+  font-size: 18px;
+  padding-left: 6px;
 }
 
 .rating {
-    padding: 10px 12px;
-    color: #02c2a9;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    grid-template-columns: 1fr 1fr 7fr 2fr;
+  padding: 10px 12px;
+  color: #02c2a9;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  grid-template-columns: 1fr 1fr 7fr 2fr;
 }
 
 .btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .btn .carousel-imgs {
-    width: 100%;
-    min-width: 245px;
-
+  width: 100%;
+  min-width: 245px;
 }
 
 .like {
-    fill: $grey-txt;
+  fill: $grey-txt;
 }

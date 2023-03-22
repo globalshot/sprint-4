@@ -1,39 +1,22 @@
 <template>
-    <div class="main-container">
-        <div class="gig-page flex"><!--suppose to be 2 colums, will make soon-->
-            <div class="sticky-outer-wrapper side-bar">
+    <div class="main-container full">
+        <div class="gig-page main-layout"><!--suppose to be 2 colums, will make soon-->
+            <div class="sticky-outer-wrapper side-bar full main-layout">
                 <div class="sticky-inner-wrapper inner-sticky">
-                    <aside class="sidbar-contect">
-                        <div class="package-tabs triple">
-                            <!--triple input radio-->
-                            <div class="nav-container flex">
-                                <!--triple label with package types-->
-                            </div>
-                            <div><!--id class-->
-                                <div class="package-content">
-                                    <header class="header-default">
-                                        <h3 class="flex">
-                                            bla
-                                            <div class="price-wrapper">price</div>
-                                        </h3>
-                                        <p>words</p>
-                                    </header>
-                                    <article>
-                                        <div class="additional-info flex">
-                                            <div>class for delivery</div>
-                                            <div>class for revision</div>
-                                        </div>
-                                        <ul class="features">
-                                            <!--v-for the features-->
-                                        </ul>
-                                    </article>
-                                </div>
-                                <footer class="tab-footer flex">
-                                    <button>to pay</button>
-                                </footer>
-                            </div>
+                    <div class="nav-container flex full">
+                        <div class="nav-container">
+                            <ul class="flex">
+                                <li>Overview</li>
+                                <li>About the seller</li>
+                                <li>Description</li>
+                                <li>Reviews</li>
+                            </ul>
                         </div>
-                    </aside>
+                    </div>
+                    <footer class="tab-footer flex">
+                        <button>to pay</button>
+                    </footer>
+
                 </div>
             </div>
 
@@ -156,7 +139,7 @@
                 </section>
             </section>
 
-            <form action="/payments"><!--it say add method post-->
+            <form class="gig-packages-form" action="/payments"><!--it say add method post-->
                 <!--lots of inputs idk-->
                 <div class="gig-packages-table">
                     <h2 class="section-title">compare packages</h2>
@@ -288,7 +271,7 @@
                             </div>
                         </div>
                     </span>
-                    
+
                     <div class="reviews-wrap">
                         <ul class="reviews-list"><!--x4 more of this-->
                             <span class="review-item-component-wrapper">
@@ -298,7 +281,8 @@
                                             <div class="user-profile-image"></div><!--user image-->
                                             <div class="flex flex-col">
                                                 <div class="flex user-info">
-                                                    <div class="user-profile-picture"></div><!--more lines, but for mobile image of user-->
+                                                    <div class="user-profile-picture"></div>
+                                                    <!--more lines, but for mobile image of user-->
                                                     <div class="reviewer-details flex"></div>
                                                 </div>
                                                 <div class="reviewer-sub-details flex">
@@ -351,19 +335,19 @@
         <div class="max-width-container">
             <div class="gig-card-carousel-wrapper gigs-other-gigs-by">
                 <h2 class="section-title">More services by
-                <!--route to users profile i guess-->
-            </h2>
-            <div class="gig_listing-package listing-carousel gig-card-layout">
-                <div><!--some id inside-->
-                    <div class="orca-slider">
-                        <div class="slick-slider slicker-initialized">
-                            <div class="slick-list">
-                                <div class="slick-track flex"></div><!--v-for the cards and that-->
+                    <!--route to users profile i guess-->
+                </h2>
+                <div class="gig_listing-package listing-carousel gig-card-layout">
+                    <div><!--some id inside-->
+                        <div class="orca-slider">
+                            <div class="slick-slider slicker-initialized">
+                                <div class="slick-list">
+                                    <div class="slick-track flex"></div><!--v-for the cards and that-->
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </aside>
