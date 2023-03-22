@@ -1,12 +1,13 @@
 <template>
-
-    <ul class="gig-list grid">
+    <h1 v-if="filterBy.tag">{{ header() }}</h1>
+    <h1 v-else>Explore</h1>
+    <div class="gig-list grid">
         <GigPreview 
         v-for="gig in gigs" 
         :key="gig.id" 
         :gig="gig"
         />
-    </ul>
+    </div>
 </template>
 
 <script>
@@ -32,7 +33,12 @@ export default {
                     }
                 }
         },
-        methods: {},
+        methods: {
+            header(){
+                let txt = this.filterBy.tag.replace('-', ' ').toUpperCase()
+                return txt
+            }
+        },
         computed: {},
     
 
