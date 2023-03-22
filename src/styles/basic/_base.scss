@@ -49,6 +49,10 @@ a {
   cursor: auto;
 }
 
+a:visited {
+  color: inherit;
+}
+
 input[type=date],
 input[type=datetime-local],
 input[type=datetime],

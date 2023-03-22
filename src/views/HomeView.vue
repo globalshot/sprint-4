@@ -7,31 +7,45 @@
             <section class="type-card">
                 <h1>Popuar professional serfices</h1>
                 <div class="gallery-container">
-                    <div class="subcategory-warper"
-                        style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
-                        <span>Add talent to AI</span>
-                        <h4>AI Artists</h4>
-                    </div>
-                    <div class="subcategory-warper"
-                        style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png) ;">
-                        <span>Build your brand</span>
-                        <h4>Logo Design</h4>
-                    </div>
-                    <div class="subcategory-warper"
-                        style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png) ;">
-                        <span>Customize your site</span>
-                        <h4>WordPress</h4>
-                    </div>
-                    <div class="subcategory-warper"
-                        style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png) ;">
-                        <span>Share your message</span>
-                        <h4>Voice Over</h4>
-                    </div>
-                    <div class="subcategory-warper"
-                        style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png) ;">
-                        <span>Engage your audience</span>
-                        <h4>Video Explainer</h4>
-                    </div>
+                    <RouterLink to="/gig?tag=ai-services">
+                        <div class="subcategory-warper"
+                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
+                            <span>Add talent to AI</span>
+                            <h4>AI Artists</h4>
+                        </div>
+                    </RouterLink>
+
+                    <RouterLink to="/gig?tag=logo-design">
+                        <div class="subcategory-warper"
+                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png) ;">
+                            <span>Build your brand</span>
+                            <h4>Logo Design</h4>
+                        </div>
+                    </RouterLink>
+
+                    <RouterLink to="/gig?tag=word-press">
+                        <div class="subcategory-warper"
+                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png) ;">
+                            <span>Customize your site</span>
+                            <h4>WordPress</h4>
+                        </div>
+                    </RouterLink>
+
+                    <RouterLink to="/gig?tag=music">
+                        <div class="subcategory-warper"
+                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png) ;">
+                            <span>Share your message</span>
+                            <h4>Voice Over</h4>
+                        </div>
+                    </RouterLink>
+
+                    <RouterLink to="/gig?tag=video">
+                        <div class="subcategory-warper"
+                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png) ;">
+                            <span>Engage your audience</span>
+                            <h4>Video Explainer</h4>
+                        </div>
+                    </RouterLink>
 
                 </div>
             </section>
@@ -146,7 +160,9 @@
             <section class="icon-category">
                 <p class="bold"> Explore the marketplace</p>
                 <section class="category-list main-layout">
-                        <section class="icons full">
+                    <section class="icons full">
+
+                        <RouterLink to="/gig?tag=graphics-design">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -173,6 +189,8 @@
                                     <h4 class="regular">Graphics & Design</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+                        <RouterLink to="/gig?tag=marketing">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -194,6 +212,9 @@
                                     <h4 class="regular">Design & Marketing</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=writing">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -226,6 +247,9 @@
                                     <h4 class="regular">Writing & Translation</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=video">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -250,6 +274,9 @@
                                     <h4 class="regular">Video & Animation</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=music">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -288,6 +315,8 @@
                                     <h4 class="regular">Music & Audio</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+                        <RouterLink to="/gig?tag=programming-tech">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -310,17 +339,22 @@
                                                     </path>
                                                 </g>
                                                 <path style="mix-blend-mode:darken" fill="#a1f4c0" d="M8 11h48v10H8z"
-                                                    id="flah"></path>
+                                                    id="flah">
+                                                </path>
                                             </g>
                                         </svg>
                                     </span>
                                     <h4 class="regular">Programming & Tech</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=business">
                             <span class="flex">
                                 <div>
                                     <span>
-                                        <svg class="svg svg-business" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                        <svg class="svg svg-business" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 64 64">
                                             <defs>
 
                                             </defs>
@@ -347,17 +381,22 @@
                                     <h4 class="regular">Business</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=lifestyle">
                             <span class="flex">
                                 <div>
                                     <span>
-                                        <svg class="svg svg-lifestyle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                        <svg class="svg svg-lifestyle" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 64 64">
                                             <defs>
 
                                             </defs>
                                             <g style="isolation:isolate">
                                                 <g id="stroke">
                                                     <path d="M12 20.2h34.7V53a4 4 0 01-4 4H16a4 4 0 01-4-4V20.2z"
-                                                        fill="#fff"></path>
+                                                        fill="#fff">
+                                                    </path>
                                                     <path
                                                         d="M12 20.2v4.2h30.5v31.5c0 .4-.1.7-.1 1 1.8-.4 4.3-2.1 4.3-4.1V20.2z"
                                                         fill="#dee0e2"></path>
@@ -366,7 +405,8 @@
                                                     </path>
                                                     <rect x="16.7" y="29.1" width="9.5" height="11.56" rx="1"
                                                         stroke-width="2.23" fill="none" stroke="#4d535b"
-                                                        stroke-miterlimit="10"></rect>
+                                                        stroke-miterlimit="10">
+                                                    </rect>
                                                     <rect x="16.7" y="29.1" width="9.5" height="11.56" rx="1"
                                                         style="mix-blend-mode:darken" fill="#a1f4c0"></rect>
                                                     <path class="cls-4" d="M46.7 28.6a9.5 9.5 0 010 18.9m-16.8-42V16">
@@ -380,6 +420,9 @@
                                     <h4 class="regular">Lifestyle</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=data">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -411,6 +454,9 @@
                                     <h4 class="regular">Data</h4>
                                 </div>
                             </span>
+                        </RouterLink>
+
+                        <RouterLink to="/gig?tag=photography">
                             <span class="flex">
                                 <div>
                                     <span>
@@ -434,14 +480,16 @@
                                                 fill="#D0F7E6" stroke="#404145" stroke-width="2" stroke-miterlimit="10">
                                             </path>
                                             <path d="M42.703 44.723h2" stroke="#404145" stroke-width="2"
-                                                stroke-miterlimit="10"></path>
+                                                stroke-miterlimit="10">
+                                            </path>
                                         </svg>
                                     </span>
                                     <h4 class="regular">Photography</h4>
                                 </div>
                             </span>
+                        </RouterLink>
 
-                        </section>
+                    </section>
                 </section>
             </section>
         </section>
