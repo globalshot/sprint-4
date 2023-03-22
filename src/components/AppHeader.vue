@@ -1,21 +1,21 @@
 <template>
-    <div class="main-header" :class="{ 'sticky': isHomePage}"><!--sticky class gets added-->
-      <header class="fiverr-header " :class="{ 'header-transparent': !isScrolled&&isHomePage}">
-        <div class="flex">
+    <div class="main-header " :class="{ 'sticky': isHomePage, 'clr-white': !isScrolled&&isHomePage}"><!--sticky class gets added-->
+      <header class="fiverr-header main-layout full" :class="{ 'header-transparent': !isScrolled&&isHomePage}">
+        <div class="flex ">
         <!--so much not sure if thats right-->
-        <nav class="header-row flex max-width-container header-row-wrapper"><!--main-pages bad name?-->
+        <nav class="header-row flex items-center header-row-wrapper"><!--main-pages bad name?-->
           <button class="btn-nav">button</button><!--for the burger nav-->
-          <RouterLink to="/"><h1>home</h1></RouterLink>
-          <div>
-            <form class="search-form fiverr-search fiverr-search-animated" :class="{ 'fiverr-search-show': isDoubleScrolled||!isHomePage}">
-              <input type="search"><!--2 kinds of placeholders, aka 2 kinds of inputs-->
+          <RouterLink to="/" class="site-logo"><h1>home</h1></RouterLink>
+          <div class="fiverr-header-search">
+            <form class="search-form fiverr-search fiverr-search-animated " :class="{ 'fiverr-search-show': isDoubleScrolled||!isHomePage}">
+              <input type="search" placeholder="What service are you looking for today?"><!--2 kinds of placeholders, aka 2 kinds of inputs-->
               <button>search</button>
             </form>
         </div>
-        <div class="fiverr-nav nav-with-space">
-          <ul class="flex">
+        <div class="fiverr-nav nav-with-space fiverr-nam-right flex">
+          <ul class="flex items-center">
             <li>
-              <RouterLink to="/gig">Explore</RouterLink>
+              <RouterLink to="/gig" class="no-style">Explore</RouterLink>
             </li>
             <li>Become a seller</li>
             <li>Sign in</li>
@@ -24,7 +24,10 @@
         </div>
         </nav>
       </div>
-      </header><!--home page image doesnt goes under the nav bar, aka no trans color-->
+    </header>
+    <div class="main-layout full bgc-white" :style="{'display': isDoubleScrolled? 'grid': 'none'}">
+      <p>testing</p>
+    </div>
     </div>
 </template>
 
@@ -47,7 +50,7 @@ export default {
       // const box = this.$el;
       // const boxHeight = box.getBoundingClientRect().height;
       const boxHeight = 0;
-      const boxHeight2 = 140;
+      const boxHeight2 = 150;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
       this.isScrolled = scrollTop > boxHeight;

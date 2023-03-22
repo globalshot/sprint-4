@@ -5,18 +5,23 @@
 div.main-header {
     z-index: 2999;
     width: 100%;
+    transition: color .5s ease;
 }
 
 .fiverr-header{
     transition: background-color .25s ease;
     nav.header-row {
         height: 80px;
+        width: 100%;
     } 
 }
+
+
 
 //somehow they pushed things to the end, without space-between
 .btn-nav {
     margin-inline-end: 15px;
+    display: none;//in media query it show it as hamburger
 }
 
 .nav-with-space {
@@ -41,23 +46,50 @@ div.main-header {
     }
 }
 
+.fiverr-header-search{
+    flex-grow: 1;
+}
+
+.fiverr-nam-right{
+    flex-grow: 1;
+
+}
+
+.site-logo{
+    min-width: 121px;
+}
+
 div.fiverr-nav ul {
     margin: 0;
     height: 100%;
-    align-items: center;
+    // align-items: center;
+    >*:hover{
+        color: $primary-clr;
+        cursor: pointer;
+    }
+    >li>*:hover{
+        color: $primary-clr;
+        cursor: pointer;
+    }
 }
 
 div.fiverr-nav ul li {
-    padding-inline-end: 20px;
+    padding-inline-end: 24px;
+    font-family: $font2;
+    color: $secondary-clr-dark;
+    
+}
+.main-header.clr-white>*li{//same, name sucks
+    color: white;
 }
 
-.header-row-wrapper {
+// .header-row-wrapper {
     //so much bad name ik, but soon i change
-    align-items: center;
+    // align-items: center;
     // justify-content: space-between;
     // align-content: space-between;
-    flex-wrap: wrap;
-}
+    // flex-wrap: wrap;
+// }
 
 header.header-transparent {
     //suppose to be in helpers?

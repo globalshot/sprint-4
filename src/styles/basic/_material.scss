@@ -9,13 +9,13 @@
     cursor: pointer;
     display: block;
     width: max-content;
-    
+
     &:hover {
         border-color: $primary-clr;
         color: $primary-clr;
     }
 
-    &.primary{
+    &.primary {
         background-color: $primary-clr;
         color: #fff;
     }
@@ -27,4 +27,21 @@
     border: 1px solid $secondary-clr;
     font-family: $font1;
     font-size: 1rem;
+}
+
+.search-form {
+    display: flex;
+    position: relative;
+    height: 42px;
+
+    input {
+        font-size: 16px;
+        flex: 1 1 auto;
+        padding: 10px 2px 10px 16px;
+        border-radius: 4px;
+        border-color: color(grey, 500);
+        // border-color: color($grey, 500);
+        box-shadow: none;
+        z-index: 3;
+    }
 }
