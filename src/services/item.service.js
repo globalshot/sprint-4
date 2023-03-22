@@ -16,7 +16,7 @@ export const itemService = {
 const KEY = 'items_db'
 const API = 'item/'
 
-function query(filterBy = '') {
+function query(filterBy) {
     return storageService
         .query(KEY)
         .then((items) => _filterItems(filterBy, items))
@@ -53,10 +53,16 @@ function getEmptyItem() {
 }
 
 function _filterItems(filterBy, items) {
+    console.log(filterBy)
     if (!filterBy) return items
     items = items.filter(item => {
         const regex = new RegExp(filterBy.txt, 'i')
         if (!regex.test(item.name)) return false
+
+        if (filterBy.tag) {
+            if(!item.tags.includes(filterBy.tag)) return false
+        }
+
 
         return item
     })
@@ -67,14 +73,14 @@ function _filterItems(filterBy, items) {
     let items = utilService.loadFromStorage(KEY)
     if (!items || !items.length) {
         items = [
-            _createItem('I will polish your personal statement and program application'),
-            _createItem('I will proofread accurately your german text in only 24 hours'),
-            _createItem('I will proofread and edit any word count within 24 hours'),
+            _createItem('I will polish your personal statement and program application', ["logo-design", "artisitic", "proffesional", "accessible"]),
+            _createItem('I will proofread accurately your german text in only 24 hours', ["logo-design", "artisitic", "proffesional", "accessible"]),
+            _createItem('I will proofread and edit any word count within 24 hours', ["artisitic", "proffesional", "accessible"]),
         ]
         utilService.saveToStorage(KEY, items)
     }
 
-    function _createItem(name) {
+    function _createItem(name,tags) {
         return {
             _id: utilService.makeId(),
             title: name,
@@ -89,12 +95,7 @@ function _filterItems(filterBy, items) {
             daysToMake: utilService.getRandomIntInc(2, 7),
             description: "Make unique logo...",
             imgUrl: "",
-            tags: [
-                "logo-design",
-                "artisitic",
-                "proffesional",
-                "accessible"
-              ],
+            tags,
             likedByUsers: ['mini-user'] // for user-wishlist : use $in
         }
     }

@@ -30,6 +30,7 @@
                 </div>
                 <div class="categories flex">
                     Popular:
+                    <RouterLink to="/gig?tag=logo-design"><div class="category flex">Logo Design</div></RouterLink>
                     <div class="category flex">website Design</div>
                     <div class="category flex">WordPress</div>
                     <div class="category flex">Logo Design</div>
