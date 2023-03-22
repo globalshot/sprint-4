@@ -26,3 +26,12 @@
         grid-template-columns: repeat(4,1fr);
       }
 }
+
+.gig-header {
+    color: $secondary-clr-darker;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    padding: 8px 0;
+    font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
