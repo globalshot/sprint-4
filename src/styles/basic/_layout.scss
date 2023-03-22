@@ -1,6 +1,6 @@
 .main-layout {
   display: grid;
-  grid-template-columns: 10px 1fr 10px;
+  grid-template-columns: 24px 1fr 24px;
   grid-template-rows: max-content 1fr max-content;
 
   >* {
@@ -15,15 +15,15 @@
     grid-template-columns: 30px 1fr 30px;
   }
 
-  @include for-narrow-layout {
-    grid-template-columns: 100px 1fr 100px;
-  }
+  // @include for-narrow-layout {
+  //   grid-template-columns: 100px 1fr 100px;
+  // }
 
   @include for-wide-layout {
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 1fr 1400px 1fr;
   }
 
   @include for-ultra-wide-layout {
-    grid-template-columns: 1fr 1400px 1fr;
+    grid-template-columns: 1fr 1600px 1fr;
   }
 }

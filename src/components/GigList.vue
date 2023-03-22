@@ -1,12 +1,13 @@
 <template>
-
-    <ul class="gig-list grid">
+    <h1 v-if="filterBy.tag">{{ header() }}</h1>
+    <h1 v-else>Explore</h1>
+    <div class="gig-list grid">
         <GigPreview 
         v-for="gig in gigs" 
         :key="gig.id" 
         :gig="gig"
         />
-    </ul>
+    </div>
 </template>
 
 <script>
@@ -20,15 +21,25 @@ export default {
         components: {
                 GigPreview
         },
-        created() { },
-        data() {
-                return {}
+        created() { 
+            this.filterBy.tag = (this.$route.query.tag)
+            console.log(this.filterBy.tag);
+            this.$emit('filterBy', { ...this.filterBy })
         },
-        methods: {},
+        data() {
+                return {
+                    filterBy: {
+                        tag: ''
+                    }
+                }
+        },
+        methods: {
+            header(){
+                let txt = this.filterBy.tag.replace('-', ' ').toUpperCase()
+                return txt
+            }
+        },
         computed: {},
-        components: {
-        GigPreview,
-    },
     
 
 }

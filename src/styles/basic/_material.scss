@@ -1,47 +1,52 @@
+/** @format */
+
 .c-btn {
-    background-color: transparent;
-    border: 1px solid $secondary-clr;
-    padding: rem(10px) rem(20px);
-    font-family: $font1;
-    font-size: 1rem;
-    border-radius: rem(5px);
-    color: $secondary-clr-light;
-    cursor: pointer;
-    display: block;
-    width: max-content;
+  background-color: transparent;
+  border: 1px solid $secondary-clr;
+  padding: rem(10px) rem(20px);
+  font-family: $font1;
+  font-size: 1rem;
+  border-radius: rem(5px);
+  color: $secondary-clr-light;
+  cursor: pointer;
+  display: block;
+  width: max-content;
 
-    &:hover {
-        border-color: $primary-clr;
-        color: $primary-clr;
-    }
+  &:hover {
+    border-color: $primary-clr;
+    color: $primary-clr;
+  }
 
-    &.primary {
-        background-color: $primary-clr;
-        color: #fff;
-    }
+  &.primary {
+    background-color: $primary-clr;
+    color: #fff;
+  }
 }
 
 .c-input {
-    padding: rem(10px);
-    border-radius: rem(5px);
-    border: 1px solid $secondary-clr;
-    font-family: $font1;
-    font-size: 1rem;
+  padding: rem(10px);
+  border-radius: rem(5px);
+  border: 1px solid $secondary-clr;
+  font-family: $font1;
+  font-size: 1rem;
 }
 
 .search-form {
-    display: flex;
-    position: relative;
-    height: 42px;
+  display: flex;
+  position: relative;
+  height: 42px;
 
-    input {
-        font-size: 16px;
-        flex: 1 1 auto;
-        padding: 10px 2px 10px 16px;
-        border-radius: 4px;
-        border-color: color(grey, 500);
-        // border-color: color($grey, 500);
-        box-shadow: none;
-        z-index: 3;
-    }
+  input {
+    font-size: 16px;
+    flex: 1 1 auto;
+    padding: 10px 2px 10px 16px;
+    border-color: $grey-txt-light;
+    background-color: #fff;
+    box-shadow: none;
+    z-index: 3;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+    width: 100%;
+    flex-grow: 1;
+  }
 }

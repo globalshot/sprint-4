@@ -1,0 +1,26 @@
+/** @format */
+
+.main-logo {
+  margin: 4px 19px 0 0;
+  svg {
+    max-height: 30px;
+    max-width: 120px;
+    cursor: pointer;
+    .svg-logo {
+      fill: $secondary-clr-dark;
+      stroke: $secondary-clr-dark;
+    }
+
+    .dot {
+      fill: $primary-clr;
+      stroke: $primary-clr;
+    }
+  }
+}
+
+header.header-transparent {
+  .svg-logo {
+    fill: white;
+    stroke: white;
+  }
+}

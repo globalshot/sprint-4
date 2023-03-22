@@ -2,10 +2,11 @@
     box-sizing: border-box;
     border: 1px solid #e4e5e7;
     width: 100%;
+    max-width: 310px;
 
 }
 
-.gig-preview:hover .title h2 {
+.gig-preview:hover .title .long-text {
     color: $primary-clr;
 }
 
@@ -36,11 +37,12 @@
     text-align: center;
     height: 43px;
     color: #222325;
-    padding: 0px 12px;
+    margin-top: 5px;
+    padding: 0px 12px 5px;
     font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.title h2 {
+.title .long-text {
     font-size: 16px;
     word-wrap: break-word;
     text-align: left;
@@ -52,6 +54,7 @@
     color: $secondary-clr-light;
     padding: 10px 12px;
     font-size: 10px;
+    justify-content: space-between;
 }
 
 .price-container .price {
@@ -77,4 +80,8 @@
     width: 100%;
     min-width: 245px;
 
+}
+
+.like {
+    fill: $grey-txt;
 }

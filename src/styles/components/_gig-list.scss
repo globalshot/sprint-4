@@ -1,7 +1,28 @@
 .gig-list {
     max-width: 1400px;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 32px;
-    min-height: 370px;
+    column-gap: 32px;
     margin-top: 16px;
+    
+
+
+    @include for-small-layout {
+        grid-template-columns: repeat(1,1fr);
+      }
+
+    @include for-medium-layout {
+        grid-template-columns: repeat(3,1fr);
+      }
+    
+      @include for-normal-layout {
+        grid-template-columns: repeat(4,1fr);
+      }
+    
+      @include for-wide-layout {
+        grid-template-columns: repeat(4,1fr);
+      }
+    
+      @include for-ultra-wide-layout {
+        grid-template-columns: repeat(4,1fr);
+      }
 }
