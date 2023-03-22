@@ -1,3 +1,5 @@
+/** @format */
+
 .grid {
   display: grid;
 }
@@ -43,15 +45,13 @@
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
 .flex.wrap {
   flex-wrap: wrap;
-=======
-.max-width-container{
-  padding-inline: 32px;
->>>>>>> cd7656fb768d8ac62364a4b390c18450bcea9b05
 }
 
+.max-width-container {
+  padding-inline: 32px;
+}
 // List
 .clean-list {
   list-style-type: none;
