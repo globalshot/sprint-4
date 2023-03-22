@@ -88,6 +88,14 @@
   @include type(boldCondensed);
 }
 
+.bold {
+  font-family: 'Macan-Bold';
+}
+
+.regular {
+  font-family: 'Macan-light';
+}
+
 // Aspect ratios
 
 .ratio-16-9 {
