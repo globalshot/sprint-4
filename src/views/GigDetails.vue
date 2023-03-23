@@ -1,38 +1,15 @@
 <template>
     <div class="main-container full main-layout">
 
-        <div class="sticky-focus-header full">
-                    <div class="nav-container main-layout full">
-                        <div class="nav-container flex">
-                            <ul class="flex">
-                                <li @click="markSelected" :class="{ selected: isSelected }">
-                                    <a>Overview</a>
-                                </li>
-                                <li @click="markSelected" :class="{ selected: isSelected }">
-                                    <a>Description</a>
-                                </li>
-                                <li @click="markSelected" :class="{ selected: isSelected }">
-                                    <a>About the seller</a>
-                                </li>
-                                <li @click="markSelected" :class="{ selected: isSelected }">
-                                    <a>Reviews</a>
-                                </li>
-                            </ul>
-                            </div>
-                    </div>
-                    <footer class="tab-footer flex">
-                    </footer>
-
-                
-        </div>
+        <StickyHeader />
 
         <div class="gig-page main-layout">
 
             <section class="details-layout flex">
-            <!--suppose to be 2 colums, will make soon-->
+                <!--suppose to be 2 colums, will make soon-->
 
                 <SidebarContect></SidebarContect>
-                
+
 
                 <div class="main">
                     <div class="gig-overview">
@@ -382,12 +359,12 @@
 import { gigService } from './../services/gig.service'
 import SidebarContect from '../components/gigDetails/SidebarContect.vue'
 import ReviewPage from './ReviewPage.vue'
+import StickyHeader from './StickyHeader.vue'
 
 export default {
     data() {
         return {
             gig: null,
-            isSelected: false,
         }
     },
 
@@ -403,27 +380,28 @@ export default {
     },
 
     computed: {
-        well(){
+        well() {
             return this.gig
         }
     },
-    components:{
+    components: {
         SidebarContect,
         ReviewPage,
+        StickyHeader,
     },
 
     methods: {
-        markSelected: function () {
-            this.isSelected = !this.isSelected
-        },
-        getGig(){
+        // markSelected: function () {
+        //     this.isSelected = !this.isSelected
+        // },
+        getGig() {
             const { id } = this.$route.params;
             console.log(this.$route);
             gigService.getById(id)
-            .then(gig => {
-            this.gig = gig;
-            console.log('gig',gig);
-        })
+                .then(gig => {
+                    this.gig = gig;
+                    console.log('gig', gig);
+                })
         }
     },
 

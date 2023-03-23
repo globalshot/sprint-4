@@ -142,10 +142,10 @@
 
 .icons {
   display: grid;
-  padding-inline-start: em(20px);
-  padding-inline-end: em(20px);
+  padding-inline-start: rem(20px);
+  padding-inline-end: rem(20px);
   grid-template-columns: repeat(5, 1fr);
-  gap: em(55px);
+  gap: rem(55px);
 
   .flex div {
     width: 100%;
