@@ -1,16 +1,17 @@
 <template>
     <div class="main-container full">
         <div class="gig-page main-layout">
-            <!--suppose to be 2 colums, will make soon-->
+
+            <!--sub header, aka nav-->
             <div class="sticky-focus-header full main-layout">
                 <div class="sticky-inner-wrapper inner-sticky">
                     <div class="nav-container flex full">
                         <div class="nav-container">
                             <ul class="flex">
-                                <li>Overview</li>
-                                <li>About the seller</li>
-                                <li>Description</li>
-                                <li>Reviews</li>
+                                <li>Overview</li><!--suppose to be waypoints in list-->
+                                <li>About the seller</li><!--suppose to be waypoints in list-->
+                                <li>Description</li><!--suppose to be waypoints in list-->
+                                <li>Reviews</li><!--suppose to be waypoints in list-->
                             </ul>
                         </div>
                     </div>
@@ -22,41 +23,10 @@
 
 
             <section class="details-layout flex">
-                <div class="sticky-outer-wrapper side-bar">
-                    <div class="sticky-inner-wrapper inner-sticky">
-                        <aside class="sidbar-contect">
-                            <div class="package-tabs triple">
-                                <!--triple input radio-->
-                                <div class="nav-container flex">
-                                    <!--triple label with package types-->
-                                </div>
-                                <div><!--id class-->
-                                    <div class="package-content">
-                                        <header class="header-default">
-                                            <h3 class="flex">
-                                                bla
-                                                <div class="price-wrapper">price</div>
-                                            </h3>
-                                            <p>words</p>
-                                        </header>
-                                        <article>
-                                            <div class="additional-info flex">
-                                                <div>class for delivery</div>
-                                                <div>class for revision</div>
-                                            </div>
-                                            <ul class="features">
-                                                <!--v-for the features-->
-                                            </ul>
-                                        </article>
-                                    </div>
-                                    <footer class="tab-footer flex">
-                                        <button>to pay</button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
+            <!--suppose to be 2 colums, will make soon-->
+
+                <SidebarContect></SidebarContect>
+                
 
                 <div class="main">
                     <div class="gig-overview">
@@ -366,34 +336,32 @@
                     </div>
                 </div>
 
-
-
-
             </section>
         </div>
-    </div>
 
-    <section></section><!--the seller pop up at the left bottom-->
-    <aside class="gig-page-bottom">
-        <div class="max-width-container">
-            <div class="gig-card-carousel-wrapper gigs-other-gigs-by">
-                <h2 class="section-title">More services by
-                    <!--route to users profile i guess-->
-                </h2>
-                <div class="gig_listing-package listing-carousel gig-card-layout">
-                    <div><!--some id inside-->
-                        <div class="orca-slider">
-                            <div class="slick-slider slicker-initialized">
-                                <div class="slick-list">
-                                    <div class="slick-track flex"></div><!--v-for the cards and that-->
+
+        <section></section><!--the seller pop up at the left bottom-->
+        <aside class="gig-page-bottom">
+            <div class="max-width-container">
+                <div class="gig-card-carousel-wrapper gigs-other-gigs-by">
+                    <h2 class="section-title">More services by
+                        <!--route to users profile i guess-->
+                    </h2>
+                    <div class="gig_listing-package listing-carousel gig-card-layout">
+                        <div><!--some id inside-->
+                            <div class="orca-slider">
+                                <div class="slick-slider slicker-initialized">
+                                    <div class="slick-list">
+                                        <div class="slick-track flex"></div><!--v-for the cards and that-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </aside>
+        </aside>
+    </div>
 
     <section v-if="gig" class="gig-details">
         <button @click="$router.go(-1)">x</button>
@@ -404,36 +372,28 @@
 
 
 <script>
-<<<<<<< HEAD
-import { itemService } from './../services/item.service'
-import AppHeader from './../components/AppHeader.vue'
-=======
-import { gigService } from '../services/gig.service'
->>>>>>> e38cb132cc30d2c3a674126bdcf03a6d4e757391
+import { gigService } from './../services/gig.service'
+import SidebarContect from '../components/gigDetails/SidebarContect.vue'
 
 export default {
     created() {
-        const { id } = this.$route.params
-        console.log(this.$route)
+        const { id } = this.$route.params;
+        console.log(this.$route);
         gigService.getById(id)
             .then(gig => {
-                this.gig = gig
-                console.log(gig);
-            })
-
-
+            this.gig = gig;
+            console.log(gig);
+        });
     },
     data() {
         return {
             gig: null
-        }
+        };
     },
-    methods: {
-
-    },
-    computed: {
-
-    },
-
+    methods: {},
+    computed: {},
+    components:{
+        SidebarContect,
+    }
 }
 </script>

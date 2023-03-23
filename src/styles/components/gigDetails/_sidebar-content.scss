@@ -1,0 +1,34 @@
+aside .package-tabs.triple {
+    & input {
+        display: none;
+    }
+
+    & .nav-container label {
+        background-color: $tertiary-clr-dark2;
+        border: 1px solid $grey-txt-lighter;
+        color: $secondary-clr-light;
+        flex: 1 1;
+        padding: 16px;
+        text-align: center;
+
+        &.aria-selected{//will be added in vue later
+            border-bottom: 3px solid $primary-clr;
+            color: $primary-clr;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+div.some-id{
+    padding-block-start: 32px;
+}
+
+//for after the zoom, 
+//sidebar width=33.6%
+
+//main:
+//margin-inline-end=9.15%
+//width=57.42%

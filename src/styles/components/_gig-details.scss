@@ -1,7 +1,6 @@
 /** @format */
 
 .gig-page {
-  //   border: 2px solid red;
   max-width: 1304px;
   //   padding: 32px; //suppose to be class with this, global class, the inline at least
   margin-inline: auto;
@@ -11,7 +10,7 @@
     background-color: #fff;
   }
 
-  .sticky-inner-wrapper {
+  .sticky-inner-wrapper {//?????? u need it? its kinda global
     padding: 2em 1.5em;
     border: 1px solid $grey-txt-light;
     margin-block-end: 16px;
@@ -22,7 +21,6 @@
   }
 
   .details-layout {
-    // display: flex;
     flex-direction: row-reverse;
   }
 
