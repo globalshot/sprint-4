@@ -4,14 +4,22 @@
 
             <!--sub header, aka nav-->
             <div class="sticky-focus-header full main-layout">
-                <div class="sticky-inner-wrapper inner-sticky">
+                <div class="sticky-inner-focus inner-sticky">
                     <div class="nav-container flex full">
                         <div class="nav-container">
                             <ul class="flex">
-                                <li>Overview</li><!--suppose to be waypoints in list-->
-                                <li>About the seller</li><!--suppose to be waypoints in list-->
-                                <li>Description</li><!--suppose to be waypoints in list-->
-                                <li>Reviews</li><!--suppose to be waypoints in list-->
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>Overview</a>
+                                </li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>Description</a>
+                                </li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>About the seller</a>
+                                </li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>Reviews</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -361,8 +369,8 @@
                 </div>
             </div>
         </aside>
-    </div>
 
+    </div>
     <section v-if="gig" class="gig-details">
         <button @click="$router.go(-1)">x</button>
         <pre>{{ gig }}</pre>
@@ -376,6 +384,13 @@ import { gigService } from './../services/gig.service'
 import SidebarContect from '../components/gigDetails/SidebarContect.vue'
 
 export default {
+    data() {
+        return {
+            gig: null,
+            isSelected: false,
+        }
+    },
+
     created() {
         const { id } = this.$route.params;
         console.log(this.$route);
@@ -390,10 +405,16 @@ export default {
             gig: null
         };
     },
-    methods: {},
     computed: {},
     components:{
         SidebarContect,
-    }
+    },
+
+    methods: {
+        markSelected: function () {
+            this.isSelected = !this.isSelected
+        }
+    },
+
 }
 </script>

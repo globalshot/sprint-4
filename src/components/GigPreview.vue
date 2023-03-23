@@ -1,5 +1,7 @@
 <template>
     <div class="gig-preview" >
+        <RouterLink :to="'/edit/' + gig._id">Edit</RouterLink>
+        <button @click="$emit('removeGig')">X</button>
         <!-- <pre>{{toy}}</pre> -->
         <RouterLink class="btn" :to="'/gig/' + gig._id">
             <img class="carousel-imgs" src="../assets/images/demo-img.png" alt="">
@@ -35,5 +37,6 @@ export default {
     components: {
         LongText,
     },
+    emits: ['removeGig']
 }
 </script>

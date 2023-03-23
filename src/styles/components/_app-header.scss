@@ -61,7 +61,7 @@ div.main-header {
       align-items: center;
       background-color: #fff;
       transition: transform 0.2s;
-      font-size: 1rem;
+      font-size: 1.1em;
       border-bottom: 1px solid #e4e5e7;
     }
 
@@ -69,7 +69,7 @@ div.main-header {
       a {
         text-decoration: none;
         padding-block: 8px;
-        margin-inline-end: 20px;
+        margin-inline-end: 45px;
         color: #62646a;
         flex-shrink: 0;
         line-height: 24px;
@@ -112,6 +112,20 @@ div.main-header {
   margin-inline-start: 32px;
   justify-content: flex-end;
   // flex-grow: 1;
+}
+
+.search-form {
+  input {
+    transition: 0.1s;
+    border: 0;
+    box-shadow: 0 0 0 1px $grey-txt-light inset;
+    border-start-end-radius: 0px;
+    border-end-end-radius: 0px;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 1px black inset;
+    }
+  }
 }
 
 .fiverr-search {
@@ -190,4 +204,8 @@ header.header-transparent {
   padding: 8px 16px;
   text-shadow: none;
   border-radius: 0 4px 4px 0;
+
+  &:hover {
+    background-color: $secondary-clr-darker-hover;
+  }
 }

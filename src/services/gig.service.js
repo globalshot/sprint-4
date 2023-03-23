@@ -1,109 +1,118 @@
-import { httpService } from "./http.service"
-import { storageService } from "./storage.service"
-import { utilService } from "./util.service"
+import { storageService } from './storage.service.js'
+import { utilService } from './util.service.js'
+import { userService } from './user.service.js'
 
-// const fs = require('fs')
-// const gigs = require('../../data/gig.json')
+const STORAGE_KEY = 'gig_db'
 
 export const gigService = {
     query,
     getById,
     save,
     remove,
-    getEmptyGig
+    getEmptyGig,
+    addGigMsg
 }
+window.cs = gigService
 
-const KEY = 'gigs_db'
-const API = 'gig/'
 
-function query(filterBy) {
-    return storageService
-        .query(KEY)
-        .then((gigs) => _filterGigs(filterBy, gigs))
-
-    // return httpService.get(API, filterBy)
+async function query(filterBy = { txt: '', tag: '' }) {
+    var gigs = await storageService.query(STORAGE_KEY)
+    if (filterBy.txt) {
+        const regex = new RegExp(filterBy.txt, 'i')
+        gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
+    }
+        if (filterBy.tag) {
+            gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
+        }
+    return gigs
 }
 
 function getById(gigId) {
-    return storageService.get(KEY, gigId)
-    // return httpService.get(API + gigId)
+    return storageService.get(STORAGE_KEY, gigId)
 }
 
-function save(gigToSave) {
-    return gigToSave._id ?
-        storageService.put(KEY, gigToSave) :
-        storageService.post(KEY, gigToSave)
-
-    // return gigToSave._id ?
-    //     httpService.put(API, gigToSave) :
-    //     httpService.post(API, gigToSave)
+async function remove(gigId) {
+    await storageService.remove(STORAGE_KEY, gigId)
 }
 
-function remove(gigId) {
-    return storageService.remove(KEY, gigId)
-    // return httpService.remove(API, gigId)
+async function save(gig) {
+    var savedGig
+    if (gig._id) {
+        savedGig = await storageService.put(STORAGE_KEY, gig)
+    } else {
+        // Later, owner is set by the backend
+        // gig.owner = userService.getLoggedinUser()
+        savedGig = await storageService.post(STORAGE_KEY, gig)
+    }
+    return savedGig
+}
+
+async function addGigMsg(gigId, txt) {
+    // Later, this is all done by the backend
+    const gig = await getById(gigId)
+    if (!gig.msgs) gig.msgs = []
+
+    const msg = {
+        id: utilService.makeId(),
+        by: userService.getLoggedinUser(),
+        txt
+    }
+    gig.msgs.push(msg)
+    await storageService.put(STORAGE_KEY, gig)
+
+    return msg
 }
 
 function getEmptyGig() {
     return {
-        name: '',
-        price: null,
-        imgUrl: ''
+        title: '',
+        price: 0,
+        owner: {
+            _id: "u101",
+            fullname: "Dudu Da",
+            imgUrl: "url",
+            level: "basic/premium",
+            rate: utilService.getRandomIntInc(3, 5)
+        },
+        daysToMake: utilService.getRandomIntInc(2, 7),
+        description: "Make unique logo...",
+        imgUrl: "",
+        tags: [],
+        likedByUsers: ['mini-user'] // for user-wishlist : use $in
     }
 }
 
-function _filterGigs(filterBy, gigs) {
-    console.log(filterBy)
-    if (!filterBy) return gigs
-    gigs = gigs.filter(gig => {
-        const regex = new RegExp(filterBy.txt, 'i')
-        if (!regex.test(gig.name)) return false
-
-        if (filterBy.tag) {
-            if (!gig.tags.includes(filterBy.tag)) return false
-        }
-
-
-        return gig
-    })
-    return gigs
+function _createGig(name, tags) {
+    return {
+        _id: utilService.makeId(),
+        title: name,
+        price: utilService.getRandomIntInc(10, 100),
+        owner: {
+            _id: "u101",
+            fullname: "Dudu Da",
+            imgUrl: "url",
+            level: "basic/premium",
+            rate: utilService.getRandomIntInc(3, 5)
+        },
+        daysToMake: utilService.getRandomIntInc(2, 7),
+        description: "Make unique logo...",
+        imgUrl: "",
+        tags,
+        likedByUsers: ['mini-user'] // for user-wishlist : use $in
+    }
 }
 
 ; (() => {
-    let gigs = utilService.loadFromStorage(KEY)
-    if (!gigs || !gigs.length) {
-        gigs = [
-            _createGig('I will polish your personal statement and program application', ["logo-design", "website-design", "graphics-design"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["logo-design", "ai-services"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["word-press", "logo-design","writing"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["programming-tech", "data"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["data", "marketing"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["business", "marketing"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["lifestyle", "music"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["video", "music"]),
-            _createGig('I will proofread accurately your german text in only 24 hours', ["video", "graphics-design", "photography"]),
-        ]
-        utilService.saveToStorage(KEY, gigs)
-    }
-
-    function _createGig(name, tags) {
-        return {
-            _id: utilService.makeId(),
-            title: name,
-            price: utilService.getRandomIntInc(10, 100),
-            owner: {
-                _id: "u101",
-                fullname: "Dudu Da",
-                imgUrl: "url",
-                level: "basic/premium",
-                rate: utilService.getRandomIntInc(3, 5)
-            },
-            daysToMake: utilService.getRandomIntInc(2, 7),
-            description: "Make unique logo...",
-            imgUrl: "",
-            tags,
-            likedByUsers: ['mini-user'] // for user-wishlist : use $in
+        let gigs = utilService.loadFromStorage(STORAGE_KEY) || []
+        if (!gigs || !gigs.length) {
+            const tags = ["logo-design", "website-design", "graphics-design", "ai-services", "data", "photography", "video", "word-press"]
+            for (let i=0; i<10; i++) {
+                const idx = utilService.getRandomIntInc(0,7)
+                const title = 'I will polish your personal statement and program application'
+                gigs.push(_createGig(title, [tags[i], tags[idx]]))
+            }
+            utilService.saveToStorage(STORAGE_KEY, gigs)
         }
-    }
-})()
-
+    
+       
+    })()
