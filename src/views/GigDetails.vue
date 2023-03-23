@@ -404,14 +404,18 @@
 
 
 <script>
+<<<<<<< HEAD
 import { itemService } from './../services/item.service'
 import AppHeader from './../components/AppHeader.vue'
+=======
+import { gigService } from '../services/gig.service'
+>>>>>>> e38cb132cc30d2c3a674126bdcf03a6d4e757391
 
 export default {
     created() {
         const { id } = this.$route.params
         console.log(this.$route)
-        itemService.getById(id)
+        gigService.getById(id)
             .then(gig => {
                 this.gig = gig
                 console.log(gig);

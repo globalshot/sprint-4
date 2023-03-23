@@ -1,4 +1,4 @@
-import { itemService } from "../../services/item.service"
+import { gigService } from "../../services/gig.service"
 
 export default {
     state: {
@@ -21,7 +21,7 @@ export default {
     actions: {
         loadGigs({ commit }, { filterBy }) {
             console.log(filterBy)
-            return itemService.query(filterBy)
+            return gigService.query(filterBy)
                 .then(gigs => {
                     console.log(gigs)
                     commit({ type: 'setGigs', gigs })
