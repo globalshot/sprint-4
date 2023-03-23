@@ -1,7 +1,8 @@
 <template>
     <div class="main-container full">
         <div class="gig-page main-layout">
-            <!--suppose to be 2 colums, will make soon-->
+
+            <!--sub header, aka nav-->
             <div class="sticky-focus-header full main-layout">
                 <div class="sticky-inner-focus inner-sticky">
                     <div class="nav-container flex full">
@@ -30,41 +31,10 @@
 
 
             <section class="details-layout flex">
-                <div class="sticky-outer-wrapper side-bar">
-                    <div class="sticky-inner-wrapper inner-sticky">
-                        <aside class="sidbar-contect">
-                            <div class="package-tabs triple">
-                                <!--triple input radio-->
-                                <div class="nav-container flex">
-                                    <!--triple label with package types-->
-                                </div>
-                                <div><!--id class-->
-                                    <div class="package-content">
-                                        <header class="header-default">
-                                            <h3 class="flex">
-                                                bla
-                                                <div class="price-wrapper">price</div>
-                                            </h3>
-                                            <p>words</p>
-                                        </header>
-                                        <article>
-                                            <div class="additional-info flex">
-                                                <div>class for delivery</div>
-                                                <div>class for revision</div>
-                                            </div>
-                                            <ul class="features">
-                                                <!--v-for the features-->
-                                            </ul>
-                                        </article>
-                                    </div>
-                                    <footer class="tab-footer flex">
-                                        <button>to pay</button>
-                                    </footer>
-                                </div>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
+            <!--suppose to be 2 colums, will make soon-->
+
+                <SidebarContect></SidebarContect>
+                
 
                 <div class="main">
                     <div class="gig-overview">
@@ -374,9 +344,6 @@
                     </div>
                 </div>
 
-
-
-
             </section>
         </div>
 
@@ -413,7 +380,8 @@
 
 
 <script>
-import { gigService } from '../services/gig.service'
+import { gigService } from './../services/gig.service'
+import SidebarContect from '../components/gigDetails/SidebarContect.vue'
 
 export default {
     data() {
@@ -424,22 +392,28 @@ export default {
     },
 
     created() {
-        const { id } = this.$route.params
-        console.log(this.$route)
+        const { id } = this.$route.params;
+        console.log(this.$route);
         gigService.getById(id)
             .then(gig => {
-                this.gig = gig
-                console.log(gig);
-            })
+            this.gig = gig;
+            console.log(gig);
+        });
+    },
+    data() {
+        return {
+            gig: null
+        };
+    },
+    computed: {},
+    components:{
+        SidebarContect,
     },
 
     methods: {
         markSelected: function () {
             this.isSelected = !this.isSelected
         }
-    },
-    computed: {
-
     },
 
 }
