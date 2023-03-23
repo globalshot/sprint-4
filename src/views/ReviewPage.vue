@@ -8,9 +8,11 @@
       :key="review._id"
       class="review-preview align-center "
     >
-      <h4>By: {{ review.user.userName }}</h4>
-      <h4>Rating: {{ review.rating }}</h4>
-      <p>Review: {{ review.reviewDetails }}</p>
+      <div v-if="review.gig.gigId === this.gig._id">
+        <h4>By: {{ review.user.userName }}</h4>
+        <h4>Rating: {{ review.rating }}</h4>
+        <p>Review: {{ review.reviewDetails }}</p>
+      </div>
     </div>
     <!-- </details> -->
   </div>
