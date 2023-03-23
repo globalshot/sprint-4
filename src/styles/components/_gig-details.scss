@@ -1,7 +1,6 @@
 /** @format */
 
 .gig-page {
-  max-width: 1304px;
   position: relative;
   padding: 32px;
 
@@ -11,7 +10,7 @@
 
   .sticky-focus-header {
     width: 100%;
-    height: 53px;
+    height: 3.3125em;
     position: sticky;
     top: 0;
     border-bottom: 1px solid $grey-txt-lighter;
@@ -33,9 +32,9 @@
 }
 
 .seller-photo {
-  margin-inline-end: 16px;
+  margin-inline-end: 1rem;
 }
 
 .seller-stats > * {
-  margin-inline-end: 8px;
+  margin-inline-end: .5rem;
 }

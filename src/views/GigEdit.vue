@@ -17,7 +17,7 @@
                 </label>
                 <section class="flex gap-1">
                     <button class="c-btn">Save</button>
-                    <router-link class="c-btn" to="/gigs">Back</router-link>
+                    <router-link class="c-btn" to="/gig">Back</router-link>
                 </section>
             </div>
         </form>

@@ -2,7 +2,7 @@
     <div class="user-msg" :class="msg?.type">
         <!-- <img :src="" alt=""> -->
         <a href="" class="logo-container">
-            <svg version="1.1" class="logo" x="0px" y="0px" viewBox="0 0 603.45862 196.59274"
+            <!-- <svg version="1.1" class="logo" x="0px" y="0px" viewBox="0 0 603.45862 196.59274"
                 enable-background="new 0 0 612 792" xml:space="preserve" sodipodi:docname="fiverr-logo2.svg"
                 inkscape:version="1.2.2 (732a01da63, 2022-12-09)" inkscape:export-filename="fiverr-logo3.svg"
                 inkscape:export-xdpi="34.675816" inkscape:export-ydpi="34.675816" width="603.45862" height="196.59274"
@@ -46,7 +46,7 @@
                     <circle class="dot" fill="#ed1c24" stroke="#ed1c24" stroke-miterlimit="10" cx="574.79999" cy="369.29999"
                         r="21.200001" inkscape:label="dot" />
                 </g>
-            </svg>
+            </svg> -->
         </a>
         <h3>{{ txt }}</h3>
     </div>

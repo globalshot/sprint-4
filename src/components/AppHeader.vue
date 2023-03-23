@@ -18,7 +18,7 @@
 
                 <g class="fiverr" inkscape:label="logo" inkscape:export-filename="fiverr-logo2.svg"
                   inkscape:export-xdpi="34.675816" inkscape:export-ydpi="34.675816"
-                  transform="matrix(1.0898657,0,0,1.1708895,-135.646252,-261.22504)">
+                  transform="matrix(1.0898657,0,0,1.1708895,-158.646252,-261.22504)">
                   <g class="fiverr">
                     <polyline class="svg-logo" fill="#ed1c24"
                       points="235.2,387.3 217.6,387.3 177.2,274.4 213.3,274.4 232.1,337.9  " />
@@ -81,9 +81,9 @@
         <a href="#/gig?tag=music" class="">Music &amp; Audio</a>
         <a href="#/gig?tag=programming-tech" class="">Programming &amp; Tech</a>
         <a href="#/gig?tag=photography" class="">Photography</a>
-        <a href="#/business" class="">Business</a>
-        <a href="#/explore" class="">Lifestyle</a>
-        <a href="#/lifestyle" class="">AI Services</a>
+        <a href="#/gig?tag=business" class="">Business</a>
+        <a href="#/gig?tag=lifestyle" class="">Lifestyle</a>
+        <a href="#/gig?tag=ai-services" class="">AI Services</a>
       </div>
     </div>
   </div>
