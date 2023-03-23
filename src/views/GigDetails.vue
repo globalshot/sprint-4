@@ -1,9 +1,7 @@
 <template>
     <div class="main-container full">
-        <div class="gig-page main-layout">
 
-            <!--sub header, aka nav-->
-            <div class="sticky-focus-header full main-layout">
+        <div class="sticky-focus-header full main-layout">
                 <div class="sticky-inner-focus inner-sticky">
                     <div class="nav-container flex full">
                         <div class="nav-container">
@@ -27,8 +25,9 @@
                     </footer>
 
                 </div>
-            </div>
+        </div>
 
+        <div class="gig-page main-layout">
 
             <section class="details-layout flex">
             <!--suppose to be 2 colums, will make soon-->

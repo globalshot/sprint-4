@@ -16,7 +16,7 @@
                         <div class="package-content">
                             <header class="header-default">
                                 <h3 class="flex">
-                                    bla
+                                    {{ selectedItem }} package
                                     <div class="price-wrapper">price</div>
                                 </h3>
                                 <p>words</p>
