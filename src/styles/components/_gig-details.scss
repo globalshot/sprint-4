@@ -1,20 +1,56 @@
 /** @format */
 
 .gig-page {
-  //   border: 2px solid red;
   max-width: 1304px;
-  //   padding: 32px; //suppose to be class with this, global class, the inline at least
-  margin-inline: auto;
   position: relative;
 
   .side-bar {
     background-color: #fff;
   }
 
-  .sticky-inner-wrapper {
-    padding: 2em 1.5em;
-    border: 1px solid $grey-txt-light;
-    margin-block-end: 16px;
+  .nav-container {
+    z-index: 100;
+    width: 100%;
+    height: 53px;
+
+    ul {
+      gap: 26px;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+
+      li {
+        height: 100%;
+        color: #95979d;
+        display: inline-block;
+        font-size: 0.875em;
+        font-weight: 600;
+        transition: color 0.2s;
+        line-height: 3rem;
+        text-align: center;
+        &.selected {
+          box-shadow: 0 -4px #1dbf73 inset;
+          color: $secondary-clr-dark;
+        }
+
+        &:hover {
+          color: $secondary-clr;
+        }
+
+        a {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .sticky-focus-header {
+    width: 100%;
+    height: 53px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid $grey-txt-lighter;
+    background: #ffffff;
+    width: 100%;
   }
 
   .main {
@@ -27,15 +63,7 @@
   }
 
   .gig-packages-form {
-    position: relative;
-  }
-
-  .sticky-focus-header {
-    position: sticky;
-    top: 32px;
-    border-bottom: 1px solid $grey-txt-lighter;
-    background: #ffffff56;
-    width: 100%;
+    // position: relative;
   }
 }
 

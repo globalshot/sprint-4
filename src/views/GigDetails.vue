@@ -3,14 +3,22 @@
         <div class="gig-page main-layout">
             <!--suppose to be 2 colums, will make soon-->
             <div class="sticky-focus-header full main-layout">
-                <div class="sticky-inner-wrapper inner-sticky">
+                <div class="sticky-inner-focus inner-sticky">
                     <div class="nav-container flex full">
                         <div class="nav-container">
                             <ul class="flex">
-                                <li>Overview</li>
-                                <li>About the seller</li>
-                                <li>Description</li>
-                                <li>Reviews</li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>Overview</a>
+                                </li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>Description</a>
+                                </li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>About the seller</a>
+                                </li>
+                                <li @click="markSelected" :class="{ selected: isSelected }">
+                                    <a>Reviews</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -371,30 +379,31 @@
 
             </section>
         </div>
-    </div>
 
-    <section></section><!--the seller pop up at the left bottom-->
-    <aside class="gig-page-bottom">
-        <div class="max-width-container">
-            <div class="gig-card-carousel-wrapper gigs-other-gigs-by">
-                <h2 class="section-title">More services by
-                    <!--route to users profile i guess-->
-                </h2>
-                <div class="gig_listing-package listing-carousel gig-card-layout">
-                    <div><!--some id inside-->
-                        <div class="orca-slider">
-                            <div class="slick-slider slicker-initialized">
-                                <div class="slick-list">
-                                    <div class="slick-track flex"></div><!--v-for the cards and that-->
+
+        <section></section><!--the seller pop up at the left bottom-->
+        <aside class="gig-page-bottom">
+            <div class="max-width-container">
+                <div class="gig-card-carousel-wrapper gigs-other-gigs-by">
+                    <h2 class="section-title">More services by
+                        <!--route to users profile i guess-->
+                    </h2>
+                    <div class="gig_listing-package listing-carousel gig-card-layout">
+                        <div><!--some id inside-->
+                            <div class="orca-slider">
+                                <div class="slick-slider slicker-initialized">
+                                    <div class="slick-list">
+                                        <div class="slick-track flex"></div><!--v-for the cards and that-->
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </aside>
+        </aside>
 
+    </div>
     <section v-if="gig" class="gig-details">
         <button @click="$router.go(-1)">x</button>
         <pre>{{ gig }}</pre>
@@ -404,14 +413,16 @@
 
 
 <script>
-<<<<<<< HEAD
-import { itemService } from './../services/item.service'
-import AppHeader from './../components/AppHeader.vue'
-=======
 import { gigService } from '../services/gig.service'
->>>>>>> e38cb132cc30d2c3a674126bdcf03a6d4e757391
 
 export default {
+    data() {
+        return {
+            gig: null,
+            isSelected: false,
+        }
+    },
+
     created() {
         const { id } = this.$route.params
         console.log(this.$route)
@@ -420,16 +431,12 @@ export default {
                 this.gig = gig
                 console.log(gig);
             })
-
-
     },
-    data() {
-        return {
-            gig: null
-        }
-    },
+
     methods: {
-
+        markSelected: function () {
+            this.isSelected = !this.isSelected
+        }
     },
     computed: {
 
