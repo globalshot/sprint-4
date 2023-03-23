@@ -24,6 +24,13 @@ aside .package-tabs.triple {
 
 div.some-id{
     padding-block-start: 32px;
+    & div.package-content{
+        padding-inline: 24px;
+
+        & h3{
+            justify-content: space-between;
+        }
+    }
 }
 
 //for after the zoom, 
