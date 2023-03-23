@@ -361,13 +361,13 @@
 
 
 <script>
-import { itemService } from './../services/item.service'
+import { gigService } from '../services/gig.service'
 
 export default {
     created() {
         const { id } = this.$route.params
         console.log(this.$route)
-        itemService.getById(id)
+        gigService.getById(id)
             .then(gig => {
                 this.gig = gig
                 console.log(gig);
