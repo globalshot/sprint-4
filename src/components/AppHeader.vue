@@ -62,7 +62,11 @@
               <li>
                 <RouterLink to="/gig" class="no-style">Explore</RouterLink>
               </li>
-              <li>Become a seller</li>
+
+              <li>
+                <RouterLink to="/edit">Become a seller </RouterLink>
+              </li>
+
               <li>Sign in</li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
@@ -123,9 +127,12 @@ export default {
     isHome() {
       return this.isHomePage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
     },
-    isExplorePage() {
-      return this.$route.path === '/gig';
+    isDetailsPage() {
+      return this.$route.path === '/gig/';
     },
+    isDetails() {
+      return this.isDetailsPage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
+    }
   }
 };
 </script>
