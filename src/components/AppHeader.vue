@@ -15,16 +15,10 @@
                 xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
                 xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
                 xmlns:svg="http://www.w3.org/2000/svg">
-                <defs pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2"
-                  inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1"
-                  showgrclass="false" inkscape:zoom="1.4659091" inkscape:cx="294.0155" inkscape:cy="396"
-                  inkscape:window-width="2560" inkscape:window-height="1351" inkscape:window-x="-9" inkscape:window-y="-9"
-                  inkscape:window-maximized="1" inkscape:current-layer="Layer_1" />
-
 
                 <g class="fiverr" inkscape:label="logo" inkscape:export-filename="fiverr-logo2.svg"
                   inkscape:export-xdpi="34.675816" inkscape:export-ydpi="34.675816"
-                  transform="matrix(1.0898657,0,0,1.1708895,-46.646252,-261.22504)">
+                  transform="matrix(1.0898657,0,0,1.1708895,-135.646252,-261.22504)">
                   <g class="fiverr">
                     <polyline class="svg-logo" fill="#ed1c24"
                       points="235.2,387.3 217.6,387.3 177.2,274.4 213.3,274.4 232.1,337.9  " />
@@ -78,8 +72,19 @@
         </nav>
       </div>
     </header>
-    <div class="main-layout full bgc-white" :style="{'display': isHome}">
-      <p>testing</p>
+    <div class="sec-header main-layout full bgc-white" :class="{ 'show': isDoubleScrolled }">
+      <div class="sec-header-nav flex space-between">
+        <a href="#/gig?tag=graphics-design" class="">Graphics &amp; Design</a>
+        <a href="#/gig?tag=marketing" class="">Digital Marketing</a>
+        <a href="#/gig?tag=writing" class="">Writing &amp; Translation</a>
+        <a href="#/gig?tag=video" class="">Video &amp; Animation</a>
+        <a href="#/gig?tag=music" class="">Music &amp; Audio</a>
+        <a href="#/gig?tag=programming-tech" class="">Programming &amp; Tech</a>
+        <a href="#/gig?tag=photography" class="">Photography</a>
+        <a href="#/business" class="">Business</a>
+        <a href="#/explore" class="">Lifestyle</a>
+        <a href="#/lifestyle" class="">AI Services</a>
+      </div>
     </div>
   </div>
 </template>
@@ -109,14 +114,14 @@ export default {
       this.isScrolled = scrollTop > boxHeight;
       this.isDoubleScrolled = scrollTop > boxHeight2;
     },
-    
+
   },
   computed: {
     isHomePage() {
       return this.$route.path === '/';
     },
-    isHome(){
-      return this.isHomePage? (this.isDoubleScrolled? 'grid': 'none') : 'grid'
+    isHome() {
+      return this.isHomePage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
     }
   }
 };
