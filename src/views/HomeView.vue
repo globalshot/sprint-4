@@ -8,55 +8,13 @@
                 <h1>Popuar professional serfices</h1>
                 <div class="gallery-container">
 
-                    <vueper-slides class="no-shadow"  :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 4"
+                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 4"
                         :dragging-distance="200" :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" @click.prevent/>
+                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" @click.prevent />
                     </vueper-slides>
-
-                    <!-- 
-                    <RouterLink to="/gig?tag=ai-services">
-                        <div class="subcategory-warper"
-                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
-                            <span>Add talent to AI</span>
-                            <h4>AI Artists</h4>
-                        </div>
-                    </RouterLink>
-
-                    <RouterLink to="/gig?tag=logo-design">
-                        <div class="subcategory-warper"
-                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png) ;">
-                            <span>Build your brand</span>
-                            <h4>Logo Design</h4>
-                        </div>
-                    </RouterLink>
-
-                    <RouterLink to="/gig?tag=word-press">
-                        <div class="subcategory-warper"
-                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png) ;">
-                            <span>Customize your site</span>
-                            <h4>WordPress</h4>
-                        </div>
-                    </RouterLink>
-
-                    <RouterLink to="/gig?tag=music">
-                        <div class="subcategory-warper"
-                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png) ;">
-                            <span>Share your message</span>
-                            <h4>Voice Over</h4>
-                        </div>
-                    </RouterLink>
-
-                    <RouterLink to="/gig?tag=video">
-                        <div class="subcategory-warper"
-                            style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png) ;">
-                            <span>Engage your audience</span>
-                            <h4>Video Explainer</h4>
-                        </div>
-                    </RouterLink> -->
 
                 </div>
             </section>
-
             <div class="selling-proposition-wrapper main-layout full">
                 <div class="selling-proposition">
                     <div class="selling-container">
@@ -495,7 +453,6 @@
                                 </div>
                             </span>
                         </RouterLink>
-
                     </section>
                 </section>
             </section>
@@ -517,106 +474,115 @@ export default {
                 title: 'Slide #1',
                 content:
                     // 'Slide 1 content'
-                    ` <RouterLink to="/gig?tag=ai-services">
+                    //     ` <RouterLink to="/gig?tag=ai-services">
+                    // <div class="subcategory-warper"
+                    //     style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
+                    //     <span>Add talent to AI</span>
+                    //     <h4>AI Artists</h4>
+                    // </div>
+                    // </RouterLink>`,
+                    `<a href="#/gig?tag=ai-services">
                 <div class="subcategory-warper"
                     style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
                     <span>Add talent to AI</span>
                     <h4>AI Artists</h4>
                 </div>
-                </RouterLink>`,
+                </a>`,
                 props: {
                     allow: 'click',
                 }
             },
             {
                 title: 'Slide #2',
-                content: `<RouterLink to="/gig?tag=logo-design">
+                content: `
+                
+                    <a href="#/gig?tag=logo-design">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741678/logo-design-2x.png) ;">
                             <span>Build your brand</span>
                             <h4>Logo Design</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #3',
-                content: `<RouterLink to="/gig?tag=word-press">
+                content: `<a href="#/gig?tag=word-press">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png) ;">
                             <span>Customize your site</span>
                             <h4>WordPress</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #4',
-                content: `<RouterLink to="/gig?tag=music">
+                content: `<a href="#/gig?tag=music">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png) ;">
                             <span>Share your message</span>
                             <h4>Voice Over</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #5',
-                content: `<RouterLink to="/gig?tag=video">
+                content: `<a href="#/gig?tag=video">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png) ;">
                             <span>Engage your audience</span>
                             <h4>Video Explainer</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #6',
-                content: `<RouterLink to="/gig?tag=marketing">
+                content: `<a href="#/gig?tag=marketing">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png;">
                             <span>Reach more costumers</span>
                             <h4>Social Media</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #7',
-                content: `<RouterLink to="/gig?tag=marketing">
+                content: `<a href="#/gig?tag=marketing">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png);">
                             <span>Unlock growth online</span>
                             <h4>SEO</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #8',
-                content: `<RouterLink to="/gig?tag=graphics-design">
+                content: `<a href="#/gig?tag=graphics-design">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png) ;">
                             <span>Color your dreams</span>
                             <h4>Illustration</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #9',
-                content: `<RouterLink to="/gig?tag=word-press">
+                content: `<a href="#/gig?tag=word-press">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png) ;">
                             <span>Go global</span>
                             <h4>Translation</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
             {
                 title: 'Slide #10',
-                content: `<RouterLink to="/gig?tag=data">
+                content: `<a href="#/gig?tag=data">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png) ;">
                             <span>Learn your business</span>
                             <h4>Data Entry</h4>
                         </div>
-                    </RouterLink>`
+                    </a>`
             },
         ]
     }),

@@ -31,7 +31,7 @@ div.main-header {
   & .header-transparent {
     .btn-join {
       font-family: 14px;
-      padding: 10px 16px;
+      padding: 8px 14px;
       border: 1px solid white;
 
       &:hover {
@@ -75,6 +75,7 @@ div.main-header {
         line-height: 24px;
         transition: color 0.2s;
         font-family: $font1;
+        cursor: pointer;
 
         &:hover {
           box-shadow: 0 -3px #1dbf73 inset;
@@ -166,12 +167,19 @@ div.fiverr-nav ul {
   }
 }
 
-div.fiverr-nav ul li {
-  font-size: 0.875em;
+div.fiverr-nav ul {
+  & > * {
+    font-size: 1em;
 
-  padding-inline-end: 24px;
-  font-family: $font2;
-  color: $secondary-clr-dark;
+    padding-inline-end: 24px;
+    font-family: $font2;
+    color: $secondary-clr-dark;
+
+    &:last-child {
+      padding-inline-end: 0;
+    }
+  }
+
 }
 .main-header.clr-white > *li {
   //same, name sucks
@@ -182,7 +190,6 @@ div.fiverr-nav ul li {
   a {
     max-width: 138px;
     justify-self: start;
-    // text-align: start;
   }
 }
 // .header-row-wrapper {
