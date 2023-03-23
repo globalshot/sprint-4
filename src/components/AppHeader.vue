@@ -62,7 +62,11 @@
               <li>
                 <RouterLink to="/gig" class="no-style">Explore</RouterLink>
               </li>
-              <li>Become a seller</li>
+
+              <li>
+                <RouterLink to="/edit">Become a seller </RouterLink>
+              </li>
+
               <li>Sign in</li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
@@ -72,7 +76,8 @@
         </nav>
       </div>
     </header>
-    <div class="sec-header main-layout full bgc-white" :class="{ 'show': isDoubleScrolled || !isHomePage }">
+    <div class="sec-header main-layout full bgc-white"
+      :class="{ 'show': isDoubleScrolled || !isHomePage }, { 'show-details': isDetailsPage }">
       <div class="sec-header-nav flex space-between">
         <a href="#/gig?tag=graphics-design" class="">Graphics &amp; Design</a>
         <a href="#/gig?tag=marketing" class="">Digital Marketing</a>
@@ -123,9 +128,12 @@ export default {
     isHome() {
       return this.isHomePage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
     },
-    isExplorePage() {
-      return this.$route.path === '/gig';
+    isDetailsPage() {
+      return this.$route.path === '/gig/';
     },
+    isDetails() {
+      return this.isDetailsPage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
+    }
   }
 };
 </script>
