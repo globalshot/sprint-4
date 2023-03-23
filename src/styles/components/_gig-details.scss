@@ -2,7 +2,7 @@
 
 .gig-page {
   position: relative;
-  padding: 32px;
+
 
   .side-bar {
     background-color: #fff;
@@ -19,11 +19,13 @@
   }
 
   .main {
-    flex-grow: 1;
+    margin-inline-end: 9.15%;
+    width: 57.42%;
   }
 
   .details-layout {
     flex-direction: row-reverse;
+    padding: 32px;
   }
 
   .gig-packages-form {
@@ -35,6 +37,6 @@
   margin-inline-end: 1rem;
 }
 
-.seller-stats > * {
+.seller-stats>* {
   margin-inline-end: .5rem;
 }

@@ -1,7 +1,7 @@
 <template>
-    <div class="main-container full">
+    <div class="main-container full main-layout">
 
-        <div class="sticky-focus-header full main-layout">
+        <div class="sticky-focus-header main-layout">
                 <div class="sticky-inner-focus inner-sticky">
                     <div class="nav-container flex full">
                         <div class="nav-container">
@@ -43,7 +43,7 @@
                                 <li>sub category</li>
                             </ul>
                         </nav>
-                        <h1 class="text-display-3">{{ this.gig.title }}</h1><!--size suppose to be 28px-->
+                        <h1 class="text-display-3">{{ gig.title }}</h1><!--size suppose to be 28px-->
 
 
                         <div class="seller-overview">
@@ -391,20 +391,25 @@ export default {
     },
 
     created() {
-        const { id } = this.$route.params;
-        console.log(this.$route);
-        gigService.getById(id)
-            .then(gig => {
-            this.gig = gig;
-            console.log(gig);
-        });
+        // const { id } = this.$route.params;
+        // console.log(this.$route);
+        // gigService.getById(id)
+        //     .then(gig => {
+        //     this.gig = gig;
+        //     console.log(gig);
+        // });
+        this.getGig()
     },
     data() {
         return {
             gig: null
         };
     },
-    computed: {},
+    computed: {
+        well(){
+            return this.gig
+        }
+    },
     components:{
         SidebarContect,
     },
@@ -412,6 +417,15 @@ export default {
     methods: {
         markSelected: function () {
             this.isSelected = !this.isSelected
+        },
+        getGig(){
+            const { id } = this.$route.params;
+            console.log(this.$route);
+            gigService.getById(id)
+            .then(gig => {
+            this.gig = gig;
+            console.log('gig',gig);
+        })
         }
     },
 
