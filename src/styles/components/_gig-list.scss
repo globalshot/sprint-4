@@ -36,13 +36,15 @@
     font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
-.count-services {
-  color: #74767e;
-    font-size: .825em;
-    font-weight: 600;
-    line-height: 1.375em;
-}
 
 .services-sort {
   margin-top: .5rem;
+
+  .count-services {
+    color: #74767e;
+      font-size: .825em;
+      font-weight: 600;
+      line-height: 1.375em;
+  }
+  
 }
