@@ -1,7 +1,5 @@
 /** @format */
 
-
-
 .gig-page {
   //   border: 2px solid red;
   max-width: 1304px;
@@ -9,8 +7,23 @@
   margin-inline: auto;
   position: relative;
 
+  .side-bar {
+    background-color: #fff;
+  }
+
+  .sticky-inner-wrapper {
+    padding: 2em 1.5em;
+    border: 1px solid $grey-txt-light;
+    margin-block-end: 16px;
+  }
+
   .main {
     flex-grow: 1;
+  }
+
+  .details-layout {
+    // display: flex;
+    flex-direction: row-reverse;
   }
 
   .gig-packages-form {
@@ -18,20 +31,20 @@
   }
 
   .gig-packages-table {
-    position: sticky;
-    top: 53px;
-    width: 35%;
-    background-color: #fff;
-    align-self: flex-start;
-    overflow-y: auto;
-    border: 2px solid blue;
+    // position: sticky;
+    // top: 53px;
+    // width: 35%;
+    // background-color: #fff;
+    // align-self: flex-start;
+    // overflow-y: auto;
+    // border: 2px solid blue;
   }
 
-  .sticky-outer-wrapper {
+  .sticky-focus-header {
     position: sticky;
-    top: 0;
+    top: 32px;
     border-bottom: 1px solid $grey-txt-lighter;
-    background: #fff;
+    background: #ffffff56;
     width: 100%;
   }
 }

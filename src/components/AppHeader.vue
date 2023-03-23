@@ -72,7 +72,7 @@
         </nav>
       </div>
     </header>
-    <div class="sec-header main-layout full bgc-white" :class="{ 'show': isDoubleScrolled }">
+    <div class="sec-header main-layout full bgc-white" :class="{ 'show': isDoubleScrolled || !isHomePage }">
       <div class="sec-header-nav flex space-between">
         <a href="#/gig?tag=graphics-design" class="">Graphics &amp; Design</a>
         <a href="#/gig?tag=marketing" class="">Digital Marketing</a>
@@ -122,7 +122,10 @@ export default {
     },
     isHome() {
       return this.isHomePage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
-    }
+    },
+    isExplorePage() {
+      return this.$route.path === '/gig';
+    },
   }
 };
 </script>

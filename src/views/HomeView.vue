@@ -508,6 +508,7 @@ import Hero from '../components/Hero.vue'
 
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+
 export default {
     name: 'HomeView',
     data: () => ({
