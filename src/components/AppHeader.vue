@@ -72,8 +72,8 @@
         </nav>
       </div>
     </header>
-    <div class="sec-header main-layout full bgc-white" :class="{ 'show': isDoubleScrolled || !isHomePage }">
-      <div class="sec-header-nav flex space-between">
+    <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage}" :style="{'display': (!isHomePage || isScrolled? 'grid':'none') }">
+      <div class="sec-header-nav flex space-between" >
         <a href="#/gig?tag=graphics-design" class="">Graphics &amp; Design</a>
         <a href="#/gig?tag=marketing" class="">Digital Marketing</a>
         <a href="#/gig?tag=writing" class="">Writing &amp; Translation</a>

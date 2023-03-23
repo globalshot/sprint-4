@@ -47,12 +47,12 @@ div.main-header {
   }
 
   .sec-header {
-    position: absolute;
+    // position: absolute;
     left: 0%;
     width: 100%;
     opacity: 0;
     transform: rotateX(90deg);
-
+    transition: transform 0.2s;
     &.show {
       // position: relative;
       opacity: 1;
@@ -60,9 +60,10 @@ div.main-header {
       height: 40px;
       align-items: center;
       background-color: #fff;
-      transition: transform 0.2s;
+      
       font-size: 1.1em;
       border-bottom: 1px solid #e4e5e7;
+      border-top: 1px solid #e4e5e7;
     }
 
     &-nav {
@@ -92,9 +93,6 @@ div.main-header {
       width: 100%;
     }
 
-    &:not(.header-transparent) {
-      border-bottom: 1px solid #e4e5e7;
-    }
   }
 
   .btn-nav {
