@@ -76,18 +76,39 @@
         </nav>
       </div>
     </header>
-    <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage}" :style="{'display': (!isHomePage || isScrolled? 'grid':'none') }">
-      <div class="sec-header-nav flex space-between" >
-        <a href="#/gig?tag=graphics-design" class="">Graphics &amp; Design</a>
-        <a href="#/gig?tag=marketing" class="">Digital Marketing</a>
-        <a href="#/gig?tag=writing" class="">Writing &amp; Translation</a>
-        <a href="#/gig?tag=video" class="">Video &amp; Animation</a>
-        <a href="#/gig?tag=music" class="">Music &amp; Audio</a>
-        <a href="#/gig?tag=programming-tech" class="">Programming &amp; Tech</a>
-        <a href="#/gig?tag=photography" class="">Photography</a>
-        <a href="#/gig?tag=business" class="">Business</a>
-        <a href="#/gig?tag=lifestyle" class="">Lifestyle</a>
-        <a href="#/gig?tag=ai-services" class="">AI Services</a>
+    <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
+      :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
+      <div class="sec-header-nav flex space-between">
+        <RouterLink to="/gig?tag=graphics-design">
+          Graphics &amp; Design
+        </RouterLink>
+        <RouterLink to="/gig?tag=marketing">
+          Digital Marketing
+        </RouterLink>
+        <RouterLink to="/gig?tag=word-press">
+          Writing &amp; Translation
+        </RouterLink>
+        <RouterLink to="/gig?tag=video">
+          Video &amp; Animation
+        </RouterLink>
+        <RouterLink to="/gig?tag=music">
+          Music &amp; Audio
+        </RouterLink>
+        <RouterLink to="/gig?tag=programming-tech">
+          Programming &amp; Tech
+        </RouterLink>
+        <RouterLink to="/gig?tag=photography">
+          Photography
+        </RouterLink>
+        <RouterLink to="/gig?tag=business">
+          Business
+        </RouterLink>
+        <RouterLink to="/gig?tag=lifestyle">
+          Lifestyle
+        </RouterLink>
+        <RouterLink to="/gig?tag=ai-services">
+          AI Services
+        </RouterLink>
       </div>
     </div>
   </div>

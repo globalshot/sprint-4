@@ -1,31 +1,45 @@
 <template>
     <div class="flex">
-        <RouterLink class="c-btn" to="/edit">Add</RouterLink>
+        <!-- <RouterLink class="c-btn" to="/edit">Add</RouterLink> -->
         <button class="clear-filter-btn bold" style="font-size: 16px; color: rgb(34, 35, 37);">Clear Filter</button>
         <button @click="showForm" class="budget-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
             <div>Budget
                 <form v-if="showBudget" class="budget-dropdown">
-                <div class="inputs flex">
-                    <div>
-                        <p class="bold">MIN.</p><input><i>$</i>
+                    <div class="inputs flex">
+                        <div>
+                            <p class="bold">MIN.</p>
+                            <div class="input-container flex">
+                                <input placeholder="Any">
+                                <div class="icon-container">
+                                    <i>$</i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="bold">MAX.</p>
+                            <div class="input-container flex">
+                                <input placeholder="Any">
+                                <div class="icon-container last">
+                                    <i>$</i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="bold">MAX.</p><input><i>$</i>
+                    <div class="buttons flex">
+                        <div>Clear All</div>
+                        <button class="btn-apply">Apply</button>
                     </div>
-                </div>
-                <div class="buttons flex">
-                    <div>Clear All</div><button>Apply</button>
-                </div>
-            </form>
+                </form>
 
             </div>
-            <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg" fill="currentFill">
+            <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
+                fill="currentFill">
                 <path
                     d="M5.464 6.389.839 1.769a.38.38 0 0 1 0-.535l.619-.623a.373.373 0 0 1 .531 0l3.74 3.73L9.47.61a.373.373 0 0 1 .531 0l.619.623a.38.38 0 0 1 0 .535l-4.624 4.62a.373.373 0 0 1-.531 0Z">
                 </path>
             </svg>
         </button>
-        <button class="budget-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
+        <button class="delivey-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
             <p>Delivey Time</p>
             <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
                 fill="currentFill">
