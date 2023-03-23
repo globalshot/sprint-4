@@ -21,9 +21,9 @@ async function query(filterBy = { txt: '', tag: '' }) {
         const regex = new RegExp(filterBy.txt, 'i')
         gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
     }
-        if (filterBy.tag) {
-            gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
-        }
+    if (filterBy.tag) {
+        gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
+    }
     return gigs
 }
 
@@ -103,16 +103,16 @@ function _createGig(name, tags) {
 }
 
 ; (() => {
-        let gigs = utilService.loadFromStorage(STORAGE_KEY) || []
-        if (!gigs || !gigs.length) {
-            const tags = ["logo-design", "website-design", "graphics-design", "ai-services", "data", "photography", "video", "word-press"]
-            for (let i=0; i<10; i++) {
-                const idx = utilService.getRandomIntInc(0,7)
-                const title = 'I will polish your personal statement and program application'
-                gigs.push(_createGig(title, [tags[i], tags[idx]]))
-            }
-            utilService.saveToStorage(STORAGE_KEY, gigs)
+    let gigs = utilService.loadFromStorage(STORAGE_KEY) || []
+    if (!gigs || !gigs.length) {
+        const tags = ["logo-design", "website-design", "graphics-design", "ai-services", "data", "photography", "video", "word-press", "marketing", "music", "programming-tech", "business", "lifestyle"]
+        for (let i = 0; i < 20; i++) {
+            const idx = utilService.getRandomIntInc(0, 7)
+            const title = 'I will polish your personal statement and program application'
+            gigs.push(_createGig(title, [tags[i], tags[idx]]))
         }
-    
-       
-    })()
+        utilService.saveToStorage(STORAGE_KEY, gigs)
+    }
+
+
+})()
