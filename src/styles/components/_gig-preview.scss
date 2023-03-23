@@ -4,49 +4,49 @@
   box-sizing: border-box;
   border: 1px solid #e4e5e7;
   width: 100%;
-  max-width: 310px;
+  max-width: rem(310px);
 
   .user-profile {
-    height: 54px;
+    height: rem(54px);
     align-items: center;
-    padding: 12px 12px 8px;
+    padding: rem(12px) rem(12px) rem(8px);
 
     img {
       border-radius: 50%;
-      height: 24px;
-      width: 24px;
+      height: rem(24px);
+      width: rem(24px);
     }
 
     .user-name {
       color: $secondary-clr-dark;
-      font-size: 14px;
+      font-size: em(14px);
       font-weight: 600;
-      margin-left: 8px;
+      margin-left: rem(8px);
     }
 
   }
 
   .title {
     text-align: center;
-    height: 43px;
+    height: rem(43px);
     color: #222325;
-    margin-top: 5px;
-    padding: 0px 12px 5px;
+    margin-top: rem(5px);
+    padding: 0px rem(12px) rem(5px);
     font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
 
     .long-text {
-      font-size: 16px;
+      font-size: 1em;
       word-wrap: break-word;
       text-align: left;
     }
   }
 
   .rating {
-    padding: 10px 12px;
+    padding: rem(10px) rem(12px);
     color: #02c2a9;
-    font-size: 14px;
+    font-size: em(14px);
     font-weight: 700;
-    line-height: 21px;
+    line-height: em(21px);
     grid-template-columns: 1fr 1fr 7fr 2fr;
   }
 
@@ -54,14 +54,14 @@
     text-align: right;
     border-top: 1px solid #efeff0;
     color: $secondary-clr-light;
-    padding: 10px 12px;
-    font-size: 10px;
+    padding: rem(10px) rem(12px);
+    font-size: em(10px);
     justify-content: space-between;
   
     .price {
       color: #404145;
-      font-size: 18px;
-      padding-left: 6px;
+      font-size: em(18px);
+      padding-left: rem(6px);
     }
 
     .like {
@@ -90,7 +90,7 @@
 
   .carousel-imgs {
     width: 100%;
-    min-width: 245px;
+    min-width: rem(245px);
   }
 
 }

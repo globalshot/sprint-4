@@ -1,10 +1,10 @@
 /** @format */
 
 .main-logo {
-  margin: 4px 19px 0 0;
+  margin: rem(4px) rem(19px) 0 0;
   svg {
-    max-height: 28px;
-    max-width: 120px;
+    max-height: rem(28px);
+    max-width: rem(120px);
     cursor: pointer;
     .svg-logo {
       fill: $secondary-clr-dark;

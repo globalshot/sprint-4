@@ -1,10 +1,9 @@
 <template>
     <div class="main-container full main-layout">
 
-        <div class="sticky-focus-header main-layout">
-                <div class="sticky-inner-focus inner-sticky">
-                    <div class="nav-container flex full">
-                        <div class="nav-container">
+        <div class="sticky-focus-header full">
+                    <div class="nav-container main-layout full">
+                        <div class="nav-container flex">
                             <ul class="flex">
                                 <li @click="markSelected" :class="{ selected: isSelected }">
                                     <a>Overview</a>
@@ -19,12 +18,12 @@
                                     <a>Reviews</a>
                                 </li>
                             </ul>
-                        </div>
+                            </div>
                     </div>
                     <footer class="tab-footer flex">
                     </footer>
 
-                </div>
+                
         </div>
 
         <div class="gig-page main-layout">
@@ -400,11 +399,7 @@ export default {
         // });
         this.getGig()
     },
-    data() {
-        return {
-            gig: null
-        };
-    },
+
     computed: {
         well(){
             return this.gig

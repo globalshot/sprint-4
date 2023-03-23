@@ -1,8 +1,8 @@
 /** @format */
 .type-card {
   h1 {
-    padding-bottom: 24px;
-    font-size: 32px;
+    padding-bottom: rem(24px);
+    font-size: 2rem;
     line-height: 120%;
   }
 }
@@ -12,13 +12,11 @@
   display: flex;
   height: 100%;
   white-space: nowrap;
-  margin-block-end: 96px;
+  margin-block-end: rem(96px);
 
   a {
     width: 20%;
-    padding: 16px;
-
-    
+    padding: 1em;
   }
 }
 
@@ -26,22 +24,19 @@
   background-color: $primary-clr-light;
 
   .selling-proposition {
-    padding-block-end: 96px;
-    padding-block-start: 96px;
+    padding-block-end: rem(96px);
+    padding-block-start: rem(96px);
   }
 
   .selling-container {
     position: relative;
-    // display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
   }
 
   .selling-video {
-    padding: 0 16px;
-    // flex-basis: 53.3%;
-    // max-width: 53.3%;
+    padding: 0 1em;
     img {
       object-fit: contain;
       width: 100%;
@@ -90,65 +85,67 @@
   }
 }
 
-.svg-graphic {
-  .cls-4 {
-    fill: none;
-    stroke: #4d535b;
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-  }
-}
-
-.svg-writing {
-  .cls-5 {
-    fill: none;
-    stroke: #4d535b;
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-  }
-}
-
-.svg-sound {
-  .cls-4 {
-    fill: none;
-    stroke: #4d535b;
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-  }
-}
-
-.svg-tech {
-  .cls-4 {
-    fill: none;
-    stroke: #4d535b;
-    stroke-miterlimit: 10;
-    stroke-width: 2px;
-  }
-}
-
-.svg-lifestyle {
-  .cls-4 {
-    fill: none;
-    stroke: #4d535b;
-    stroke-miterlimit: 10;
+.svg {
+  &.svg-graphic {
+    .cls-4 {
+      fill: none;
+      stroke: #4d535b;
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+    }
   }
 
-  .cls-4 {
-    stroke-width: 2.1px;
+  &.svg-writing {
+    .cls-5 {
+      fill: none;
+      stroke: #4d535b;
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+    }
   }
-}
-.svg-business {
-  .cls-2 {
-    fill: #fff;
+
+  &.svg-sound {
+    .cls-4 {
+      fill: none;
+      stroke: #4d535b;
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+    }
+  }
+
+  &.svg-tech {
+    .cls-4 {
+      fill: none;
+      stroke: #4d535b;
+      stroke-miterlimit: 10;
+      stroke-width: 2px;
+    }
+  }
+
+  &.svg-lifestyle {
+    .cls-4 {
+      fill: none;
+      stroke: #4d535b;
+      stroke-miterlimit: 10;
+    }
+
+    .cls-4 {
+      stroke-width: 2.1px;
+    }
+  }
+  &.svg-business {
+    .cls-2 {
+      fill: #fff;
+    }
   }
 }
 
 .icons {
   display: grid;
-  padding-inline-start: 20px;
-  padding-inline-end: 20px;
+  padding-inline-start: em(20px);
+  padding-inline-end: em(20px);
   grid-template-columns: repeat(5, 1fr);
-  gap: 55px;
+  gap: em(55px);
 
   .flex div {
     width: 100%;

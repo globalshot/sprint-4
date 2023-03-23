@@ -16,7 +16,7 @@
   .categories-list section.type-card .vueperslides__parallax-wrapper {
     position: relative;
     overflow: hidden;
-    padding-bottom: 26% !important;
+    // padding-bottom: 26% !important;
   }
 
   .vueperslides__track {
@@ -36,7 +36,7 @@
     white-space: nowrap;
     transition: 0.5s ease-in-out transform;
     // min-height: 300px;
-    height: 340px;
+    height: em(340px);
     display: flex;
   }
 
@@ -46,19 +46,19 @@
 
   .subcategory-warper {
     position: relative;
-    height: 340px;
+    height: em(340px);
     display: flex;
     flex-direction: column;
     color: $tertiary-clr-light;
     margin-inline-end: 3%;
-    width: 252px;
+    width: rem(252px);
     // height: 100%;
     border-radius: 4px;
-    padding: 16px;
+    padding: 1rem;
     cursor: pointer;
 
     span {
-      font-size: 14px;
+      font-size: em(14px);
       padding-block-end: 0.5em;
         text-align: left;
     }
@@ -66,12 +66,12 @@
     h4 {
       color: white;
       text-align: left;
-      font-size: 23px;
+      font-size: em(23px);
     }
   }
 
   .vueperslide__content {
-    min-height: 300px;
+    min-height: em(300px);
     width: 100%;
     color: white;
     

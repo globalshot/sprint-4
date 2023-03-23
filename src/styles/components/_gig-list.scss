@@ -1,5 +1,5 @@
 .gig-list {
-    max-width: 1400px;
+    max-width: rem(1400px);
     grid-template-columns: repeat(4,1fr);
     grid-gap: 2em;
     margin-top: 1rem;
