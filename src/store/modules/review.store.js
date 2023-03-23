@@ -1,7 +1,7 @@
 import { reviewService } from '../../services/review.service.js';
 import router from '../../router/routes'
 
-export default {
+export const reviewStore = {
   state: {
     reviews: null
   },

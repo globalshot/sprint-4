@@ -8,9 +8,11 @@
       :key="review._id"
       class="review-preview align-center "
     >
-      <h4>About: <router-link :to="'/gig/'+review.gig._id">{{ review.gig.name }}</router-link></h4>
-      <h4>By: {{ review.user.username }}</h4>
-      <p>Review: {{ review.txt }}</p>
+      <div v-if="review.gig.gigId === this.gig._id">
+        <h4>By: {{ review.user.userName }}</h4>
+        <h4>Rating: {{ review.rating }}</h4>
+        <p>Review: {{ review.reviewDetails }}</p>
+      </div>
     </div>
     <!-- </details> -->
   </div>
@@ -19,6 +21,9 @@
 <script>
 export default {
   name: 'review-page',
+  props: {
+        gig: Object,
+    },
   computed: {
     reviews() {
       return this.$store.getters.getReviews;

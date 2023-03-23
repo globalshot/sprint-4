@@ -191,6 +191,7 @@
 
 
                     <div class="gig-page-review">
+                        <ReviewPage :gig='gig' />
                         <div class="">Review</div><!--some classes-->
                         <div class="package-review">
                             <header class="reviews-header breakdown-header">
@@ -380,6 +381,7 @@
 <script>
 import { gigService } from './../services/gig.service'
 import SidebarContect from '../components/gigDetails/SidebarContect.vue'
+import ReviewPage from './ReviewPage.vue'
 
 export default {
     data() {
@@ -407,6 +409,7 @@ export default {
     },
     components:{
         SidebarContect,
+        ReviewPage,
     },
 
     methods: {
