@@ -3,6 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import GigIndex from '../views/GigIndex.vue'
 import GigDetails from '../views/GigDetails.vue'
+import GigEdit from '../views/GigEdit.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,12 @@ const router = createRouter({
             name: 'GigDetails',
             component: GigDetails
         },
+        {
+            path: '/edit/:id?',
+            name: 'GigEdit',
+            component: GigEdit
+        },
+        
     ]
 })
 

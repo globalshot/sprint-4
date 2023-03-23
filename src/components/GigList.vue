@@ -1,9 +1,16 @@
 <template>
-    <h1 class="list-header" v-if="filterBy.tag">{{ header() }}</h1>
-    <h1 class="list-header" v-else>Explore</h1>
+    <h1 class="gig-header" v-if="filterBy.tag">{{ header() }}</h1>
+    <h1 class="gig-header" v-else>Explore</h1>
     <MultipleSelect/>
+    <div class="services-sort">
+        <div class="count-services">
+            <span>{{ gigs.length }} </span>
+            <span v-if="gigs.length === 1"> service available</span>
+            <span v-else> services available</span>
+        </div>
+    </div>
     <div class="gig-list grid">
-        <GigPreview v-for="gig in gigs" :key="gig.id" :gig="gig" />
+        <GigPreview v-for="gig in gigs" :key="gig._id" :gig="gig" @removeGig="$emit('removeGig', gig._id)"/>
     </div>
 </template>
 
@@ -21,9 +28,6 @@ export default {
         MultipleSelect
     },
     created() {
-        this.filterBy.tag = (this.$route.query.tag)
-        console.log(this.filterBy.tag);
-        this.$emit('filterBy', { ...this.filterBy })
     },
     data() {
         return {
