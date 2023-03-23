@@ -1,8 +1,8 @@
 .gig-list {
     max-width: 1400px;
     grid-template-columns: repeat(4,1fr);
-    grid-gap: 32px;
-    margin-top: 16px;
+    grid-gap: 2em;
+    margin-top: 1rem;
     
 
 
@@ -29,20 +29,20 @@
 
 .gig-header {
     color: $secondary-clr-darker;
-    font-size: 32px;
-    line-height: 36px;
+    font-size: 2em;
+    line-height: 2.25em;
     font-weight: 700;
-    padding: 8px 0;
+    padding: .5em 0;
     font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .count-services {
   color: #74767e;
-    font-size: 14px;
+    font-size: .825em;
     font-weight: 600;
-    line-height: 22px;
+    line-height: 1.375em;
 }
 
 .services-sort {
-  margin-top: 16px;
+  margin-top: .5rem;
 }

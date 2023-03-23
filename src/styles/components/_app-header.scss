@@ -84,57 +84,52 @@ div.main-header {
       }
     }
   }
-}
 
-.fiverr-header {
-  transition: background-color 0.25s ease;
-  nav.header-row {
-    height: 80px;
-    width: 100%;
+  .fiverr-header {
+    transition: background-color 0.25s ease;
+    nav.header-row {
+      height: 80px;
+      width: 100%;
+    }
+
+    &:not(.header-transparent) {
+      border-bottom: 1px solid #e4e5e7;
+    }
   }
 
-  &:not(.header-transparent) {
-    border-bottom: 1px solid #e4e5e7;
+  .btn-nav {
+    margin-inline-end: 15px;
+    display: none; //in media query it show it as hamburger
   }
-}
 
-//somehow they pushed things to the end, without space-between
-.btn-nav {
-  margin-inline-end: 15px;
-  display: none; //in media query it show it as hamburger
-}
+  .nav-with-space {
+    //looks like its justr margin change
+    margin-inline-start: 1rem;
+  }
 
-.nav-with-space {
-  //looks like its justr margin change
-  margin-inline-start: 16px;
-}
+  .fiverr-nav {
+    margin-inline-start: 2rem;
+    justify-content: flex-end;
+  }
 
-.fiverr-nav {
-  margin-inline-start: 32px;
-  justify-content: flex-end;
-  // flex-grow: 1;
-}
-
-.search-form {
-  input {
-    transition: 0.1s;
-    border: 0;
-    box-shadow: 0 0 0 1px $grey-txt-light inset;
-    border-start-end-radius: 0px;
-    border-end-end-radius: 0px;
-    &:focus {
-      outline: 0;
-      box-shadow: 0 0 0 1px black inset;
+  .search-form {
+    input {
+      transition: 0.1s;
+      border: 0;
+      box-shadow: 0 0 0 1px $grey-txt-light inset;
+      border-start-end-radius: 0px;
+      border-end-end-radius: 0px;
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 1px black inset;
+      }
     }
   }
 }
 
 .fiverr-search {
-  //idk if good
   visibility: hidden;
-  // &-anim   ated{
 
-  // }
   &-show {
     visibility: visible;
   }
@@ -171,7 +166,7 @@ div.fiverr-nav ul {
   & > * {
     font-size: 1em;
 
-    padding-inline-end: 24px;
+    padding-inline-end: 1.5em;
     font-family: $font2;
     color: $secondary-clr-dark;
 
@@ -179,7 +174,6 @@ div.fiverr-nav ul {
       padding-inline-end: 0;
     }
   }
-
 }
 .main-header.clr-white > *li {
   //same, name sucks
@@ -188,7 +182,7 @@ div.fiverr-nav ul {
 
 .header-row {
   a {
-    max-width: 138px;
+    max-width: 8.625rem;
     justify-self: start;
   }
 }
@@ -208,7 +202,7 @@ header.header-transparent {
 .btn-search {
   background-color: $secondary-clr-darker;
   color: white;
-  padding: 8px 16px;
+  padding: 0.5em 1em;
   text-shadow: none;
   border-radius: 0 4px 4px 0;
 
