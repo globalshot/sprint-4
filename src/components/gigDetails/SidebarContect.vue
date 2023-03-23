@@ -24,10 +24,14 @@
                             <article>
                                 <div class="additional-info flex">
                                     <div>class for delivery</div>
-                                    <div>class for revision</div>
+                                    <div class="revision-wrapper">class for revision</div>
                                 </div>
                                 <ul class="features">
                                     <!--v-for the features-->
+                                    <li class="flex items-center"><span>vi</span>first feature</li>
+                                    <li class="flex items-center"><span>vi</span>second feature</li>
+                                    <li class="flex items-center"><span>vi</span>third feature</li>
+                                    <li class="flex items-center"><span>vi</span>fourth feature</li>
                                 </ul>
                             </article>
                         </div>
