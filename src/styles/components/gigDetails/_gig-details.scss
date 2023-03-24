@@ -1,0 +1,31 @@
+/** @format */
+
+.gig-page {
+  position: relative;
+
+  .side-bar {
+    background-color: #fff;
+  }
+
+  .main {
+    margin-inline-end: 9.15%;
+    width: 57.42%;
+  }
+
+  .details-layout {
+    flex-direction: row-reverse;
+    padding: 2rem;
+  }
+
+  // .gig-packages-form {
+  //   position: relative;
+  // }
+}
+
+.seller-photo {
+  margin-inline-end: 1rem;
+}
+
+.seller-stats > * {
+  margin-inline-end: 0.5rem;
+}

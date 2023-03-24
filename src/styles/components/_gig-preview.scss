@@ -1,6 +1,7 @@
 /** @format */
 
 .gig-preview {
+  position: relative;
   box-sizing: border-box;
   border: 1px solid #e4e5e7;
   width: 100%;
@@ -23,7 +24,6 @@
       font-weight: 600;
       margin-left: rem(8px);
     }
-
   }
 
   .title {
@@ -57,19 +57,38 @@
     padding: rem(10px) rem(12px);
     font-size: em(10px);
     justify-content: space-between;
-  
+    align-items: center;
+
     .price {
       color: #404145;
-      font-size: em(18px);
+      font-size: em(24px);
       padding-left: rem(6px);
+    }
+
+    h4 {
+      padding-bottom: rem(2px);
+      display: inline-block;
+      font-size: em(16px);
+      font-weight: 700;
+      letter-spacing: em(0.5px);
+      padding: 2px 0 0;
+      text-transform: uppercase;
+      vertical-align: top;
     }
 
     .like {
       fill: $grey-txt;
     }
-  
+
+    & .flex {
+      text-align: right;
+      flex-direction: column;
+      height: rem(40px);
+      justify-content: center;
+      margin-block-start: -2px;
+      line-height: rem(20px);
+    }
   }
-  
 
   @include for-mobile-layout {
     justify-self: center;
@@ -79,22 +98,23 @@
     justify-self: center;
   }
 
-}
-
-.gig-preview:hover .title .long-text {
-  color: $primary-clr;
-}
-
-.btn {
-  cursor: pointer;
-
-  .carousel-imgs {
-    width: 100%;
-    min-width: rem(245px);
+  &:hover .title .long-text {
+    color: $primary-clr;
+  }
+  .btns-container {
+    position: absolute;
+    left: 87%;
+    top: 1%;
+    display: flex;
+    gap: rem(10px);
   }
 
+  .btn {
+    cursor: pointer;
+    color: $secondary-clr-dark;
+    .carousel-imgs {
+      width: 100%;
+      min-width: rem(245px);
+    }
+  }
 }
-
-
-
-

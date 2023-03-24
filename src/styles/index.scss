@@ -1,30 +1,35 @@
+/** @format */
+
 // SETUP
-@import 'setup/typography';
-@import 'setup/functions';
-@import 'setup/mixins';
-@import 'setup/variables';
+@import "setup/typography";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/variables";
 
 // BASE
-@import 'basic/base';
-@import 'basic/helpers';
-@import 'basic/spacing';
-@import 'basic/layout';
-@import 'basic/material';
+@import "basic/base";
+@import "basic/helpers";
+@import "basic/spacing";
+@import "basic/layout";
+@import "basic/material";
 
 // COMPONENTS
-@import 'components/user-msg';
-@import 'components/app-header';
-@import 'components/hero';
-@import 'components/app-footer';
-@import 'components/gig-details';
-@import 'components/gigDetails/sidebar-content';
-@import 'components/gig-list';
-@import 'components/gig-preview';
-@import 'components/trusted-by';
-@import 'components/main-lolgo';
-@import 'components/multiple-select';
-@import 'components/vapor-slides';
+@import "components/user-msg";
+@import "components/app-header";
+@import "components/hero";
+@import "components/app-footer";
+@import "components/gig-list";
+@import "components/gig-preview";
+@import "components/trusted-by";
+@import "components/main-lolgo";
+@import "components/multiple-select";
+@import "components/vapor-slides";
+
+//DETAILS
+@import "components/gigDetails/gig-details";
+@import "components/gigDetails/sidebar-content";
+@import "components/gigDetails/sticky-header";
 
 // VIEWS
-@import 'views/home';
-@import 'views/about';
+@import "views/home";
+@import "views/about";
