@@ -24,13 +24,13 @@
                         <div class="seller-overview">
                             <div class="flex">
                                 <div class="seller-photo">
-                                    <img class="img-user" src="../assets/images/profile-pic.png" alt="">
+                                    <img class="img-user" src="../../assets/images/profile-pic.png" alt="">
                                 </div>
                                 <div class="seller-stats"><!--idk if to call it stats-->
                                     <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink>
                                     <span>{{ gig.owner.level }}</span> |
                                     <span class="color-yellow">
-                                        <span><!--v-for for the mount of stars--></span>
+                                        <span>v-for for the mount of stars</span>
                                         {{ gig.owner.rate }}
                                         <span class="rating-count"></span>
                                     </span>
@@ -66,7 +66,7 @@ export default {
             gigService.getById(id)
                 .then(gig => {
                     this.gig = gig;
-                    console.log('gig', gig);
+                    console.log('gig', this.gig.owner.level);
                 })
         }
     },
