@@ -65,8 +65,8 @@
                     <section class="gig-gallery-component"><!--photos-->
                     </section>
 
-
-                    <div class="gig-review-snipped">
+                    <GigReview />
+                    <!-- <div class="gig-review-snipped">
                         <header class="flex">
                             <h2 class="section-title">What people loved about this seller</h2>
                             <button class="reviews-btn">See all reviews</button>
@@ -74,7 +74,7 @@
                         <span class="review-carousel-wrapper">
                             <div>the review</div>
                         </span>
-                    </div>
+                    </div> -->
 
 
                     <div class="gig-description">
@@ -382,6 +382,7 @@ import SidebarContect from '../components/gigDetails/SidebarContect.vue'
 import ReviewPage from './ReviewPage.vue'
 import StickyHeader from '../components/gigDetails/StickyHeader.vue'
 import GigOverview from '../components/gigDetails/GigOverview.vue'
+import GigReview from '../components/gigDetails/GigReview.vue'
 
 export default {
     data() {
@@ -409,6 +410,8 @@ export default {
         ReviewPage,
         StickyHeader,
         GigOverview,
+        GigReview,
+
     },
 
     methods: {

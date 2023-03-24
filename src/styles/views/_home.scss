@@ -14,6 +14,23 @@
   white-space: nowrap;
   margin-block-end: rem(96px);
 
+  .vueperslides__arrow{
+    height: 48px;
+    width: 48px;
+    opacity: 1;
+    
+    
+    &.vueperslides__arrow--prev {
+    transform: translate(60%,-100%);
+    // left: rem(-20px);
+    
+  }
+  &.vueperslides__arrow--next {
+    transform: translate(-60%,-100%);
+  }
+  }
+
+
   a {
     width: 20%;
     padding: 1em;

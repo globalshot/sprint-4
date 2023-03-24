@@ -1,0 +1,142 @@
+/** @format */
+
+.gig-review {
+  position: relative;
+  display: block;
+  margin-block-end: rem(32px);
+  max-height: rem(300px);
+
+  .vueperslides__arrow--prev {
+    left: rem(-26px);
+    opacity: 1;
+  }
+  .vueperslides__arrow--next {
+    right: rem(-26px);
+    opacity: 1;
+  }
+
+  @include for-medium-layout {
+    margin-block-end: rem(64px);
+  }
+
+  header {
+    justify-content: space-between;
+    width: 100%;
+
+    .section-title {
+      font-size: em(20px);
+      line-height: rem(28px);
+      padding-bottom: rem(25px);
+      color: $secondary-clr-dark;
+      font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+    }
+
+    .reviews-btn {
+      font-size: em(14px);
+      padding: 0 0 rem(28px);
+      background: transparent;
+      color: $primary-clr;
+      font-weight: 400;
+      border: 1px solid transparent;
+      border-radius: 4px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .vueperslide__content {
+    height: fit-content;
+    width: 100%;
+    color: white;
+  }
+
+  .carousel-container {
+    max-height: fit-content;
+    height: 100%;
+    width: 100%;
+    // padding: 1rem;
+  }
+
+  .review {
+    // background-color: ;
+    display: flex;
+    outline: none;
+    width: rem(677px);
+    float: left;
+    height: fit-content;
+    min-height: 1px;
+    color: $secondary-clr;
+
+    // padding: 0 rem(16px);
+
+    @include for-small-layout {
+      padding: 0 rem(9px);
+    }
+    @include for-medium-layout {
+      padding: 0 rem(18px);
+    }
+
+    .img-user {
+      // border-radius: 50%;
+      // @include aspect-ratio(1, 1);
+      margin-block-start: 1rem;
+      margin-inline-end: 1rem;
+      img {
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    .review-details {
+      display: flex;
+      flex-direction: column;
+      //   align-items: center;
+    }
+    .user-review {
+      display: flex;
+      align-items: center;
+
+      h6 {
+        font-size: 1em;
+        line-height: 140%;
+      }
+
+      .country {
+        padding: 0 0 0 rem(12px);
+        display: inline-flex;
+        align-items: center;
+        padding-inline-end: 1rem;
+
+        .country-flag {
+          border-radius: 4px;
+          height: rem(20px);
+          margin-top: rem(-3px);
+          width: rem(20px);
+        }
+
+        .country-name {
+          padding-inline-start: 0.5rem;
+        }
+      }
+
+      li {
+        font-size: rem(12px);
+        width: 20px;
+        color: #ffb33e;
+
+        &.num {
+          font-size: 0.8em;
+          font-weight: 600;
+        }
+      }
+    }
+    .review-description {
+      font-weight: 500;
+      width: 100%;
+    }
+  }
+}
