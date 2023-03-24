@@ -1,4 +1,5 @@
-// import { storageService } from './async-storage.service'
+import { storageService } from './storage.service.js'
+import { utilService } from './util.service.js'
 import { httpService } from './http.service'
 import { store } from '../store'
 // import { socketService, SOCKET_EVENT_USER_UPDATED, SOCKET_EMIT_USER_WATCH } from './socket.service'
@@ -33,12 +34,12 @@ function onUserUpdate(user) {
 }
 
 async function getById(userId) {
-    // const user = await storageService.get('user', userId)
-    const user = await httpService.get(`user/${userId}`)
+    const user = await storageService.get('user_db', userId)
+    // const user = await httpService.get(`user/${userId}`)
 
-    socketService.emit(SOCKET_EMIT_USER_WATCH, userId)
-    socketService.off(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
-    socketService.on(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
+    // socketService.emit(SOCKET_EMIT_USER_WATCH, userId)
+    // socketService.off(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
+    // socketService.on(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
 
     return user
 }
@@ -108,6 +109,26 @@ function getLoggedinUser() {
 //     await userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 10000, isAdmin: true})
 //     await userService.signup({fullname: 'Muki G', username: 'muki', password:'123', score: 10000})
 // })()
+
+function _createUser(name, id) {
+    return {
+      _id: id,
+        fullname: name
+  }
+}
+  
+  ; (() => {
+    
+    let users = utilService.loadFromStorage('user_db') || []
+    if (!users || !users.length) {
+        users = [
+        _createUser('Dudu Da', 'u101'),
+      ]
+      utilService.saveToStorage('user_db', users)
+    }
+  
+   
+  })()
 
 
 

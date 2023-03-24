@@ -5,6 +5,7 @@ import GigIndex from '../views/GigIndex.vue'
 import GigDetails from '../views/GigDetails.vue'
 import GigEdit from '../views/GigEdit.vue'
 import reviewPage from '../views/ReviewPage.vue'
+import UserDetails from '../views/UserDetails.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
             path: '/review',
             name: 'reviewpage',
             component: reviewPage,
+        },
+        {
+            path: '/user/:id',
+            name: 'UserDetails',
+            component: UserDetails
         },
 
     ]
