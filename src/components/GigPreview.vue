@@ -59,6 +59,8 @@ export default {
     },
     components: {
         LongText,
+        VueperSlides,
+        VueperSlide
     },
     emits: ['removeGig']
 }
