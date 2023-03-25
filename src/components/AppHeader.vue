@@ -65,7 +65,7 @@
           <div class="fiverr-nav nav-with-space fiverr-nam-right flex">
             <ul class="flex items-center">
               <li>
-                <RouterLink to="/gig" class="no-style">Explore</RouterLink>
+                <RouterLink @click="loadGig" to="/gig" class="no-style">Explore</RouterLink>
               </li>
 
               <li>

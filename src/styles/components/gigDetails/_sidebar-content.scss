@@ -1,68 +1,76 @@
-div.side-bar{
-    width: 33.6%;
-    & .inner-sticky {
-        top: 86px;
-    }
+/** @format */
+
+div.side-bar {
+  width: 33.6%;
+  & .inner-sticky {
+    top: rem(86px);
+  }
 }
 
 aside .package-tabs.triple {
-    & input {
-        display: none;
+  & input {
+    display: none;
+  }
+
+  & .nav-container label {
+    background-color: $tertiary-clr-dark2;
+    border: 1px solid $grey-txt-lighter;
+    color: $secondary-clr-light;
+    flex: 1 1;
+    padding: rem(16px);
+    text-align: center;
+
+    &.aria-selected {
+      //will be added in vue later
+      border-bottom: rem(3px) solid $primary-clr;
+      color: $primary-clr;
     }
 
-    & .nav-container label {
-        background-color: $tertiary-clr-dark2;
-        border: 1px solid $grey-txt-lighter;
-        color: $secondary-clr-light;
-        flex: 1 1;
-        padding: 16px;
-        text-align: center;
-
-        &.aria-selected{//will be added in vue later
-            border-bottom: 3px solid $primary-clr;
-            color: $primary-clr;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    &:hover {
+      cursor: pointer;
     }
+  }
 }
 
-div.some-id{
-    padding-block-start: 32px;
+div.some-id {
+  padding-block-start: rem(32px);
+  border: 1px solid $grey-txt-lighter;
+  border-top: 0;
 
-    & div.package-content{
-        padding-inline: 24px;
-        & .header-default{
-            & h3{
-            justify-content: space-between;
-            min-height: 45px;
-        }
-        & p {
-            margin-block-start: 10px;
-            margin-block-end: 0;
-            min-height: 63px;
-        }
-        }
-        
+  & div.package-content {
+    padding-inline: rem(24px);
+    & .header-default {
+      & h3 {
+        justify-content: space-between;
+        min-height: rem(45px);
+      }
+      & p {
+        font: 400 16px/24px Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+        color: $grey-txt-dark;
+        margin-block-start: rem(10px);
+        margin-block-end: 0;
+        min-height: rem(63px);
+        font-size: em(14px);
+        word-break: break-word;
+      }
     }
+  }
 
-    & div.additional-info {
-        .revision-wrapper{
-            margin-inline-start: 16px;
-        }
+  & div.additional-info {
+    .revision-wrapper {
+      margin-inline-start: rem(16px);
     }
+  }
 
-    & ul{
-        margin-block-end: 20px;
-        color: $secondary-clr-lighter;
-        font-size: 14px;
-        & span{//its svg size 16x16
-            height: 16px;
-            width: 16px;
-            font-size: 16px;
-        }
+  & ul {
+    margin-block-end: rem(20px);
+    color: $secondary-clr-lighter;
+    font-size: em(14px);
+    & span {
+      //its svg size 16x16
+      height: rem(16px);
+      width: rem(16px);
+      font-size: em(16px);
     }
-
+  }
 }
