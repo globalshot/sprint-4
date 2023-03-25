@@ -35,29 +35,79 @@
                         </nav>
                         <h1 class="text-display-3 bold">{{ gig.title }}</h1><!--size suppose to be 28px-->
 
-                        <RouterLink :to="'/user/' + gig.owner._id">
-                            <div class="seller-overview">
-                                <div class="flex">
+
+                        <div class="seller-overview">
+                            <div class="flex">
+                                <RouterLink :to="'/user/' + gig.owner._id">
                                     <div class="seller-photo">
                                         <img class="img-user" src="../assets/images/profile-pic.png" alt="">
                                     </div>
-                                    <div class="seller-stats"><!--idk if to call it stats-->
-                                        <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink>
-                                        <span>{{ gig.owner.level }}</span> |
-                                        <span class="color-yellow">
-                                            <span><!--v-for for the mount of stars--></span>
-                                            {{ gig.owner.rate }}
-                                            <span class="rating-count"></span>
+                                </RouterLink>
+                                <div class="seller-stats"><!--idk if to call it stats-->
+                                    <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink>
+                                    <span>{{ gig.owner.level }}</span> |
+                                    <span class="color-yellow">
+                                        <span><!--v-for for the mount of stars--></span>
+                                        {{ gig.owner.rate }}
+                                        <span class="rating-count"></span>
+                                    </span>
+                                    <div class="img-container">
+
+                                        <span class="review-carousel-wrapper">
+                                            <vueper-slides class="carousel-container no-shadow details-slides"
+                                                :bullets="false" fade>
+                                                <template #arrow-left>
+                                                    <i class="fa-solid fa-angle-left"></i>
+                                                </template>
+                                                <template #arrow-right>
+                                                    <i class="fa-solid fa-angle-right"></i>
+                                                </template>
+                                                <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title"
+                                                    :content="slide.content" :image="slide.image">
+                                                </vueper-slide>
+                                            </vueper-slides>
+                                            <!-- <div class="img-preview"> //trying to make double carusle 
+                                                    <vueper-slides ref="vueperslides1"
+                                                        @slide="$refs.vueperslides2 && $refs.vueperslides2.goToSlide($event.currentSlide.index, { emit: false })"
+                                                         :slide-ratio="1 / 4" :bullets="false" fade>
+                                                        <template #arrow-left>
+                                                            <i class="fa-solid fa-angle-left"></i>
+                                                        </template>
+                                                        <template #arrow-right>
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </template>>
+                                                        <vueper-slide v-for="i in slides" :key="i" :title="i.toString()"
+                                                            :style="'background-color: ' + ['#ff5252', '#42b983'][i % 2]" />
+                                                    </vueper-slides>
+
+                                                    <vueper-slides ref="vueperslides2" :slide-ratio="1 / 6"
+                                                        :dragging-distance="50"
+                                                        @slide="$refs.vueperslides1 && $refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
+                                                        :visible-slides="3" fixed-height="60px" :bullets="false" fade
+                                                        class="img-small-slide">
+                                                        <template #arrow-left>
+                                                            <i class="fa-solid fa-angle-left"></i>
+                                                        </template>
+                                                        <template #arrow-right>
+                                                            <i class="fa-solid fa-angle-right"></i>
+                                                        </template>>
+                                                        <vueper-slide v-for="i in 2" :key="i"
+                                                            @click.native="$refs.vueperslides2 && $refs.vueperslides2.goToSlide(i - 1)">
+                                                            <template #content>
+                                                                <div class="vueperslide__content-wrapper">
+                                                                    <div class="vueperslide__title">{{ i.toString() }}</div>
+                                                                </div>
+                                                            </template>
+                                                        </vueper-slide>
+                                                    </vueper-slides>
+                                                </div> -->
                                         </span>
-                                        <div class="img-container">
-                                            <img src="../../assets/images/demo-img.png" alt="">
-                                            <span>HEYY</span>
-                                        </div>
-                                        <span>(number) orders in queue</span><!--less bold color-->
                                     </div>
+                                    <span>(number) orders in queue</span><!--less bold color-->
                                 </div>
                             </div>
-                        </RouterLink>
+                        </div>
+
 
                         <div class="loyalty-and-noteable-clients">loyalty placeholder</div><!--missing padding and margin-->
                     </div>
@@ -67,8 +117,8 @@
                     <section class="gig-gallery-component"><!--photos-->
                     </section>
 
-
-                    <div class="gig-review-snipped">
+                    <GigReview />
+                    <!-- <div class="gig-review-snipped">
                         <header class="flex">
                             <h2 class="section-title">What people loved about this seller</h2>
                             <button class="reviews-btn">See all reviews</button>
@@ -76,15 +126,60 @@
                         <span class="review-carousel-wrapper">
                             <div>the review</div>
                         </span>
-                    </div>
+                    </div> -->
 
 
                     <div class="gig-description">
                         <header>
-                            <h2 class="section-title">About this gig</h2>
+                            <h2 class="section-title bold">About this Gig</h2>
                         </header>
                         <div class="description-wrapper">
-                            <div class="description-content"></div>
+                            <div class="description-wrapper"><span style="font-size:0"></span>
+                                <div class="description-content" data-impression-collected="true">
+                                    <p><strong>Please message me before ordering!</strong></p>
+                                    <p><br></p>
+                                    <p>I will help you Generating Artificial Intelligence Images from your requests and
+                                        prompts.</p>
+                                    <p><br></p>
+                                    <p>You can choose any style and aspect ratio (1:1, 1:2, 4:5, 16:9, 6:9 etc.).</p>
+                                    <p>You can also ask for a specific AI to be used to generate your Art.</p>
+                                    <p>Fell free to contact me before order, I'll help you to create the perfect image and
+                                        suggest you how to improve the prompts for the best results.</p>
+                                    <p><br></p>
+                                    <p><strong>BASIC PROMPT EXAMPLES:</strong></p>
+                                    <p>"A girl with red hair and brown eyes in anime style"</p>
+                                    <p>"Post apocalyptic city with a child and a robot"</p>
+                                    <p>"A cute fluffy bunny grumpily working on her trip itinerary"</p>
+                                    <p><br></p>
+                                    <p><strong>STYLE EXAMPLES:</strong></p>
+                                    <p>2D, 3D, Futuristic, Abstract, Anime, Manga, Vaporwave, Realistic, painted by Van
+                                        Gogh, Gothic, Pop-Art, Cyberpunk, Concept Art, Character Design, Fantasy etc..</p>
+                                    <p><br></p>
+                                    <p><strong>UNLEASH YOUR IMAGINATION! LET'S CREATE TOGETHER! </strong></p>
+                                    <p><br></p>
+                                    <p>Thanks,</p>
+                                    <p><em>Jacopo.</em></p>
+                                </div>
+                            </div>
+                            <!-- <div class="description-content">
+                                <p class="headline">
+                                    Please message me before ordering!
+                                </p>
+                                <p>
+                                    I will help you Generating Artificial Intelligence Images from your requests and prompts
+                                </p>
+                                <p></p>
+                                <p>
+                                    You can choose any style and aspect ratio (1:1, 1:2, 4:5, 16:9, 6:9 etc.).
+                                    You can also ask for a specific AI to be used to generate your Art.
+                                    Fell free to contact me before order, I'll help you to create the perfect image and
+                                    suggest you how to improve the prompts for the best results.
+                                </p>
+                                <p></p>
+                                <p class="main-headline">
+                                    BASIC PROMPT EXAMPLES:
+                                </p>
+                            </div> -->
                         </div>
                         <ul class="metadata flex"><!--looks like v-for inside v-for-->
                         </ul>
@@ -384,11 +479,26 @@ import SidebarContect from '../components/gigDetails/SidebarContect.vue'
 import ReviewPage from './ReviewPage.vue'
 import StickyHeader from '../components/gigDetails/StickyHeader.vue'
 import GigOverview from '../components/gigDetails/GigOverview.vue'
+import GigReview from '../components/gigDetails/GigReview.vue'
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
 
 export default {
     data() {
         return {
             gig: null,
+
+            slides: [
+                {
+                    // content: `  <span>
+                    //                 <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg" alt="">
+                    //             </span>`,
+                    image: (`https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg`)
+                },
+                {
+                    image: (`https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a48578535dda6059a92aaa13f8c22a64-1678831259/Human_body_fruit-removebg-preview-transformed/create-your-unique-art-through-ai-and-detailed-prompts.png`)
+                }
+            ]
         }
     },
     created() {
@@ -411,6 +521,10 @@ export default {
         ReviewPage,
         StickyHeader,
         GigOverview,
+        GigReview,
+        VueperSlides,
+        VueperSlide,
+
     },
 
     methods: {

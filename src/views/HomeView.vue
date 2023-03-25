@@ -8,9 +8,16 @@
                 <h1>Popuar professional serfices</h1>
                 <div class="gallery-container">
 
-                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 4"
+                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 3" :bullets="false"
                         :dragging-distance="200" :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" @click.prevent />
+                        <template #arrow-left>
+                            <i class="fa-solid fa-angle-left"></i>
+                        </template>
+                        <template #arrow-right>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </template>
+                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" :link="slide.link"
+                            @click.prevent />
                     </vueper-slides>
 
                 </div>
@@ -471,16 +478,18 @@ export default {
     data: () => ({
         slides: [
             {
-                title: 'Slide #1',
+                // title: 'Slide #1',
+                // link : "localhost:5173/#/gig?tag=ai-services",
                 content:
                     // 'Slide 1 content'
-                    //     ` <RouterLink to="/gig?tag=ai-services">
+                    //     ` 
                     // <div class="subcategory-warper"
                     //     style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
                     //     <span>Add talent to AI</span>
                     //     <h4>AI Artists</h4>
                     // </div>
-                    // </RouterLink>`,
+                    // <RouterLink to="/gig?tag=ai-services"></RouterLink>
+                    // `
                     `<a href="#/gig?tag=ai-services">
                 <div class="subcategory-warper"
                     style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
@@ -493,7 +502,7 @@ export default {
                 }
             },
             {
-                title: 'Slide #2',
+                // title: 'Slide #2',
                 content: `
                 
                     <a href="#/gig?tag=logo-design">
@@ -505,7 +514,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #3',
+                // title: 'Slide #3',
                 content: `<a href="#/gig?tag=word-press">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/ae11e2d45410b0eded7fba0e46b09dbd-1598561917003/wordpress-2x.png) ;">
@@ -515,7 +524,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #4',
+                // title: 'Slide #4',
                 content: `<a href="#/gig?tag=music">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png) ;">
@@ -525,7 +534,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #5',
+                // title: 'Slide #5',
                 content: `<a href="#/gig?tag=video">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741663/animated-explainer-2x.png) ;">
@@ -535,7 +544,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #6',
+                // title: 'Slide #6',
                 content: `<a href="#/gig?tag=marketing">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png;">
@@ -545,7 +554,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #7',
+                // title: 'Slide #7',
                 content: `<a href="#/gig?tag=marketing">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741668/seo-2x.png);">
@@ -555,7 +564,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #8',
+                // title: 'Slide #8',
                 content: `<a href="#/gig?tag=graphics-design">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/illustration-2x.png) ;">
@@ -565,7 +574,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #9',
+                // title: 'Slide #9',
                 content: `<a href="#/gig?tag=word-press">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741674/translation-2x.png) ;">
@@ -575,7 +584,7 @@ export default {
                     </a>`
             },
             {
-                title: 'Slide #10',
+                // title: 'Slide #10',
                 content: `<a href="#/gig?tag=data">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741664/data-entry-2x.png) ;">

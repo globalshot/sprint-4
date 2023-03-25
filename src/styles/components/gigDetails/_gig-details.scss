@@ -16,10 +16,67 @@
     flex-direction: row-reverse;
     padding: 2rem;
   }
+  .img-container {
+    .vueperslides {
+      height: 100%;
+      width: rem(713px);
+      padding: 0;
 
-  // .gig-packages-form {
-  //   position: relative;
-  // }
+      &__parallax-wrapper {
+        height: 100%;
+        width: 100%;
+      }
+
+      .vueperslide:last-of-type {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        max-width: 20%;
+        display: flex;
+        left: 50%;
+      }
+
+      .vueperslides__arrow {
+        height: 48px;
+        width: 48px;
+        // opacity: 1;
+        font-size: 1.5em;
+
+        &.vueperslides__arrow--prev {
+          transform: translate(-100%, -100%);
+          // left: rem(-20px);
+        }
+        &.vueperslides__arrow--next {
+          transform: translate(100%, -100%);
+        }
+      }
+    }
+
+    .review-carousel-wrapper {
+      display: block;
+      height: 428.6px;
+    }
+  }
+
+  .gig-description {
+    color: $grey-txt-dark;
+    font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    .section-title {
+      font-size: 20px;
+      line-height: 28px;
+      padding-bottom: 25px;
+      color: $secondary-clr-dark;
+    }
+    .headline {
+      color: $secondary-clr-dark;
+      font-weight: 700;
+    }
+    p:nth-last-child(2) {
+      margin: 0;
+    }
+    p:last-child {
+      margin: 0;
+    }
+  }
 }
 
 .seller-photo {

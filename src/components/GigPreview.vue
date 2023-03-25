@@ -43,6 +43,9 @@
 
 <script>
 import LongText from './LongText.vue'
+import { VueperSlides, VueperSlide } from "vueperslides";
+import "vueperslides/dist/vueperslides.css";
+
 export default {
     name: 'GigPreview',
     data() {
@@ -56,6 +59,8 @@ export default {
     },
     components: {
         LongText,
+        VueperSlides,
+        VueperSlide
     },
     emits: ['removeGig']
 }
