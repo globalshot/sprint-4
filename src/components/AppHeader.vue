@@ -52,9 +52,14 @@
           <div class="fiverr-header-search">
             <form class="search-form fiverr-search fiverr-search-animated "
               :class="{ 'fiverr-search-show': isDoubleScrolled || !isHomePage }">
-              <input type="search"
+              <input v-model="filterBy.txt" type="search"
                 placeholder="What service are you looking for today?"><!--2 kinds of placeholders, aka 2 kinds of inputs-->
-              <button class="btn btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                
+                <a v-bind:href="'/#/gig?txt='+ filterBy.txt">
+                  <div class="btn btn-search">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                </a>
             </form>
           </div>
           <div class="fiverr-nav nav-with-space fiverr-nam-right flex">
@@ -119,7 +124,10 @@ export default {
   data() {
     return {
       isScrolled: false,
-      isDoubleScrolled: false
+      isDoubleScrolled: false,
+      filterBy: {
+                txt: '',
+            },
     };
   },
   mounted() {
