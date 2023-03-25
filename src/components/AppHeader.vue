@@ -157,9 +157,7 @@ export default {
       let { txt, tag } = this.$route.query
       let filterBy = { txt, tag }
       this.$store.dispatch({ type: 'loadGigs', filterBy })
-      // { txt, tag } = this.$route.query
-      // filterBy = { txt, tag }
-      // this.$store.dispatch({ type: 'loadGigs', filterBy })
+      // NOW ITS FILTERING BEFORE CHANGING THE ROUTE... NOT GOOD
     },
     handleScroll() {
       // const box = this.$el;

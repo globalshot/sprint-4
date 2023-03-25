@@ -45,7 +45,7 @@ div.some-id {
         min-height: rem(45px);
       }
       & p {
-        font: 400 16px/24px Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
         color: $grey-txt-dark;
         margin-block-start: rem(10px);
         margin-block-end: 0;
@@ -57,8 +57,22 @@ div.some-id {
   }
 
   & div.additional-info {
+    .delivery-container {
+      display: flex;
+      align-items: center;
+
+      .delivery {
+        margin-inline-start: rem(8px);
+      }
+    }
     .revision-wrapper {
+      display: flex;
+      align-items: center;
       margin-inline-start: rem(16px);
+
+      .revisions {
+        margin-inline-start: rem(8px);
+      }
     }
   }
 
@@ -71,6 +85,50 @@ div.some-id {
       height: rem(16px);
       width: rem(16px);
       font-size: em(16px);
+    }
+  }
+
+  .tab-footer {
+    justify-content: center;
+    padding: rem(20px);
+
+    .btn {
+      display: flex;
+      width: 100%;
+      font-size: 1em;
+      color: white;
+      background-color: $primary-clr;
+      border: 1px solid $primary-clr;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 100%;
+      padding: rem(12px) rem(14px);
+      position: relative;
+      text-decoration: none;
+      justify-content: center;
+
+      .continue {
+        margin-left: auto;
+      }
+
+      .arrow {
+        // position: absolute;
+        float: right;
+        background: none;
+        border: none;
+        // display: inline-block;
+        margin: 0;
+        padding: 0;
+        justify-self: end;
+        margin-left: auto;
+        // padding-inline-start: 13rem;
+      }
+
+      &:hover {
+        background-color: $primary-clr-dark;
+        border-color: $primary-clr-dark;
+      }
     }
   }
 }

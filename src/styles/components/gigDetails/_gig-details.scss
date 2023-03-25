@@ -17,9 +17,13 @@
     padding: 2rem;
   }
   .img-container {
+
     .vueperslides {
       height: 100%;
-      width: rem(713px);
+      // max-width: rem(713px);
+      width: em(713px);
+      // width: 100%;
+    
       padding: 0;
 
       &__parallax-wrapper {
