@@ -60,7 +60,7 @@ div.main-header {
       height: 40px;
       align-items: center;
       background-color: #fff;
-      
+
       font-size: 1.1em;
       border-bottom: 1px solid #e4e5e7;
       border-top: 1px solid #e4e5e7;
@@ -92,7 +92,6 @@ div.main-header {
       height: 80px;
       width: 100%;
     }
-
   }
 
   .btn-nav {
@@ -136,6 +135,19 @@ div.main-header {
 .fiverr-header-search {
   flex-grow: 8;
   max-width: 434px;
+
+  .btn-search {
+    background-color: $secondary-clr-darker;
+    color: white;
+    padding: 0.75em 1em;
+    text-shadow: none;
+    border-radius: 0 4px 4px 0;
+    height: 100%;
+
+    &:hover {
+      background-color: $secondary-clr-darker-hover;
+    }
+  }
 }
 
 .fiverr-nam-right {
@@ -195,17 +207,4 @@ div.fiverr-nav ul {
 header.header-transparent {
   //suppose to be in helpers?
   background-color: transparent;
-}
-
-.btn-search {
-  background-color: $secondary-clr-darker;
-  color: white;
-  padding: 0.5em 1em;
-  text-shadow: none;
-  border-radius: 0 4px 4px 0;
-  height: 100%;
-
-  &:hover {
-    background-color: $secondary-clr-darker-hover;
-  }
 }

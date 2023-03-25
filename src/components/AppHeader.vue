@@ -52,14 +52,14 @@
           <div class="fiverr-header-search">
             <form class="search-form fiverr-search fiverr-search-animated "
               :class="{ 'fiverr-search-show': isDoubleScrolled || !isHomePage }">
-              <input v-model="filterBy.txt" type="search"
+              <input @submit="loadGig" v-model="filterBy.txt" type="search"
                 placeholder="What service are you looking for today?"><!--2 kinds of placeholders, aka 2 kinds of inputs-->
-                
-                <a v-bind:href="'/#/gig?txt='+ filterBy.txt">
-                  <div class="btn btn-search">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                  </div>
-                </a>
+
+              <a @click="loadGig" v-bind:href="'/#/gig?txt=' + filterBy.txt">
+                <div class="btn btn-search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </a>
             </form>
           </div>
           <div class="fiverr-nav nav-with-space fiverr-nam-right flex">
@@ -84,34 +84,34 @@
     <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
       :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
       <div class="sec-header-nav flex space-between">
-        <RouterLink to="/gig?tag=graphics-design">
+        <RouterLink to="/gig?tag=graphics-design" @click="loadGig">
           Graphics &amp; Design
         </RouterLink>
-        <RouterLink to="/gig?tag=marketing">
+        <RouterLink to="/gig?tag=marketing" @click="loadGig" >
           Digital Marketing
         </RouterLink>
-        <RouterLink to="/gig?tag=word-press">
+        <RouterLink to="/gig?tag=word-press" @click="loadGig">
           Writing &amp; Translation
         </RouterLink>
-        <RouterLink to="/gig?tag=video">
+        <RouterLink to="/gig?tag=video" @click="loadGig">
           Video &amp; Animation
         </RouterLink>
-        <RouterLink to="/gig?tag=music">
+        <RouterLink to="/gig?tag=music" @click="loadGig">
           Music &amp; Audio
         </RouterLink>
-        <RouterLink to="/gig?tag=programming-tech">
+        <RouterLink to="/gig?tag=programming-tech" @click="loadGig">
           Programming &amp; Tech
         </RouterLink>
-        <RouterLink to="/gig?tag=photography">
+        <RouterLink to="/gig?tag=photography" @click="loadGig">
           Photography
         </RouterLink>
-        <RouterLink to="/gig?tag=business">
+        <RouterLink to="/gig?tag=business" @click="loadGig">
           Business
         </RouterLink>
-        <RouterLink to="/gig?tag=lifestyle">
+        <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
           Lifestyle
         </RouterLink>
-        <RouterLink to="/gig?tag=ai-services">
+        <RouterLink to="/gig?tag=ai-services" @click="loadGig">
           AI Services
         </RouterLink>
       </div>
@@ -126,8 +126,8 @@ export default {
       isScrolled: false,
       isDoubleScrolled: false,
       filterBy: {
-                txt: '',
-            },
+        txt: '',
+      },
     };
   },
   mounted() {
@@ -137,6 +137,11 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    loadGig() {
+      const { txt, tag } = this.$route.query
+      const filterBy = { txt, tag }
+      this.$store.dispatch({ type: 'loadGigs', filterBy })
+    },
     handleScroll() {
       // const box = this.$el;
       // const boxHeight = box.getBoundingClientRect().height;
