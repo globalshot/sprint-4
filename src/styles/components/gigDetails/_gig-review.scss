@@ -79,18 +79,6 @@
       padding: 0 rem(18px);
     }
 
-    .img-user {
-      // border-radius: 50%;
-      // @include aspect-ratio(1, 1);
-      margin-block-start: 1rem;
-      margin-inline-end: 1rem;
-      img {
-        border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
-      }
-    }
-
     .review-details {
       display: flex;
       flex-direction: column;

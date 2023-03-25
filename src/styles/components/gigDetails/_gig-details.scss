@@ -59,6 +59,10 @@
 
   .gig-description {
     color: $grey-txt-dark;
+    position: relative;
+    // padding-block-end: rem(20px);
+    margin-block-end: rem(64px);
+    // border-bottom: 1px solid $grey-txt;
     font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
     .section-title {
       font-size: 20px;
@@ -77,10 +81,55 @@
       margin: 0;
     }
   }
+
+  .metadata {
+    flex-flow: row wrap;
+    border-top: 1px solid $grey-txt;
+
+    &-attribute {
+      box-sizing: border-box;
+      padding-right: rem(20px);
+      padding-top: rem(20px);
+      width: 33%;
+
+      p {
+        color: $grey-txt;
+      }
+
+      ul {
+        color: $secondary-clr-dark;
+        margin: 0;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .about-this-seller {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 25px;
+  }
 }
 
 .seller-photo {
   margin-inline-end: 1rem;
+}
+
+.img-label {
+position: relative;
+  width: 110px;
+  height: 110px;
+  font-size: 2.2em;
+
+  .img-user {
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
 }
 
 .seller-stats > * {

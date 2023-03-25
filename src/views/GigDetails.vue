@@ -182,6 +182,14 @@
                             </div> -->
                         </div>
                         <ul class="metadata flex"><!--looks like v-for inside v-for-->
+                            <li class="metadata-attribute">
+                                <p>AI engine</p>
+                                <ul class="flex">
+                                    <li>
+                                        Midjourney
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
@@ -191,6 +199,9 @@
                         <div class="seller-card">
                             <div class="profile-info flex">
                                 <div class="user-profile-image flex">
+                                    <label for="profile-image" class="img-label">
+                                        <img class="img-user" src="../assets/images/profile-pic.png" alt="">
+                                    </label>
                                     <!--some kind of label, there is his photo, and over it the level-->
                                 </div>
                                 <div class="user-profile-label flex">

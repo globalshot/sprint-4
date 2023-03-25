@@ -88,3 +88,17 @@ textarea {
 .bgc-white {
   background-color: white;
 }
+
+
+.img-user {
+  border-radius: 50%;
+  // @include aspect-ratio(1, 1);
+  margin-block-start: 1rem;
+  margin-inline-end: 1rem;
+
+  img {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+  }
+}
