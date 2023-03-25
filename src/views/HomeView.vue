@@ -8,8 +8,9 @@
                 <h1>Popuar professional serfices</h1>
                 <div class="gallery-container">
 
-                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 3" :bullets="false"
-                        :dragging-distance="200" :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
+                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 3"
+                        :bullets="false" :dragging-distance="200"
+                        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
                         <template #arrow-left>
                             <i class="fa-solid fa-angle-left"></i>
                         </template>
@@ -17,7 +18,7 @@
                             <i class="fa-solid fa-angle-right"></i>
                         </template>
                         <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content" :link="slide.link"
-                            @click.prevent />
+                            @click="loadGig" />
                     </vueper-slides>
 
                 </div>
@@ -475,7 +476,19 @@ import "vueperslides/dist/vueperslides.css";
 
 export default {
     name: 'HomeView',
+
+    methods: {
+        loadGig() {
+            const { txt, tag } = this.$route.query
+            const filterBy = { txt, tag }
+            this.$store.dispatch({ type: 'loadGigs', filterBy })
+        },
+    },
     data: () => ({
+
+        filterBy: {
+            txt: '',
+        },
         slides: [
             {
                 // title: 'Slide #1',

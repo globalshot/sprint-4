@@ -84,10 +84,16 @@
     <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
       :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
       <div class="sec-header-nav flex space-between">
+
+        <!-- <vueper-slides :slide-ratio="0.2" :infinite="false" class="no-shadow" :visible-slides="1" disable-arrows-on-edges :bullets="false"><vueper-slide
+          v-for="(slide, i) in slides" :key="i" :title="slide.title" :content="slide.content"
+          :style="'color: ' + ['#ff5252', '#42b983'][i % 2]" />
+        </vueper-slides> -->
+
         <RouterLink to="/gig?tag=graphics-design" @click="loadGig">
           Graphics &amp; Design
         </RouterLink>
-        <RouterLink to="/gig?tag=marketing" @click="loadGig" >
+        <RouterLink to="/gig?tag=marketing" @click="loadGig">
           Digital Marketing
         </RouterLink>
         <RouterLink to="/gig?tag=word-press" @click="loadGig">
@@ -128,6 +134,16 @@ export default {
       filterBy: {
         txt: '',
       },
+      slides: [
+        {
+          title: 'Slide 1',
+          content: 'Slide 1 content.'
+        },
+        {
+          title: 'Slide 2',
+          content: 'Slide 2 content.'
+        }
+      ]
     };
   },
   mounted() {
@@ -138,9 +154,12 @@ export default {
   },
   methods: {
     loadGig() {
-      const { txt, tag } = this.$route.query
-      const filterBy = { txt, tag }
+      let { txt, tag } = this.$route.query
+      let filterBy = { txt, tag }
       this.$store.dispatch({ type: 'loadGigs', filterBy })
+      // { txt, tag } = this.$route.query
+      // filterBy = { txt, tag }
+      // this.$store.dispatch({ type: 'loadGigs', filterBy })
     },
     handleScroll() {
       // const box = this.$el;
@@ -152,6 +171,19 @@ export default {
       this.isScrolled = scrollTop > boxHeight;
       this.isDoubleScrolled = scrollTop > boxHeight2;
     },
+
+    appendSlide() {
+      this.slides.push({
+        title: `Programmagically appended slide ${this.slides.length + 1}`,
+        content: `Programmagically appended slide ${this.slides.length + 1} content.`
+      })
+    },
+    removeSlide() {
+      this.slides.pop()
+    },
+    toggleSlideshow() {
+      this.slideshowDisabled = !this.slideshowDisabled
+    }
 
   },
   computed: {

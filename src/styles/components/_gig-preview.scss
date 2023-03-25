@@ -117,4 +117,60 @@
       min-width: rem(245px);
     }
   }
+
+  .vueperslides {
+    height: rem(185px);
+    width: 308px;
+    padding: 0;
+    .vueperslides__parallax-wrapper {
+      height: 100%;
+
+      .vueperslides__track {
+        .vueperslides__track-inner {
+          .vueperslide {
+            z-index: -11;
+          }
+        }
+      }
+      // @include aspect-ratio($width:308.4, $height:185)
+    }
+
+    .vueperslides__arrow {
+      position: absolute;
+      bottom: 0;
+      height: 35px;
+      width: rem(35px);
+      opacity: 0;
+      transition: 0.2s;
+
+      &--next {
+        right: -10%;
+        border-radius: 50% 0 0 50%;
+      }
+      &--prev {
+        left: -10%;
+        border-radius: 0 50% 50% 0;
+      }
+    }
+
+    &:hover {
+      .vueperslides__arrow {
+        opacity: 1;
+        position: absolute;
+        bottom: 0;
+        height: 35px;
+        width: rem(35px);
+        transition: 0.2s;
+
+        &--next {
+          right: 0;
+          border-radius: 50% 0 0 50%;
+        }
+        &--prev {
+          left: 0;
+        border-radius: 0 50% 50% 0;
+        }
+      }
+    }
+  }
 }

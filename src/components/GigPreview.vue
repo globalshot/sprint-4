@@ -6,9 +6,26 @@
             <button class="btn btn-owner" v-if="showBtns" @click="$emit('removeGig')"><i
                     class="fa-solid fa-trash-can"></i></button>
         </div>
-        <RouterLink class="btn" :to="'/gig/' + gig._id">
-            <img class="carousel-imgs" src="../assets/images/demo-img.png" alt="">
-        </RouterLink>
+
+        <!-- xxx -->
+        <vueper-slides class="carousel-container no-shadow details-slides" :bullets="false" fade>
+            <template #arrow-left>
+                <i class="fa-solid fa-angle-left"></i>
+            </template>
+            <template #arrow-right>
+                <i class="fa-solid fa-angle-right"></i>
+            </template>
+            <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i" :image="slide.image">
+            </vueper-slide>
+        </vueper-slides>
+
+
+        <!-- <RouterLink class="btn" :to="'/gig/' + gig._id">
+            <img class="carousel-imgs" src="../assets/images/gig-imgs/01.webp" alt="">// user img 1 user img 2
+        </RouterLink> -->
+
+
+        <!-- xxx -->
         <div class="user-profile flex">
             <img src="../assets/images/profile-pic.png" alt="">
             <p class="user-name">{{ gig.owner.fullname }}</p>
@@ -48,10 +65,31 @@ import "vueperslides/dist/vueperslides.css";
 
 export default {
     name: 'GigPreview',
+    methods: {
+        loadGig() {
+            const { txt, tag } = this.$route.query
+            const filterBy = { txt, tag }
+            this.$store.dispatch({ type: 'loadGigs', filterBy })
+        },
+    },
     data() {
         return {
+            filterBy: {
+                txt: '',
+            },
             showBtns: false,
+
+            slides: [
+                {
+                    image: (`https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038.jpg`)
+                },
+                {
+                    image: (`https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/296272891/original/01ea9956b9ccee25eee7438bc652a361bce1db0f.jpg`)
+                }
+            ]
         }
+
+
     },
 
     props: {
