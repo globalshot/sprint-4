@@ -20,13 +20,15 @@
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </span>
                         </div>
-                        <input type="text" name="" placeholder='Try "Logo Design"'>
+                        <input v-model="filterBy.txt" type="text" name="" placeholder='Try "Logo Design"'>
                     </div>
-                    <button class="el-button">
-                        <span>
-                            Search
-                        </span>
-                    </button>
+                    <a v-bind:href="'/#/gig?txt='+ filterBy.txt">
+                        <button class="el-button">
+                            <span>
+                                Search
+                            </span>
+                        </button>
+                    </a>
                 </div>
                 <div class="categories flex">
                     Popular:
@@ -79,3 +81,21 @@
         </section>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            filterBy: {
+                txt: '',
+            },
+        }
+    },
+    methods: {
+        // setFilterBy() {
+        //     const filterBy = { ...this.filterBy }
+        //     this.$store.dispatch({ type: 'loadGigs', filterBy })
+        // }
+    }
+}
+</script>

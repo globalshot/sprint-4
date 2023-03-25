@@ -203,6 +203,7 @@ header.header-transparent {
   padding: 0.5em 1em;
   text-shadow: none;
   border-radius: 0 4px 4px 0;
+  height: 100%;
 
   &:hover {
     background-color: $secondary-clr-darker-hover;
