@@ -109,6 +109,9 @@ export default {
       required: true
     }
   },
+    created() {
+        // console.log('test2',this.gig.owner);
+    },
     methods: {
         getGig() {
             const { id } = this.$route.params
