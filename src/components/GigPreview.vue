@@ -26,10 +26,12 @@
 
 
         <!-- xxx -->
-        <div class="user-profile flex">
-            <img src="../assets/images/profile-pic.png" alt="">
-            <p class="user-name">{{ gig.owner.fullname }}</p>
-        </div>
+        <RouterLink :to="'/user/' + gig.owner._id">
+            <div class="user-profile flex">
+                <img src="../assets/images/profile-pic.png" alt="">
+                <p class="user-name">{{ gig.owner.fullname }}</p>
+            </div>
+        </RouterLink>
         <RouterLink class="btn" :to="'/gig/' + gig._id">
             <h3 class="title">
                 <LongText class="long-text" :txt="gig.title" />
