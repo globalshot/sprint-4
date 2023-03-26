@@ -5,7 +5,7 @@
         <!-- <p>app vue</p> -->
         <router-view />
     </div>
-    <Footer></Footer>
+    <Footer class="full"></Footer>
 </template>
 
 <script>
