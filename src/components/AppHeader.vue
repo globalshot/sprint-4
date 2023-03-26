@@ -73,7 +73,7 @@
                 <RouterLink to="/user/u101">Become a seller </RouterLink>
               </li>
 
-              <li>Sign in</li>
+              <li @click="toggleLogin">Sign in</li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
               </li>
@@ -82,6 +82,9 @@
         </nav>
       </div>
     </header>
+
+    <Login v-if="login"/>
+
     <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
       :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
       <div class="sec-header-nav flex space-between">
@@ -127,6 +130,7 @@
 </template>
 
 <script>
+import Login from './Login.vue'
 export default {
   data() {
     return {
@@ -144,7 +148,8 @@ export default {
           title: 'Slide 2',
           content: 'Slide 2 content.'
         }
-      ]
+      ],
+      login: false,
     }
   },
   mounted() {
@@ -177,6 +182,10 @@ export default {
     },
     toggleSlideshow() {
       this.slideshowDisabled = !this.slideshowDisabled
+    },
+
+    toggleLogin(){
+      this.login = !this.login
     }
 
   },
@@ -199,5 +208,8 @@ export default {
       this.$store.dispatch({ type: 'loadGigs', filterBy })
     },
   },
+  components: {
+    Login,
+  }
 }
 </script>

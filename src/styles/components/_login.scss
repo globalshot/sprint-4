@@ -1,0 +1,14 @@
+
+div.model-background{
+    position: absolute;
+    background-color: $grey-txt-dark;
+    opacity: 0.65;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-model{
+    background-color: white;
+    height: 615px;
+    width: 400px;//but they algo got y scroll,
+}
