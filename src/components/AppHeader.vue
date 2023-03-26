@@ -145,30 +145,25 @@ export default {
           content: 'Slide 2 content.'
         }
       ]
-    };
+    }
   },
   mounted() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll)
   },
   destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
-    loadGig() {
-      let { txt, tag } = this.$route.query
-      let filterBy = { txt, tag }
-      this.$store.dispatch({ type: 'loadGigs', filterBy })
-      // NOW ITS FILTERING BEFORE CHANGING THE ROUTE... NOT GOOD
-    },
+    
     handleScroll() {
       // const box = this.$el;
       // const boxHeight = box.getBoundingClientRect().height;
-      const boxHeight = 0;
-      const boxHeight2 = 150;
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const boxHeight = 0
+      const boxHeight2 = 150
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
-      this.isScrolled = scrollTop > boxHeight;
-      this.isDoubleScrolled = scrollTop > boxHeight2;
+      this.isScrolled = scrollTop > boxHeight
+      this.isDoubleScrolled = scrollTop > boxHeight2
     },
 
     appendSlide() {
@@ -187,17 +182,22 @@ export default {
   },
   computed: {
     isHomePage() {
-      return this.$route.path === '/';
+      return this.$route.path === '/'
     },
     isHome() {
       return this.isHomePage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
     },
     isDetailsPage() {
-      return this.$route.path === '/gig/';
+      return this.$route.path === '/gig/'
     },
     isDetails() {
       return this.isDetailsPage ? (this.isDoubleScrolled ? 'grid' : 'none') : 'grid'
-    }
-  }
-};
+    },
+    loadGig() {
+      let { txt, tag } = this.$route.query
+      let filterBy = { txt, tag }
+      this.$store.dispatch({ type: 'loadGigs', filterBy })
+    },
+  },
+}
 </script>
