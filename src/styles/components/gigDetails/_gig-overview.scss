@@ -1,7 +1,6 @@
 /** @format */
 
 .gig-overview {
-
   margin-block-end: rem(16px);
 
   @include for-medium-layout {
@@ -44,11 +43,36 @@
   }
 
   .seller-overview {
-    .seller-photo {
-      .img-user {
-        border-radius: 50%;
-        height: rem(30px);
-        width: rem(30px);
+    .seller-container {
+      align-items: center;
+      margin-block-end: 1rem;
+      .seller-photo {
+        .img-user {
+          margin: 0;
+          border-radius: 50%;
+          height: rem(30px);
+          width: rem(30px);
+        }
+      }
+
+      .seller-stats {
+        align-items: center;
+        
+
+        .stars {
+          color: #ffb33e;
+          margin-inline-start: 1em;
+          .star {
+            font-size: 0.8em;
+            letter-spacing: 0.4em;
+          }
+        }
+        .num {
+          font-size: .8em;
+          align-self:center ;
+          padding-block-start: .2rem;
+          font-weight: 700;
+        }
       }
     }
   }

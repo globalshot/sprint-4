@@ -37,75 +37,76 @@
 
 
                         <div class="seller-overview">
-                            <div class="flex">
-                                <RouterLink :to="'/user/' + gig.owner._id">
+                            <RouterLink :to="'/user/' + gig.owner._id">
+                                <div class="seller-container flex">
                                     <div class="seller-photo">
                                         <img class="img-user" src="../assets/images/profile-pic.png" alt="">
                                     </div>
-                                </RouterLink>
-                                <div class="seller-stats"><!--idk if to call it stats-->
-                                    <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink>
-                                    <span>{{ gig.owner.level }}</span> |
-                                    <span class="color-yellow">
-                                        <span><!--v-for for the mount of stars--></span>
-                                        {{ gig.owner.rate }}
-                                        <span class="rating-count"></span>
-                                    </span>
-                                    <div class="img-container">
 
-                                        <span class="review-carousel-wrapper">
-                                            <vueper-slides class="carousel-container no-shadow details-slides"
-                                                :bullets="false" fade>
-                                                <template #arrow-left>
-                                                    <i class="fa-solid fa-angle-left"></i>
-                                                </template>
-                                                <template #arrow-right>
-                                                    <i class="fa-solid fa-angle-right"></i>
-                                                </template>
-                                                <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title"
-                                                    :content="slide.content" :image="slide.image">
-                                                </vueper-slide>
-                                            </vueper-slides>
-                                            <!-- <div class="img-preview"> //trying to make double carusle 
-                                                    <vueper-slides ref="vueperslides1"
-                                                        @slide="$refs.vueperslides2 && $refs.vueperslides2.goToSlide($event.currentSlide.index, { emit: false })"
-                                                         :slide-ratio="1 / 4" :bullets="false" fade>
-                                                        <template #arrow-left>
-                                                            <i class="fa-solid fa-angle-left"></i>
-                                                        </template>
-                                                        <template #arrow-right>
-                                                            <i class="fa-solid fa-angle-right"></i>
-                                                        </template>>
-                                                        <vueper-slide v-for="i in slides" :key="i" :title="i.toString()"
-                                                            :style="'background-color: ' + ['#ff5252', '#42b983'][i % 2]" />
-                                                    </vueper-slides>
-
-                                                    <vueper-slides ref="vueperslides2" :slide-ratio="1 / 6"
-                                                        :dragging-distance="50"
-                                                        @slide="$refs.vueperslides1 && $refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
-                                                        :visible-slides="3" fixed-height="60px" :bullets="false" fade
-                                                        class="img-small-slide">
-                                                        <template #arrow-left>
-                                                            <i class="fa-solid fa-angle-left"></i>
-                                                        </template>
-                                                        <template #arrow-right>
-                                                            <i class="fa-solid fa-angle-right"></i>
-                                                        </template>>
-                                                        <vueper-slide v-for="i in 2" :key="i"
-                                                            @click.native="$refs.vueperslides2 && $refs.vueperslides2.goToSlide(i - 1)">
-                                                            <template #content>
-                                                                <div class="vueperslide__content-wrapper">
-                                                                    <div class="vueperslide__title">{{ i.toString() }}</div>
-                                                                </div>
-                                                            </template>
-                                                        </vueper-slide>
-                                                    </vueper-slides>
-                                                </div> -->
+                                    <div class="seller-stats flex"><!--idk if to call it stats-->
+                                        <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
+                                        <span>{{ gig.owner.level }}</span> |
+                                        <span class="color-yellow">
+                                            <span>
+                                                <div class="stars">
+                                                    <ul class="flex">
+                                                        <li>
+                                                            <span class="star">
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="star">
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="star">
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="star">
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="star">
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                        </li>
+                                                        <li class="num">
+                                                            {{ gig.owner.rate }}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </span>
+                                            
+                                            <!-- <span class="rating-count"></span> -->
                                         </span>
+                                        <!--less bold color-->
                                     </div>
-                                    <span>(number) orders in queue</span><!--less bold color-->
                                 </div>
+                            </RouterLink>
+
+                            <div class="img-container">
+
+                                <span class="review-carousel-wrapper">
+                                    <vueper-slides class="carousel-container no-shadow details-slides" :bullets="false"
+                                        fade>
+                                        <template #arrow-left>
+                                            <i class="fa-solid fa-angle-left"></i>
+                                        </template>
+                                        <template #arrow-right>
+                                            <i class="fa-solid fa-angle-right"></i>
+                                        </template>
+                                        <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title"
+                                            :content="slide.content" :image="slide.image">
+                                        </vueper-slide>
+                                    </vueper-slides>
+                                </span>
                             </div>
+                            <span>(number) orders in queue</span>
                         </div>
 
 
@@ -118,16 +119,6 @@
                     </section>
 
                     <GigReview />
-                    <!-- <div class="gig-review-snipped">
-                        <header class="flex">
-                            <h2 class="section-title">What people loved about this seller</h2>
-                            <button class="reviews-btn">See all reviews</button>
-                        </header>
-                        <span class="review-carousel-wrapper">
-                            <div>the review</div>
-                        </span>
-                    </div> -->
-
 
                     <div class="gig-description">
                         <header>
