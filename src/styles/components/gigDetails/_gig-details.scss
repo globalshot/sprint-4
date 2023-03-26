@@ -108,33 +108,9 @@
       }
     }
   }
-
-  .about-this-seller {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    padding-bottom: 25px;
-  }
 }
 
-.seller-photo {
-  margin-inline-end: 1rem;
-}
 
-.img-label {
-position: relative;
-  width: 110px;
-  height: 110px;
-  font-size: 2.2em;
-
-  .img-user {
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-  }
-}
 
 .seller-stats > * {
   margin-inline-end: 0.5rem;
