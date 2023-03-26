@@ -13,10 +13,10 @@
 
                 <div class="main">
 
-                    <!-- <GigOverview></GigOverview> -->
-                    <div class="gig-overview">
+                    <GigOverview :gig='gig'></GigOverview>
+                    <!-- <div class="gig-overview">
                         <nav class="nav-tag">
-                            <ul class="flex"><!--v-for loop, for each category of smth-->
+                            <ul class="flex">
                                 <li>
                                     <span class="link-category">category</span>
                                     <span class="svg-span">
@@ -33,7 +33,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <h1 class="text-display-3 bold">{{ gig.title }}</h1><!--size suppose to be 28px-->
+                        <h1 class="text-display-3 bold">{{ gig.title }}</h1>
 
 
                         <div class="seller-overview">
@@ -43,7 +43,7 @@
                                         <img class="img-user" src="../assets/images/profile-pic.png" alt="">
                                     </div>
 
-                                    <div class="seller-stats flex"><!--idk if to call it stats-->
+                                    <div class="seller-stats flex">
                                         <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
                                         <span>{{ gig.owner.level }}</span> |
                                         <span class="color-yellow">
@@ -81,10 +81,7 @@
                                                     </ul>
                                                 </div>
                                             </span>
-                                            
-                                            <!-- <span class="rating-count"></span> -->
                                         </span>
-                                        <!--less bold color-->
                                     </div>
                                 </div>
                             </RouterLink>
@@ -110,8 +107,8 @@
                         </div>
 
 
-                        <div class="loyalty-and-noteable-clients">loyalty placeholder</div><!--missing padding and margin-->
-                    </div>
+                        <div class="loyalty-and-noteable-clients">loyalty placeholder</div>
+                    </div> -->
                     <!--gig overview ends here-->
 
 
@@ -152,25 +149,6 @@
                                     <p><em>Jacopo.</em></p>
                                 </div>
                             </div>
-                            <!-- <div class="description-content">
-                                <p class="headline">
-                                    Please message me before ordering!
-                                </p>
-                                <p>
-                                    I will help you Generating Artificial Intelligence Images from your requests and prompts
-                                </p>
-                                <p></p>
-                                <p>
-                                    You can choose any style and aspect ratio (1:1, 1:2, 4:5, 16:9, 6:9 etc.).
-                                    You can also ask for a specific AI to be used to generate your Art.
-                                    Fell free to contact me before order, I'll help you to create the perfect image and
-                                    suggest you how to improve the prompts for the best results.
-                                </p>
-                                <p></p>
-                                <p class="main-headline">
-                                    BASIC PROMPT EXAMPLES:
-                                </p>
-                            </div> -->
                         </div>
                         <ul class="metadata flex"><!--looks like v-for inside v-for-->
                             <li class="metadata-attribute">
