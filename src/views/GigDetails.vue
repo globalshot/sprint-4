@@ -8,7 +8,7 @@
             <section class="details-layout flex" v-if="gig">
                 <!--suppose to be 2 colums, will make soon-->
 
-                <SidebarContent></SidebarContent>
+                <SidebarContent :gig='gig'></SidebarContent>
 
 
                 <div class="main">

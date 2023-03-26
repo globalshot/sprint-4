@@ -39,7 +39,7 @@
                 </path>
             </svg>
         </button>
-        <button class="delivey-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
+        <!-- <button class="delivey-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
             <p>Delivey Time</p>
             <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
                 fill="currentFill">
@@ -47,7 +47,7 @@
                     d="M5.464 6.389.839 1.769a.38.38 0 0 1 0-.535l.619-.623a.373.373 0 0 1 .531 0l3.74 3.73L9.47.61a.373.373 0 0 1 .531 0l.619.623a.38.38 0 0 1 0 .535l-4.624 4.62a.373.373 0 0 1-.531 0Z">
                 </path>
             </svg>
-        </button>
+        </button> -->
         <div>
 
         </div>

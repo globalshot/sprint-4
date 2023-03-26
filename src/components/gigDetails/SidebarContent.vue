@@ -13,9 +13,9 @@
                     <div class="nav-container flex">
                         <label @click="price = '66$', quant = '1'" :for="'package-tab-1'"
                             :class="{ 'aria-selected': (this.selectedItem === `basic`) }">Basic</label><!--the style here i guess-->
-                        <label @click="price = '100$', quant = '2'" :for="'package-tab-2'"
+                        <label @click="price = '96$', quant = '2'" :for="'package-tab-2'"
                             :class="{ 'aria-selected': (this.selectedItem === `standart`) }">Standart</label><!--the style here i guess-->
-                        <label @click="price = '166$', quant = '3'" :for="'package-tab-3'"
+                        <label @click="price = '136$', quant = '3'" :for="'package-tab-3'"
                             :class="{ 'aria-selected': (this.selectedItem === `premium`) }">Premium</label><!--the style here i guess-->
                     </div>
                     <div class="some-id"><!--id class-->
@@ -92,10 +92,19 @@
 </template>
 
 <script>
+import { gigService } from '../../services/gig.service';
+
 export default {
+    props: {
+        gig: {
+            type: Object,
+            required: true
+        }
+    },
     data() {
         return {
             selectedItem: 'basic',
+            // price: gig.price,
             price: '66$',
             quant: '1',
         }
