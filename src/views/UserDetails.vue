@@ -1,19 +1,21 @@
 <template>
     <h3>User Details</h3>
-    
-    <h1>{{ user.fullname }}</h1>
-    <button>
-        <RouterLink to="/edit">Add Gig</RouterLink>
-    </button>
-    <GigIndex/>
 
+    <h1>{{ user.fullname }}</h1>
+    <div class="add-gig-container flex">
+        <button class="btn btn-add">
+            <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
+        </button>
+        <span>Add gig</span>
+    </div>
+    <GigIndex />
 </template>
 
 <script>
 import GigList from '../components/GigList.vue'
 import GigIndex from '../views/GigIndex.vue'
 import { userService } from '../services/user.service'
-    export default {
+export default {
     name: "UserDetails",
     data() {
         return {
@@ -35,8 +37,8 @@ import { userService } from '../services/user.service'
         },
     },
     components: {
-         GigList,
-         GigIndex
-        }
+        GigList,
+        GigIndex
+    }
 }
 </script>

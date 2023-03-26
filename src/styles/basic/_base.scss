@@ -53,19 +53,19 @@ a:visited {
   color: inherit;
 }
 
-input[type=date],
-input[type=datetime-local],
-input[type=datetime],
-input[type=email],
-input[type=month],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=text],
-input[type=time],
-input[type=url],
-input[type=week],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
 textarea {
   background-color: #fff;
   border: 1px solid #c5c6c9;
@@ -76,9 +76,8 @@ textarea {
   font: inherit;
   padding: 8px 12px;
   resize: none;
-  transition: .15s ease-in-out;
+  transition: 0.15s ease-in-out;
   width: 100%;
-  
 }
 
 .fiverr-header {
@@ -89,6 +88,23 @@ textarea {
   background-color: white;
 }
 
+.btn.btn-add {
+  border-radius: 50%;
+  height: rem(40px);
+  width: rem(40px);
+  color: white;
+  background-color: $primary-clr;
+  &:hover {
+    background-color: $primary-clr-dark;
+    .fa-solid {
+      transform: scale(1.5);
+    }
+  }
+  .fa-solid {
+    transform: scale(1);
+    transition: 0.2s;
+  }
+}
 
 .img-user {
   border-radius: 50%;
