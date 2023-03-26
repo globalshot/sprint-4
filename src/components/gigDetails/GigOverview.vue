@@ -18,19 +18,19 @@
                 </li>
             </ul>
         </nav>
-        <h1 class="text-display-3 bold">{{ this.gig.title }}</h1>
+        <h1 class="text-display-3 bold">{{ gig.title }}</h1>
 
 
         <div class="seller-overview">
-            <RouterLink :to="'/user/' + this.gig.owner._id">
+            <RouterLink :to="'/user/' + gig.owner._id">
                 <div class="seller-container flex">
                     <div class="seller-photo">
                         <img class="img-user" src="../../assets/images/profile-pic.png" alt="">
                     </div>
 
                     <div class="seller-stats flex">
-                        <RouterLink :to="'/user/' + this.gig.owner._id">{{ this.gig.owner.fullname }}</RouterLink>
-                        <span>{{ this.gig.owner.level }}</span> |
+                        <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
+                        <span>{{ gig.owner.level }}</span> |
                         <span class="color-yellow">
                             <span>
                                 <div class="stars">
@@ -61,7 +61,7 @@
                                             </span>
                                         </li>
                                         <li class="num">
-                                            {{ this.gig.owner.rate }}
+                                            {{ gig.owner.rate }}
                                         </li>
                                     </ul>
                                 </div>
@@ -98,8 +98,8 @@
 <script>
 import { objectToString } from '@vue/shared'
 import { gigService } from '../../services/gig.service.js'
-import { VueperSlides, VueperSlide } from "vueperslides";//???
-import "vueperslides/dist/vueperslides.css";//???
+import { VueperSlides, VueperSlide } from "vueperslides"//???
+import "vueperslides/dist/vueperslides.css"//???
 
 export default {
     // props:['gig'],
