@@ -6,7 +6,7 @@
                 <div class="profile-info flex">
                     <div class="user-profile-image flex">
                         <label for="profile-image" class="img-label">
-                            <img class="img-user" src="../assets/images/profile-pic.png" alt="">
+                            <img class="img-user" src="../../assets/images/profile-pic.png" alt="">
                         </label>
                         <!--some kind of label, there is his photo, and over it the level-->
                     </div>
@@ -105,10 +105,11 @@
 
 <script>
 export default {
-    data() {
-        return {
-            gig:null,
+    props: {
+        gig: {
+            type: Object,
+            required: true
         }
-    }
+    },
 }
 </script>

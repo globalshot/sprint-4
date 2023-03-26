@@ -17,205 +17,13 @@
 
                     <GigReview />
 
-                    <div class="gig-description"><!--hard coded-->
-                        <header>
-                            <h2 class="section-title bold">About this Gig</h2>
-                        </header>
-                        <div class="description-wrapper">
-                            <div class="description-wrapper"><span style="font-size:0"></span>
-                                <div class="description-content" data-impression-collected="true">
-                                    <p><strong>Please message me before ordering!</strong></p>
-                                    <p><br></p>
-                                    <p>I will help you Generating Artificial Intelligence Images from your requests and
-                                        prompts.</p>
-                                    <p><br></p>
-                                    <p>You can choose any style and aspect ratio (1:1, 1:2, 4:5, 16:9, 6:9 etc.).</p>
-                                    <p>You can also ask for a specific AI to be used to generate your Art.</p>
-                                    <p>Fell free to contact me before order, I'll help you to create the perfect image and
-                                        suggest you how to improve the prompts for the best results.</p>
-                                    <p><br></p>
-                                    <p><strong>BASIC PROMPT EXAMPLES:</strong></p>
-                                    <p>"A girl with red hair and brown eyes in anime style"</p>
-                                    <p>"Post apocalyptic city with a child and a robot"</p>
-                                    <p>"A cute fluffy bunny grumpily working on her trip itinerary"</p>
-                                    <p><br></p>
-                                    <p><strong>STYLE EXAMPLES:</strong></p>
-                                    <p>2D, 3D, Futuristic, Abstract, Anime, Manga, Vaporwave, Realistic, painted by Van
-                                        Gogh, Gothic, Pop-Art, Cyberpunk, Concept Art, Character Design, Fantasy etc..</p>
-                                    <p><br></p>
-                                    <p><strong>UNLEASH YOUR IMAGINATION! LET'S CREATE TOGETHER! </strong></p>
-                                    <p><br></p>
-                                    <p>Thanks,</p>
-                                    <p><em>Jacopo.</em></p>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="metadata flex"><!--looks like v-for inside v-for-->
-                            <li class="metadata-attribute">
-                                <p>AI engine</p>
-                                <ul class="flex">
-                                    <li>
-                                        Midjourney
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                    <!--hard coded-->
+                    <GigDescription/>
 
 
-                    <!-- <AboutSeller /> NOT WORKING -->
+                    <AboutSeller :gig="gig"/>
 
-                    <div class="about-seller">
-                        <h2 class="section-title about-this-seller">About The Seller</h2>
-                        <div class="profile-card">
-                            <div class="seller-card">
-                                <div class="profile-info flex">
-                                    <div class="user-profile-image flex">
-                                        <label for="profile-image" class="img-label">
-                                            <img class="img-user" src="../assets/images/profile-pic.png" alt="">
-                                        </label>
-                                        <!--some kind of label, there is his photo, and over it the level-->
-                                    </div>
-                                    <div class="user-profile-label flex">
-                                        <div class="username-line flex">
-                                            <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
-                                            <!--add route to his profile-->
-                                            <div class="status-indicator">
-                                                <span>
-                                                    <svg width="4px" height="4px" viewBox="0 0 16 16"
-                                                        xmlns="http://www.w3.org/2000/svg" fill="#1dbf73">
-                                                        <path
-                                                            d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z">
-                                                        </path>
-                                                    </svg>
-                                                </span>
-                                                <p class="circle-icon">Online</p><!--todo this-->
-                                            </div>
-                                        </div>
-                                        <div class="one-liner flex">
-                                            <p class="one-liner">Level 3 Seller</p>
-                                            <div class="color-yellow">
-                                                <div class="stars">
-                                                    <ul class="flex">
-                                                        <li v-for="star in  stars">
-                                                            <span class="star">
-                                                                <i class="fa-solid fa-star"></i>
-                                                            </span>
-                                                        </li>
-                                                        <span>
-                                                            {{ gig.owner.rate }}
-                                                        </span>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <!--v-for for the stars-->
-                                        </div>
-                                        <button class="btn-contact-me">Contact Me</button>
-                                    </div>
-                                </div>
-
-                                <div class="stats-desc">
-                                    <section class="user-stats-container">
-                                        <ul class="user-stats"><!--v-for loop, or hard coded-->
-                                            <li class="flex">
-                                                <span class="key">From</span>
-                                                <span class="value">Israel</span>
-                                            </li>
-                                            <li class="flex">
-                                                <span class="key">Member since</span>
-                                                <span class="value">Jan 2017</span>
-                                            </li>
-                                            <li class="flex">
-                                                <span class="key">Avg. response time</span>
-                                                <span class="value">1 hour</span>
-                                            </li>
-                                            <li class="flex">
-                                                <span class="key">Last delivery</span>
-                                                <span class="value">about 40 minutes</span>
-                                            </li>
-                                        </ul>
-                                    </section>
-
-                                    <section class="seller-desc">
-                                        <div class="inner">
-                                            <p>
-                                                Hello, I am Waqas. I am a Software Engineer and a tech enthusiast. I have 10
-                                                years of experience in WordPress. I have completed more than 1,000
-                                                successful projects on Fiverr. I help businesses to grow their online
-                                                presence by having modern and up-to-date websites. I offer full website
-                                                creation service along with search engine optimization, marketing, A/B
-                                                testing, brand building, eCommerce solutions and conversion rate
-                                                optimization. Building a top notch website design is what makes me different
-                                                from others. Feel free to contact me for any questions or custom orders!
-                                            </p>
-                                        </div>
-                                        <button>read more</button><!--check when this is a thing-->
-                                    </section>
-                                    <!-- <div class="notable-clients">
-                                        <div class="notable-clients-about">
-                                            <div class="notable-clients-title flex">
-                                                <span>Among my clients &nbsp;</span>
-                                            </div>
-                                            &nbsp;
-                                            <div>question mark svg</div>
-                                            <span>NEW</span>
-                                        </div>
-                                        <ul class="client-list double flex">
-
-                                        </ul>
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <section class="portfolio-external-wrapper">
-                            <section class="porfilio-presence">
-                                <div class="presence-header flex">
-                                    <RouterLink to="/">link to the porfilios</RouterLink>
-                                    <div>the question mark svg</div>
-                                    <span>the new svg(ping one)</span>
-                                </div>
-                                <ul class="grid">
-                                </ul>
-                                <RouterLink to="/">more projects</RouterLink>
-                            </section>
-                        </section> -->
-
-                        <!-- <form class="gig-packages-form" action="/payments">
-                            <div class="gig-packages-table">
-                                <h2 class="section-title">compare packages</h2>
-                                <table>
-                                    <colgroup>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                    </colgroup>
-                                    <tbody>
-                                        <tr class="package-type">
-                                            <th class="package-row-label">Package</th>
-                                            <th class="package-row-price">
-                                                <div class="price-wrapper flex">
-                                                    <p class="price">number</p>
-                                                </div>
-                                                <p class="type">Basic</p>
-                                                <p class="title">his title</p>
-                                            </th>
-                                        </tr>
-                                        <tr class="description">
-                                            <td class="package-row-label"></td>
-                                            <td>bla bla lba</td>
-                                        </tr>
-
-                                        <tr></tr>
-
-                                        <tr class="delivery-time">bla bla, the 4 colums</tr>
-                                        <tr class="select-package">bla bla, the 4 colums, but with button</tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </form> -->
-                    </div>
-
+                
 
                     <GigReviews :gig="gig"/>
 
@@ -233,26 +41,7 @@
 
 
         <section></section><!--the seller pop up at the left bottom-->
-        <aside class="gig-page-bottom">
-            <div class="max-width-container">
-                <div class="gig-card-carousel-wrapper gigs-other-gigs-by">
-                    <h2 class="section-title">More services by
-                        <!--route to users profile i guess-->
-                    </h2>
-                    <div class="gig_listing-package listing-carousel gig-card-layout">
-                        <div><!--some id inside-->
-                            <div class="orca-slider">
-                                <div class="slick-slider slicker-initialized">
-                                    <div class="slick-list">
-                                        <div class="slick-track flex"></div><!--v-for the cards and that-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
+        <GigBottom/><!--wasnt scss-ed at all-->
 
     </div>
     <!-- <section v-if="gig" class="gig-details">
@@ -272,6 +61,8 @@ import GigOverview from '../components/gigDetails/GigOverview.vue'
 import GigReview from '../components/gigDetails/GigReview.vue'
 import GigReviews from '../components/gigDetails/GigReviews.vue'
 import AboutSeller from '../components/gigDetails/AboutSeller.vue'
+import GigDescription from '../components/gigDetails/GigDescription.vue'
+import GigBottom from '../components/gigDetails/GigBottom.vue'
 
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
@@ -308,10 +99,13 @@ export default {
         GigOverview,
         GigReview,
         AboutSeller,
+        GigReviews,
+        GigDescription,
+        GigBottom,
 
         VueperSlides,
         VueperSlide,
-        GigReviews,
+        
 
 
     },
