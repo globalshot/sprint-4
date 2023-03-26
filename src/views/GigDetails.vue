@@ -84,7 +84,6 @@
 
                                             <!-- <span class="rating-count"></span> -->
                                         </span>
-                                        <!--less bold color-->
                                     </div>
                                 </div>
                             </RouterLink>
@@ -110,13 +109,10 @@
                         </div>
 
 
-                        <div class="loyalty-and-noteable-clients">loyalty placeholder</div><!--missing padding and margin-->
+                        <div class="loyalty-and-noteable-clients">loyalty placeholder</div>
                     </div>
                     <!--gig overview ends here-->
 
-
-                    <section class="gig-gallery-component"><!--photos-->
-                    </section>
 
                     <GigReview />
 
@@ -152,25 +148,6 @@
                                     <p><em>Jacopo.</em></p>
                                 </div>
                             </div>
-                            <!-- <div class="description-content">
-                                <p class="headline">
-                                    Please message me before ordering!
-                                </p>
-                                <p>
-                                    I will help you Generating Artificial Intelligence Images from your requests and prompts
-                                </p>
-                                <p></p>
-                                <p>
-                                    You can choose any style and aspect ratio (1:1, 1:2, 4:5, 16:9, 6:9 etc.).
-                                    You can also ask for a specific AI to be used to generate your Art.
-                                    Fell free to contact me before order, I'll help you to create the perfect image and
-                                    suggest you how to improve the prompts for the best results.
-                                </p>
-                                <p></p>
-                                <p class="main-headline">
-                                    BASIC PROMPT EXAMPLES:
-                                </p>
-                            </div> -->
                         </div>
                         <ul class="metadata flex"><!--looks like v-for inside v-for-->
                             <li class="metadata-attribute">
@@ -200,60 +177,109 @@
                                     </div>
                                     <div class="user-profile-label flex">
                                         <div class="username-line flex">
-                                            <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink>
+                                            <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
                                             <!--add route to his profile-->
                                             <div class="status-indicator">
-                                                <span class="circle-icon">online/offline</span><!--todo this-->
+                                                <span>
+                                                    <svg width="4px" height="4px" viewBox="0 0 16 16"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="#1dbf73">
+                                                        <path
+                                                            d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16Z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <p class="circle-icon">Online</p><!--todo this-->
                                             </div>
                                         </div>
-                                        <div class="one-liner-rating-wrapper flex">
-                                            <p class="one-liner">(his moto i guess)</p>
-                                            <div class="color-yellow">{{ gig.owner.rate }} (number of ratings)</div>
+                                        <div class="one-liner flex">
+                                            <p class="one-liner">Level 3 Seller</p>
+                                            <div class="color-yellow">
+                                                <div class="stars">
+                                                    <ul class="flex">
+                                                        <li v-for="star in  stars">
+                                                            <span class="star">
+                                                                <i class="fa-solid fa-star"></i>
+                                                            </span>
+                                                        </li>
+                                                        <span>
+                                                            {{ gig.owner.rate }}
+                                                        </span>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                             <!--v-for for the stars-->
                                         </div>
-                                        <button class="btn-contact-me">contact me</button>
+                                        <button class="btn-contact-me">Contact Me</button>
                                     </div>
                                 </div>
 
                                 <div class="stats-desc">
-                                    <ul class="user-stats flex"><!--v-for loop, or hard coded-->
-                                    </ul>
-                                    <article class="seller-desc">
-                                        <div class="inner">text text text</div>
+                                    <section class="user-stats-container">
+                                        <ul class="user-stats"><!--v-for loop, or hard coded-->
+                                            <li class="flex">
+                                                <span class="key">From</span>
+                                                <span class="value">Israel</span>
+                                            </li>
+                                            <li class="flex">
+                                                <span class="key">Member since</span>
+                                                <span class="value">Jan 2017</span>
+                                            </li>
+                                            <li class="flex">
+                                                <span class="key">Avg. response time</span>
+                                                <span class="value">1 hour</span>
+                                            </li>
+                                            <li class="flex">
+                                                <span class="key">Last delivery</span>
+                                                <span class="value">about 40 minutes</span>
+                                            </li>
+                                        </ul>
+                                    </section>
+
+                                    <section class="seller-desc">
+                                        <div class="inner">
+                                            <p>
+                                                Hello, I am Waqas. I am a Software Engineer and a tech enthusiast. I have 10
+                                                years of experience in WordPress. I have completed more than 1,000
+                                                successful projects on Fiverr. I help businesses to grow their online
+                                                presence by having modern and up-to-date websites. I offer full website
+                                                creation service along with search engine optimization, marketing, A/B
+                                                testing, brand building, eCommerce solutions and conversion rate
+                                                optimization. Building a top notch website design is what makes me different
+                                                from others. Feel free to contact me for any questions or custom orders!
+                                            </p>
+                                        </div>
                                         <button>read more</button><!--check when this is a thing-->
-                                    </article>
-                                    <div class="notable-clients">
+                                    </section>
+                                    <!-- <div class="notable-clients">
                                         <div class="notable-clients-about">
                                             <div class="notable-clients-title flex">
-                                                <span>Among my clients &nbsp;</span><!--some <b> class-->
+                                                <span>Among my clients &nbsp;</span>
                                             </div>
                                             &nbsp;
-                                            <div>question mark svg</div><!--more info about this section-->
-                                            <span>NEW</span><!--pink new-->
+                                            <div>question mark svg</div>
+                                            <span>NEW</span>
                                         </div>
-                                        <ul class="client-list double flex"><!--v-for loop-->
+                                        <ul class="client-list double flex">
 
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
-                        <section class="portfolio-external-wrapper">
+                        <!-- <section class="portfolio-external-wrapper">
                             <section class="porfilio-presence">
                                 <div class="presence-header flex">
                                     <RouterLink to="/">link to the porfilios</RouterLink>
                                     <div>the question mark svg</div>
                                     <span>the new svg(ping one)</span>
                                 </div>
-                                <ul class="grid"><!--idk if there grid class-->
-                                    <!--first image is 2x2, other 4 are 1x1-->
+                                <ul class="grid">
                                 </ul>
-                                <RouterLink to="/">more projects</RouterLink><!--add link ofc-->
+                                <RouterLink to="/">more projects</RouterLink>
                             </section>
-                        </section>
+                        </section> -->
 
-                        <form class="gig-packages-form" action="/payments"><!--it say add method post-->
-                            <!--lots of inputs idk-->
+                        <!-- <form class="gig-packages-form" action="/payments">
                             <div class="gig-packages-table">
                                 <h2 class="section-title">compare packages</h2>
                                 <table>
@@ -264,33 +290,32 @@
                                         <col>
                                     </colgroup>
                                     <tbody>
-                                        <tr class="package-type"><!--do this x2 times-->
+                                        <tr class="package-type">
                                             <th class="package-row-label">Package</th>
                                             <th class="package-row-price">
                                                 <div class="price-wrapper flex">
                                                     <p class="price">number</p>
                                                 </div>
-                                                <p class="type">Basic</p><!--there was b element-->
+                                                <p class="type">Basic</p>
                                                 <p class="title">his title</p>
                                             </th>
                                         </tr>
                                         <tr class="description">
                                             <td class="package-row-label"></td>
-                                            <td>bla bla lba</td><!--2 more times-->
+                                            <td>bla bla lba</td>
                                         </tr>
 
                                         <tr></tr>
-                                        <!--v-for for sure, not even bothering to write all of the rows(bonuses of each thing)-->
 
                                         <tr class="delivery-time">bla bla, the 4 colums</tr>
                                         <tr class="select-package">bla bla, the 4 colums, but with button</tr>
                                     </tbody>
                                 </table>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
 
-                    
+
                     <div class="gig-page-review">
                         <ReviewPage :gig='gig' />
                         <div class="">Review</div><!--some classes-->
@@ -496,6 +521,8 @@ export default {
     data() {
         return {
             gig: null,
+
+            stars: ['', '', '', '', ''],
 
             slides: [
                 {

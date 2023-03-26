@@ -36,5 +36,13 @@ export default {
     components: {
         GigList,
     },
+    watch: {
+    '$route.query.q': function(newQuery) {
+        const txt = newQuery.txt
+        const tag = newQuery.tag
+        this.filterBy = {txt: txt, tag: tag}
+      // Do something with the new query parameter
+    }
+}
 }
 </script>
