@@ -98,29 +98,15 @@
 <script>
 import { objectToString } from '@vue/shared'
 import { gigService } from '../../services/gig.service.js'
-import { VueperSlides, VueperSlide } from "vueperslides";//???
-import "vueperslides/dist/vueperslides.css";//???
+import { VueperSlides, VueperSlide } from "vueperslides"//???
+import "vueperslides/dist/vueperslides.css"//???
 
 export default {
     // props:['gig'],
     props: {
-    gig: {
-      type: Object,
-      required: true
-    }
-  },
-    created() {
-        // console.log('test2',this.gig.owner);
-    },
-    methods: {
-        getGig() {
-            const { id } = this.$route.params
-            console.log(this.$route)
-            gigService.getById(id)
-                .then(gig => {
-                    this.gig = gig
-                    console.log('gig', this.gig.owner.level)
-                })
+        gig: {
+            type: Object,
+            required: true
         }
     },
     components: {
