@@ -104,11 +104,27 @@ import "vueperslides/dist/vueperslides.css";//???
 export default {
     // props:['gig'],
     props: {
-    gig: {
-      type: Object,
-      required: true
-    }
-  },
+        gig: {
+            type: Object,
+            required: true
+        }
+    },
+
+    data() {
+        return {
+            slides: [
+                {
+                    // content: `  <span>
+                    //                 <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg" alt="">
+                    //             </span>`,
+                    image: (`https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg`)
+                },
+                {
+                    image: (`https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a48578535dda6059a92aaa13f8c22a64-1678831259/Human_body_fruit-removebg-preview-transformed/create-your-unique-art-through-ai-and-detailed-prompts.png`)
+                }
+            ]
+        }
+    },
     created() {
         // console.log('test2',this.gig.owner);
     },
