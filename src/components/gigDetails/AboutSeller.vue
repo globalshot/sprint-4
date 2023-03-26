@@ -13,7 +13,7 @@
                         <div class="username-line flex">
                             <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
                             <!--add route to his profile-->
-                            <div class="status-indicator">
+                            <!-- <div class="status-indicator">
                                 <span>
                                     <svg width="4px" height="4px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                                         fill="#1dbf73">
@@ -24,8 +24,8 @@
                                 </span>
                                 <p class="circle-icon">
                                     online
-                                </p><!--todo this-->
-                            </div>
+                                </p>
+                            </div> -->
                         </div>
                         <div class="one-liner flex">
                             <p class="one-liner">Level 3 Seller</p>

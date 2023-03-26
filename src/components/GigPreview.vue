@@ -8,7 +8,7 @@
         </div>
 
         <!-- xxx -->
-        <vueper-slides class="carousel-container no-shadow details-slides" :bullets="false" fade>
+        <vueper-slides class="carousel-container no-shadow details-slides" fade>
             <template #arrow-left>
                 <i class="fa-solid fa-angle-left"></i>
             </template>

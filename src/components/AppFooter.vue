@@ -46,7 +46,7 @@
                             </g>
                         </svg>
                     </span>
-                    <span class="copy-rights">Coffee rights 2023</span>
+                    <span>Coffee rights 2023</span>
                 </RouterLink>
                 <div class="social-btns flex">
                     <div>

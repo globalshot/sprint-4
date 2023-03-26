@@ -3,7 +3,8 @@
         <div class="nav-container main-layout full">
             <div class="nav-container flex">
                 <ul class="flex">
-                    <li @click="markSelected" :class="{ selected: isSelected }">
+                    <!-- <li @click="$emit(scrollTo)('OverView')" :class="{ selected: isSelected }"> -->
+                        <li @click="markSelected" :class="{ selected: isSelected }">
                         <a>Overview</a>
                     </li>
                     <li @click="markSelected" :class="{ selected: isSelected }">
@@ -35,8 +36,10 @@ export default {
     },
     methods: {
         markSelected: function () {
-            this.isSelected = !this.isSelected
+            // this.isSelected = !this.isSelected
         },
+        
     },
+
 }
 </script>

@@ -4,14 +4,16 @@ div.main-header {
   z-index: 2999;
   width: 100%;
   transition: color 0.5s ease;
+
   .btn-join {
+    font-size: 14px;
     transition: 0.2s;
     border-radius: 4px;
   }
 
   &:not(.header-transparent) {
     .btn-join {
-      font-family: 14px;
+      font-size: 14px;
       padding: 10px 16px;
 
       color: $primary-clr;
@@ -30,8 +32,8 @@ div.main-header {
 
   & .header-transparent {
     .btn-join {
-      font-family: 14px;
-      padding: 8px 14px;
+      font-size: 14px;
+      padding: 10px 16px;
       border: 1px solid white;
 
       &:hover {
