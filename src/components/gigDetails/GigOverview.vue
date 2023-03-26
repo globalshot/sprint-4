@@ -23,25 +23,42 @@
 
                         <div class="seller-overview">
                             <div class="flex">
-                                <div class="seller-photo">
-                                    <img class="img-user" src="../../assets/images/profile-pic.png" alt="">
-                                </div>
+                                <RouterLink :to="'/user/' + gig.owner._id">
+                                    <div class="seller-photo">
+                                        <img class="img-user" src="../assets/images/profile-pic.png" alt="">
+                                    </div>
+                                </RouterLink>
                                 <div class="seller-stats"><!--idk if to call it stats-->
                                     <RouterLink to="/">{{ gig.owner.fullname }}</RouterLink>
                                     <span>{{ gig.owner.level }}</span> |
                                     <span class="color-yellow">
-                                        <span>v-for for the mount of stars</span>
+                                        <span><!--v-for for the mount of stars--></span>
                                         {{ gig.owner.rate }}
                                         <span class="rating-count"></span>
                                     </span>
                                     <div class="img-container">
-                                        <img src="../../assets/images/demo-img.png" alt="">
-                                        <span>HEYY</span>
+
+                                        <span class="review-carousel-wrapper">
+                                            <vueper-slides class="carousel-container no-shadow details-slides"
+                                                :bullets="false" fade>
+                                                <template #arrow-left>
+                                                    <i class="fa-solid fa-angle-left"></i>
+                                                </template>
+                                                <template #arrow-right>
+                                                    <i class="fa-solid fa-angle-right"></i>
+                                                </template>
+                                                <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title"
+                                                    :content="slide.content" :image="slide.image">
+                                                </vueper-slide>
+                                            </vueper-slides>
+                                        </span>
                                     </div>
                                     <span>(number) orders in queue</span><!--less bold color-->
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="loyalty-and-noteable-clients">loyalty placeholder</div><!--missing padding and margin-->
                     </div>
 </template>
