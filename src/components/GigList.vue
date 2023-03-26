@@ -1,14 +1,4 @@
 <template>
-    <h1 class="gig-header" v-if="filterBy.tag">{{ header() }}</h1>
-    <h1 class="gig-header" v-else>Explore</h1>
-    <MultipleSelect/>
-    <div class="services-sort">
-        <div class="count-services">
-            <span>{{ gigs.length }} </span>
-            <span v-if="gigs.length === 1"> service available</span>
-            <span v-else> services available</span>
-        </div>
-    </div>
     <div class="gig-list grid">
         <GigPreview v-for="gig in gigs" :key="gig._id" :gig="gig" @removeGig="$emit('removeGig', gig._id)"/>
     </div>

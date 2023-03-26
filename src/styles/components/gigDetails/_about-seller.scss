@@ -65,13 +65,15 @@
 
       .one-liner {
         flex-direction: column;
-        margin-block-end: 0.55rem;
+        margin-block-end: 0.3rem;
         p {
           margin: 0;
         }
         .stars {
+          display: flex;
           font-size: 1em;
           ul {
+            margin: 0;
             margin-block-start: 0.5rem;
             .star {
               font-size: rem(12px);
@@ -103,6 +105,11 @@
         border: 1px solid $grey-txt-dark;
         border-radius: 0.2857142857em;
         max-width: rem(130px);
+
+        &:hover {
+          background-color: $secondary-clr-light;
+          color: white;
+        }
       }
     }
   }

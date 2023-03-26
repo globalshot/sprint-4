@@ -37,7 +37,7 @@ div.main-header {
       &:hover {
         color: white;
         background-color: $primary-clr-dark;
-        border: 1px solid $primary-clr-dark;
+        border: 1px solid $primary-clr;
       }
 
       &:visited:not(:hover) {

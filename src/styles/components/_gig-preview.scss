@@ -126,7 +126,12 @@
       width: 100%;
       min-width: rem(245px);
     }
+    &.btn-owner{
+      z-index: 100;
+      color: #efeff0;
+    }
   }
+
 
   .vueperslides {
     height: rem(185px);

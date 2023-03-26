@@ -1,6 +1,6 @@
 <template>
     <div class="gig-preview" @mouseover="showBtns = true" @mouseleave="showBtns = false">
-        <div class="btns-container">
+        <div v-if="this.$route.params.id" class="btns-container">
             <RouterLink class="btn btn-owner" v-if="showBtns" :to="'/edit/' + gig._id"><i class="fa-solid fa-pencil"></i>
             </RouterLink>
             <button class="btn btn-owner" v-if="showBtns" @click="$emit('removeGig')"><i
@@ -96,6 +96,9 @@ export default {
 
     props: {
         gig: Object,
+    },
+    created() {
+        console.log(window.location.hash.split('/')[1])
     },
     components: {
         LongText,
