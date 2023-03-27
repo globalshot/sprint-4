@@ -120,9 +120,9 @@
         <RouterLink to="/gig?tag=business" @click="loadGig">
           Business
         </RouterLink>
-        <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
+        <!-- <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
           Lifestyle
-        </RouterLink>
+        </RouterLink> -->
         <RouterLink to="/gig?tag=ai-services" @click="loadGig">
           AI Services
         </RouterLink>
