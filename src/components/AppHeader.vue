@@ -70,11 +70,12 @@
 
               <li>
                 <!-- <RouterLink to="/edit">Become a seller </RouterLink> -->
-                <RouterLink to="/user/u101">Become a seller </RouterLink>
+                <RouterLink to="/user/u101">Become a Seller </RouterLink>
               </li>
 
               <li>
-                <RouterLink to="/signin">Sign in </RouterLink>
+                <!-- <RouterLink to="/signin">Sign in </RouterLink> -->
+                <div @click="toggleLogin">Sign in </div>
               </li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
@@ -85,7 +86,7 @@
       </div>
     </header>
 
-    <Login v-if="login"/>
+    <Login v-if="login" @passUp="toggleLogin"/>
 
     <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
       :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
@@ -120,9 +121,9 @@
         <RouterLink to="/gig?tag=business" @click="loadGig">
           Business
         </RouterLink>
-        <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
+        <!-- <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
           Lifestyle
-        </RouterLink>
+        </RouterLink> -->
         <RouterLink to="/gig?tag=ai-services" @click="loadGig">
           AI Services
         </RouterLink>
@@ -188,7 +189,7 @@ export default {
 
     toggleLogin(){
       this.login = !this.login
-    }
+    },
 
   },
   computed: {

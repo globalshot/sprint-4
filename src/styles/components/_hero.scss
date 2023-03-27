@@ -30,16 +30,20 @@
     align-self: center;
 
     h1 {
+      letter-spacing: 0.1rem;
       max-width: rem(650px);
-      font-size: 3rem;
-      line-height: rem(56px);
-      font-weight: bold;
-      //   font-family: domainDisplay, Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 2.85em;
+      line-height: 3.4rem;
+      font-family: "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      // margin-block-end: 4px;
     }
     .fancy-word {
       font-style: italic;
-      font-family: Domain-Display-Medium-Italic;
-      font-weight: 600;
+      font-family: "DomaineDisplay", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.016em;
     }
 
     .el-button {
@@ -53,7 +57,7 @@
       box-sizing: border-box;
       outline: 0;
       transition: 0.1s;
-      padding: rem(12px) rem(24px);
+      padding: 0.75rem 1.51rem;
       background-color: $primary-clr;
       border: 1px solid $primary-clr;
       border-radius: 0 4px 4px 0;
@@ -74,7 +78,9 @@
 
     .hero-search {
       // position: relative;
-      margin: rem(24px) 0;
+      margin-block-end: rem(24px);
+      margin-block-start: rem(24px);
+      // margin: rem(24px) 0;
       height: 3rem;
       max-width: rem(650px);
       background-color: $tertiary-clr-light;
@@ -89,6 +95,10 @@
       border-radius: rem(4px) 0 0 rem(4px);
       width: rem(41px);
       padding-top: rem(3px);
+
+      span {
+        padding: 0px 0px 0px 4px;
+      }
     }
 
     .input-container {
@@ -100,6 +110,8 @@
         font-size: 1em;
         width: 100%;
         outline: 0;
+        padding: 0px 0px 0px 4px;
+        font-family: $font3;
       }
     }
 
@@ -127,6 +139,11 @@
           background-color: #fff;
           color: $secondary-clr;
         }
+      }
+
+      span {
+        padding-block-end: 1px;
+        letter-spacing: 0.04em;
       }
     }
   }

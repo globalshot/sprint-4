@@ -26,7 +26,7 @@ async function query(filterBy = { txt: '', tag: '' }) {
         gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
     }
     if (filterBy.budget) {
-        gigs = gigs.filter(gig => gig.price >= filterBy.budget.min && gig.price <= filterBy.budget.max)
+        gigs = gigs.filter(gig => (gig.price >= filterBy.budget.min && gig.price <= filterBy.budget.max))
     }
     if (filterBy.daysToMake) {
         gigs = gigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
