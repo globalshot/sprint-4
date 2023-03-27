@@ -58,30 +58,36 @@
             <form @submit.prevent v-if="showDelivery" class="delivery-dropdown">
                 <div class="inputs flex">
                     <div class="radio-list">
-                        <div class="radio-item-wrapper"><label class="n3bUTho Y7LofzN radio-item"><input type="radio"
-                                    name="delivery_time" value="1"><span class="VoSvP5v"></span>
-                                <div class="inner-radio"><span>Express 24H</span></div>
-                            </label></div>
-                        <div class="radio-item-wrapper"><label class="n3bUTho Y7LofzN radio-item"><input type="radio"
-                                    name="delivery_time" value="3"><span class="VoSvP5v"></span>
-                                <div class="inner-radio"><span>Up to 3 days</span></div>
-                            </label></div>
-                        <div class="radio-item-wrapper"><label class="n3bUTho Y7LofzN radio-item"><input type="radio"
-                                    name="delivery_time" value="7"><span class="VoSvP5v"></span>
-                                <div class="inner-radio"><span>Up to 7 days</span></div>
+                        <div class="radio-item-wrapper">
+                            <label class="n3bUTho Y7LofzN radio-item">
+                                <div class="inner-radio">
+                                    <span>Express 24H</span>
+                                </div>
                             </label>
                         </div>
                         <div class="radio-item-wrapper">
-                            <label class="n3bUTho Y7LofzN radio-item selected"><input type="radio" name="delivery_time"
-                                    value="" checked="">
-                                <span class="VoSvP5v"></span>
+                            <label class="n3bUTho Y7LofzN radio-item">
+                                <div class="inner-radio">
+                                    <span>Up to 3 days</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-item-wrapper">
+                            <label class="n3bUTho Y7LofzN radio-item">
+                                <div class="inner-radio">
+                                    <span>Up to 7 days</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radio-item-wrapper">
+                            <label class="radio-item selected felx">
                                 <div class="inner-radio">
                                     <span>Anytime</span>
                                 </div>
                             </label>
                         </div>
                     </div>
-                    <div>
+                    <!-- <div>
                         <p class="bold">MAX.</p>
                         <div class="input-container flex">
                             <input v-model="filterBy.budget.max" placeholder="Any">
@@ -89,7 +95,7 @@
                                 <i>$</i>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="buttons flex">
                     <div @click="clearBudget">Clear All</div>
@@ -112,7 +118,10 @@ export default {
                 },
                 sortBy: {
                     price: false
-                }
+                },
+                timeToDeliver: 999
+
+                
             },
             showBudget: false,
             showDelivery: false,
@@ -122,19 +131,19 @@ export default {
             value4: ref([]),
             options: [
                 {
-                    value: 'Express 24H',
+                    value: 1,
                     label: 'Express 24H',
                 },
                 {
-                    value: 'Up to 3 days',
+                    value: 3,
                     label: 'Up to 3 days',
                 },
                 {
-                    value: 'Up to 7 days',
+                    value: 7,
                     label: 'Up to 7 days',
                 },
                 {
-                    value: 'Anytime',
+                    value: 999,
                     label: 'anytime',
                 },
             ]

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   border: 1px solid #e4e5e7;
   width: 100%;
-  max-width: rem(310px);
+  max-width: rem(326px);
 
   .user-profile {
     height: rem(54px);
@@ -43,26 +43,33 @@
 
   .rating {
     padding: rem(10px) rem(12px);
-    color: #02c2a9;
+    // color: #02c2a9;
     font-size: em(14px);
     font-weight: 700;
     line-height: em(21px);
     grid-template-columns: 1fr 1fr 7fr 2fr;
+    svg {
+      margin: 0;
+    }
+
+    span {
+      margin-inline-start: -.35rem;
+    }
   }
 
   .price-container {
     text-align: right;
     border-top: 1px solid #efeff0;
     color: $secondary-clr-light;
-    padding: rem(10px) rem(12px);
+    padding: rem(3px) rem(12px);
     font-size: em(10px);
     justify-content: space-between;
     align-items: center;
 
     .price {
       color: #404145;
-      padding-left: rem(6px);
-      margin-inline-start: 0.3125em;
+      padding-left: rem(4px);
+      // margin-inline-start: 0.3125em;
       font-size: 1.125rem;
       line-height: 1.25rem;
     }
@@ -72,16 +79,18 @@
       display: inline-block;
       font-size: em(16px);
       font-weight: 700;
-      letter-spacing: em(0.5px);
-      padding: 2px 0 0;
+      letter-spacing: em(1px);
+      padding: 6px 0 0;
       text-transform: uppercase;
       vertical-align: top;
+      margin-inline-start:12px ;
     }
 
     .like {
       fill: $grey-txt;
       transform: scale(1);
       transition: 0.2s;
+      margin: 0;
 
       &:hover {
         fill: rgb(219, 85, 85);
@@ -98,14 +107,6 @@
       margin-block-start: -2px;
       line-height: rem(20px);
     }
-  }
-
-  @include for-mobile-layout {
-    justify-self: center;
-  }
-
-  @include for-small-layout {
-    justify-self: center;
   }
 
   &:hover .title .long-text {
@@ -135,7 +136,7 @@
 
   .vueperslides {
     height: rem(185px);
-    width: 308px;
+    width: rem(326px);
     padding: 0;
     border: 0;
     .vueperslides__parallax-wrapper {
