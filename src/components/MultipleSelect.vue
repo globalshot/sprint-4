@@ -39,7 +39,7 @@
                 </div>
                 <div class="buttons flex">
                     <div @click="clearBudget">Clear All</div>
-                    <button @click="filter()" class="btn-apply">Apply</button>
+                    <button @click="setBudget()" class="btn-apply">Apply</button>
                 </div>
             </form>
         </div>
@@ -58,28 +58,28 @@
             <form @submit.prevent v-if="showDelivery" class="delivery-dropdown">
                 <div class="inputs flex">
                     <div class="radio-list">
-                        <div class="radio-item-wrapper">
+                        <div @click="setDeliveryTime(1)" class="radio-item-wrapper">
                             <label class="n3bUTho Y7LofzN radio-item">
                                 <div class="inner-radio">
                                     <span>Express 24H</span>
                                 </div>
                             </label>
                         </div>
-                        <div class="radio-item-wrapper">
+                        <div @click="setDeliveryTime(3)" class="radio-item-wrapper">
                             <label class="n3bUTho Y7LofzN radio-item">
                                 <div class="inner-radio">
                                     <span>Up to 3 days</span>
                                 </div>
                             </label>
                         </div>
-                        <div class="radio-item-wrapper">
+                        <div @click="setDeliveryTime(7)" class="radio-item-wrapper">
                             <label class="n3bUTho Y7LofzN radio-item">
                                 <div class="inner-radio">
                                     <span>Up to 7 days</span>
                                 </div>
                             </label>
                         </div>
-                        <div class="radio-item-wrapper">
+                        <div @click="setDeliveryTime(999)" class="radio-item-wrapper">
                             <label class="radio-item selected felx">
                                 <div class="inner-radio">
                                     <span>Anytime</span>
@@ -119,7 +119,7 @@ export default {
                 sortBy: {
                     price: false
                 },
-                timeToDeliver: 999
+                daysToMake: 999
 
                 
             },
@@ -158,8 +158,9 @@ export default {
         },
         filter() {
             let filterBy = { ...this.filterBy }
+            console.log(filterBy)
             this.$store.dispatch({ type: 'loadGigs', filterBy })
-            this.showForm()
+            // this.showBudgetForm()
         },
         clearFilter() {
             this.filterBy.budget.min = 0
@@ -170,6 +171,15 @@ export default {
         clearBudget() {
             this.filterBy.budget.min = 0
             this.filterBy.budget.max = 99999
+        },
+        setDeliveryTime(timeValue) {
+            this.filterBy.daysToMake = timeValue
+            this.filter()
+            this.showDeliveryForm()
+        },
+        setBudget() {
+            this.filter()
+            this.showBudgetForm()
         }
     }
 }
