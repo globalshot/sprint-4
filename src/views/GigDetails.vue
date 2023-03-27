@@ -19,13 +19,12 @@
                     <!--not from store yet-->
                     <GigReview />
 
-                    <!--hard coded-->
+                    <!--gig description closer to finish, make it pre, check about meta-->
+                    <GigDescription :gig='gig'/>
+
+
                     <!--not from store yet--><!--im here-->
-                    <GigDescription />
-
-
-                    <!--not from store yet-->
-                    <!-- <AboutSeller :gig="gig" /> -->
+                    <AboutSeller :gig="gig" />
 
 
 
@@ -46,6 +45,7 @@
 
 
         <section></section><!--the seller pop up at the left bottom-->
+        <!--not from store yet-->
         <GigBottom /><!--wasnt scss-ed at all-->
 
     </div>
