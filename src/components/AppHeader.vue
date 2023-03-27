@@ -70,7 +70,7 @@
 
               <li>
                 <!-- <RouterLink to="/edit">Become a seller </RouterLink> -->
-                <RouterLink to="/user/u101">Become a seller </RouterLink>
+                <RouterLink to="/user/u101">Become a Seller </RouterLink>
               </li>
 
               <li>
@@ -121,9 +121,9 @@
         <RouterLink to="/gig?tag=business" @click="loadGig">
           Business
         </RouterLink>
-        <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
+        <!-- <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
           Lifestyle
-        </RouterLink>
+        </RouterLink> -->
         <RouterLink to="/gig?tag=ai-services" @click="loadGig">
           AI Services
         </RouterLink>

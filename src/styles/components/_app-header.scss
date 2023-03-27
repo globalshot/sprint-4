@@ -69,16 +69,20 @@ div.main-header {
     }
 
     &-nav {
+      padding-block-start: 0.14em;
       a {
         text-decoration: none;
-        padding-block: 8px;
-        margin-inline-end: 45px;
-        color: #62646a;
+        padding-block: rem(8px);
+        margin-inline-end: rem(38px);
+        color: $grey-txt-dark;
         flex-shrink: 0;
-        line-height: 24px;
+        line-height: 20px;
         transition: color 0.2s;
-        font-family: $font1;
+        font-family: $font3;
+        font-size: 1em;
+        letter-spacing: -0.047em;
         cursor: pointer;
+        font-weight: 400;
 
         &:hover {
           box-shadow: 0 -3px #1dbf73 inset;
@@ -168,9 +172,14 @@ div.fiverr-nav ul {
     color: $primary-clr;
     cursor: pointer;
   }
-  > li > *:hover {
-    color: $primary-clr;
-    cursor: pointer;
+  li {
+    & > * {
+      // color: #fff;
+      &:hover {
+        color: $primary-clr;
+        cursor: pointer;
+      }
+    }
   }
 }
 
