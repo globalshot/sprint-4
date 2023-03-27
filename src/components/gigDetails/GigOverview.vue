@@ -25,7 +25,7 @@
             <RouterLink :to="'/user/' + gig.owner._id">
                 <div class="seller-container flex">
                     <div class="seller-photo">
-                        <img class="img-user" src="../../assets/images/profile-pic.png" alt="">
+                        <img class="img-user" :src=gig.owner.imgUrl alt="">
                     </div>
 
                     <div class="seller-stats flex">

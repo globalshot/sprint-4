@@ -23,12 +23,14 @@
                     <GigDescription :gig='gig'/>
 
 
-                    <!--not from store yet--><!--im here-->
+                    <!--not from store yet-->
+                    <!--cant do it yet because there no user yet-->
+                    <!--im here ended, dont know where to continue-->
                     <AboutSeller :gig="gig" />
 
 
 
-                    <!--not from store yet-->
+                    <!-- not from store yet -->
                     <GigReviews :gig="gig" />
 
 
