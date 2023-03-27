@@ -1,31 +1,31 @@
 <template>
     <div class="main-container full main-layout">
 
-        <StickyHeader />
+        <StickyHeader @scrollTo="scrollTo"/>
 
         <div class="gig-page main-layout">
 
             <section class="details-layout flex" v-if="gig">
                 <!--suppose to be 2 colums, will make soon-->
 
-                <SidebarContent></SidebarContent>
+                <SidebarContent :gig='gig'></SidebarContent>
 
 
                 <div class="main">
 
-                    <GigOverview :gig='gig'></GigOverview>
+                    <GigOverview ref="OverView" :gig='gig'></GigOverview>
 
                     <GigReview />
 
                     <!--hard coded-->
-                    <GigDescription/>
+                    <GigDescription />
 
 
-                    <AboutSeller :gig="gig"/>
+                    <AboutSeller :gig="gig" />
 
-                
 
-                    <GigReviews :gig="gig"/>
+
+                    <GigReviews :gig="gig" />
 
 
                     <div class="gig-tags-container">
@@ -41,7 +41,7 @@
 
 
         <section></section><!--the seller pop up at the left bottom-->
-        <GigBottom/><!--wasnt scss-ed at all-->
+        <GigBottom /><!--wasnt scss-ed at all-->
 
     </div>
     <!-- <section v-if="gig" class="gig-details">
@@ -74,7 +74,7 @@ export default {
 
             stars: ['', '', '', '', ''],
 
-            
+
         }
     },
     created() {
@@ -105,7 +105,7 @@ export default {
 
         VueperSlides,
         VueperSlide,
-        
+
 
 
     },
@@ -119,7 +119,10 @@ export default {
                     this.gig = gig;
                     console.log('gig', this.gig);
                 })
-        }
+        },
+        scrollTo(txt) {
+            this.$refs[txt].scrollIntoView({ behavior: "smooth" })
+        },
     },
 
 }

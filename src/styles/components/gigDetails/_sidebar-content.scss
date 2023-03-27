@@ -1,7 +1,8 @@
 /** @format */
 
 div.side-bar {
-  width: 33.6%;
+  // width: 33.6%;
+  width: rem(412.95px);
   & .inner-sticky {
     top: rem(86px);
   }

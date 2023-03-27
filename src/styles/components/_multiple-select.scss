@@ -59,8 +59,7 @@
 .budget-dropdown {
   z-index: 11;
   position: absolute;
-  left: -30%;
-  top: 250%;
+  top: 100%;
   color: $grey-txt;
   background-color: #fff;
   border: 1px solid #e4e5e7;
@@ -143,4 +142,8 @@
 
 .filter-arrow {
   margin-left: rem(12px);
+}
+
+.budget-container {
+  position: relative;
 }

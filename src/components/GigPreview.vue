@@ -8,7 +8,7 @@
         </div>
 
         <!-- xxx -->
-        <vueper-slides class="carousel-container no-shadow details-slides" :bullets="false" fade>
+        <vueper-slides class="carousel-container no-shadow details-slides" fade>
             <template #arrow-left>
                 <i class="fa-solid fa-angle-left"></i>
             </template>
@@ -97,9 +97,7 @@ export default {
     props: {
         gig: Object,
     },
-    created() {
-        console.log(window.location.hash.split('/')[1])
-    },
+    created() {},
     components: {
         LongText,
         VueperSlides,
