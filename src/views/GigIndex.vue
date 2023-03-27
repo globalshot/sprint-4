@@ -2,15 +2,15 @@
 
 <template>
     <div v-if="!this.$route.params.id">
-        <ul class="flex">
-            <li>
+        <ul class="bread-crumbles flex">
+            <li class="btn-home">
                 <a class="" href="/">
                     <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/home-breadcrumb.2ba1681.svg" alt="Fiverr">
                 </a>
             </li>
-            <li>
+            <li >
                 <span class="divider">/</span>
-                <a href="">{{ header() }}</a>
+                <a class="category" href="">{{ header() }}</a>
             </li>
         </ul>
         <h1 class="gig-header">{{ header() }}</h1>
