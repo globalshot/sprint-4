@@ -14,10 +14,10 @@
                 <div class="main">
 
                     <!--carousel images hard coded, no order amount yet-->
-                    <!-- <GigOverview ref="OverView" :gig='gig'></GigOverview> -->
+                    <GigOverview ref="OverView" :gig='gig'></GigOverview>
 
                     <!--not from store yet-->
-                    <!-- <GigReview /> -->
+                    <GigReview />
 
                     <!--hard coded-->
                     <!--not from store yet--><!--im here-->
@@ -30,7 +30,7 @@
 
 
                     <!--not from store yet-->
-                    <!-- <GigReviews :gig="gig" /> -->
+                    <GigReviews :gig="gig" />
 
 
                     <div class="gig-tags-container">
