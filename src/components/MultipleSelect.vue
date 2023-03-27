@@ -2,7 +2,8 @@
     <div class="flex">
 
         <!-- <RouterLink class="c-btn" to="/edit">Add</RouterLink> -->
-        <button class="clear-filter-btn bold" style="font-size: 16px; color: rgb(34, 35, 37);">Clear Filter</button>
+        <button @click="clearFilter" class="clear-filter-btn bold" style="font-size: 16px; color: rgb(34, 35, 37);">Clear
+            Filter</button>
         <div class="budget-container">
             <button @click="showForm" class="budget-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
                 <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
@@ -13,7 +14,7 @@
                 </svg>
             </button>
             <div>Budget
-                <form v-if="showBudget" class="budget-dropdown">
+                <form @submit.prevent v-if="showBudget" class="budget-dropdown">
                     <div class="inputs flex">
                         <div>
                             <p class="bold">MIN.</p>
@@ -35,15 +36,14 @@
                         </div>
                     </div>
                     <div class="buttons flex">
-                        <div>Clear All</div>
-                        <button @click="filterBudget(filterBy.budget.min, filterBy.budget.max)"
-                            class="btn-apply">Apply</button>
+                        <div @click="clearBudget">Clear All</div>
+                        <button @click="filter()" class="btn-apply">Apply</button>
                     </div>
                 </form>
             </div>
 
         </div>
-        <!-- <button class="delivey-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
+        <button class="delivey-filter-btn bold flex" style="font-size: 16px; color: rgb(34, 35, 37);">
             <p>Delivey Time</p>
             <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
                 fill="currentFill">
@@ -51,7 +51,7 @@
                     d="M5.464 6.389.839 1.769a.38.38 0 0 1 0-.535l.619-.623a.373.373 0 0 1 .531 0l3.74 3.73L9.47.61a.373.373 0 0 1 .531 0l.619.623a.38.38 0 0 1 0 .535l-4.624 4.62a.373.373 0 0 1-.531 0Z">
                 </path>
             </svg>
-        </button> -->
+        </button>
         <div>
 
         </div>
@@ -67,6 +67,9 @@ export default {
                 budget: {
                     min: 0,
                     max: 99999,
+                },
+                sortBy: {
+                    price: false
                 }
             },
             showBudget: false,
@@ -98,17 +101,20 @@ export default {
         showForm() {
             this.showBudget = !this.showBudget
         },
-        filterBudget(minBudget, maxBudget) {
-            console.log(minBudget, maxBudget)
-            let filterBy = {
-                budget: {
-                    min: 0,
-                    max: 99999
-                }
-            }
-            filterBy.budget.min = minBudget
-            filterBy.budget.max = maxBudget
+        filter() {
+            let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
+            this.showForm()
+        },
+        clearFilter() {
+            this.filterBy.budget.min = 0
+            this.filterBy.budget.max = 99999
+            let filterBy = { ...this.filterBy }
+            this.$store.dispatch({ type: 'loadGigs', filterBy })
+        },
+        clearBudget() {
+            this.filterBy.budget.min = 0
+            this.filterBy.budget.max = 99999
         }
     }
 }

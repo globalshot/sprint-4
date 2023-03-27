@@ -16,6 +16,7 @@ window.cs = gigService
 
 
 async function query(filterBy = { txt: '', tag: '' }) {
+    console.log(filterBy)
     var gigs = await storageService.query(STORAGE_KEY)
     if (filterBy.txt) {
         const regex = new RegExp(filterBy.txt, 'i')
@@ -26,6 +27,9 @@ async function query(filterBy = { txt: '', tag: '' }) {
     }
     if (filterBy.budget) {
         gigs = gigs.filter(gig => gig.price >= filterBy.budget.min && gig.price <= filterBy.budget.max)
+    }
+    if (filterBy.daysToMake) {
+        gigs = gigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
     }
     return gigs
 }

@@ -29,7 +29,6 @@ export default {
         const {txt, tag} = this.$route.query
         const filterBy = {txt, tag}
         this.$store.dispatch({ type: 'loadGigs', filterBy })
-        console.log(filterBy.tag)
     },
     data() {
         return {
