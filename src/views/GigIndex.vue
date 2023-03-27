@@ -2,6 +2,17 @@
 
 <template>
     <div v-if="!this.$route.params.id">
+        <ul class="flex">
+            <li>
+                <a class="" href="/">
+                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/home-breadcrumb.2ba1681.svg" alt="Fiverr">
+                </a>
+            </li>
+            <li>
+                <span class="divider">/</span>
+                <a href="">{{ header() }}</a>
+            </li>
+        </ul>
         <h1 class="gig-header">{{ header() }}</h1>
         <!-- <h1 class="gig-header" v-else>Explore</h1> -->
         <MultipleSelect />
@@ -26,10 +37,14 @@ export default {
     created() {
         // if (!this.user) this.$router.push('/login')
         
-        const {txt, tag} = this.$route.query
-        const filterBy = {txt, tag}
+        console.log(this.$route.query)
+        let {txt, tag} = this.$route.query
+        let filterBy = {txt, tag}
+        console.log(filterBy)
         this.$store.dispatch({ type: 'loadGigs', filterBy })
-        console.log(filterBy.tag)
+        this.filterBy.txt = filterBy.txt
+        this.filterBy.tag = filterBy.tag
+
     },
     data() {
         return {
@@ -50,7 +65,7 @@ export default {
             }
         },
         header() {
-            console.log(this.filterBy.tag)
+            console.log(this.filterBy)
             let newTag = 'Explore'
             if (this.filterBy.tag) {
                 const mySentence = this.filterBy.tag.replace('-', ' ');

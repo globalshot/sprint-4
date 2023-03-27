@@ -1,50 +1,58 @@
+/** @format */
+
 .gig-list {
-    max-width: rem(1400px);
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 2em;
-    margin-top: 1rem;
-    
+  max-width: rem(1400px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2.2em;
+  margin-top: 1rem;
 
+  @include for-mobile-layout {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+  @include for-small-layout {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
 
-    @include for-small-layout {
-        grid-template-columns: repeat(1,1fr);
-      }
+  @include for-medium-layout {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+  }
 
-    @include for-medium-layout {
-        grid-template-columns: repeat(3,1fr);
-      }
-    
-      @include for-normal-layout {
-        grid-template-columns: repeat(4,1fr);
-      }
-    
-      @include for-wide-layout {
-        grid-template-columns: repeat(4,1fr);
-      }
-    
-      @include for-ultra-wide-layout {
-        grid-template-columns: repeat(4,1fr);
-      }
+  @include for-normal-layout {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+  }
+
+  @include for-wide-layout {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+  }
+
+  @include for-ultra-wide-layout {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+  }
 }
 
 .gig-header {
-    color: $secondary-clr-darker;
-    font-size: 2em;
-    line-height: 2.25em;
-    font-weight: 700;
-    padding: .5em 0;
-    font-family: Macan,Helvetica Neue,Helvetica,Arial,sans-serif;
+  color: $secondary-clr-darker;
+  font-size: 2em;
+  line-height: 2.25em;
+  font-weight: 700;
+  padding: 0.5em 0;
+  font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-
 .services-sort {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 
   .count-services {
     color: #74767e;
-      font-size: .825em;
-      font-weight: 600;
-      line-height: 1.375em;
+    font-size: 0.825em;
+    font-weight: 600;
+    line-height: 1.375em;
+    padding-inline-start: 0.15rem;
   }
-  
 }
