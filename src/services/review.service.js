@@ -17,6 +17,7 @@ async function addReview(review) {
 }
 
 
+
 function _createReview(name, gigId) {
   return {
     _id: utilService.makeId(),
@@ -36,7 +37,7 @@ function _createReview(name, gigId) {
   let reviews = utilService.loadFromStorage(STORAGE_KEY) || []
   if (!reviews || !reviews.length) {
     reviews = [
-      _createReview('Eran', 'uUeVA'),
+      _createReview('Eran', 'IOZtG'),
       _createReview('Darian', 'lnC5d'),
       _createReview('Steven', 'cWV3c'),
       _createReview('Puki', '7pDYZ'),
