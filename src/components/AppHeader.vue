@@ -73,7 +73,9 @@
                 <RouterLink to="/user/u101">Become a seller </RouterLink>
               </li>
 
-              <li>Sign in</li>
+              <li>
+                <RouterLink to="/signin">Sign in </RouterLink>
+              </li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
               </li>

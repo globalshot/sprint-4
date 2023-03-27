@@ -2,8 +2,8 @@
 
 <template>
     <div v-if="!this.$route.params.id">
-        <h1 class="gig-header" v-if="filterBy.tag">{{ header() }}</h1>
-        <h1 class="gig-header" v-else>Explore</h1>
+        <h1 class="gig-header">{{ header() }}</h1>
+        <!-- <h1 class="gig-header" v-else>Explore</h1> -->
         <MultipleSelect />
         <div class="services-sort">
         <div class="count-services">
@@ -29,6 +29,7 @@ export default {
         const {txt, tag} = this.$route.query
         const filterBy = {txt, tag}
         this.$store.dispatch({ type: 'loadGigs', filterBy })
+        console.log(filterBy.tag)
     },
     data() {
         return {
@@ -49,12 +50,16 @@ export default {
             }
         },
         header() {
-            const mySentence = this.filterBy.tag.replace('-', ' ');
-            const words = mySentence.split(" ");
-
-            let newTag = words.map((word) => {
-                return word[0].toUpperCase() + word.substring(1);
-            }).join(" ");
+            console.log(this.filterBy.tag)
+            let newTag = 'Explore'
+            if (this.filterBy.tag) {
+                const mySentence = this.filterBy.tag.replace('-', ' ');
+                const words = mySentence.split(" ");
+    
+                newTag = words.map((word) => {
+                    return word[0].toUpperCase() + word.substring(1);
+                }).join(" ");
+            }
 
             return newTag
         }
@@ -73,6 +78,7 @@ export default {
         const txt = newQuery.txt
         const tag = newQuery.tag
         this.filterBy = {txt: txt, tag: tag}
+        console.log(this.filterBy)
       // Do something with the new query parameter
     }
 }
