@@ -1,14 +1,105 @@
-
-div.model-background{
+div.model-background {
+    //need to make it take 0.5 sec to show the model
     position: absolute;
-    background-color: $grey-txt-dark;
-    opacity: 0.65;
+    background-color: rgba($color: #000000, $alpha: 0.65);
     width: 100vw;
     height: 100vh;
+    z-index: 100;
+    top: 0;
+
 }
 
-.login-model{
-    background-color: white;
+.login-model {
+    background-color: $white-clr;
     height: 615px;
-    width: 400px;//but they algo got y scroll,
+
+    // margin-inline-start: 7px;
+    z-index: 101;
+
+    section {
+        padding: 0 36px 24px;
+        width: 400px;
+    }
+}
+
+form.sign-in-form {
+    width: 400px;
+
+    h4 {
+        padding: rem(32px) 0;
+        font-size: em(24px);
+        line-height: 130%;
+    }
+
+    button {
+        margin: 12px 0;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    & div .social-signing-button {
+        margin-block: rem(12px);
+        padding: 12px 30px 12px 16px;
+        width: 100%;
+        border-radius: 4px;
+
+        span {
+            height: 18px;
+            width: 18px;
+
+            svg {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &.facebook-signing-button {
+            border: 1px solid $facebook-clr;
+            background-color: $facebook-clr;
+            color: $white-clr;
+            fill: $white-clr;
+        }
+
+        &:not(.facebook-signing-button) {
+            background-color: $tertiary-clr-light;
+            border: 1px solid $signing-clr;
+        }
+
+        & p {
+            width: 100%;
+            margin: 0;
+            font-size: em(24px);
+        }
+    }
+
+    div.form-seperator {
+        border-bottom: 1px solid #e4e5e7;
+        height: 12px;
+        margin: 20px 0 32px;
+        text-align: center;
+        padding: 0;
+
+        span {
+            background-color: #fff;
+            color: #62646a;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            padding: 0 8px;
+            text-transform: uppercase;
+        }
+    }
+
+    div.field{
+        padding-block-end: 16px;
+        input{
+            padding: 8px 12px;
+            padding-inline-end: 40px;
+            border-radius: 4px;
+        }
+    }
 }

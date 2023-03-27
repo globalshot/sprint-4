@@ -72,6 +72,10 @@
   transform: translate(-50%, -50%);
 }
 
+.disable-scroll {
+  overflow: hidden;
+}
+
 // List
 .clean-list {
   list-style-type: none;

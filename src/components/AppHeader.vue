@@ -74,7 +74,8 @@
               </li>
 
               <li>
-                <RouterLink to="/signin">Sign in </RouterLink>
+                <!-- <RouterLink to="/signin">Sign in </RouterLink> -->
+                <div @click="toggleLogin">Sign in </div>
               </li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
@@ -85,7 +86,7 @@
       </div>
     </header>
 
-    <Login v-if="login"/>
+    <Login v-if="login" @passUp="toggleLogin"/>
 
     <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
       :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
@@ -188,7 +189,7 @@ export default {
 
     toggleLogin(){
       this.login = !this.login
-    }
+    },
 
   },
   computed: {
