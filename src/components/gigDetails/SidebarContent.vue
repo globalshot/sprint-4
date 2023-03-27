@@ -92,7 +92,6 @@
 </template>
 
 <script>
-import { gigService } from '../../services/gig.service';
 
 export default {
     props: {
