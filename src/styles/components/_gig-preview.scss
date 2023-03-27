@@ -5,7 +5,7 @@
   box-sizing: border-box;
   border: 1px solid #e4e5e7;
   width: 100%;
-  max-width: rem(326px);
+  max-width: rem(323px);
 
   .user-profile {
     height: rem(54px);
@@ -32,7 +32,7 @@
     color: #222325;
     margin-top: rem(5px);
     padding: 0px rem(12px) rem(5px);
-    font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Macan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     .long-text {
       font-size: 1em;
@@ -69,6 +69,7 @@
     .price {
       color: #404145;
       padding-left: rem(4px);
+      padding-top: rem(4px);
       // margin-inline-start: 0.3125em;
       font-size: 1.125rem;
       line-height: 1.25rem;
@@ -154,11 +155,15 @@
 
     .vueperslides__arrow {
       position: absolute;
-      bottom: 0;
-      height: 35px;
-      width: rem(35px);
+      top: 58%;
+      height: 28px;
+      width: 24px;
       opacity: 0;
       transition: 0.2s;
+
+      i {
+        font-size: 14px;
+      }
 
       &--next {
         right: -10%;
@@ -175,8 +180,7 @@
         opacity: 1;
         position: absolute;
         bottom: 0;
-        height: 35px;
-        width: rem(35px);
+        // width: rem(35px);
         transition: 0.2s;
 
         &--next {

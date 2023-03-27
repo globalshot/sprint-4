@@ -124,3 +124,36 @@ textarea {
 .star {
   color: #ffbe5b;
 }
+
+.bread-crumbles {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0;
+  margin-block-start: 36px;
+  .btn-home {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    // padding: .4em;
+    border-radius: 50% ;
+    background-color: #fff;
+    transition: .2s;
+
+    &:hover {
+      background-color: $tertiary-clr-dark;
+    }
+    a {
+      img {
+        height: 14px;
+        width: 14px;
+      }
+    }
+  }
+
+  .divider {
+    margin-inline-end: .5em;
+  }
+}
