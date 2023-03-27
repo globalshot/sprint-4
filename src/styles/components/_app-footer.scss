@@ -1,44 +1,64 @@
 /** @format */
-.footer {
-  border-top: 1px solid #e4e5e7;
-  margin-block-start: 1rem;
-
-  footer {
-    height: rem(80px);
+.footer-container {
+  position: relative;
+  
+  .footer {
+    position: absolute;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    top: 100%;
+    border-top: 1px solid #e4e5e7;
+    margin-block-start: 1rem;
+    
 
-    .social-btns {
-      justify-self: end;
+    footer {
+      max-height: rem(80px);
+      height: rem(80px);
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
 
-      div {
-        margin-inline-start: rem(20px);
-      }
-    }
-    .fiverr-logo-footer {
-      svg {
-        fill: none;
-        & > * {
-          fill: rgb(122, 125, 133);
+      .social-btns {
+        justify-self: end;
+        justify-content: flex-start;
+
+        div {
+          margin-inline-start: rem(20px);
         }
-        .dot-copy {
-          fill: $grey-txt;
-          transform-origin: 0px 0px;
-        }
       }
-    }
-    .text-body {
-      font-size: 14px;
-      line-height: 21px;
-      margin: 0;
-      font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
 
-      .copyright {
-        color: $grey-txt;
-        flex-direction: row;
-        align-items: center;
-        margin-inline-start: rem(24px);
+      .left-footer {
+        width: auto;
+
+        .fiverr-logo-footer {
+          svg {
+            fill: none;
+            & > * {
+              fill: rgb(122, 125, 133);
+            }
+            .dot-copy {
+              fill: $grey-txt;
+              transform-origin: 0px 0px;
+            }
+          }
+        }
+
+        .text-body {
+          // font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-weight: 400;
+          font-size: em(14px);
+          // line-height: rem(21px);
+          line-height: 1.7125rem;
+          margin: 0;
+
+          .copyright {
+            color: $grey-txt;
+            flex-direction: row;
+            align-items: center;
+            margin-inline-start: rem(24px);
+            min-width: 0;
+            white-space: nowrap;
+          }
+        }
       }
     }
   }
