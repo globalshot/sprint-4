@@ -14,23 +14,22 @@
                 <div class="main">
 
                     <!--carousel images hard coded, no order amount yet-->
-                    <!-- <GigOverview ref="OverView" :gig='gig'></GigOverview> -->
+                    <GigOverview ref="OverView" :gig='gig'></GigOverview>
 
                     <!--not from store yet-->
-                    <!-- <GigReview /> -->
+                    <GigReview />
 
-                    <!--hard coded-->
+                    <!--gig description closer to finish, make it pre, check about meta-->
+                    <GigDescription :gig='gig'/>
+
+
                     <!--not from store yet--><!--im here-->
-                    <GigDescription />
-
-
-                    <!--not from store yet-->
-                    <!-- <AboutSeller :gig="gig" /> -->
+                    <AboutSeller :gig="gig" />
 
 
 
                     <!--not from store yet-->
-                    <!-- <GigReviews :gig="gig" /> -->
+                    <GigReviews :gig="gig" />
 
 
                     <div class="gig-tags-container">
@@ -46,6 +45,7 @@
 
 
         <section></section><!--the seller pop up at the left bottom-->
+        <!--not from store yet-->
         <GigBottom /><!--wasnt scss-ed at all-->
 
     </div>
