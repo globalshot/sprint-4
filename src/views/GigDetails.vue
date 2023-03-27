@@ -26,12 +26,12 @@
                     <!--not from store yet-->
                     <!--cant do it yet because there no user yet-->
                     <!--im here ended, dont know where to continue-->
-                    <AboutSeller :gig="gig" />
+                    <AboutSeller :gig="gig" :reviews="reviews"/>
 
 
 
                     <!-- not from store yet -->
-                    <GigReviews :gig="gig" />
+                    <GigReviews :gig="gig" :reviews="reviews" />
 
 
                     <div class="gig-tags-container">
@@ -96,7 +96,11 @@ export default {
     computed: {
         well() {
             return this.gig
-        }
+        },
+        reviews() {
+            console.log(this.$store.getters.getReviews);
+            return this.$store.getters.getReviews
+        },
     },
     components: {
         SidebarContent,

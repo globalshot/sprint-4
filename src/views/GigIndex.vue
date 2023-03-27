@@ -45,6 +45,8 @@ export default {
         this.filterBy.txt = filterBy.txt
         this.filterBy.tag = filterBy.tag
 
+        this.$store.dispatch({ type: 'getReviews' })
+
     },
     data() {
         return {

@@ -132,6 +132,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div v-for="review in reviews">
+                                <div v-if="review.gig.gigId === gig._id">
+                                    <h3>By: {{ review.user.userName }}</h3>
+                                    <h3>{{ review.reviewDetails }}</h3>
+                                </div>
+                            </div>
                         </li>
                     </span>
                     <!--more reviews-->
@@ -149,7 +155,25 @@ export default {
         gig: {
             type: Object,
             required: true
+        },
+        reviews: {
+            type: Array,
         }
+    },
+    // data() {
+    //     return {
+    //         reviews: []
+    //     }
+    // },
+    created() {
+        // this.reviews = this.$store.getters.getReviews
+        // console.log(this.$store.getters.getReviews)
+        console.log(this.reviews)
+    },
+    computed: {
+        // reviews() {
+        //     return this.$store.getters.getReviews
+        // },
     },
 }
 </script>
