@@ -16,17 +16,30 @@
         margin-inline-start: rem(20px);
       }
     }
-    .main-logo {
+    .fiverr-logo-footer {
       svg {
-        // color: $grey-txt;
-        & >* {
-
+        fill: none;
+        & > * {
+          fill: rgb(122, 125, 133);
+        }
+        .dot-copy {
           fill: $grey-txt;
+          transform-origin: 0px 0px;
         }
       }
     }
-    .copy-rights {
-      color: $grey-txt;
+    .text-body {
+      font-size: 14px;
+      line-height: 21px;
+      margin: 0;
+      font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+      .copyright {
+        color: $grey-txt;
+        flex-direction: row;
+        align-items: center;
+        margin-inline-start: rem(24px);
+      }
     }
   }
 }
