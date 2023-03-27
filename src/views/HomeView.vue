@@ -5,7 +5,7 @@
             <Hero />
 
             <section class="type-card">
-                <h1>Popuar professional serfices</h1>
+                <h1>Popular professional services</h1>
                 <div class="gallery-container">
 
                     <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 3"

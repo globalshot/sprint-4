@@ -168,9 +168,14 @@ div.fiverr-nav ul {
     color: $primary-clr;
     cursor: pointer;
   }
-  > li > *:hover {
-    color: $primary-clr;
-    cursor: pointer;
+  li {
+    & > * {
+      color: #fff;
+      &:hover {
+        color: $primary-clr;
+        cursor: pointer;
+      }
+    }
   }
 }
 
