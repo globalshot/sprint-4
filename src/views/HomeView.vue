@@ -27,7 +27,7 @@
                 <div class="selling-proposition">
                     <div class="selling-container">
                         <div class="selling-info">
-                            <h2>A whole world of freelance talent at your fingertips</h2>
+                            <h2>A whole world of freelance <br> talent at your fingertips</h2>
                             <ul>
                                 <li>
                                     <section class="flex align-center">
@@ -131,7 +131,7 @@
             </div>
 
             <section class="icon-category">
-                <p class="bold"> Explore the marketplace</p>
+                <h2 class="bold"> Explore the marketplace</h2>
                 <section class="category-list main-layout">
                     <section class="icons full">
 
@@ -139,7 +139,7 @@
                             <span class="flex">
                                 <div>
                                     <span>
-                                        <svg class="svg svg-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                        <svg class="svg svg-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
                                             <defs>
 
                                             </defs>
@@ -182,7 +182,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                    <h4 class="regular">Design & Marketing</h4>
+                                    <h4 class="regular">Digital Marketing</h4>
                                 </div>
                             </span>
                         </RouterLink>

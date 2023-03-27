@@ -1,8 +1,8 @@
 /** @format */
 .type-card {
   h1 {
-    letter-spacing: .01em;
-    padding-bottom: .5rem;
+    letter-spacing: 0.01em;
+    padding-bottom: 0.5rem;
     font-size: 2rem;
     line-height: 120%;
   }
@@ -13,13 +13,21 @@
   display: flex;
   height: 100%;
   white-space: nowrap;
-  margin-block-end: rem(96px);
+  margin-block-end: -0.8rem;
 
   .vueperslide {
     opacity: 1;
     transition: 0.2s;
     &:hover {
       opacity: 0.8;
+    }
+  }
+
+  .subcategory-warper {
+    padding: 1.15rem 1.1rem 1.1rem 1.1rem;
+
+    h4 {
+      letter-spacing: 0.03em;
     }
   }
 
@@ -47,6 +55,7 @@
 
 .selling-proposition-wrapper {
   background-color: $primary-clr-light;
+  margin-bottom: rem(96px);
 
   .selling-proposition {
     padding-block-end: rem(96px);
@@ -61,7 +70,7 @@
   }
 
   .selling-video {
-    padding: 0 1em;
+    margin-block-end: 2.3rem;
     img {
       object-fit: contain;
       width: 100%;
@@ -79,6 +88,9 @@
 
     li {
       padding-block-end: 1.5em;
+      h3 {
+        letter-spacing: -0.01em;
+      }
     }
 
     h2 {
@@ -88,6 +100,14 @@
       line-height: 120%;
       padding-block-end: 0.3em;
       color: $secondary-clr-dark;
+      letter-spacing: 0.01em;
+    }
+
+    p {
+      color: $secondary-clr-light;
+      // margin-block-end: 1.5rem;
+      margin-block-start: 0.8rem;
+      letter-spacing: 0.06em;
     }
 
     span {
@@ -103,14 +123,13 @@
         width: 100%;
       }
     }
-
-    p {
-      color: $secondary-clr-light;
-    }
   }
 }
 
-.svg {
+svg {
+  // height: 48px;
+  // width: 48px;
+  margin: 0 auto 15px;
   &.svg-graphic {
     .cls-4 {
       fill: none;
@@ -164,57 +183,65 @@
     }
   }
 }
-
-.icons {
-  display: grid;
-  padding-inline-start: rem(20px);
-  padding-inline-end: rem(20px);
-  grid-template-columns: repeat(5, 1fr);
-  gap: rem(55px);
-
-  .flex div {
-    width: 100%;
-    height: 100%;
+.icon-category {
+  margin-block-end: 4.9rem;
+  h2 {
+    font-size: 2em;
+    line-height: 118%;
+    padding-bottom: rem(24px);
+    margin-bottom: rem(40px);
   }
+  .icons {
+    display: grid;
+    padding-inline-start: rem(20px);
+    padding-inline-end: rem(20px);
+    grid-template-columns: repeat(5, 1fr);
+    gap: rem(55px);
 
-  span {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    font-family: $font1;
-
-    &.flex::after {
-      content: "";
-      position: absolute;
-      top: 60px;
-      right: 50%;
-      transform: translate(50%);
-      padding: 0 0 8px;
-      width: 48px;
-      border-bottom: 2px solid #c5c6c9;
-      transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+    .flex div {
+      width: 100%;
+      height: 100%;
     }
-    &:hover::after {
-      border-color: $primary-clr;
-      width: 90px;
-      transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+
+    span {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      font-family: $font1;
+
+      &.flex::after {
+        content: "";
+        position: absolute;
+        top: 43px;
+        right: 50%;
+        transform: translate(50%);
+        padding: 0 0 8px;
+        width: 48px;
+        border-bottom: 2px solid #c5c6c9;
+        transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+      }
+      &:hover::after {
+        border-color: $primary-clr;
+        width: 90px;
+        transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+      }
     }
-  }
 
-  span:not(.flex) {
-    display: flex;
-    // width: 60px;
-    margin-bottom: 16px;
-    height: 60px;
-  }
+    span:not(.flex) {
+      display: flex;
+      // width: 60px;
+      // margin-bottom: 16px;
+      height: 60px;
+    }
 
-  h4 {
-    text-align: center;
-    font-family: Macan-light;
-    color: $secondary-clr-dark;
-    line-height: 26px;
+    h4 {
+      text-align: center;
+      font-family: Macan-light;
+      color: $secondary-clr-dark;
+      line-height: 26px;
+    }
   }
 }
