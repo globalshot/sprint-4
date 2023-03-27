@@ -67,22 +67,26 @@
     // padding-block-end: rem(20px);
     margin-block-end: rem(64px);
     // border-bottom: 1px solid $grey-txt;
-    font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font: 400 16px/24px 'Macan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     .section-title {
-      font-size: 20px;
-      line-height: 28px;
-      padding-bottom: 25px;
+      font-size: em(20px);
+      line-height:rem(28px);
+      padding-bottom: 1.5075rem;
       color: $secondary-clr-dark;
     }
     .headline {
       color: $secondary-clr-dark;
       font-weight: 700;
     }
-    p:nth-last-child(2) {
+    p {
       margin: 0;
-    }
-    p:last-child {
-      margin: 0;
+      // &:nth-last-child(2) {
+      //   margin: 0;
+      // }
+
+      // &:last-child {
+      //   margin: 0;
+      // }
     }
   }
 

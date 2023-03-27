@@ -3,7 +3,7 @@
 .gig-review {
   position: relative;
   display: block;
-  margin-block-end: rem(32px);
+  margin-block-end: 9.3rem;
   height: 100px;
   // max-height: rem(300px);
   .vueperslides {
@@ -20,20 +20,20 @@
       }
     }
     &__arrow--prev {
-      left: rem(-26px);
-      top: 65%;
+      left: rem(-18px);
+      top: 50%;
       opacity: 1;
     }
     &__arrow--next {
-      right: rem(-26px);
-      top: 65%;
+      right: rem(-18px);
+      top: 50%;
       opacity: 1;
     }
   }
 
-  @include for-medium-layout {
-    margin-block-end: rem(64px);
-  }
+  // @include for-medium-layout {
+  //   margin-block-end: rem(64px);
+  // }
 
   header {
     justify-content: space-between;
