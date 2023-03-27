@@ -88,8 +88,13 @@
 
     li {
       padding-block-end: 1.5em;
-      h3 {
-        letter-spacing: -0.01em;
+      section {
+        h6 {
+          display: flex;
+        }
+        h3 {
+          letter-spacing: -0.01em;
+        }
       }
     }
 
