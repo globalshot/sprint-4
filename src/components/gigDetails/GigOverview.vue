@@ -25,7 +25,7 @@
             <RouterLink :to="'/user/' + gig.owner._id">
                 <div class="seller-container flex">
                     <div class="seller-photo">
-                        <img class="img-user" src="../../assets/images/profile-pic.png" alt="">
+                        <img class="img-user" :src=gig.owner.imgUrl alt="">
                     </div>
 
                     <div class="seller-stats flex">
@@ -35,27 +35,7 @@
                             <span>
                                 <div class="stars">
                                     <ul class="flex">
-                                        <li>
-                                            <span class="star">
-                                                <i class="fa-solid fa-star"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="star">
-                                                <i class="fa-solid fa-star"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="star">
-                                                <i class="fa-solid fa-star"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="star">
-                                                <i class="fa-solid fa-star"></i>
-                                            </span>
-                                        </li>
-                                        <li>
+                                        <li v-for="n in gig.owner.rate">
                                             <span class="star">
                                                 <i class="fa-solid fa-star"></i>
                                             </span>
@@ -87,19 +67,18 @@
                     </vueper-slides>
                 </span>
             </div>
-            <span>(number) orders in queue</span>
+            <span>(number) orders in queue</span><!--we need user for this-->
         </div>
 
 
-        <div class="loyalty-and-noteable-clients">loyalty placeholder</div>
+        <!--only render if there loyalty-->
+        <div v-if="gig.owner.loyalty" class="loyalty-and-noteable-clients">loyalty placeholder</div>
     </div>
 </template>
 
 <script>
-import { objectToString } from '@vue/shared'
-import { gigService } from '../../services/gig.service.js'
-import { VueperSlides, VueperSlide } from "vueperslides"//???
-import "vueperslides/dist/vueperslides.css"//???
+import { VueperSlides, VueperSlide } from "vueperslides"
+import "vueperslides/dist/vueperslides.css"
 
 export default {
     // props:['gig'],
@@ -112,7 +91,7 @@ export default {
 
     data() {
         return {
-            slides: [
+            slides: [//still hard coded
                 {
                     // content: `  <span>
                     //                 <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg" alt="">
@@ -127,17 +106,6 @@ export default {
     },
     created() {
         // console.log('test2',this.gig.owner);
-    },
-    methods: {
-        getGig() {
-            const { id } = this.$route.params
-            console.log(this.$route)
-            gigService.getById(id)
-                .then(gig => {
-                    this.gig = gig
-                    console.log('gig', this.gig.owner.level)
-                })
-        }
     },
     components: {
         VueperSlides,

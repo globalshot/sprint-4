@@ -6,25 +6,31 @@
         <div class="gig-page main-layout">
 
             <section class="details-layout flex" v-if="gig">
-                <!--suppose to be 2 colums, will make soon-->
 
+                <!--not from store yet-->
+                <!--cant till we dont figure how to make few packages, different-->
                 <SidebarContent :gig='gig'></SidebarContent>
-
 
                 <div class="main">
 
+                    <!--carousel images hard coded, no order amount yet-->
                     <GigOverview ref="OverView" :gig='gig'></GigOverview>
 
+                    <!--not from store yet-->
                     <GigReview />
 
-                    <!--hard coded-->
-                    <GigDescription />
+                    <!--gig description closer to finish, make it pre, check about meta-->
+                    <GigDescription :gig='gig'/>
 
 
+                    <!--not from store yet-->
+                    <!--cant do it yet because there no user yet-->
+                    <!--im here ended, dont know where to continue-->
                     <AboutSeller :gig="gig" />
 
 
 
+                    <!-- not from store yet -->
                     <GigReviews :gig="gig" />
 
 
@@ -41,13 +47,13 @@
 
 
         <section></section><!--the seller pop up at the left bottom-->
+        <!--not from store yet-->
         <GigBottom /><!--wasnt scss-ed at all-->
 
     </div>
-    <!-- <section v-if="gig" class="gig-details">
-        <button @click="$router.go(-1)">x</button>
+    <section v-if="gig" class="gig-details">
         <pre>{{ gig }}</pre>
-    </section> -->
+    </section>
 </template>
 
 

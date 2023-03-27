@@ -1,15 +1,16 @@
 <template>
     <div class="gig-page-review">
         <ReviewPage :gig='gig' />
-        <div class="">Review</div><!--some classes-->
         <div class="package-review">
+            <div class="reviews-title">Review</div>
             <header class="reviews-header breakdown-header">
                 <div class="details flex">
                     <span class="flex">
                         <span>
-                            (number) review for gig
+                           <!-- TODO add reviews from store -->
+                           8,702 reviews for this Gig
                         </span>
-                        <div class="color-yellow">(stars) {{ gig.owner.rate }}</div>
+                        <div>(stars) {{ gig.owner.rate }}</div>
                     </span>
                 </div>
             </header>
@@ -69,7 +70,6 @@
                     <div class="filters-list">
                         <span class="search-box-filter-wrapper">
                             <form class="search-form-filter flex">
-                                <!--too lazy for 2 more divs-->
                                 <input type="search" placeholder="Search review">
                                 <button>search</button>
                             </form>
@@ -99,9 +99,9 @@
                 <ul class="reviews-list"><!--x4 more of this-->
                     <span class="review-item-component-wrapper">
                         <li class="review-item-component review-item">
-                            <div class="reaview-header-container">
+                            <div class="review-header-container">
                                 <div class="flex flex-items-center">
-                                    <div class="user-profile-image"></div><!--user image-->
+                                    <div class="user-profile-image"> <label class="profile-pic" for="profile_image_7113077744648" style="width: 48px; height: 48px; font-size: 1em;"><span class="missing-profile-image flex-center tbody-6 custom-profile-image">j</span></label> </div><!--user image-->
                                     <div class="flex flex-col">
                                         <div class="flex user-info">
                                             <div class="user-profile-picture"></div>

@@ -1,0 +1,53 @@
+/** @format */
+
+.package-review {
+  margin-block-end: rem(64px);
+
+  .reviews-title {
+    font-weight: 700;
+    font-size: rem(20px);
+    line-height: rem(28px);
+    margin-block-end: rem(16px);
+  }
+
+  .review-item-component {
+    padding: rem(40px) 0;
+
+    .review-header-container {
+      width: 100%;
+
+      .flex-items-center {
+        align-items: center;
+
+        .user-profile-image {
+          display: flex;
+          margin-inline-start: rem(16px);
+          label {
+            position: relative;
+            border-radius: 50%;
+            background-color: #e4e5e7;
+            width: 48px;
+            height: 48px;
+            font-size: 1em;
+          }
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e4e5e7;
+            border-radius: 50%;
+            color: #fff;
+            font-weight: 700;
+            height: 100%;
+            text-transform: uppercase;
+            width: 100%;
+            color: #b5b6ba;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+}
