@@ -37,7 +37,7 @@
 
   h1 {
     overflow-wrap: break-word;
-    padding-bottom: rem(16px);
+    padding-bottom: rem(14px);
     font-weight: 700;
     color: #404145;
   }
@@ -46,6 +46,7 @@
     .seller-container {
       align-items: center;
       margin-block-end: 1rem;
+      gap: 10px;
       .seller-photo {
         .img-user {
           margin: 0;
@@ -57,12 +58,25 @@
 
       .seller-stats {
         align-items: center;
-        
+        // padding-bottom: 1em;
+        color: $secondary-clr;
+        cursor: pointer;
+        a {
+          color: $secondary-clr-darker;
+          padding-bottom: 0.2em;
+        }
+
+        span {
+         
+          padding-bottom: 0.2em;
+        }
 
         .stars {
           color: #ffb33e;
-          margin-inline-start: 1em;
+          margin-inline-start: .5em;
+          padding-bottom: 0.2em;
           .star {
+            color: #ffb33e;
             font-size: 0.8em;
             letter-spacing: 0.4em;
           }
