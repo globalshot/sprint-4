@@ -97,9 +97,7 @@ export default {
     props: {
         gig: Object,
     },
-    created() {
-        console.log(window.location.hash.split('/')[1])
-    },
+    created() {},
     components: {
         LongText,
         VueperSlides,
