@@ -112,5 +112,155 @@
         "review": "didnt liked some much what i got, but he tried"
       }
     ]
+  },
+  {
+    "_id": "np2W2",
+    "title": "The best gig ever",
+    "owner": {
+      "_id": "u110",
+      "fullname": "Muki ka",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "2",
+      "rate": 5
+    },
+    "description": "I will create the most beatiful website",
+    "imgUrl": "",
+    "tags": [
+      "Website Design",
+      "word-press"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "50", "description": "3 pages Website", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "70", "description": "7 pages Website", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "200", "description": "Full website", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": [
+      {
+        "_id": "5Ddsd",
+        "createdAt": 1679985935783,
+        "user": {
+          "_id": "u102",
+          "fullname": "John Buy",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 5,
+        "review": "I love my website design. the seller is very responsive and helped a lot"
+      }
+    ]
+  },
+  {
+    "_id": "mY32e",
+    "title": "1st class animations",
+    "owner": {
+      "_id": "u109",
+      "fullname": "Puki po",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "1",
+      "rate": 4
+    },
+    "description": "This is for creating animations and videos, can be uploaded to YouTube",
+    "imgUrl": "",
+    "tags": [
+      "Video & Animation"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "100", "description": "1 minute video animation", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "200", "description": "3 minute video animation", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "300", "description": "5 minute video animation", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": [
+      {
+        "_id": "1G1by",
+        "createdAt": 1679986035783,
+        "user": {
+          "_id": "u110",
+          "fullname": "Muki ka",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 1,
+        "review": "Worse animation ever, my expectations were much higher. seller is not communicative"
+      }
+    ]
+  },
+  {
+    "_id": "1Rz2z",
+    "title": "Audio editing",
+    "owner": {
+      "_id": "u111",
+      "fullname": "Dave sound",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "1",
+      "rate": 5
+    },
+    "description": "I will clean up denoise edit your audio or sound in video",
+    "imgUrl": "",
+    "tags": [
+      "Music & Audio"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "20", "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "40", "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "50", "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": [
+      {
+        "_id": "1G3sd",
+        "createdAt": 1679986070783,
+        "user": {
+          "_id": "u110",
+          "fullname": "Muki ka",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 5,
+        "review": "Even though my video audio was distorted beyond repair, he significantly improved the audio which I appreciate."
+      }
+    ]
+  },
+  {
+    "_id": "B2b2z",
+    "title": "Portrait Photographers",
+    "owner": {
+      "_id": "u112",
+      "fullname": "Take pic",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "1",
+      "rate": 4
+    },
+    "description": "I will do portrait photography in london",
+    "imgUrl": "",
+    "tags": [
+      "Photography",
+      "Graphics Design"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "20", "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "40", "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "50", "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": [
+      {
+        "_id": "1G3sd",
+        "createdAt": 1679986070783,
+        "user": {
+          "_id": "u120",
+          "fullname": "John doe",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 5,
+        "review": "Josh was amazing all the way along. I needed a photograph to shoot my proposal in London and he agreed even though it was at night. He helped me to chose the right location and the perfect spot for it. He made sure to chose a place where there weren't that many people. He made a lot of photos and they are awesome and very different. Would work with him again 100%"
+      }
+    ]
   }
 ]
