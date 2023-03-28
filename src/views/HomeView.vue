@@ -491,18 +491,8 @@ export default {
         },
         slides: [
             {
-                // title: 'Slide #1',
-                // link : "localhost:5173/#/gig?tag=ai-services",
+
                 content:
-                    // 'Slide 1 content'
-                    //     ` 
-                    // <div class="subcategory-warper"
-                    //     style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
-                    //     <span>Add talent to AI</span>
-                    //     <h4>AI Artists</h4>
-                    // </div>
-                    // <RouterLink to="/gig?tag=ai-services"></RouterLink>
-                    // `
                     `<a href="#/gig?tag=ai-services">
                 <div class="subcategory-warper"
                     style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/f27bec553efc12cc60baed89b8f2223e-1674661140708/ai-artists-2x.png) ;">
