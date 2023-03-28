@@ -45,28 +45,53 @@
 
   .seller-overview {
     .review-carousel-wrapper {
-      .vueperslide__content-wrapper {
+      margin-block-end: 11rem;
+      .slide-img-container {
         background-color: #f5f5f5;
-        .slide-img-container {
-          img {
-            background: transparent
-              url(https://fiverr-res.cloudinary.com/app_assets/fiverr_logo_loader.svg)
-              no-repeat 50%;
-            background-size: 80px;
-            height: 100%;
-            max-height: 100%;
-            max-width: 100%;
-            min-height: 140px;
-            min-width: 140px;
-            // -o-object-fit: contain;
-            object-fit: contain;
-            width: 100%;
-          }
+        img {
+          background: transparent no-repeat 50%;
+          background-size: 80px;
+          height: 100%;
+          max-height: 100%;
+          max-width: 100%;
+          min-height: 140px;
+          min-width: 140px;
+          // -o-object-fit: contain;
+          object-fit: contain;
+          width: 100%;
         }
+      }
+      .slide2-img-container {
+        background-color: #f5f5f5;
+        img {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+
+      .thumbnails {
+        
+        // padding: 0 1rem;
+        margin: auto;
+        max-width: 210px;
+      }
+
+      .thumbnails .vueperslide {
+        box-sizing: border-box;
+        border: 1px solid #fff;
+        transition: 0.3s ease-in-out;
+        opacity: 0.7;
+        cursor: pointer;
+      }
+
+      .thumbnails .vueperslide--active {
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+        border-color: #000;
       }
     }
     .seller-container {
-      align-items: center;
+      align-items: start;
       margin-block-end: 1rem;
       gap: 10px;
       .seller-photo {
@@ -79,10 +104,12 @@
       }
 
       .seller-stats {
-        align-items: center;
-        // padding-bottom: 1em;
+        // align-items: center;
+        padding-bottom: 0.8em;
         color: $secondary-clr;
+        font-size: rem(14px);
         cursor: pointer;
+        padding-top: 0.6em;
         a {
           color: $secondary-clr-darker;
           padding-bottom: 0.2em;
@@ -96,7 +123,11 @@
           color: #ffb33e;
           margin-inline-start: 0.5em;
           padding-bottom: 0.2em;
+          ul {
+            margin: 0;
+          }
           .star {
+            // padding-block-end: 1em;
             color: #ffb33e;
             font-size: 0.8em;
             letter-spacing: 0.4em;
