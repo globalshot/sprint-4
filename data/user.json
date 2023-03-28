@@ -18,5 +18,19 @@
         "languages": [{"english": "fluent"}, {"herbew": "fluent"}],
         "education": ["coding academy 2023"],
         "certifications": []
+    },
+    {
+        "_id": "u102",
+        "fullname": "Dudu Da",
+        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+        "information":{
+            "country": "France",
+            "memeberSince": 1679985825783
+        },
+        "description": "",
+        "skills": [""],
+        "languages": [{"english": "fluent"}, {"herbew": "fluent"}],
+        "education": [""],
+        "certifications": []
     }
 ]
