@@ -32,7 +32,7 @@
 
 
                     <!-- not from store yet -->
-                    <GigReviews :gig="gig" :reviews="reviews" />
+                    <GigReviews :gig="gig" :reviews="reviews" ref="reviews" />
 
 
                     <div class="gig-tags-container">

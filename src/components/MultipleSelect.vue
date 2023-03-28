@@ -151,9 +151,11 @@ export default {
     },
     methods: {
         showBudgetForm() {
+            if (this.showDelivery) {this.showDeliveryForm()}
             this.showBudget = !this.showBudget
         },
         showDeliveryForm() {
+            if (this.showBudget) {this.showBudgetForm()}
             this.showDelivery = !this.showDelivery
         },
         filter() {
@@ -163,8 +165,11 @@ export default {
             // this.showBudgetForm()
         },
         clearFilter() {
+            if (this.showDelivery) {this.showDeliveryForm()}
+            if (this.showBudget) {this.showBudgetForm()}
             this.filterBy.budget.min = 0
             this.filterBy.budget.max = 99999
+            this.filterBy.daysToMake = 999
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
