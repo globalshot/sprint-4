@@ -4,9 +4,8 @@ import { userService } from './user.service.js'
 
 
 // const fs = require('fs')
-import data from '../../data/gig.json';
+import gGigs from '../../data/gig.json';
 
-const gGigs = data
 
 const STORAGE_KEY = 'gig_db'
 

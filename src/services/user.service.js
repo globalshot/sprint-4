@@ -5,6 +5,10 @@ import { store } from '../store'
 // import { socketService, SOCKET_EVENT_USER_UPDATED, SOCKET_EMIT_USER_WATCH } from './socket.service'
 import { showSuccessMsg } from './event-bus.service'
 
+import data from '../../data/user.json';
+
+const gUsers = data
+
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 
 export const userService = {
@@ -121,9 +125,7 @@ function _createUser(name, id) {
     
     let users = utilService.loadFromStorage('user_db') || []
     if (!users || !users.length) {
-        users = [
-        _createUser('Dudu Da', 'u101'),
-      ]
+        users = gUsers
       utilService.saveToStorage('user_db', users)
     }
   

@@ -12,6 +12,40 @@ div.main-header {
   }
 
   &:not(.header-transparent) {
+    &:visited:not(:hover) {
+      color: $primary-clr-dark;
+    }
+
+    div.fiverr-nav ul {
+      margin: 0;
+      height: 100%;
+      & > * {
+        font-size: 1em;
+
+        padding-inline-end: 1.5em;
+        font-family: $font2;
+        color: white;
+
+        &:last-child {
+          padding-inline-end: 0;
+        }
+      }
+      // align-items: center;
+      // > *:hover {
+      //   color: red;
+      //   cursor: pointer;
+      // }
+      li {
+        & > * {
+          color: $secondary-clr-dark;
+          &:hover:not(.btn-join) {
+            color: $primary-clr;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
     .btn-join {
       font-size: 14px;
       padding: 10px 16px;
@@ -23,10 +57,6 @@ div.main-header {
         background-color: $primary-clr-dark;
         border-color: $primary-clr-dark;
       }
-    }
-
-    &:visited:not(:hover) {
-      color: $primary-clr-dark;
     }
   }
 
@@ -44,6 +74,36 @@ div.main-header {
 
       &:visited:not(:hover) {
         color: white;
+      }
+    }
+
+    div.fiverr-nav ul {
+      margin: 0;
+      height: 100%;
+      & > * {
+        font-size: 1em;
+
+        padding-inline-end: 1.5em;
+        font-family: $font2;
+        color: $secondary-clr-dark;
+
+        &:last-child {
+          padding-inline-end: 0;
+        }
+      }
+      // align-items: center;
+      > *:hover {
+        color: $primary-clr;
+        cursor: pointer;
+      }
+      li {
+        & > * {
+          color: white;
+          &:hover:not(.btn-join) {
+            color: $primary-clr;
+            cursor: pointer;
+          }
+        }
       }
     }
   }
@@ -164,38 +224,6 @@ div.main-header {
   min-width: 121px;
 }
 
-div.fiverr-nav ul {
-  margin: 0;
-  height: 100%;
-  // align-items: center;
-  > *:hover {
-    color: $primary-clr;
-    cursor: pointer;
-  }
-  li {
-    & > * {
-      // color: #fff;
-      &:hover {
-        color: $primary-clr;
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-div.fiverr-nav ul {
-  & > * {
-    font-size: 1em;
-
-    padding-inline-end: 1.5em;
-    font-family: $font2;
-    color: $secondary-clr-dark;
-
-    &:last-child {
-      padding-inline-end: 0;
-    }
-  }
-}
 .main-header.clr-white > *li {
   //same, name sucks
   color: white;
@@ -205,6 +233,8 @@ div.fiverr-nav ul {
   a {
     max-width: 8.625rem;
     justify-self: start;
+
+    // color: #fff;
   }
 }
 // .header-row-wrapper {
