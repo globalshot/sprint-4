@@ -168,13 +168,9 @@ export default {
     created() {
         // this.reviews = this.$store.getters.getReviews
         // console.log(this.$store.getters.getReviews)
-        console.log(this.reviews)
+        console.log(this.$store.getters.getReviews)
     },
-    computed: {
-        // reviews() {
-        //     return this.$store.getters.getReviews
-        // },
-    },
+    computed: {    },
     components: {
         ReviewPage
     }
