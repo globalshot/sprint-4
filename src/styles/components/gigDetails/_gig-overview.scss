@@ -44,6 +44,27 @@
   }
 
   .seller-overview {
+    .review-carousel-wrapper {
+      .vueperslide__content-wrapper {
+        background-color: #f5f5f5;
+        .slide-img-container {
+          img {
+            background: transparent
+              url(https://fiverr-res.cloudinary.com/app_assets/fiverr_logo_loader.svg)
+              no-repeat 50%;
+            background-size: 80px;
+            height: 100%;
+            max-height: 100%;
+            max-width: 100%;
+            min-height: 140px;
+            min-width: 140px;
+            // -o-object-fit: contain;
+            object-fit: contain;
+            width: 100%;
+          }
+        }
+      }
+    }
     .seller-container {
       align-items: center;
       margin-block-end: 1rem;
@@ -68,13 +89,12 @@
         }
 
         span {
-         
           padding-bottom: 0.2em;
         }
 
         .stars {
           color: #ffb33e;
-          margin-inline-start: .5em;
+          margin-inline-start: 0.5em;
           padding-bottom: 0.2em;
           .star {
             color: #ffb33e;
@@ -83,9 +103,9 @@
           }
         }
         .num {
-          font-size: .8em;
-          align-self:center ;
-          padding-block-start: .2rem;
+          font-size: 0.8em;
+          align-self: center;
+          padding-block-start: 0.2rem;
           font-weight: 700;
         }
       }

@@ -1,11 +1,13 @@
 <template>
-    <Header></Header>
     <user-msg />
-    <div class="main-layout">
-        <!-- <p>app vue</p> -->
-        <router-view />
+    <div class="main-app">
+        <Header></Header>
+        <main class="main-layout">
+            <!-- <p>app vue</p> -->
+            <router-view />
+        </main>
+        <Footer class="full"></Footer>
     </div>
-    <Footer class="full"></Footer>
 </template>
 
 <script>
