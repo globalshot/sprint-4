@@ -21,7 +21,7 @@
 </template>
 
 <script>
-
+import ReviewPage from '../../views/ReviewPage.vue';
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
@@ -33,6 +33,7 @@ export default {
     },
     data() {
         return {
+            // userImg: review.user.imgUrl,
             slides: [
                 {
                     content: `
@@ -145,6 +146,7 @@ export default {
         }
     },
     components: {
+        ReviewPage,
         VueperSlides,
         VueperSlide
     },

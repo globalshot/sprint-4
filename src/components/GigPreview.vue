@@ -15,7 +15,12 @@
             <template #arrow-right>
                 <i class="fa-solid fa-angle-right"></i>
             </template>
-            <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i" :image="slide.image">
+            <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i" >
+                <template #content>
+                <!-- <span>hi</span> -->
+                <!-- <img :src="gig.imgUrl[i]" alt=""> -->
+                <img :src="gig.imgUrl[i]" alt="">
+                </template>
             </vueper-slide>
         </vueper-slides>
 
@@ -29,6 +34,7 @@
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
                 <img src="../assets/images/profile-pic.png" alt="">
+                
                 <p class="user-name">{{ gig.owner.fullname }}</p>
             </div>
         </RouterLink>

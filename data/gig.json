@@ -10,18 +10,37 @@
       "rate": 5
     },
     "description": "Make unique logo...",
-    "imgUrl": "",
-    "tags": [
-      "logo-design",
-      "video"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/167094387/original/dd006e572d30979126ec55f6bd0f84e6c4ac451c.jpg",
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/167094387/original/d2ed29826edeca4143e2ba84cd6d149c5a25e1bf.jpg"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["logo-design", "video"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 63, "description": "the most basic ever package", "revisits": 1, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 100, "description": "the most standart ever package", "revisits": 2, "daysToMake": 4, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 200, "description": "the most premium ever package", "revisits": 3, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 63,
+        "description": "the most basic ever package",
+        "revisits": 1,
+        "daysToMake": 2,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 100,
+        "description": "the most standart ever package",
+        "revisits": 2,
+        "daysToMake": 4,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 200,
+        "description": "the most premium ever package",
+        "revisits": 3,
+        "daysToMake": 6,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
@@ -48,18 +67,37 @@
       "rate": 5
     },
     "description": "just trolling or something",
-    "imgUrl": "",
-    "tags": [
-      "word-press",
-      "website-design"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/attachments/delivery/asset/2e047e6f6562cb80b6b08d9f23113551-1679915952/screencapture-technow-app-2023-03-27-16_18_47.png",
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/269863025/original/0883dcd5180b09f02c78f680dc02522f84a5058e.png"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["word-press", "website-design"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 30, "description": "the most basic ever package", "revisits": 1, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 100, "description": "the most standart ever package", "revisits": 2, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 400, "description": "the most troll ever package", "revisits": 5, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 30,
+        "description": "the most basic ever package",
+        "revisits": 1,
+        "daysToMake": 1,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 100,
+        "description": "the most standart ever package",
+        "revisits": 2,
+        "daysToMake": 3,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 400,
+        "description": "the most troll ever package",
+        "revisits": 5,
+        "daysToMake": 6,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
@@ -86,18 +124,37 @@
       "rate": 5
     },
     "description": "making the best logo or test files",
-    "imgUrl": "",
-    "tags": [
-      "logo-design",
-      "word-press"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/289277183/original/3c1733662084d627581cde33eb7b75b65a84bd3b.png",
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs3/289277183/original/c327c7ebdc776ebe02f07e40f745931105fa6a25.png"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["logo-design", "word-press"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 40, "description": "1 text file or logo", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 80, "description": "can make both but max 3 of each", "revisits": 5, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 160, "description": "lots of them so it will be the best", "revisits": 10, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 40,
+        "description": "1 text file or logo",
+        "revisits": 2,
+        "daysToMake": 1,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 80,
+        "description": "can make both but max 3 of each",
+        "revisits": 5,
+        "daysToMake": 3,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 160,
+        "description": "lots of them so it will be the best",
+        "revisits": 10,
+        "daysToMake": 6,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
@@ -124,18 +181,37 @@
       "rate": 5
     },
     "description": "I will create the most beatiful website",
-    "imgUrl": "",
-    "tags": [
-      "Website Design",
-      "word-press"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs3/273679055/original/e3eafda2785f32dd0ba829543d9324cea78dd13c.jpg",
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/273679055/original/34c948d58d10e5ca79a779a03372f7b69de1793b.png"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["Website Design", "word-press"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 50, "description": "3 pages Website", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 70, "description": "7 pages Website", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 200, "description": "Full website", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 50,
+        "description": "3 pages Website",
+        "revisits": 2,
+        "daysToMake": 2,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 70,
+        "description": "7 pages Website",
+        "revisits": 5,
+        "daysToMake": 5,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 200,
+        "description": "Full website",
+        "revisits": 10,
+        "daysToMake": 10,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
@@ -162,17 +238,37 @@
       "rate": 4
     },
     "description": "This is for creating animations and videos, can be uploaded to YouTube",
-    "imgUrl": "",
-    "tags": [
-      "Video & Animation"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/164584703/original/6eb83c1d3f31b6e3a99910ed1a18306acab7d2db.jpg",
+      "https://fiverr-res.cloudinary.com/image/upload/w_600/q_auto,f_auto/v1/attachments/generic_asset/asset/10f680cb84a2f3ef4473ecfdede3a1ba-1593438129320/business%20logo%20design-fiverr%20guide.jpg"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["Video & Animation"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 100, "description": "1 minute video animation", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 200, "description": "3 minute video animation", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 300, "description": "5 minute video animation", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 100,
+        "description": "1 minute video animation",
+        "revisits": 2,
+        "daysToMake": 2,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 200,
+        "description": "3 minute video animation",
+        "revisits": 5,
+        "daysToMake": 5,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 300,
+        "description": "5 minute video animation",
+        "revisits": 10,
+        "daysToMake": 10,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
@@ -199,17 +295,37 @@
       "rate": 5
     },
     "description": "I will clean up denoise edit your audio or sound in video",
-    "imgUrl": "",
-    "tags": [
-      "Music & Audio"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/125201427/original/b120e58737b8b7330824cbe82c594796dadefc9e.jpg",
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/144452185/original/e25bfd29174b18c0f2ff682dc926ce4233b06ea7.png"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["Music & Audio"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 20, "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 40, "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 50, "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 20,
+        "description": "Up to 1 minute editing",
+        "revisits": 2,
+        "daysToMake": 1,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 40,
+        "description": "Up to 5 minute editing",
+        "revisits": 5,
+        "daysToMake": 2,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 50,
+        "description": "Up to 10 minute editing",
+        "revisits": 10,
+        "daysToMake": 4,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
@@ -236,18 +352,37 @@
       "rate": 4
     },
     "description": "I will do portrait photography in london",
-    "imgUrl": "",
-    "tags": [
-      "Photography",
-      "Graphics Design"
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/295371479/original/6fcdd7ae738553c1cc9f265972383abedeeb6393.jpg",
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/288408744/original/7091af416115ace5c1e868271e109b02b014b2ec/create-concept-art-and-character-illustration.png"
     ],
-    "likedByUsers": [
-      "mini-user"
-    ],
+    "tags": ["Photography", "Graphics Design"],
+    "likedByUsers": ["mini-user"],
     "packages": [
-      {"type": "basic", "price": 20, "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": 40, "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": 50, "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
+      {
+        "type": "basic",
+        "price": 20,
+        "description": "Up to 1 minute editing",
+        "revisits": 2,
+        "daysToMake": 1,
+        "features": ["y", "n", "n", "n", "y", "n"]
+      },
+      {
+        "type": "standart",
+        "price": 40,
+        "description": "Up to 5 minute editing",
+        "revisits": 5,
+        "daysToMake": 2,
+        "features": ["y", "y", "y", "n", "y", "n"]
+      },
+      {
+        "type": "premium",
+        "price": 50,
+        "description": "Up to 10 minute editing",
+        "revisits": 10,
+        "daysToMake": 4,
+        "features": ["y", "y", "y", "y", "y", "y"]
+      }
     ],
     "reviews": [
       {
