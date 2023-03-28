@@ -151,7 +151,8 @@
     }
     &.btn-owner {
       z-index: 100;
-      color: #efeff0;
+      color: $primary-clr-light;
+      mix-blend-mode: difference;
     }
   }
 
@@ -182,7 +183,7 @@
               min-height: 140px;
               min-width: 140px;
               // -o-object-fit: contain;
-              object-fit: contain;
+              object-fit: cover;
               width: 100%;
             }
           }
@@ -222,11 +223,11 @@
         transition: 0.2s;
 
         &--next {
-          right: -1%;
+          right: 0%;
           border-radius: 50% 0 0 50%;
         }
         &--prev {
-          left: -1%;
+          left: 0%;
           border-radius: 0 50% 50% 0;
         }
       }

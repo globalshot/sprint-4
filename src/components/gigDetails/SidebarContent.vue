@@ -11,11 +11,11 @@
                     <input type="radio" id="package-tab-3" v-model="selectedItem" :value="'premium'"
                         name="package-tab-group">
                     <div class="nav-container flex">
-                        <label @click="price = '66$', quant = '1'" :for="'package-tab-1'"
+                        <label @click="quant = '1'" :for="'package-tab-1'"
                             :class="{ 'aria-selected': (this.selectedItem === `basic`) }">Basic</label><!--the style here i guess-->
-                        <label @click="price = '96$', quant = '2'" :for="'package-tab-2'"
-                            :class="{ 'aria-selected': (this.selectedItem === `standart`) }">Standart</label><!--the style here i guess-->
-                        <label @click="price = '136$', quant = '3'" :for="'package-tab-3'"
+                        <label @click="quant = '2'" :for="'package-tab-2'"
+                            :class="{ 'aria-selected': (this.selectedItem === `standart`) }">Standard</label><!--the style here i guess-->
+                        <label @click="quant = '3'" :for="'package-tab-3'"
                             :class="{ 'aria-selected': (this.selectedItem === `premium`) }">Premium</label><!--the style here i guess-->
                     </div>
                     <div class="some-id"><!--id class-->
@@ -23,10 +23,9 @@
                             <header class="header-default">
                                 <h3 class="flex">
                                     {{ selectedItem }} package
-                                    <div class="price-wrapper">{{ price }}</div>
+                                    <div class="price-wrapper">US${{ gig.packages[quant - 1].price }}</div>
                                 </h3>
-                                <p>{{ quant }} STANDARD QUALITY IMAGE from ONE PROMPT.
-                                    Custom aspect ratio.</p>
+                                <p>{{ gig.packages[quant - 1].description }}</p>
                             </header>
                             <article>
                                 <div class="additional-info flex">
@@ -63,10 +62,26 @@
                                 </div>
                                 <ul class="features">
                                     <!--v-for the features-->
-                                    <li class="flex items-center"><span>vi</span>first feature</li>
-                                    <li class="flex items-center"><span>vi</span>second feature</li>
+                                    <li class="flex items-center" v-for="feature in gig.packages[quant - 1].features"> <!-- if enough time, render specific features y and n, by doing gig.packages['the type of package'].features -->
+                                        <span class="glAQDp5 bvg2_O1 ZbQv8bb" aria-hidden="true"
+                                            style="width: 16px; height: 16px;">
+                                            <svg width="16" height="16" viewBox="0 0 11 9"
+                                                xmlns="http://www.w3.org/2000/svg" v-if="feature === 'y'" fill="#1dbf73">
+                                                <path
+                                                    d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
+                                                </path>
+                                            </svg>
+                                            <svg width="16" height="16" viewBox="0 0 11 9"
+                                                xmlns="http://www.w3.org/2000/svg" v-if="feature !== 'y'" fill="#dadbdd">
+                                                <path
+                                                    d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
+                                                </path>
+                                            </svg>
+                                        </span>Promt writing 
+                                    </li>
+                                    <!-- <li class="flex items-center"><span>vi</span>second feature</li>
                                     <li class="flex items-center"><span>vi</span>third feature</li>
-                                    <li class="flex items-center"><span>vi</span>fourth feature</li>
+                                    <li class="flex items-center"><span>vi</span>fourth feature</li> -->
                                 </ul>
                             </article>
                         </div>
@@ -104,7 +119,7 @@ export default {
         return {
             selectedItem: 'basic',
             // price: gig.price,
-            price: '66$',
+            i: '1',
             quant: '1',
         }
     }

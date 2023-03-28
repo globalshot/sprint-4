@@ -1,7 +1,9 @@
 <template>
-    <div class="gig-list grid">
+    <div >
+        <div class="gig-list grid">
         <GigPreview v-for="gig in gigs" :key="gig._id" :gig="gig" @removeGig="$emit('removeGig', gig._id)"/>
     </div>
+</div>
 </template>
 
 <script>
