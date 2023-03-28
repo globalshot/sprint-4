@@ -22,7 +22,7 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </span>
                                         </li>
-                                    <span>5</span>
+                                    <span>{{ gig.owner.rate }}</span>
                                 </ul>
                             </div>
                         </div>
@@ -67,11 +67,6 @@
 
 <script>
 export default {
-    data() {
-        return {
-            stars: ['', '', '', '', ''],
-        }
-    },
     props: {
         gig: {
             type: Object,

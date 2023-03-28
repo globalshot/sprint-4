@@ -1,6 +1,7 @@
 <template>
     <div class="main-container full main-layout">
 
+        <!--when everything from store, look at this-->
         <StickyHeader @scrollTo="scrollTo"/>
 
         <div class="gig-page main-layout">
@@ -35,7 +36,7 @@
 
 
                     <div class="gig-tags-container">
-                        <h2 class="section-title"> Related tags</h2>
+                        <!-- <h2 class="section-title"> Related tags</h2> -->
                         <ul><!--v-for for the tags-->
 
                         </ul>
@@ -48,11 +49,12 @@
 
         <section></section><!--the seller pop up at the left bottom-->
         <!--not from store yet-->
-        <GigBottom /><!--wasnt scss-ed at all-->
+        <!-- <GigBottom /> -->
+        <!--wasnt scss-ed at all-->
 
     </div>
     <section v-if="gig" class="gig-details">
-        <pre>{{ gig }}</pre>
+        <!-- <pre>{{ gig }}</pre> -->
     </section>
 </template>
 
@@ -76,10 +78,7 @@ import "vueperslides/dist/vueperslides.css";
 export default {
     data() {
         return {
-            gig: null,
-
-            stars: ['', '', '', '', ''],
-
+            gig: null
 
         }
     },
