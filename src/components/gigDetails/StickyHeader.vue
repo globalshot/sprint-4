@@ -38,7 +38,6 @@ export default {
         markSelected: function () {
             // this.isSelected = !this.isSelected
         },
-        
     },
 
 }
