@@ -3,8 +3,8 @@
         <div class="package-review">
             <div class="reviews-wrap">
                 <ul class="reviews-list">
-                    <div v-for="review in reviews">
-                        <div v-if="review.gig.gigId === gig._id">
+                    <div v-for="review in gig.reviews">
+                        <!-- <div v-if="review.gig.gigId === gig._id"> -->
                             <li class="review-item-component review-item">
                                 <div class="review-header-container">
                                     <div class="flex flex-items-center">
@@ -20,7 +20,7 @@
 
                                                 <!--more lines, but for mobile image of user-->
                                                 <div class="reviewer-details flex">
-                                                    <span class="username">{{ review.user.userName }}</span>
+                                                    <span class="username">{{ review.user.fullname }}</span>
                                                 </div>
                                             </div>
                                             <div class="reviewer-sub-details flex">
@@ -39,24 +39,24 @@
                                         <div class="orca-rating color-yellow tbody-6">
                                             <div class="stars">
                                                 <ul class="flex">
-                                                    <li v-for="n in gig.owner.rate">
+                                                    <li v-for="n in review.rate">
                                                         <span class="star">
                                                             <i class="fa-solid fa-star"></i>
                                                         </span>
                                                     </li>
                                                     <li class="num">
-                                                        {{ gig.owner.rate }} 
+                                                        {{ review.rate }} 
                                                     </li>
                                                     <span class="inline-divider "></span>
                                                     <time class="text-body-2"> 2 months ago</time>
                                                 </ul>
                                             </div>
-                                            <p>{{ review.reviewDetails }}</p>
+                                            <p>{{ review.review }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                        </div>
+                        <!-- </div> -->
                     </div>
                 </ul>
                 <!-- <div class="load-more-wrapper">
@@ -74,9 +74,9 @@ export default {
             type: Object,
             required: true
         },
-        reviews: {
-            type: Array,
-        }
+        // reviews: {
+        //     type: Array,
+        // }
     },
     created() {
         console.log(this.reviews)
