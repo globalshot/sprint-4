@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import GigIndex from '../views/GigIndex.vue'
 import GigDetails from '../views/GigDetails.vue'
 import GigEdit from '../views/GigEdit.vue'
+import GigPayment from '../components/GigPayment.vue'
 import reviewPage from '../views/ReviewPage.vue'
 import UserDetails from '../views/UserDetails.vue'
 import SignIn from '../components/SignIn.vue'
@@ -20,6 +21,11 @@ const router = createRouter({
             path: '/gig',
             name: 'GigIndex',
             component: GigIndex
+        },
+        {
+            path: '/gig/payment/:id',
+            name: 'GigPayment',
+            component: GigPayment
         },
         {
             path: '/gig/:id',
