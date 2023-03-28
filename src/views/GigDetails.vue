@@ -18,7 +18,7 @@
                     <GigOverview ref="OverView" :gig='gig'></GigOverview>
 
                     <!--not from store yet-->
-                    <GigReview />
+                    <GigReview  :reviews="reviews" />
 
                     <!--gig description closer to finish, make it pre, check about meta-->
                     <GigDescription :gig='gig'/>
@@ -27,7 +27,7 @@
                     <!--not from store yet-->
                     <!--cant do it yet because there no user yet-->
                     <!--im here ended, dont know where to continue-->
-                    <AboutSeller :gig="gig" :reviews="reviews"/>
+                    <AboutSeller :gig="gig"/>
 
 
 
