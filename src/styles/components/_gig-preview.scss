@@ -37,13 +37,28 @@
     height: rem(43px);
     color: #222325;
     margin-top: rem(5px);
-    padding: 0px rem(12px) rem(5px);
+    // padding: 0px rem(12px) rem(5px);
     font-family: "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     .long-text {
-      font-size: 1em;
-      word-wrap: break-word;
-      text-align: left;
+      // font-size: 1em;
+      // word-wrap: break-word;
+      // text-align: left;
+      box-sizing: border-box;
+      color: #222325;
+      cursor: pointer;
+      display: block;
+      display: -webkit-box;
+      font-weight: 400;
+      height: 43px;
+      line-height: 22px;
+      margin-top: 5px;
+      // overflow: hidden;
+      padding: 0 12px 5px;
+      -webkit-transition: 0.15s ease-in-out;
+      -o-transition: 0.15s ease-in-out;
+      transition: 0.15s ease-in-out;
+      word-break: break-word;
     }
   }
 
@@ -151,7 +166,6 @@
     @include for-small-layout {
       max-width: rem(348px);
     }
-  
 
     .vueperslides__parallax-wrapper {
       height: 100%;

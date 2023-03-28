@@ -1,6 +1,6 @@
 /** @format */
 
-div.main-header {
+.main-header {
   z-index: 2999;
   width: 100%;
   transition: color 0.5s ease;
@@ -11,11 +11,10 @@ div.main-header {
     border-radius: 4px;
   }
 
-  &:not(.header-transparent) {
+  .fiverr-header:not(.header-transparent) {
     &:visited:not(:hover) {
       color: $primary-clr-dark;
     }
-
     div.fiverr-nav ul {
       margin: 0;
       height: 100%;
@@ -36,9 +35,9 @@ div.main-header {
       //   cursor: pointer;
       // }
       li {
-        & > * {
+        & > *:not(.btn-join) {
           color: $secondary-clr-dark;
-          &:hover:not(.btn-join) {
+          &:hover {
             color: $primary-clr;
             cursor: pointer;
           }
@@ -60,7 +59,7 @@ div.main-header {
     }
   }
 
-  & .header-transparent {
+  .fiverr-header.header-transparent {
     .btn-join {
       font-size: 14px;
       padding: 10px 16px;
@@ -78,6 +77,7 @@ div.main-header {
     }
 
     div.fiverr-nav ul {
+      color: white;
       margin: 0;
       height: 100%;
       & > * {
@@ -85,18 +85,19 @@ div.main-header {
 
         padding-inline-end: 1.5em;
         font-family: $font2;
-        color: $secondary-clr-dark;
+        color: white;
 
         &:last-child {
           padding-inline-end: 0;
         }
       }
       // align-items: center;
-      > *:hover {
-        color: $primary-clr;
-        cursor: pointer;
-      }
+      // > *:hover {
+      //   color: $primary-clr;
+      //   cursor: pointer;
+      // }
       li {
+        color: white;
         & > * {
           color: white;
           &:hover:not(.btn-join) {
@@ -237,13 +238,6 @@ div.main-header {
     // color: #fff;
   }
 }
-// .header-row-wrapper {
-//so much bad name ik, but soon i change
-// align-items: center;
-// justify-content: space-between;
-// align-content: space-between;
-// flex-wrap: wrap;
-// }
 
 header.header-transparent {
   //suppose to be in helpers?

@@ -104,6 +104,10 @@
           // left: rem(-20px);
         }
         &.vueperslides__arrow--next {
+          @include for-medium-layout {
+            
+            transform: translate(100%, -100%);
+          }
           transform: translate(10%, -100%);
         }
       }
