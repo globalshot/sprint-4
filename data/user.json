@@ -15,21 +15,35 @@
         "services": ["WCCde"],
         "description": "just a random user",
         "skills": ["logo design"],
-        "languages": [{"english": "fluent"}, {"herbew": "fluent"}],
+        "languages": [{"english": "Fluent"}, {"herbew": "Fluent"}],
         "education": ["coding academy 2023"],
         "certifications": []
     },
     {
         "_id": "u102",
         "fullname": "John Buy",
-        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+        "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp",
         "information":{
             "country": "France",
             "memeberSince": 1679985825783
         },
         "description": "",
         "skills": [""],
-        "languages": [{"english": "fluent"}, {"herbew": "fluent"}],
+        "languages": [{"english": "Fluent"}, {"herbew": "Fluent"}],
+        "education": [""],
+        "certifications": []
+    },
+    {
+        "_id": "u103",
+        "fullname": "Don Peru",
+        "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "information":{
+            "country": "Israel",
+            "memeberSince": 1679985825783
+        },
+        "description": "",
+        "skills": [""],
+        "languages": [{"english": "Fluent"}, {"german": "Native"}, {"arabic": "Basic"}],
         "education": [""],
         "certifications": []
     }
