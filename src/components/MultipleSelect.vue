@@ -39,7 +39,7 @@
                 </div>
                 <div class="buttons flex">
                     <div @click="clearBudget">Clear All</div>
-                    <button @click="setBudget()" class="btn-apply">Apply</button>
+                    <button type="button" @click="setBudget()" class="btn-apply">Apply</button>
                 </div>
             </form>
         </div>
