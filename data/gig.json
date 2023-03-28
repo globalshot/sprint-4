@@ -117,10 +117,10 @@
     "_id": "np2W2",
     "title": "The best gig ever",
     "owner": {
-      "_id": "u110",
-      "fullname": "Muki ka",
+      "_id": "u101",
+      "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
-      "level": "2",
+      "level": "3",
       "rate": 5
     },
     "description": "I will create the most beatiful website",
@@ -155,11 +155,11 @@
     "_id": "mY32e",
     "title": "1st class animations",
     "owner": {
-      "_id": "u109",
-      "fullname": "Puki po",
+      "_id": "u101",
+      "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
-      "level": "1",
-      "rate": 4
+      "level": "3",
+      "rate": 5
     },
     "description": "This is for creating animations and videos, can be uploaded to YouTube",
     "imgUrl": "",
@@ -179,8 +179,8 @@
         "_id": "1G1by",
         "createdAt": 1679986035783,
         "user": {
-          "_id": "u110",
-          "fullname": "Muki ka",
+          "_id": "u102",
+          "fullname": "John Buy",
           "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
         },
         "rate": 1,
@@ -192,10 +192,10 @@
     "_id": "1Rz2z",
     "title": "Audio editing",
     "owner": {
-      "_id": "u111",
-      "fullname": "Dave sound",
+      "_id": "u101",
+      "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
-      "level": "1",
+      "level": "3",
       "rate": 5
     },
     "description": "I will clean up denoise edit your audio or sound in video",
@@ -216,9 +216,9 @@
         "_id": "1G3sd",
         "createdAt": 1679986070783,
         "user": {
-          "_id": "u110",
-          "fullname": "Muki ka",
-          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+          "_id": "u103",
+          "fullname": "Don Peru",
+          "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
         },
         "rate": 5,
         "review": "Even though my video audio was distorted beyond repair, he significantly improved the audio which I appreciate."
@@ -229,11 +229,11 @@
     "_id": "B2b2z",
     "title": "Portrait Photographers",
     "owner": {
-      "_id": "u112",
-      "fullname": "Take pic",
+      "_id": "u101",
+      "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
-      "level": "1",
-      "rate": 4
+      "level": "3",
+      "rate": 5
     },
     "description": "I will do portrait photography in london",
     "imgUrl": "",
@@ -254,9 +254,9 @@
         "_id": "1G3sd",
         "createdAt": 1679986070783,
         "user": {
-          "_id": "u120",
-          "fullname": "John doe",
-          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+          "_id": "u103",
+          "fullname": "Don Peru",
+          "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
         },
         "rate": 5,
         "review": "Josh was amazing all the way along. I needed a photograph to shoot my proposal in London and he agreed even though it was at night. He helped me to chose the right location and the perfect spot for it. He made sure to chose a place where there weren't that many people. He made a lot of photos and they are awesome and very different. Would work with him again 100%"
