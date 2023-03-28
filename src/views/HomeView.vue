@@ -8,9 +8,13 @@
                 <h1>Popular professional services</h1>
                 <div class="gallery-container">
 
-                    <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3" :slide-ratio="1 / 3"
-                        :bullets="false" :dragging-distance="200"
-                        :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
+                    <vueper-slides class="no-shadow" :visible-slides='slidesNum' slide-multiple :gap="3"
+                        :slide-ratio="1 / 3" :bullets="false" :dragging-distance="200" :breakpoints="{
+                            550: { visibleSlides: 1, slideMultiple: 2 },
+                            800: { visibleSlides: 2, slideMultiple: 2 },
+                            1000: { visibleSlides: 3, slideMultiple: 2 },
+                            1330: { visibleSlides: 4, slideMultiple: 2 }
+                        }">
                         <template #arrow-left>
                             <i class="fa-solid fa-angle-left"></i>
                         </template>
@@ -139,7 +143,7 @@
                             <span class="flex">
                                 <div>
                                     <span>
-                                        <svg class="svg svg-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" >
+                                        <svg class="svg svg-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                             <defs>
 
                                             </defs>
@@ -596,8 +600,24 @@ export default {
                         </div>
                     </a>`
             },
-        ]
+        ],
+        slidesNum: '5',
+        width: window.innerWidth,
     }),
+    // created() {
+    //     console.log('width', width)
+
+    // },
+    //     computed: {
+    //         changeWidth() {
+    // if(width === 1300){
+    //     this.slidesNum = 3
+    // }
+    //         }
+    //     },
+    watch: {
+        // width
+    },
     components: {
         Hero,
         VueperSlides,
