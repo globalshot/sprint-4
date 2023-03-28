@@ -104,20 +104,20 @@ function _createGig(name, tags) {
     }
 }
 
-function _filter(gGigs, filterBy) {
+function _filter(gigs, filterBy) {
     if (filterBy.txt) {
         const regex = new RegExp(filterBy.txt, 'i')
-        gigs = gGigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
+        gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
     }
     if (filterBy.tag) {
-        gigs = gGigs.filter(gig => gig.tags.includes(filterBy.tag))
+        gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
     }
     if (filterBy.budget) {
-        console.log(gig.packages[0].price)
-        gigs = gGigs.filter(gig => (gig.packages[0].price >= filterBy.budget.min && gig.packages[0].price <= filterBy.budget.max))
+        console.log(gigs[0].packages[0].price)
+        gigs = gigs.filter(gig => (gig.packages[0].price >= filterBy.budget.min && gig.packages[0].price <= filterBy.budget.max))
     }
     if (filterBy.daysToMake) {
-        gigs = gGigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
+        gigs = gigs.filter(gig => gig.packages[0].daysToMake <= filterBy.daysToMake)
     }
     return gigs
 }
