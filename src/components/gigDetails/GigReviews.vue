@@ -32,15 +32,26 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="review-details">
-                                            <div class="flex m-t-20">
-                                                <div class="orca-rating color-yellow tbody-6">
-                                                    <div class="stars">
-                                                        <time class="text-body-2">2 months ago</time>
-                                                    </div>
-                                                    <p>{{ review.reviewDetails }}</p>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div class="review-details">
+                                    <div class="flex m-t-20">
+                                        <div class="orca-rating color-yellow tbody-6">
+                                            <div class="stars">
+                                                <ul class="flex">
+                                                    <li v-for="n in gig.owner.rate">
+                                                        <span class="star">
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </span>
+                                                    </li>
+                                                    <li class="num">
+                                                        {{ gig.owner.rate }} 
+                                                    </li>
+                                                    <span class="inline-divider "></span>
+                                                    <time class="text-body-2"> 2 months ago</time>
+                                                </ul>
                                             </div>
+                                            <p>{{ review.reviewDetails }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -48,9 +59,9 @@
                         </div>
                     </div>
                 </ul>
-                <div class="load-more-wrapper">
+                <!-- <div class="load-more-wrapper">
                     <button class="see-more-button">see more</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -36,7 +36,7 @@
 
 
                     <div class="gig-tags-container">
-                        <h2 class="section-title"> Related tags</h2>
+                        <!-- <h2 class="section-title"> Related tags</h2> -->
                         <ul><!--v-for for the tags-->
 
                         </ul>
@@ -49,11 +49,12 @@
 
         <section></section><!--the seller pop up at the left bottom-->
         <!--not from store yet-->
-        <GigBottom /><!--wasnt scss-ed at all-->
+        <!-- <GigBottom /> -->
+        <!--wasnt scss-ed at all-->
 
     </div>
     <section v-if="gig" class="gig-details">
-        <pre>{{ gig }}</pre>
+        <!-- <pre>{{ gig }}</pre> -->
     </section>
 </template>
 
