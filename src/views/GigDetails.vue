@@ -71,6 +71,7 @@ import GigReviews from '../components/gigDetails/GigReviews.vue'
 import AboutSeller from '../components/gigDetails/AboutSeller.vue'
 import GigDescription from '../components/gigDetails/GigDescription.vue'
 import GigBottom from '../components/gigDetails/GigBottom.vue'
+import SidebarSmall from '../components/gigDetails/SidebarSmall.vue'
 
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
@@ -103,6 +104,7 @@ export default {
     },
     components: {
         SidebarContent,
+        SidebarSmall,
         ReviewPage,
         StickyHeader,
         GigOverview,

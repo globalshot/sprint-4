@@ -67,6 +67,7 @@
                     </vueper-slides>
                 </span>
             </div>
+            <SidebarSmall :gig='gig'></SidebarSmall>
             <span>(number) orders in queue</span><!--we need user for this-->
         </div>
 
@@ -77,6 +78,9 @@
 </template>
 
 <script>
+import SidebarContent from '../gigDetails/SidebarContent.vue'
+import SidebarSmall from '../gigDetails/SidebarSmall.vue'
+
 import { VueperSlides, VueperSlide } from "vueperslides"
 import "vueperslides/dist/vueperslides.css"
 
@@ -110,6 +114,7 @@ export default {
         // console.log('test2',this.gig.owner);
     },
     components: {
+        SidebarSmall,
         VueperSlides,
         VueperSlide
     }
