@@ -23,7 +23,17 @@
       {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "daysToMake": 4, "features": ["y","y","y","n","y","n"]},
       {"type": "premium", "price": "200", "description": "the most premium ever package", "revisits": 3, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
     ],
-    "reviews": []
+    "reviews": [
+      {
+        "user": {
+          "_id": "u102",
+          "fullname": "John Buy",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 5,
+        "review": "the seller was nice, the final thing i got was as i wished"
+      }
+    ]
   },
   {
     "_id": "49q3d",
@@ -49,7 +59,19 @@
       {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
       {"type": "premium", "price": "400", "description": "the most troll ever package", "revisits": 5, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
     ],
-    "reviews": []
+    "reviews": [
+      {
+        "_id": "1G3sd",
+        "createdAt": 1679985935783,
+        "user": {
+          "_id": "u102",
+          "fullname": "John Buy",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rating": 5,
+        "text": "lol he is jsut soo good at trolling"
+      }
+    ]
   },
   {
     "_id": "b4sea",
@@ -75,6 +97,16 @@
       {"type": "standart", "price": "80", "description": "can make both but max 3 of each", "revisits": 5, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
       {"type": "premium", "price": "160", "description": "lots of them so it will be the best", "revisits": 10, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
     ],
-    "reviews": []
+    "reviews": [
+      {
+        "user": {
+          "_id": "u102",
+          "fullname": "John Buy",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 3,
+        "review": "didnt liked some much what i got, but he tried"
+      }
+    ]
   }
 ]
