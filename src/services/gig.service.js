@@ -1,4 +1,4 @@
-import { storageService } from './storage.service.js'
+import { httpService } from './http.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
@@ -21,31 +21,23 @@ window.cs = gigService
 
 
 async function query(filterBy = { txt: '', tag: '' }) {
-    // console.log(filterBy)
-    // var gigs = await storageService.query(STORAGE_KEY)
-
-    // return gigs = _filter(gigs, filterBy)
     return httpService.get(STORAGE_KEY, filterBy)
 }
 
 
 function getById(gigId) {
-    // return storageService.get(STORAGE_KEY, gigId)
     return httpService.get(`gig/${gigId}`)
 }
 
 async function remove(gigId) {
-    // await storageService.remove(STORAGE_KEY, gigId)
     return httpService.delete(`gig/${gigId}`)
 }
 
 async function save(gig) {
     var savedGig
     if (gig._id) {
-        // savedGig = await storageService.put(STORAGE_KEY, gig)
         savedGig = await httpService.put(`gig/${gig._id}`, gig)
     } else {
-        // savedGig = await storageService.post(STORAGE_KEY, gig)
         gig.owner = userService.getLoggedinUser()
         savedGig = await httpService.post('gig', gig)
     }
@@ -53,20 +45,6 @@ async function save(gig) {
 }
 
 async function addGigMsg(gigId, txt) {
-    // Later, this is all done by the backend
-    // const gig = await getById(gigId)
-    // if (!gig.msgs) gig.msgs = []
-
-    // const msg = {
-    //     id: utilService.makeId(),
-    //     by: userService.getLoggedinUser(),
-    //     txt
-    // }
-    // gig.msgs.push(msg)
-    // await storageService.put(STORAGE_KEY, gig)
-
-    // return msg
-
     const savedMsg = await httpService.post(`gig/${gigId}/msg`, { txt })
     return savedMsg
 }
@@ -108,24 +86,6 @@ function _createGig(name, tags) {
         tags,
         likedByUsers: ['mini-user'] // for user-wishlist : use $in
     }
-}
-
-function _filter(gigs, filterBy) {
-    if (filterBy.txt) {
-        const regex = new RegExp(filterBy.txt, 'i')
-        gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
-    }
-    if (filterBy.tag) {
-        gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
-    }
-    if (filterBy.budget) {
-        console.log(gigs[0].packages[0].price)
-        gigs = gigs.filter(gig => (gig.packages[0].price >= filterBy.budget.min && gig.packages[0].price <= filterBy.budget.max))
-    }
-    if (filterBy.daysToMake) {
-        gigs = gigs.filter(gig => gig.packages[0].daysToMake <= filterBy.daysToMake)
-    }
-    return gigs
 }
 
 ; (() => {
