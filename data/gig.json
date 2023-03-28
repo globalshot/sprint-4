@@ -19,9 +19,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "63", "description": "the most basic ever package", "revisits": 1, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "daysToMake": 4, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "200", "description": "the most premium ever package", "revisits": 3, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 63, "description": "the most basic ever package", "revisits": 1, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 100, "description": "the most standart ever package", "revisits": 2, "daysToMake": 4, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 200, "description": "the most premium ever package", "revisits": 3, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {
@@ -57,9 +57,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "30", "description": "the most basic ever package", "revisits": 1, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "400", "description": "the most troll ever package", "revisits": 5, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 30, "description": "the most basic ever package", "revisits": 1, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 100, "description": "the most standart ever package", "revisits": 2, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 400, "description": "the most troll ever package", "revisits": 5, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {
@@ -95,9 +95,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "40", "description": "1 text file or logo", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "80", "description": "can make both but max 3 of each", "revisits": 5, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "160", "description": "lots of them so it will be the best", "revisits": 10, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 40, "description": "1 text file or logo", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 80, "description": "can make both but max 3 of each", "revisits": 5, "daysToMake": 3, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 160, "description": "lots of them so it will be the best", "revisits": 10, "daysToMake": 6, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {
@@ -133,9 +133,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "50", "description": "3 pages Website", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "70", "description": "7 pages Website", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "200", "description": "Full website", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 50, "description": "3 pages Website", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 70, "description": "7 pages Website", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 200, "description": "Full website", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {
@@ -170,9 +170,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "100", "description": "1 minute video animation", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "200", "description": "3 minute video animation", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "300", "description": "5 minute video animation", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 100, "description": "1 minute video animation", "revisits": 2, "daysToMake": 2, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 200, "description": "3 minute video animation", "revisits": 5, "daysToMake": 5, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 300, "description": "5 minute video animation", "revisits": 10, "daysToMake": 10, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {
@@ -207,9 +207,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "20", "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "40", "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "50", "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 20, "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 40, "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 50, "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {
@@ -245,9 +245,9 @@
       "mini-user"
     ],
     "packages": [
-      {"type": "basic", "price": "20", "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
-      {"type": "standart", "price": "40", "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
-      {"type": "premium", "price": "50", "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
+      {"type": "basic", "price": 20, "description": "Up to 1 minute editing", "revisits": 2, "daysToMake": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": 40, "description": "Up to 5 minute editing", "revisits": 5, "daysToMake": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": 50, "description": "Up to 10 minute editing", "revisits": 10, "daysToMake": 4, "features": ["y","y","y","y","y","y"]}
     ],
     "reviews": [
       {

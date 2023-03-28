@@ -2,6 +2,12 @@ import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
 
+
+// const fs = require('fs')
+import data from '../../data/gig.json';
+
+const gGigs = data
+
 const STORAGE_KEY = 'gig_db'
 
 export const gigService = {
@@ -98,19 +104,20 @@ function _createGig(name, tags) {
     }
 }
 
-function _filter(gigs, filterBy) {
+function _filter(gGigs, filterBy) {
     if (filterBy.txt) {
         const regex = new RegExp(filterBy.txt, 'i')
-        gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
+        gigs = gGigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
     }
     if (filterBy.tag) {
-        gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
+        gigs = gGigs.filter(gig => gig.tags.includes(filterBy.tag))
     }
     if (filterBy.budget) {
-        gigs = gigs.filter(gig => (gig.price >= filterBy.budget.min && gig.price <= filterBy.budget.max))
+        console.log(gig.packages[0].price)
+        gigs = gGigs.filter(gig => (gig.packages[0].price >= filterBy.budget.min && gig.packages[0].price <= filterBy.budget.max))
     }
     if (filterBy.daysToMake) {
-        gigs = gigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
+        gigs = gGigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
     }
     return gigs
 }
@@ -118,12 +125,7 @@ function _filter(gigs, filterBy) {
 ; (() => {
     let gigs = utilService.loadFromStorage(STORAGE_KEY) || []
     if (!gigs || !gigs.length) {
-        const tags = ["logo-design", "website-design", "graphics-design", "ai-services", "data", "photography", "video", "word-press", "marketing", "music", "programming-tech", "business", "lifestyle"]
-        for (let i = 0; i < 20; i++) {
-            const idx = utilService.getRandomIntInc(0, 7)
-            const title = 'I will polish your personal statement and program application'
-            gigs.push(_createGig(title, [tags[i], tags[idx]]))
-        }
+        gigs = gGigs
         utilService.saveToStorage(STORAGE_KEY, gigs)
     }
     

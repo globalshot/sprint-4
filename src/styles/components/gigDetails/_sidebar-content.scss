@@ -1,10 +1,25 @@
 /** @format */
 
 div.side-bar {
+  display: none;
+  @include for-medium-layout {
+    display: block;
+  }
   width: 33.6%;
   min-width: rem(280px);
   & .inner-sticky {
     top: rem(86px);
+  }
+}
+div.side-bar-small {
+  display: block;
+  @include for-medium-layout {
+    display: none;
+  }
+  width: 100%;
+  min-width: rem(280px);
+  & .inner-sticky {
+    position: relative;
   }
 }
 

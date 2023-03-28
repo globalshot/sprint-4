@@ -15,7 +15,21 @@
   white-space: nowrap;
   margin-block-end: -0.8rem;
 
+  .vueperslides {
+    visible-slides: 3;
+
+    &__parallax-wrapper {
+      min-height: 430px;
+      height: 100%;
+    }
+
+    // &__track-inner {
+    //   justify-content: center;
+    // }
+  }
+
   .vueperslide {
+    height: 100%;
     opacity: 1;
     transition: 0.2s;
     &:hover {
@@ -25,6 +39,10 @@
 
   .subcategory-warper {
     padding: 1.15rem 1.1rem 1.1rem 1.1rem;
+    left: 0;
+    @include for-mobile-layout {
+      left: 20%;
+    }
 
     h4 {
       letter-spacing: 0.03em;
@@ -45,6 +63,17 @@
     &.vueperslides__arrow--next {
       transform: translate(-110%, -100%);
     }
+    @include for-mobile-layout {
+
+      &.vueperslides__arrow--prev {
+        transform: translate(-50%, -100%);
+        // left: rem(-20px);
+      }
+      &.vueperslides__arrow--next {
+        transform: translate(50%, -100%);
+      }
+    }
+
   }
 
   a {

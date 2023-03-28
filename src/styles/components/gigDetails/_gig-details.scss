@@ -2,30 +2,78 @@
 
 .gig-page {
   position: relative;
+  @include for-small-layout {
+    // width: 100%;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: center;
+
+    .details-layout {
+      padding: 0;
+    }
+  }
+  @include for-mobile-layout {
+    // width: 100%;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: center;
+
+    .details-layout {
+      padding: 0;
+    }
+  }
+  @include for-medium-layout {
+    // width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: center;
+
+    .details-layout {
+      padding: 2rem;
+    }
+  }
+
+  .details-layout {
+    flex-direction: row-reverse;
+    // padding: 2rem;
+    max-width: 1304px;
+    margin: auto;
+  }
 
   .side-bar {
     background-color: #fff;
   }
 
+  .main-small {
+    padding:0 33px;
+
+    @include for-medium-layout {
+      padding:0 ;
+    }
+  }
+
   .main {
-    margin-inline-end: 9.15%;
-    width: 57.42%;
+    width: 100%;
+    // padding:0 33px;
+    // @include for-small-layout {
+    //   width: 100%;
+    // }
+    margin-inline-end: 0%;
+    @include for-medium-layout {
+      margin-inline-end: 9.15%;
+      width: 57.42%;
+    }
   }
 
-  .details-layout {
-    flex-direction: row-reverse;
-    padding: 2rem;
-    max-width: 1304px;
-    margin: auto;
-  }
   .img-container {
-
     .vueperslides {
       height: 100%;
       // max-width: rem(713px);
       // width: em(713px);
       // width: 100%;
-    
+
       padding: 0;
 
       &__parallax-wrapper {
@@ -48,11 +96,15 @@
         font-size: 1.5em;
 
         &.vueperslides__arrow--prev {
-          transform: translate(-100%, -100%);
+          @include for-medium-layout {
+            
+            transform: translate(-100%, -100%);
+          }
+          transform: translate(-10%, -100%);
           // left: rem(-20px);
         }
         &.vueperslides__arrow--next {
-          transform: translate(100%, -100%);
+          transform: translate(10%, -100%);
         }
       }
     }
@@ -69,10 +121,10 @@
     // padding-block-end: rem(20px);
     margin-block-end: rem(64px);
     // border-bottom: 1px solid $grey-txt;
-    font: 400 16px/24px 'Macan', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font: 400 16px/24px "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
     .section-title {
       font-size: em(20px);
-      line-height:rem(28px);
+      line-height: rem(28px);
       padding-bottom: 1.5075rem;
       color: $secondary-clr-dark;
     }
@@ -115,8 +167,6 @@
     }
   }
 }
-
-
 
 .seller-stats > * {
   margin-inline-end: 0.5rem;

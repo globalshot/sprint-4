@@ -53,7 +53,7 @@
             </svg>
             <div class="flex">
                 <h4>STARTING AT </h4>
-                <span class="price">US${{ gig.price }}</span>
+                <span class="price">US${{ gig.packages[0].price }}</span>
             </div>
         </div>
 

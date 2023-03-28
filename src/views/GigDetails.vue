@@ -2,7 +2,7 @@
     <div class="main-container full main-layout">
 
         <!--when everything from store, look at this-->
-        <StickyHeader @scrollTo="scrollTo"/>
+        <StickyHeader @scrollTo="scrollTo" />
 
         <div class="gig-page main-layout">
 
@@ -17,30 +17,33 @@
                     <!--carousel images hard coded, no order amount yet-->
                     <GigOverview ref="OverView" :gig='gig'></GigOverview>
 
-                    <!--not from store yet-->
-                    <GigReview  :reviews="reviews" />
+                    <div class="main-small">
+                        <!--not from store yet-->
+                        <GigReview :reviews="reviews" />
 
-                    <!--gig description closer to finish, make it pre, check about meta-->
-                    <GigDescription :gig='gig'/>
-
-
-                    <!--not from store yet-->
-                    <!--cant do it yet because there no user yet-->
-                    <!--im here ended, dont know where to continue-->
-                    <AboutSeller :gig="gig"/>
+                        <!--gig description closer to finish, make it pre, check about meta-->
+                        <GigDescription :gig='gig' />
 
 
+                        <!--not from store yet-->
+                        <!--cant do it yet because there no user yet-->
+                        <!--im here ended, dont know where to continue-->
+                        <AboutSeller :gig="gig" />
 
-                    <!-- not from store yet -->
-                    <GigReviews :gig="gig" :reviews="reviews" ref="reviews" />
 
 
-                    <div class="gig-tags-container">
-                        <!-- <h2 class="section-title"> Related tags</h2> -->
-                        <ul><!--v-for for the tags-->
+                        <!-- not from store yet -->
+                        <GigReviews :gig="gig" :reviews="reviews" ref="reviews" />
 
-                        </ul>
+
+                        <div class="gig-tags-container">
+                            <!-- <h2 class="section-title"> Related tags</h2> -->
+                            <ul><!--v-for for the tags-->
+
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
 
             </section>
@@ -71,6 +74,7 @@ import GigReviews from '../components/gigDetails/GigReviews.vue'
 import AboutSeller from '../components/gigDetails/AboutSeller.vue'
 import GigDescription from '../components/gigDetails/GigDescription.vue'
 import GigBottom from '../components/gigDetails/GigBottom.vue'
+import SidebarSmall from '../components/gigDetails/SidebarSmall.vue'
 
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
@@ -103,6 +107,7 @@ export default {
     },
     components: {
         SidebarContent,
+        SidebarSmall,
         ReviewPage,
         StickyHeader,
         GigOverview,

@@ -29,6 +29,19 @@
       top: 50%;
       opacity: 1;
     }
+
+    @include for-medium-layout {
+      &__arrow--prev {
+        left: rem(-18px);
+        top: 50%;
+        opacity: 1;
+      }
+      &__arrow--next {
+        right: rem(-18px);
+        top: 50%;
+        opacity: 1;
+      }
+    }
   }
 
   // @include for-medium-layout {
