@@ -1,7 +1,83 @@
 [
-    {
-      "_id": "i101",
-      "title": "I will design your logo",
-      "price": 12
-    }
+  {
+    "_id": "WCCde",
+    "title": "I will polish your personal statement and program application",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Dudu Da",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "3",
+      "rate": 5
+    },
+    "daysToMake": 2,
+    "description": "Make unique logo...",
+    "imgUrl": "",
+    "tags": [
+      "logo-design",
+      "video"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "63", "description": "the most basic ever package", "revisits": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "200", "description": "the most premium ever package", "revisits": 3, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": []
+  },
+  {
+    "_id": "WCCde",
+    "title": "I will polish your personal statement and program application",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Dudu Da",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "3",
+      "rate": 5
+    },
+    "daysToMake": 2,
+    "description": "Make unique logo...",
+    "imgUrl": "",
+    "tags": [
+      "logo-design",
+      "video"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "63", "description": "the most basic ever package", "revisits": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "200", "description": "the most premium ever package", "revisits": 3, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": []
+  },
+  {
+    "_id": "WCCde",
+    "title": "I will polish your personal statement and program application",
+    "owner": {
+      "_id": "u101",
+      "fullname": "Dudu Da",
+      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "level": "3",
+      "rate": 5
+    },
+    "daysToMake": 2,
+    "description": "Make unique logo...",
+    "imgUrl": "",
+    "tags": [
+      "logo-design",
+      "video"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ],
+    "packages": [
+      {"type": "basic", "price": "63", "description": "the most basic ever package", "revisits": 1, "features": ["y","n","n","n","y","n"]},
+      {"type": "standart", "price": "100", "description": "the most standart ever package", "revisits": 2, "features": ["y","y","y","n","y","n"]},
+      {"type": "premium", "price": "200", "description": "the most premium ever package", "revisits": 3, "features": ["y","y","y","y","y","y"]}
+    ],
+    "reviews": []
+  }
 ]

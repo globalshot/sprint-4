@@ -1,0 +1,22 @@
+[
+    {
+        "_id": "u101",
+        "fullname": "Dudu Da",
+        "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+        "level": "3",
+        "rate": 5,
+        "totalOrders": 10,
+        "information":{
+            "country": "France",
+            "memeberSince": 1679985825783,
+            "avgResponse": "1 hour",
+            "lastDelivery": "14 hours"
+        },
+        "services": ["WCCde"],
+        "description": "just a random user",
+        "skills": ["logo design"],
+        "languages": [{"english": "fluent"}, {"herbew": "fluent"}],
+        "education": ["coding academy 2023"],
+        "certifications": []
+    }
+]
