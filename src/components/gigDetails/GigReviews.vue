@@ -55,7 +55,7 @@
                                                 <time class="text-body-2"> 2 months ago</time>
                                             </ul>
                                         </div>
-                                        <p>{{ review.review }}</p>
+                                        <p>{{ review.text }}</p>
                                     </div>
                                 </div>
                             </div>

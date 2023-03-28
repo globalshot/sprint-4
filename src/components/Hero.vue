@@ -3,9 +3,14 @@
         <div class="hero-pos-container main-layout full">
 
             <div class="img-container full">
-                <!-- <vueper-slides autoplay class="no-shadow">
-                    <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :content="slide.content" />
-                </vueper-slides> -->
+                <vueper-slides autoplay class="no-shadow" fade>
+                    <vueper-slide v-for="(slide, i) in slides" :key="i" >
+                    <template #content>
+                        <img src="https://res.cloudinary.com/dhsdxj3y3/image/upload/v1670768271/gigs/zj3dflxnixaytffgqpn9.webp"
+                            alt="">
+                        </template>
+                        </vueper-slide>
+                </vueper-slides>
                 <img src="https://res.cloudinary.com/dhsdxj3y3/image/upload/v1670768271/gigs/zj3dflxnixaytffgqpn9.webp"
                     alt="">
             </div>
@@ -105,16 +110,10 @@ export default {
             slides: [
                 {
                     // id: 'slide-1',
-                    content: `<div>
-                    <img style="width:100%;" src="https://res.cloudinary.com/dhsdxj3y3/image/upload/v1670768271/gigs/zj3dflxnixaytffgqpn9.webp"
-                    alt="">
-                    </div>`,
                     img: ("https://res.cloudinary.com/dhsdxj3y3/image/upload/v1670768271/gigs/zj3dflxnixaytffgqpn9.webp"),
                 },
                 {
                     // id: 'slide-2',
-                    content: `<img src="https://res.cloudinary.com/dhsdxj3y3/image/upload/v1670768271/gigs/zj3dflxnixaytffgqpn9.webp"
-                    alt="">`,
                     img: ("https://res.cloudinary.com/dhsdxj3y3/image/upload/v1670768271/gigs/zj3dflxnixaytffgqpn9.webp"),
                 },
             ]
