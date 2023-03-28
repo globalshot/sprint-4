@@ -8,11 +8,11 @@
 
   @include for-mobile-layout {
     grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
+    justify-items: center;
   }
   @include for-small-layout {
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 
   @include for-medium-layout {
