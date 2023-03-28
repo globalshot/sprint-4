@@ -1,0 +1,170 @@
+/** @format */
+
+.app-container {
+  min-height: 100vh;
+  .gig-payment {
+    position: relative;
+    display: flex;
+    margin: 32px;
+    justify-content: space-between;
+    // min-width: rem(340px);
+    height: 100vh;
+    .payment-container {
+      flex-wrap: wrap;
+
+      .payment-details-container {
+        flex: 1.5;
+        flex-wrap: wrap;
+        min-width: rem(350px);
+        border: 1px solid $grey-txt-lighter;
+        border-radius: 0.1875em;
+        padding: 1.5em;
+        margin-block-end: rem(64px);
+        background-color: #fafafa;
+        color: $secondary-clr-light;
+        margin-inline-end: 50px;
+
+        .credit-selection {
+          background-color: #fff;
+          height: rem(50px);
+          margin: 0 rem(-24px);
+          padding-inline-start: rem(24px);
+
+          .credit-txt {
+            display: flex;
+            align-items: center;
+          }
+
+          .visa {
+            width: rem(100px);
+            height: rem(50px);
+          }
+        }
+      }
+
+      .package-container {
+        position: -webkit-sticky;
+        position: sticky;
+        min-width: rem(350px);
+        flex: 1;
+        width: 35%;
+        background-color: #fff;
+        align-self: flex-start;
+        top: 53px;
+        // overflow-y: auto;
+
+        .gig-package-payment {
+          min-width: rem(340px);
+
+          .package-content {
+            border-radius: 3px;
+            padding: 2em 1.5em;
+            border: 1px solid $grey-txt-lighter;
+            margin-block-end: 16px;
+
+            .header {
+              margin-block-end: rem(18px);
+              min-height: rem(48px);
+
+              .img-container {
+                height: 70px;
+                margin-inline-end: 10px;
+                margin-block-start: 5px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+
+            .price {
+              font-size: 1.25rem;
+              line-height: 1.5em;
+              font-weight: 400;
+              color: $secondary-clr-dark;
+            }
+
+            p {
+              font-size: 0.875rem;
+              min-height: 63px;
+              margin-block-end: 10px;
+              line-height: 140%;
+              font-weight: 500;
+              color: $grey-txt-dark;
+            }
+            ul {
+              margin-inline-end: rem(20px);
+              li {
+                display: flex;
+                align-items: center;
+                font-size: 0.875rem;
+                color: $secondary-clr-lighter;
+                line-height: 1.7142857143em;
+                font-family: $font3;
+                .v-svg-container {
+                  width: rem(16px);
+                  height: rem(16px);
+                  margin-inline-end: rem(10px);
+                  svg {
+                    float: left;
+                    height: 100%;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+
+            .pricing {
+              display: flex;
+              justify-content: space-between;
+              color: $grey-txt-dark;
+
+              p {
+                font-family: $font3;
+                font-size: 1rem;
+                min-height: rem(45px);
+                margin-block-end: rem(10px);
+                line-height: 120%;
+                font-weight: 500;
+              }
+
+              & .total {
+                border-top: 1px solid $grey-txt-lighter;
+                padding-top: 15px;
+                color: $secondary-clr-dark;
+                p {
+                  font-weight: 700s;
+                }
+              }
+            }
+
+            .continue-btn {
+              border: 1px solid transparent;
+              border-radius: 0.25em;
+              font-size: 1rem;
+              font-weight: 600;
+              font-family: inherit;
+              line-height: 100%;
+              padding: 0.75em 1.5em;
+              position: relative;
+              text-align: center;
+              width: 100%;
+              transition: 70ms cubic-bezier(0.75, 0, 0.25, 1);
+              cursor: pointer;
+              background-color: $secondary-clr-darker;
+              color: #fff;
+              opacity: 1;
+              transition: background-color .2s;
+
+              &:hover {
+                background-color: $primary-clr;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
