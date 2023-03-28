@@ -18,21 +18,10 @@ window.cs = gigService
 async function query(filterBy = { txt: '', tag: '' }) {
     console.log(filterBy)
     var gigs = await storageService.query(STORAGE_KEY)
-    if (filterBy.txt) {
-        const regex = new RegExp(filterBy.txt, 'i')
-        gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
-    }
-    if (filterBy.tag) {
-        gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
-    }
-    if (filterBy.budget) {
-        gigs = gigs.filter(gig => (gig.price >= filterBy.budget.min && gig.price <= filterBy.budget.max))
-    }
-    if (filterBy.daysToMake) {
-        gigs = gigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
-    }
-    return gigs
+
+    return gigs = _filter(gigs, filterBy)
 }
+
 
 function getById(gigId) {
     return storageService.get(STORAGE_KEY, gigId)
@@ -109,6 +98,23 @@ function _createGig(name, tags) {
     }
 }
 
+function _filter(gigs, filterBy) {
+    if (filterBy.txt) {
+        const regex = new RegExp(filterBy.txt, 'i')
+        gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
+    }
+    if (filterBy.tag) {
+        gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
+    }
+    if (filterBy.budget) {
+        gigs = gigs.filter(gig => (gig.price >= filterBy.budget.min && gig.price <= filterBy.budget.max))
+    }
+    if (filterBy.daysToMake) {
+        gigs = gigs.filter(gig => gig.daysToMake <= filterBy.daysToMake)
+    }
+    return gigs
+}
+
 ; (() => {
     let gigs = utilService.loadFromStorage(STORAGE_KEY) || []
     if (!gigs || !gigs.length) {
@@ -120,6 +126,6 @@ function _createGig(name, tags) {
         }
         utilService.saveToStorage(STORAGE_KEY, gigs)
     }
-
-
+    
+    
 })()
