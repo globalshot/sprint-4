@@ -157,3 +157,11 @@ textarea {
     margin-inline-end: .5em;
   }
 }
+
+.social-signing-button {
+  opacity: 1;
+
+  &:hover {
+    opacity: .75;
+  }
+}

@@ -93,13 +93,15 @@ export default {
         return {
             slides: [//still hard coded
                 {
-                    // content: `  <span>
-                    //                 <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg" alt="">
-                    //             </span>`,
-                    image: (`https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg`)
+                    content: `  <span class="slide-img-container">
+                                    <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg" alt="">
+                                </span>`,
+                    // image: (`https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg`)
                 },
-                {
-                    image: (`https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a48578535dda6059a92aaa13f8c22a64-1678831259/Human_body_fruit-removebg-preview-transformed/create-your-unique-art-through-ai-and-detailed-prompts.png`)
+                {  content: `  <span class="slide-img-container">
+                                    <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/296272891/original/01ea9956b9ccee25eee7438bc652a361bce1db0f.jpg" alt="">
+                                </span>`,
+                    // image: (`https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a48578535dda6059a92aaa13f8c22a64-1678831259/Human_body_fruit-removebg-preview-transformed/create-your-unique-art-through-ai-and-detailed-prompts.png`)
                 }
             ]
         }
