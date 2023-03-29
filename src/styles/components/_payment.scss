@@ -8,7 +8,11 @@
     margin: 32px;
     justify-content: space-between;
     // min-width: rem(340px);
-    height: 100vh;
+    
+
+    @include for-medium-layout {
+      height: 100vh;
+    }
     .payment-container {
       flex-wrap: wrap;
 
