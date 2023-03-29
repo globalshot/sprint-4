@@ -128,9 +128,6 @@ export default {
             ]
         }
     },
-    created() {
-        // console.log('test2',this.gig.owner);
-    },
     components: {
         SidebarSmall,
         VueperSlides,

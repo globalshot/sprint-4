@@ -70,7 +70,7 @@
 
               <li>
                 <!-- <RouterLink to="/edit">Become a seller </RouterLink> -->
-                <RouterLink to="/user/u101">Become a Seller </RouterLink>
+                <RouterLink to="/user/64233f238e1b02500fd244bf">Become a Seller </RouterLink>
               </li>
 
               <li>

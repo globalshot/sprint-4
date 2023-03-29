@@ -37,10 +37,8 @@ export default {
     created() {
         // if (!this.user) this.$router.push('/login')
         
-        console.log(this.$route.query)
         let {txt, tag} = this.$route.query
         let filterBy = {txt, tag}
-        console.log(filterBy)
         this.$store.dispatch({ type: 'loadGigs', filterBy })
         this.filterBy.txt = filterBy.txt
         this.filterBy.tag = filterBy.tag
@@ -67,7 +65,6 @@ export default {
             }
         },
         header() {
-            console.log(this.filterBy)
             let newTag = 'Explore'
             if (this.filterBy.tag) {
                 const mySentence = this.filterBy.tag.replace('-', ' ');
@@ -95,7 +92,6 @@ export default {
         const txt = newQuery.txt
         const tag = newQuery.tag
         this.filterBy = {txt: txt, tag: tag}
-        console.log(this.filterBy)
       // Do something with the new query parameter
     }
 }

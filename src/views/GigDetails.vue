@@ -101,7 +101,6 @@ export default {
             return this.gig
         },
         reviews() {
-            console.log(this.$store.getters.getReviews);
             return this.$store.getters.getReviews
         },
     },
@@ -127,11 +126,9 @@ export default {
     methods: {
         getGig() {
             const { id } = this.$route.params;
-            console.log(this.$route);
             gigService.getById(id)
                 .then(gig => {
                     this.gig = gig;
-                    console.log('gig', this.gig);
                 })
         },
         scrollTo(txt) {

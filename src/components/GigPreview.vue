@@ -33,7 +33,7 @@
         <!-- xxx -->
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
-                <img src="../assets/images/profile-pic.png" alt="">
+                <img :src="gig.owner.imgUrl" alt="">
                 
                 <p class="user-name">{{ gig.owner.fullname }}</p>
             </div>
@@ -59,7 +59,7 @@
             </svg>
             <div class="flex">
                 <h4>STARTING AT </h4>
-                <span class="price">US${{ gig.packages[0].price }}</span>
+                <span class="price">US${{ gig.price }}</span>
             </div>
         </div>
 
@@ -75,8 +75,8 @@ export default {
     name: 'GigPreview',
     methods: {
         loadGig() {
-            const { txt, tag } = this.$route.query
-            const filterBy = { txt, tag }
+            const { txt, tag, budget, daysToMake } = this.$route.query
+            const filterBy = { txt, tag, budget, daysToMake }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
     },
@@ -94,7 +94,7 @@ export default {
                 {
                     image: (`https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/296272891/original/01ea9956b9ccee25eee7438bc652a361bce1db0f.jpg`)
                 }
-            ]
+            ],
         }
 
 

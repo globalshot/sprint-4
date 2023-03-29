@@ -379,17 +379,13 @@ export default {
         }
     },
     created() {
-        console.log(this.gig);
         this.getGig()
     },
     methods: {
         getGig() {
-            console.log(this.$route.params);
             const { id } = this.$route.params;
-            console.log(id);
             gigService.getById(id)
                 .then(gig => {
-                    console.log('gig', gig);
                     this.gig = gig;
                 })
         },

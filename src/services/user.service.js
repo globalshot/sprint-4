@@ -38,8 +38,8 @@ function onUserUpdate(user) {
 }
 
 async function getById(userId) {
-    const user = await storageService.get('user_db', userId)
-    // const user = await httpService.get(`user/${userId}`)
+    // const user = await storageService.get('user_db', userId)
+    const user = await httpService.get(`user/${userId}`)
 
     // socketService.emit(SOCKET_EMIT_USER_WATCH, userId)
     // socketService.off(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
@@ -121,16 +121,16 @@ function _createUser(name, id) {
   }
 }
   
-  ; (() => {
+//   ; (() => {
     
-    let users = utilService.loadFromStorage('user_db') || []
-    if (!users || !users.length) {
-        users = gUsers
-      utilService.saveToStorage('user_db', users)
-    }
+//     let users = utilService.loadFromStorage('user_db') || []
+//     if (!users || !users.length) {
+//         users = gUsers
+//       utilService.saveToStorage('user_db', users)
+//     }
   
    
-  })()
+//   })()
 
 
 

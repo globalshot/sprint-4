@@ -7,7 +7,7 @@ import { userService } from './user.service.js'
 import gGigs from '../../data/gig.json'
 
 
-const STORAGE_KEY = 'gig_db'
+const STORAGE_KEY = 'gig'
 
 export const gigService = {
     query,
@@ -38,7 +38,7 @@ async function save(gig) {
     if (gig._id) {
         savedGig = await httpService.put(`gig/${gig._id}`, gig)
     } else {
-        gig.owner = userService.getLoggedinUser()
+        // gig.owner = userService.getLoggedinUser()
         savedGig = await httpService.post('gig', gig)
     }
     return savedGig

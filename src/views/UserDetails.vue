@@ -1,4 +1,6 @@
 <template>
+    <div v-if="user">
+
     <h3>User Details</h3>
 
     <h1>{{ user.fullname }}</h1>
@@ -9,6 +11,7 @@
         <span>Add gig</span>
     </div>
     <GigIndex />
+    </div>
 </template>
 
 <script>
@@ -20,7 +23,7 @@ export default {
     data() {
         return {
             user: null,
-            gigs: []
+    //         gigs: []
         };
     },
     async created() {
@@ -28,7 +31,6 @@ export default {
         this.user = (id) ?
             await userService.getById(id) :
             console.log("Wrong User");
-        console.log(this.user);
 
     },
     computed: {

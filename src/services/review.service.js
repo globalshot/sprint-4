@@ -7,7 +7,6 @@ const STORAGE_KEY = 'review_db'
 
 async function query(filterBy = null) {
   var reviews = await storageService.query(STORAGE_KEY)
-  console.log(reviews)
   return reviews
   // return await httpService.get(ENDPOINT, filterBy)
 }
