@@ -179,7 +179,7 @@ export default {
   },
   methods: {
     signIn() {
-      if (!this.login) {
+      if (!this.loggedinUser) {
         eventBus.emit('showLogin')
         this.toggleLogin()
         return
