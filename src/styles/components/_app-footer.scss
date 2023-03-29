@@ -18,19 +18,24 @@
       justify-content: space-between;
 
       .social-btns {
-        justify-self: end;
-        justify-content: flex-start;
+        // justify-self: end;
+        // justify-content: flex-start;
+        align-items: center;
 
         div {
           margin-inline-start: rem(20px);
+          padding-block-start: 1.2em;
         }
       }
 
       .left-footer {
         width: auto;
+        align-items: center;
+        height: 100%;
 
         .fiverr-logo-footer {
           svg {
+            margin: 0;
             fill: none;
             & > * {
               fill: rgb(122, 125, 133);
@@ -43,19 +48,20 @@
         }
 
         .text-body {
-          // font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+          height: 100%;
           font-weight: 400;
           font-size: em(14px);
-          // line-height: rem(21px);
           line-height: 1.7125rem;
           margin: 0;
+          align-items: center;
 
           .copyright {
+            padding-block-start: 0.9em;
             color: $grey-txt;
             flex-direction: row;
-            align-items: center;
             margin-inline-start: rem(24px);
             min-width: 0;
+            // padding-block-start: 1em;
             white-space: nowrap;
           }
         }

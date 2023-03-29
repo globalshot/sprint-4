@@ -87,8 +87,8 @@
   margin-bottom: rem(96px);
 
   .selling-proposition {
-    padding-block-end: rem(96px);
-    padding-block-start: rem(96px);
+    padding-block-end: rem(88px);
+    padding-block-start: rem(88px);
   }
 
   .selling-container {
@@ -107,12 +107,14 @@
   }
 
   .selling-info {
-    padding-inline-end: 11%;
-    // flex-basis: 46.66667%;
-    // max-width: 70%;
+    padding-inline-end: 30%;
+
 
     .flex {
       align-items: center;
+      h3 {
+        color: #404145;
+      }
     }
 
     li {
@@ -139,12 +141,14 @@
 
     p {
       color: $secondary-clr-light;
-      // margin-block-end: 1.5rem;
+      line-height: rem(30px);
+
       margin-block-start: 0.8rem;
       letter-spacing: 0.06em;
     }
 
     span {
+      
       display: block;
       width: 24px;
       height: 24px;

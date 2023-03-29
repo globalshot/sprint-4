@@ -1,6 +1,8 @@
 /** @format */
 
 div.side-bar {
+  color: $grey-txt-dark;
+  fill: $grey-txt-dark;
   display: none;
   @include for-medium-layout {
     display: block;
@@ -86,8 +88,11 @@ div.some-id {
       display: flex;
       align-items: center;
       margin-inline-start: rem(16px);
-
+      
       .revisions {
+        // font-weight: 600;
+        font-family: $font3;
+        font-size: .875em;
         margin-inline-start: rem(8px);
       }
     }
@@ -97,6 +102,10 @@ div.some-id {
     margin-block-end: rem(20px);
     color: $secondary-clr-lighter;
     font-size: em(14px);
+    li {
+      gap: 10px;
+      padding-block-end: 0.9rem;
+    }
     & span {
       //its svg size 16x16
       height: rem(16px);

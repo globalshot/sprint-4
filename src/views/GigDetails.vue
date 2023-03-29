@@ -2,7 +2,7 @@
     <div class="main-container full main-layout">
 
         <!--when everything from store, look at this-->
-        <StickyHeader @scrollTo="scrollTo" />
+        <!-- <StickyHeader @scrollTo="scrollTo" /> -->
 
         <div class="gig-page main-layout">
 

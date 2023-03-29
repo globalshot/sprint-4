@@ -111,6 +111,7 @@
       span {
         font-family: "Macan-light";
         color: $tertiary-clr-light;
+        // margin: 0;
       }
     }
 
@@ -136,6 +137,9 @@
 
       span {
         padding: 0px 0px 0px 4px;
+        svg {
+          margin: 0;
+        }
       }
     }
 

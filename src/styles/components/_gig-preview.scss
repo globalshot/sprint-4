@@ -33,17 +33,12 @@
   }
 
   .title {
-    text-align: center;
     height: rem(43px);
     color: #222325;
     margin-top: rem(5px);
-    // padding: 0px rem(12px) rem(5px);
     font-family: "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
     .long-text {
-      // font-size: 1em;
-      // word-wrap: break-word;
-      // text-align: left;
       box-sizing: border-box;
       color: #222325;
       cursor: pointer;
@@ -64,7 +59,6 @@
 
   .rating {
     padding: rem(10px) rem(12px);
-    // color: #02c2a9;
     font-size: em(14px);
     font-weight: 700;
     line-height: em(21px);
@@ -75,6 +69,12 @@
 
     span {
       margin-inline-start: -0.35rem;
+    }
+
+    .num {
+      margin-inline-start: -.75rem;
+      color: $grey-txt;
+      font-weight: 400;
     }
   }
 

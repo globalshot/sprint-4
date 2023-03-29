@@ -26,9 +26,9 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 100,
-        "description": "the most standart ever package",
+        "description": "the most standard ever package",
         "revisits": 2,
         "daysToMake": 4,
         "features": ["y", "y", "y", "n", "y", "n"]
@@ -83,9 +83,9 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 100,
-        "description": "the most standart ever package",
+        "description": "the most standard ever package",
         "revisits": 2,
         "daysToMake": 3,
         "features": ["y", "y", "y", "n", "y", "n"]
@@ -140,7 +140,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 80,
         "description": "can make both but max 3 of each",
         "revisits": 5,
@@ -197,7 +197,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 70,
         "description": "7 pages Website",
         "revisits": 5,
@@ -254,7 +254,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 200,
         "description": "3 minute video animation",
         "revisits": 5,
@@ -311,7 +311,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 40,
         "description": "Up to 5 minute editing",
         "revisits": 5,
@@ -368,7 +368,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 40,
         "description": "Up to 5 minute editing",
         "revisits": 5,
