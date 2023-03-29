@@ -55,6 +55,7 @@ div.some-id {
 
   & div.package-content {
     padding-inline: rem(24px);
+
     & .header-default {
       & h3 {
         justify-content: space-between;
@@ -107,6 +108,10 @@ div.some-id {
   .tab-footer {
     justify-content: center;
     padding: rem(20px);
+
+    a {
+      width: 100%;
+    }
 
     .btn {
       display: flex;
