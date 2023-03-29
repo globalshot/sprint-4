@@ -32,7 +32,8 @@ export default {
     },
 
     created() {
-        this.$store.dispatch({ type: 'loadStore' })
+        this.$store.dispatch({ type: 'loadGigs', filterBy: null })
+        this.$store.dispatch({ type: 'loadUser' })
     }
 }
 </script>
