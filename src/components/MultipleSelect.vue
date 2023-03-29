@@ -160,7 +160,6 @@ export default {
         },
         filter() {
             let filterBy = { ...this.filterBy }
-            console.log(filterBy)
             this.$store.dispatch({ type: 'loadGigs', filterBy })
             // this.showBudgetForm()
         },

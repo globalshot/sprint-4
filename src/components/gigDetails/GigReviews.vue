@@ -82,9 +82,6 @@ export default {
         //     type: Array,
         // }
     },
-    created() {
-        console.log(this.reviews)
-    },
     computed: {
     },
     computed: {},
