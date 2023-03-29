@@ -79,7 +79,7 @@
                 <span v-if="!loggedinUser">Sign in </span>
 
                 <!-- YES LOGIN-->
-                <RouterLink v-else :to="userProfile">{{ fullname }} </RouterLink>
+                <RouterLink v-else :to="userProfile"> {{ fullname }} </RouterLink>
               </li>
               <li v-if="!loggedinUser">
                 <a  class="btn btn-join" href="">Join</a>
@@ -240,7 +240,9 @@ export default {
     fullname(){
       if (!this.loggedinUser) return '' 
       return this.loggedinUser.fullname
-    }
+    },
+
+
   },
   components: {
     Login,

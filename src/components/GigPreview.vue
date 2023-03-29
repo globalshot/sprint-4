@@ -1,6 +1,6 @@
 <template>
     <div class="gig-preview" @mouseover="showBtns = true" @mouseleave="showBtns = false">
-        <div v-if="this.$route.params.id" class="btns-container">
+        <div v-if="this.$route.params.id && this.$route.params.id === this.userId " class="btns-container">
             <RouterLink class="btn btn-owner" v-if="showBtns" :to="'/edit/' + gig._id"><i class="fa-solid fa-pencil"></i>
             </RouterLink>
             <button class="btn btn-owner" v-if="showBtns" @click="$emit('removeGig')"><i
@@ -15,11 +15,11 @@
             <template #arrow-right>
                 <i class="fa-solid fa-angle-right"></i>
             </template>
-            <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i" >
+            <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i">
                 <template #content>
-                <!-- <span>hi</span> -->
-                <!-- <img :src="gig.imgUrl[i]" alt=""> -->
-                <img :src="gig.imgUrl[i]" alt="">
+                    <!-- <span>hi</span> -->
+                    <!-- <img :src="gig.imgUrl[i]" alt=""> -->
+                    <img :src="gig.imgUrl[i]" alt="">
                 </template>
             </vueper-slide>
         </vueper-slides>
@@ -34,7 +34,7 @@
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
                 <img src="../assets/images/profile-pic.png" alt="">
-                
+
                 <p class="user-name">{{ gig.owner.fullname }}</p>
             </div>
         </RouterLink>
@@ -44,12 +44,12 @@
             </h3>
         </RouterLink>
         <div class="rating grid star">
-            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15" height="15">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792" width="15" height="15">
                 <path fill="currentColor"
                     d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
                 </path>
             </svg>
-           <span>5.0</span> 
+            <span>5.0</span>
         </div>
         <div class="price-container flex">
             <svg class="like" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -103,11 +103,20 @@ export default {
     props: {
         gig: Object,
     },
-    created() {},
+    created() { },
     components: {
         LongText,
         VueperSlides,
         VueperSlide
+    },
+    computed: {
+        loggedinUser() {
+            return this.$store.getters.loggedinUser
+        },
+        userId() {
+            if (!this.loggedinUser) return ''
+            return this.loggedinUser._id
+        },
     },
     emits: ['removeGig']
 }

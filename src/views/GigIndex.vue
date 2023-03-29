@@ -42,10 +42,14 @@ export default {
         console.log(this.$route.query)
         let {txt, tag} = this.$route.query
         let filterBy = {txt, tag}
-        console.log(filterBy)
-        this.$store.dispatch({ type: 'loadGigs', filterBy })
         this.filterBy.txt = filterBy.txt
         this.filterBy.tag = filterBy.tag
+        if (this.$route.params.id) {
+            filterBy.id = this.$route.params.id
+        }
+        this.filterBy.id = filterBy.id
+        console.log(filterBy)
+        this.$store.dispatch({ type: 'loadGigs', filterBy })
 
 
         this.subscribe = eventBus.on('changeUserStatus', this.setUser)
@@ -54,7 +58,8 @@ export default {
     data() {
         return {
             filterBy: {
-                tag: ''
+                tag: '',
+                id: null,
             },
             loggedinUser: null
         }

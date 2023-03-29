@@ -2,7 +2,7 @@
     <h3>User Details</h3>
 
     <h1>{{ user.fullname }}</h1>
-    <div class="add-gig-container flex">
+    <div v-if="userId === this.$route.params.id" class="add-gig-container flex">
         <button class="btn btn-add">
             <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
         </button>
@@ -34,6 +34,13 @@ export default {
     computed: {
         gigs() {
             return this.$store.getters.gigs
+        },
+        loggedinUser() {
+            return this.$store.getters.loggedinUser
+        },
+        userId() {
+            if (!this.loggedinUser) return ''
+            return this.loggedinUser._id
         },
     },
     components: {
