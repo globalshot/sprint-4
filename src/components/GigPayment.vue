@@ -133,7 +133,7 @@
                                 <div class="pricing">
                                     <p class="bold">Delivery Time</p>
                                     <p>1 Days</p>
-                                </div><button class="continue-btn">Confirm And Pay</button>
+                                </div><button @click="saveOrder" class="continue-btn">Confirm And Pay</button>
                             </section>
                         </section>
                     </section>
@@ -145,37 +145,38 @@
 </template>
 
 <script>
-import { gigService } from './../services/gig.service'
+import { eventBus, showErrorMsg } from '../services/event-bus.service'
+import { gigService } from './../services/gig.service.local'
+import { orderService } from './../services/order.service'
 export default {
-    // props: {
-    //     gig: {
-    //         type: Object,
-    //         required: true
-    //     }
-    // },
     data() {
         return {
-            gig: {}
+            gig: null,
+            order: null
         }
     },
-    created() {
-        console.log(this.gig);
+    async created() {
         this.getGig()
     },
     methods: {
-        getGig() {
-            console.log(this.$route.params);
-            const { id } = this.$route.params;
-            console.log(id);
-            gigService.getById(id)
-                .then(gig => {
-                    console.log('gig', gig);
-                    this.gig = gig;
-                })
+       async getGig() {
+            try {
+                const { id } = this.$route.params;
+                const gig = await gigService.getById(id)
+                this.gig = gig;
+            }
+            catch(err) {
+                showErrorMsg('Failed to get Gig')
+            }
+                
         },
         async saveOrder() {
+            if (!this.loggedinUser) {
+                eventBus.emit('showLogin')
+                return
+            }
             try {
-                await this.$store.dispatch({ addOrder, order: { ...this.order } })
+                await this.$store.dispatch({ type:'addOrder', gigId: this.gig._id })
                 showSuccessMsg('Order Saved')
                 this.$router.push('/gig')
             }
@@ -183,6 +184,12 @@ export default {
                 // showErrorMsg('Failed to save')
             }
         },
+    },
+    computed: {
+        loggedinUser () {
+            return false
+            // return this.$store.getter.loggedinUser
+        }
     }
 
 }

@@ -1,5 +1,6 @@
 <template>
-    <div class="model-background" @click.self="$emit('passUp')">
+    <div v-if="isShown" class="model-background" >
+        <div class="model-background" @click="isShown =false"></div>
         <div class="fixed centered login-model">
             <section class="flex justify-center">
                 <form class="sign-in-form flex column">
@@ -43,7 +44,7 @@
                         </button>
                     </div>
                     <div class="form-seperator"><span>or</span></div>
-                    <div class="field"><input type="text" placeholder="Email / Username"></div>
+                    <div class="field"><input type="text" placeholder="Email / Username"></div> 
                     <div class="field"><input type="password" placeholder="Password"></div>
                     <button class="flex">
                         <p>continue</p>
@@ -57,13 +58,31 @@
     </div>
 </div></template>
 <script>
+import { eventBus } from '../services/event-bus.service'
 export default {
-
+    data() {
+        return {
+            isShown: false,
+            credentials: {
+                username: '',
+                password: '123'
+            }
+        }
+    },
+    created() {
+        this.unSub = eventBus.on('showLogin', this.showLogin)
+    },
+    methods: {
+        showLogin() {
+            this.isShown = true
+        }
+    },
     mounted() {
-        document.body.classList.add('disable-scroll')
+        // document.body.classList.add('disable-scroll')
     },
     unmounted() {
-        document.body.classList.remove('disable-scroll')
+        // document.body.classList.remove('disable-scroll')
+        this.unSub()
     }
 }
 </script>

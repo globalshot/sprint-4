@@ -1,10 +1,12 @@
 import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
+import { gigService } from './gig.service.local.js'
 
 
 // const fs = require('fs')
 import gOrders from '../../data/orders.json';
+import { httpService } from './http.service.js';
 
 
 const STORAGE_KEY = 'order_db'
@@ -36,16 +38,10 @@ async function remove(orderId) {
     await storageService.remove(STORAGE_KEY, orderId)
 }
 
-async function save(order) {
-    var savedOrder
-    if (order._id) {
-        savedOrder = await storageService.put(STORAGE_KEY, order)
-    } else {
-        // Later, owner is set by the backend
-        // gig.owner = userService.getLoggedinUser()
-        savedOrder = await storageService.post(STORAGE_KEY, order)
-    }
-    return savedOrder
+async function save(gigId) {
+    const order = _createOrder(gigId)
+    return await storageService.post(STORAGE_KEY, order)
+    // return await httpService.post()
 }
 
 async function addOrderMsg(orderId, txt) {
@@ -64,42 +60,44 @@ async function addOrderMsg(orderId, txt) {
     return msg
 }
 
-function getEmptyOrder() {
+function getEmptyOrder(gig) {
     return {
-        title: '',
-        price: 0,
-        owner: {
-            _id: "u101",
-            fullname: "Dudu Da",
-            imgUrl: "url",
-            level: "basic/premium",
-            rate: utilService.getRandomIntInc(3, 5)
+        buyer: {
+            _id: "u103",
+            fullname: "Don Peru"
         },
-        daysToMake: utilService.getRandomIntInc(2, 7),
-        description: "Make unique logo...",
-        imgUrl: "",
-        tags: [],
-        likedByUsers: ['mini-user'] // for user-wishlist : use $in
+        seller: {
+            _id: gig.owner._id,
+            fullname: gig.owner.fullname
+        },
+        gig: {
+            _id: gig._id,
+            name: gig.description,
+            price: gig.packages[0].price
+        },
+        status: "pending"
     }
 }
 
-function _createGig(name, tags) {
+async function _createOrder(gigId) {
+    const gig = await gigService.getById(gigId)
+    const buyer = await userService.getLoggedinUser()
+
     return {
-        _id: utilService.makeId(),
-        title: name,
-        price: utilService.getRandomIntInc(10, 100),
-        owner: {
-            _id: "u101",
-            fullname: "Dudu Da",
-            imgUrl: "url",
-            level: "basic/premium",
-            rate: utilService.getRandomIntInc(3, 5)
+        buyer: {
+            _id: buyer._id,
+            fullname: buyer.fullname
         },
-        daysToMake: utilService.getRandomIntInc(2, 7),
-        description: "Make unique logo...",
-        imgUrl: "",
-        tags,
-        likedByUsers: ['mini-user'] // for user-wishlist : use $in
+        seller: {
+            _id: gig.owner._id,
+            fullname: gig.owner.fullname
+        },
+        gig: {
+            _id: gig._id,
+            name: gig.description,
+            price: gig.packages[0].price
+        },
+        status: "pending"
     }
 }
 

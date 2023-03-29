@@ -1,4 +1,6 @@
+import { gigService } from "../../services/gig.service"
 import { orderService } from "../../services/order.service"
+import { userService } from "../../services/user.service"
 
 
 export function getActionRemoveOrder(orderId) {
@@ -39,7 +41,7 @@ export const orderStore = {
             state.orders = orders
         },
         addOrder(state, { order }) {
-            state.orders.push(order)
+            state.orders.unshift(order)
         },
         updateOrder(state, { order }) {
             const idx = state.orders.findIndex(c => c._id === order._id)
@@ -55,9 +57,9 @@ export const orderStore = {
         // },
     },
     actions: {
-        async addOrder(context, { order }) {
+        async addOrder(context, { gigId }) {
             try {
-                order = await orderService.save(order)
+                const order = await orderService.save(gigId)
                 context.commit(getActionAddOrder(order))
                 return order
             } catch (err) {
