@@ -47,7 +47,6 @@ export default {
         this.filterBy.txt = filterBy.txt
         this.filterBy.tag = filterBy.tag
 
-        this.$store.dispatch({ type: 'getReviews' })
 
         this.subscribe = eventBus.on('changeUserStatus', this.setUser)
 
