@@ -1,15 +1,16 @@
 import { storageService } from './storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from './user.service.js'
-import { gigService } from './gig.service.local.js'
+import { gigService } from './gig.service.js'
+import { httpService } from './http.service.js'
 
 
 // const fs = require('fs')
-import gOrders from '../../data/orders.json';
-import { httpService } from './http.service.js';
+import gOrders from '../../data/orders.json'
 
 
 const STORAGE_KEY = 'order_db'
+const API = 'order/'
 
 export const orderService = {
     query,
@@ -24,27 +25,28 @@ window.cs = orderService
 
 async function query(filterBy = { txt: '', tag: '' }) {
     console.log(filterBy)
-    var orders = await storageService.query(STORAGE_KEY)
+    // var orders = await storageService.query(STORAGE_KEY)
+    return await httpService.query(API)
 
-    return orders = _filter(orders, filterBy)
+    // return orders = _filter(orders, filterBy)
 }
 
 
 function getById(orderId) {
-    return storageService.get(STORAGE_KEY, orderId)
+    // return storageService.get(STORAGE_KEY, orderId)
+    return httpService.get(API + orderId)
 }
 
 async function remove(orderId) {
-    await storageService.remove(STORAGE_KEY, orderId)
+    // await storageService.remove(STORAGE_KEY, orderId)
+    await httpService.remove(API + orderId)
 }
 
 async function save(gigId) {
-        const order = await _createOrder(gigId)   
-        
-        return await storageService.post(STORAGE_KEY, order)
-    
+    // const order = await _createOrder(gigId)
+    // return await storageService.post(STORAGE_KEY, order)
 
-    // return await httpService.post()
+    return await httpService.post(API + gigId)
 }
 
 async function addOrderMsg(orderId, txt) {
@@ -86,10 +88,10 @@ async function _createOrder(gigId) {
     try {
         const gig = await gigService.getById(gigId)
         const buyer = await userService.getLoggedinUser()
-    
+
         console.log(gig)
         console.log(buyer)
-    
+
         return {
             buyer: {
                 _id: buyer._id,
@@ -105,9 +107,9 @@ async function _createOrder(gigId) {
                 price: gig.packages[0].price
             },
             status: "pending"
+        }
     }
-    }
-    catch(err) {
+    catch (err) {
         console.log('not working')
     }
 }
@@ -137,6 +139,6 @@ function _filter(gigs, filterBy) {
         orders = gOrders
         utilService.saveToStorage(STORAGE_KEY, orders)
     }
-    
-    
+
+
 })()

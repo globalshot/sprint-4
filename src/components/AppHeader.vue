@@ -82,7 +82,10 @@
                 <RouterLink v-else :to="userProfile">{{ fullname }} </RouterLink>
               </li>
               <li v-if="!loggedinUser">
-                <a  class="btn btn-join" href="">Join</a>
+                <RouterLink  class="btn btn-join" to="/signup">Join</RouterLink>
+              </li>
+              <li v-else @click="logout" >
+                Logout
               </li>
             </ul>
           </div>
@@ -182,6 +185,10 @@ export default {
         return
       }
     },
+    logout() {
+      this.$store.dispatch({type:'logout'})
+    },
+
 
     handleScroll() {
       // const box = this.$el;
