@@ -45,9 +45,9 @@ export const userStore = {
                 throw err
             }
         },
-        async signup({ commit }, { userCred }) {
+        async signup({ commit }, { credentials }) {
             try {
-                const user = await userService.signup(userCred)
+                const user = await userService.signup(credentials)
                 commit({ type: 'setLoggedinUser', user })
                 return user
             } catch (err) {

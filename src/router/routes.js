@@ -7,6 +7,7 @@ import GigEdit from '../views/GigEdit.vue'
 import GigPayment from '../components/GigPayment.vue'
 import reviewPage from '../views/ReviewPage.vue'
 import UserDetails from '../views/UserDetails.vue'
+import SignupView from '../views/SignupView.vue'
 import SignIn from '../components/SignIn.vue'
 
 const router = createRouter({
@@ -51,6 +52,11 @@ const router = createRouter({
             path: '/signin',
             name: 'SignIn',
             component: SignIn
+        },
+        {
+            path: '/signup',
+            name: 'signup',
+            component: SignupView
         },
 
     ]
