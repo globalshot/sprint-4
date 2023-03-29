@@ -73,11 +73,16 @@
                 <RouterLink to="/user/64233f238e1b02500fd244bf">Become a Seller </RouterLink>
               </li>
 
-              <li>
-                <RouterLink to="/signin">Sign in </RouterLink>
+              <li @click="signIn">
+
+                <!-- NO LOGIN-->
+                <span v-if="!loggedinUser">Sign in </span>
+
+                <!-- YES LOGIN-->
+                <RouterLink v-else :to="userProfile">{{ fullname }} </RouterLink>
               </li>
-              <li>
-                <a class="btn btn-join" href="">Join</a>
+              <li v-if="!loggedinUser">
+                <a  class="btn btn-join" href="">Join</a>
               </li>
             </ul>
           </div>
@@ -85,7 +90,7 @@
       </div>
     </header>
 
-    <Login v-if="login"/>
+    <Login v-if="login" />
 
     <div class="sec-header main-layout full" :class="{ 'show': isDoubleScrolled || !isHomePage }"
       :style="{ 'display': (!isHomePage || isScrolled ? 'grid' : 'none') }">
@@ -133,6 +138,8 @@
 
 <script>
 import Login from './Login.vue'
+import { eventBus } from '../services/event-bus.service'
+import { userService } from '../services/user.service'
 export default {
   data() {
     return {
@@ -160,8 +167,22 @@ export default {
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll)
   },
+  created() {
+    // if (this.user) {
+    //   this.toggleLogin()
+    // }
+    // this.user = userService.getLoggedinUser()
+    // console.log('user:', this.user);
+  },
   methods: {
-    
+    signIn() {
+      if (!this.login) {
+        eventBus.emit('showLogin')
+        this.toggleLogin()
+        return
+      }
+    },
+
     handleScroll() {
       // const box = this.$el;
       // const boxHeight = box.getBoundingClientRect().height;
@@ -186,7 +207,7 @@ export default {
       this.slideshowDisabled = !this.slideshowDisabled
     },
 
-    toggleLogin(){
+    toggleLogin() {
       this.login = !this.login
     }
 
@@ -209,6 +230,17 @@ export default {
       let filterBy = { txt, tag }
       this.$store.dispatch({ type: 'loadGigs', filterBy })
     },
+    loggedinUser() {
+      return this.$store.getters.loggedinUser
+    },
+    userProfile() {
+      if (!this.loggedinUser) return ''
+      return '/user/' + this.loggedinUser._id
+    },
+    fullname(){
+      if (!this.loggedinUser) return '' 
+      return this.loggedinUser.fullname
+    }
   },
   components: {
     Login,

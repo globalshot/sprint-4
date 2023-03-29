@@ -9,7 +9,6 @@
   display: grid;
   grid-template-columns: 24px 1fr 24px;
   grid-template-rows: max-content 1fr max-content;
-  margin-block-end: 3rem;
 
   >* {
     grid-column: 2;

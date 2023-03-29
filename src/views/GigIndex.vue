@@ -30,6 +30,8 @@
 <script>
 import MultipleSelect from '../components/MultipleSelect.vue'
 import GigList from '../components/GigList.vue'
+import { eventBus } from '../services/event-bus.service.js'
+import { userService } from '../services/user.service.js'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
 
 export default {
@@ -43,14 +45,16 @@ export default {
         this.filterBy.txt = filterBy.txt
         this.filterBy.tag = filterBy.tag
 
-        this.$store.dispatch({ type: 'getReviews' })
+
+        this.subscribe = eventBus.on('changeUserStatus', this.setUser)
 
     },
     data() {
         return {
             filterBy: {
                 tag: ''
-            }
+            },
+            loggedinUser: null
         }
     },
     methods: {
@@ -76,7 +80,13 @@ export default {
             }
 
             return newTag
-        }
+        },
+
+        setUser() {
+			const user = userService.getLoggedinUser()
+			console.log('setting user', user)
+			this.loggedinUser = user
+		}
     },
     computed: {
         gigs() {

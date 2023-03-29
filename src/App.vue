@@ -1,5 +1,6 @@
 <template>
     <user-msg />
+    <Login />
     <div class="main-app">
         <Header></Header>
         <main class="main-layout">
@@ -12,6 +13,7 @@
 
 <script>
 import UserMsg from './components/UserMsg.vue'
+import Login from './components/Login.vue'
 import Header from './components/AppHeader.vue'
 import Footer from './components/AppFooter.vue'
 
@@ -22,6 +24,7 @@ export default {
     name: 'App',
     components: {
         UserMsg,
+        Login,
         Header,
         Footer,
         VueperSlides,
@@ -29,7 +32,8 @@ export default {
     },
 
     created() {
-        this.$store.dispatch({ type: 'loadStore' })
+        this.$store.dispatch({ type: 'loadGigs', filterBy: null })
+        this.$store.dispatch({ type: 'loadUser' })
     }
 }
 </script>
