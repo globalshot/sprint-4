@@ -189,6 +189,7 @@ export default {
     },
     computed: {
         loggedinUser () {
+            console.log(this.$store.getters.loggedinUser)
             return this.$store.getters.loggedinUser
         }
     }
