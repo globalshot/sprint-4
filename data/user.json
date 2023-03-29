@@ -2,6 +2,7 @@
     {
         "_id": "u101",
         "fullname": "Dudu Da",
+        "username": "dudu",
         "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
         "level": "3",
         "rate": 5,
@@ -22,6 +23,7 @@
     {
         "_id": "u102",
         "fullname": "John Buy",
+        "username": "john",
         "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp",
         "information":{
             "country": "France",
@@ -36,6 +38,7 @@
     {
         "_id": "u103",
         "fullname": "Don Peru",
+        "username": "don",
         "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
         "information":{
             "country": "Israel",

@@ -145,7 +145,7 @@
 </template>
 
 <script>
-import { eventBus, showErrorMsg } from '../services/event-bus.service'
+import { eventBus, showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { gigService } from './../services/gig.service.local'
 import { orderService } from './../services/order.service'
 export default {
@@ -176,19 +176,20 @@ export default {
                 return
             }
             try {
-                await this.$store.dispatch({ type:'addOrder', gigId: this.gig._id })
+                await this.$store.dispatch({ type:'addOrder', gigId: this.gig._id} )
                 showSuccessMsg('Order Saved')
+                console.log('got here')
                 this.$router.push('/gig')
             }
             catch (err) {
-                // showErrorMsg('Failed to save')
+                console.log(err, 'order not saved');
+                showErrorMsg('Failed to save')
             }
         },
     },
     computed: {
         loggedinUser () {
-            return false
-            // return this.$store.getter.loggedinUser
+            return this.$store.getters.loggedinUser
         }
     }
 

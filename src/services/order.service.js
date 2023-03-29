@@ -39,8 +39,11 @@ async function remove(orderId) {
 }
 
 async function save(gigId) {
-    const order = _createOrder(gigId)
-    return await storageService.post(STORAGE_KEY, order)
+        const order = await _createOrder(gigId)   
+        
+        return await storageService.post(STORAGE_KEY, order)
+    
+
     // return await httpService.post()
 }
 
@@ -80,24 +83,32 @@ function getEmptyOrder(gig) {
 }
 
 async function _createOrder(gigId) {
-    const gig = await gigService.getById(gigId)
-    const buyer = await userService.getLoggedinUser()
-
-    return {
-        buyer: {
-            _id: buyer._id,
-            fullname: buyer.fullname
-        },
-        seller: {
-            _id: gig.owner._id,
-            fullname: gig.owner.fullname
-        },
-        gig: {
-            _id: gig._id,
-            name: gig.description,
-            price: gig.packages[0].price
-        },
-        status: "pending"
+    try {
+        const gig = await gigService.getById(gigId)
+        const buyer = await userService.getLoggedinUser()
+    
+        console.log(gig)
+        console.log(buyer)
+    
+        return {
+            buyer: {
+                _id: buyer._id,
+                fullname: buyer.fullname
+            },
+            seller: {
+                _id: gig.owner._id,
+                fullname: gig.owner.fullname
+            },
+            gig: {
+                _id: gig._id,
+                name: gig.description,
+                price: gig.packages[0].price
+            },
+            status: "pending"
+    }
+    }
+    catch(err) {
+        console.log('not working')
     }
 }
 

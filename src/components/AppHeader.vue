@@ -74,7 +74,7 @@
               </li>
 
               <li>
-                <RouterLink to="/login">Sign in </RouterLink>
+                <RouterLink to="/gig">Sign in </RouterLink>
               </li>
               <li>
                 <a class="btn btn-join" href="">Join</a>
