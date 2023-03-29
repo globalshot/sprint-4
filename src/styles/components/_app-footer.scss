@@ -1,14 +1,13 @@
 /** @format */
 .footer-container {
   position: relative;
-  
+
   .footer {
     position: absolute;
     width: 100%;
     top: 100%;
     border-top: 1px solid #e4e5e7;
     margin-block-start: 1rem;
-    
 
     footer {
       max-height: rem(80px);
@@ -33,16 +32,19 @@
         align-items: center;
         height: 100%;
 
-        .fiverr-logo-footer {
-          svg {
-            margin: 0;
-            fill: none;
-            & > * {
-              fill: rgb(122, 125, 133);
-            }
-            .dot-copy {
-              fill: $grey-txt;
-              transform-origin: 0px 0px;
+        .router-link-active {
+          padding-top: .3em;
+          .fiverr-logo-footer {
+            svg {
+              margin: 0;
+              // fill: none;
+              & > * {
+                fill: rgb(122, 125, 133);
+              }
+              .dot-copy {
+                fill: $grey-txt;
+                transform-origin: 0px 0px;
+              }
             }
           }
         }
