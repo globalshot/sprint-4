@@ -14,6 +14,7 @@
             </div>
         </div>
     </div>
+    <button @click="saveOrder">add</button>
 </template>
 
 <script>
@@ -44,6 +45,16 @@ export default {
                     console.log('gig', gig);
                     this.gig = gig;
                 })
+        },
+        async saveOrder() {
+            try {
+                await this.$store.dispatch({ addOrder, order: { ...this.order } })
+                showSuccessMsg('Order Saved')
+                this.$router.push('/gig')
+            }
+            catch (err) {
+                // showErrorMsg('Failed to save')
+            }
         },
     }
     
