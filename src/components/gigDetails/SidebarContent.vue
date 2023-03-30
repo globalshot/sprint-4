@@ -62,7 +62,7 @@
                                 </div>
                                 <ul class="features">
                                     <!--v-for the features-->
-                                    <li class="flex items-center" v-for="feature in gig.packages[quant - 1].features">
+                                    <li class="flex items-center" v-for="feature, n in gig.packages[quant - 1].features">
                                         <span class="glAQDp5 bvg2_O1 ZbQv8bb" aria-hidden="true"
                                             style="width: 16px; height: 16px;">
                                             <svg width="16" height="16" viewBox="0 0 11 9"
@@ -78,7 +78,7 @@
                                                 </path>
                                             </svg>
                                         </span>
-                                        {{ liTxt[feature] }}
+                                        {{ liTxt[n] }}
                                     </li>
                                     <!-- <li class="flex items-center"><span>vi</span>second feature</li>
                                     <li class="flex items-center"><span>vi</span>third feature</li>
