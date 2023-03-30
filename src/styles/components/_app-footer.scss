@@ -32,16 +32,46 @@
         align-items: center;
         height: 100%;
 
+        svg:not(.dot-copy) {
+          margin: 0;
+          // fill: none;
+          fill: $grey-txt;
+          & > * {
+            margin: 0;
+          }
+          .dot-copy {
+            display: none;
+            position: relative;
+            margin: 0;
+            fill: rgba(255, 255, 255, 0);
+            transform-origin: 0px 0px;
+          }
+        }
+
         .router-link-active {
-          padding-top: .3em;
+          padding-top: 0.3em;
           .fiverr-logo-footer {
             svg {
+              position: relative;
               margin: 0;
               // fill: none;
+              fill: rgb(122, 125, 133);
               & > * {
-                fill: rgb(122, 125, 133);
+                margin: 0;
+              }
+
+              &::after {
+                z-index: 10000;
+                position: absolute;
+                top: 0;
+                height: 2px;
+                width: 2px;
+                content: "\ae";
+                font-size: 0.6rem;
+                color: #0659ff;
               }
               .dot-copy {
+                margin: 0;
                 fill: $grey-txt;
                 transform-origin: 0px 0px;
               }
