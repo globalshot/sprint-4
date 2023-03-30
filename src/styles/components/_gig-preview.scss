@@ -24,11 +24,24 @@
       width: rem(24px);
     }
 
-    .user-name {
-      color: $secondary-clr-dark;
-      font-size: em(14px);
-      font-weight: 600;
-      margin-left: rem(8px);
+    .user-container {
+      flex-direction: column;
+      .user-name {
+        color: $secondary-clr-dark;
+        margin: 0;
+        font-size: em(14px);
+        font-weight: 600;
+        margin-left: rem(8px);
+        padding-bottom: 0.4em;
+      }
+
+      .user-level {
+        margin: 0;
+        color: $secondary-clr;
+        font-size: em(14px);
+        font-weight: 600;
+        margin-left: rem(8px);
+      }
     }
   }
 
@@ -72,7 +85,7 @@
     }
 
     .num {
-      margin-inline-start: -.75rem;
+      margin-inline-start: -0.75rem;
       color: $grey-txt;
       font-weight: 400;
     }

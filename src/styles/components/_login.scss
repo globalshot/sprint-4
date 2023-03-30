@@ -1,111 +1,120 @@
-div.model-background {
-    //need to make it take 0.5 sec to show the model
-    position: absolute;
-    background-color: rgba($color: #000000, $alpha: 0.65);
-    width: 100vw;
-    height: 100vh;
-    z-index: 100;
-    top: 0;
+/** @format */
 
+div.model-background {
+  //need to make it take 0.5 sec to show the model
+  position: absolute;
+  background-color: rgba($color: #000000, $alpha: 0.65);
+  width: 100vw;
+  height: 100vh;
+  z-index: 101;
+  top: 0;
 }
 
 .login-model {
-    background-color: $white-clr;
-    height: 615px;
+  background-color: $white-clr;
+  height: rem(370px);
+  color: $grey-txt-dark;
+  border-radius: 4px;
 
-    // margin-inline-start: 7px;
-    z-index: 101;
+  // margin-inline-start: 7px;
+  z-index: 101;
 
-    section {
-        padding: 0 36px 24px;
-        width: 400px;
-    }
+  section {
+    padding: 0 36px 24px;
+    height: 100%;
+    width: rem(400px);
+  }
 }
 
 form.sign-in-form {
-    width: 400px;
+  width: 400px;
+  justify-content: space-between;
+  h4 {
+    padding: rem(32px) 0;
+    font-size: em(24px);
+    line-height: 130%;
+  }
 
-    h4 {
-        padding: rem(32px) 0;
-        font-size: em(24px);
-        line-height: 130%;
+  button {
+    margin: 12px 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: 0.2s;
+    font-size: 1.2em;
+    border-radius: 4px;
+    color: white;
+    background-color: $primary-clr;
+    border: 1px solid $primary-clr;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  & div .social-signing-button {
+    margin-block: rem(12px);
+    padding: 12px 30px 12px 16px;
+    width: 100%;
+    border-radius: 4px;
+
+    &:hover {
     }
 
-    button {
-        margin: 12px 0;
-        align-items: center;
-        justify-content: center;
-        opacity: 1;
-        transition: .2s;
+    span {
+      height: 18px;
+      width: 18px;
 
-        &:hover {
-            cursor: pointer;
-            opacity: .5;
-        }
-    }
-
-    & div .social-signing-button {
-        margin-block: rem(12px);
-        padding: 12px 30px 12px 16px;
+      svg {
+        height: 100%;
         width: 100%;
-        border-radius: 4px;
-
-        &:hover {
-        }
-
-        span {
-            height: 18px;
-            width: 18px;
-
-            svg {
-                height: 100%;
-                width: 100%;
-            }
-        }
-
-        &.facebook-signing-button {
-            border: 1px solid $facebook-clr;
-            background-color: $facebook-clr;
-            color: $white-clr;
-            fill: $white-clr;
-        }
-
-        &:not(.facebook-signing-button) {
-            background-color: $tertiary-clr-light;
-            border: 1px solid $signing-clr;
-        }
-
-        & p {
-            width: 100%;
-            margin: 0;
-            font-size: em(24px);
-        }
+      }
     }
 
-    div.form-seperator {
-        border-bottom: 1px solid #e4e5e7;
-        height: 12px;
-        margin: 20px 0 32px;
-        text-align: center;
-        padding: 0;
-
-        span {
-            background-color: #fff;
-            color: #62646a;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 24px;
-            padding: 0 8px;
-            text-transform: uppercase;
-        }
+    &.facebook-signing-button {
+      border: 1px solid $facebook-clr;
+      background-color: $facebook-clr;
+      color: $white-clr;
+      fill: $white-clr;
     }
 
-    div.field{
-        padding-block-end: 16px;
-        input{
-            padding: 8px 12px;
-            padding-inline-end: 40px;
-            border-radius: 4px;
-        }
+    &:not(.facebook-signing-button) {
+      background-color: $tertiary-clr-light;
+      border: 1px solid $signing-clr;
     }
+
+    & p {
+      width: 100%;
+      margin: 0;
+      font-size: em(24px);
+    }
+  }
+
+  div.form-seperator {
+    border-bottom: 1px solid #e4e5e7;
+    height: 12px;
+    margin: 20px 0 32px;
+    text-align: center;
+    padding: 0;
+
+    span {
+      background-color: #fff;
+      color: #62646a;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      padding: 0 8px;
+      text-transform: uppercase;
+    }
+  }
+
+  div.field {
+    padding-block-end: 16px;
+    input {
+      padding: 8px 12px;
+      padding-inline-end: 40px;
+      border-radius: 4px;
+    }
+  }
 }
