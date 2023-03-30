@@ -30,7 +30,7 @@
 
                     <div class="seller-stats flex">
                         <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
-                        <span>{{ gig.owner.level }}</span> |
+                        <span>Level {{ gig.owner.level }} Seller</span> |
                         <span class="color-yellow">
                             <span>
                                 <div class="stars">

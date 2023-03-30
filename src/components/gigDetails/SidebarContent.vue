@@ -62,7 +62,7 @@
                                 </div>
                                 <ul class="features">
                                     <!--v-for the features-->
-                                    <li class="flex items-center" v-for="feature in gig.packages[quant - 1].features"> <!-- if enough time, render specific features y and n, by doing gig.packages['the type of package'].features -->
+                                    <li class="flex items-center" v-for="feature in gig.packages[quant - 1].features">
                                         <span class="glAQDp5 bvg2_O1 ZbQv8bb" aria-hidden="true"
                                             style="width: 16px; height: 16px;">
                                             <svg width="16" height="16" viewBox="0 0 11 9"
@@ -77,7 +77,8 @@
                                                     d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
                                                 </path>
                                             </svg>
-                                        </span>Promt writing 
+                                        </span>
+                                        {{ liTxt[feature] }}
                                     </li>
                                     <!-- <li class="flex items-center"><span>vi</span>second feature</li>
                                     <li class="flex items-center"><span>vi</span>third feature</li>
@@ -87,20 +88,20 @@
                         </div>
                         <footer class="tab-footer flex">
                             <RouterLink :to="`/gig/payment/` + gig._id">
-                            <span class="btn btn-join">
-                                <span class="continue">
+                                <span class="btn btn-join">
+                                    <span class="continue">
                                         Continue
 
                                     </span>
                                     <span class="arrow" aria-hidden="true" style="width: 16px; height: 16px; fill: white;">
                                         <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                             <path
-                                            d="M9.92332 2.96885C9.63854 2.66807 9.1768 2.66807 8.89202 2.96885C8.60723 3.26963 8.60723 3.75729 8.89202 4.05807L11.6958 7.01931H1.48616C1.08341 7.01931 0.756918 7.36413 0.756918 7.7895C0.756918 8.21487 1.08341 8.5597 1.48616 8.5597H11.8436L8.89202 11.677C8.60723 11.9778 8.60723 12.4654 8.89202 12.7662C9.1768 13.067 9.63854 13.067 9.92332 12.7662L14.0459 8.41213C14.3307 8.11135 14.3307 7.62369 14.0459 7.32291L13.977 7.25011C13.9737 7.24661 13.9704 7.24315 13.9671 7.23972L9.92332 2.96885Z">
-                                        </path>
-                                    </svg>
+                                                d="M9.92332 2.96885C9.63854 2.66807 9.1768 2.66807 8.89202 2.96885C8.60723 3.26963 8.60723 3.75729 8.89202 4.05807L11.6958 7.01931H1.48616C1.08341 7.01931 0.756918 7.36413 0.756918 7.7895C0.756918 8.21487 1.08341 8.5597 1.48616 8.5597H11.8436L8.89202 11.677C8.60723 11.9778 8.60723 12.4654 8.89202 12.7662C9.1768 13.067 9.63854 13.067 9.92332 12.7662L14.0459 8.41213C14.3307 8.11135 14.3307 7.62369 14.0459 7.32291L13.977 7.25011C13.9737 7.24661 13.9704 7.24315 13.9671 7.23972L9.92332 2.96885Z">
+                                            </path>
+                                        </svg>
+                                    </span>
                                 </span>
-                            </span>
-                        </RouterLink>
+                            </RouterLink>
                         </footer>
                     </div>
                 </div>
@@ -122,8 +123,16 @@ export default {
         return {
             selectedItem: 'basic',
             // price: gig.price,
-            i: '1',
+            // i: '1',
             quant: '1',
+            liTxt: [
+                'Logo transparency',
+                'Vector file',
+                'Printable file',
+                'Include 3D mockup',
+                'Include source file',
+                'Include social media kit'
+            ]
         }
     }
 }

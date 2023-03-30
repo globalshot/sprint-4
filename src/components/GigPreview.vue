@@ -17,13 +17,11 @@
             </template>
             <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i">
                 <template #content>
-                    <RouterLink :to="'/gig/' + gig._id">
                     <!-- <span>hi</span> -->
                     <!-- <img :src="gig.imgUrl[i]" alt=""> -->
-                        <img :src="gig.imgUrl[i]" alt="">
-                    </RouterLink>
-                    </template>
-                </vueper-slide>
+                    <img :src="gig.imgUrl[i]" alt="">
+                </template>
+            </vueper-slide>
         </vueper-slides>
 
 
@@ -36,8 +34,10 @@
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
                 <img :src="gig.owner.imgUrl" alt="">
-
-                <p class="user-name">{{ gig.owner.fullname }}</p>
+                <div class="flex user-container">
+                    <p class="user-name">{{ gig.owner.fullname }}</p>
+                    <p class="user-level">Level {{ gig.owner.level }} Seller</p>
+                </div>
             </div>
         </RouterLink>
         <RouterLink class="btn" :to="'/gig/' + gig._id">
