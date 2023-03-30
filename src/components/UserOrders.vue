@@ -1,31 +1,31 @@
 <template>
-    <form class="delivery-dropdown">
+    <form class="order-dropdown">
         <div class="inputs flex">
-            <div class="radio-list">
-                <div  class="radio-item-wrapper">
-                    <label class="n3bUTho Y7LofzN radio-item">
-                        <div class="inner-radio">
+            <div class="order-list">
+                <div  class="order-item-wrapper">
+                    <label class="order-item">
+                        <div class="inner-order">
                             <span>Express 24H</span>
                         </div>
                     </label>
                 </div>
-                <div class="radio-item-wrapper">
-                    <label class="n3bUTho Y7LofzN radio-item">
-                        <div class="inner-radio">
+                <div class="order-item-wrapper">
+                    <label class="order-item">
+                        <div class="inner-order">
                             <span>Up to 3 days</span>
                         </div>
                     </label>
                 </div>
-                <div class="radio-item-wrapper">
-                    <label class="n3bUTho Y7LofzN radio-item">
-                        <div class="inner-radio">
+                <div class="order-item-wrapper">
+                    <label class="n3bUTho Y7LofzN order-item">
+                        <div class="inner-order">
                             <span>Up to 7 days</span>
                         </div>
                     </label>
                 </div>
-                <div class="radio-item-wrapper">
-                    <label class="radio-item selected felx">
-                        <div class="inner-radio">
+                <div class="order-item-wrapper">
+                    <label class="order-item selected felx">
+                        <div class="inner-order">
                             <span>Anytime</span>
                         </div>
                     </label>
@@ -42,7 +42,6 @@
             </div> -->
         </div>
         <div class="buttons flex">
-            <div>Clear All</div>
             <button class="btn-apply">Apply</button>
         </div>
     </form>
