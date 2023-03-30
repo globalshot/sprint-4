@@ -128,29 +128,28 @@
       }
     }
   }
+  .btn-apply {
+    font-family: $font2;
+    font-size: 1em;
+    line-height: rem(24px);
+    padding: rem(12px) rem(28px);
+    background-color: $secondary-clr-darker;
+    color: white;
+    border: 1px solid $secondary-clr-darker;
+    border-radius: 4px;
 
+    &:hover {
+      color: white;
+      background-color: $secondary-clr-darker-hover;
+      border-color: $primary-clr-dark;
+    }
+  }
   .buttons {
     border-top: 1px solid #dadbdd;
     justify-content: space-between;
     align-items: center;
     padding: rem(12px) rem(24px);
     font-size: em(14px);
-
-    .btn-apply {
-      font-family: $font2;
-      line-height: rem(24px);
-      padding: rem(12px) rem(28px);
-      background-color: $secondary-clr-darker;
-      color: white;
-      border: 1px solid $secondary-clr-darker;
-      border-radius: 4px;
-
-      &:hover {
-        color: white;
-        background-color: $secondary-clr-darker-hover;
-        border-color: $primary-clr-dark;
-      }
-    }
   }
 }
 
@@ -185,7 +184,7 @@
           display: flex;
           max-height: 214px;
           justify-content: space-between;
-          padding: .5em;
+          padding: 0.5em;
           border-radius: 4px;
           &:hover {
             background-color: $tertiary-clr;

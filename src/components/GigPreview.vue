@@ -33,9 +33,9 @@
         <!-- xxx -->
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
-                <img :src="gig.owner.imgUrl" alt="">
+                <img class="btn" :src="gig.owner.imgUrl" alt="">
                 <div class="flex user-container">
-                    <p class="user-name">{{ gig.owner.fullname }}</p>
+                    <p class="btn user-name">{{ gig.owner.fullname }}</p>
                     <p class="user-level">Level {{ gig.owner.level }} Seller</p>
                 </div>
             </div>
