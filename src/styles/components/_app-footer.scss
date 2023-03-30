@@ -51,31 +51,32 @@
         .router-link-active {
           padding-top: 0.3em;
           .fiverr-logo-footer {
-            svg {
-              position: relative;
-              margin: 0;
-              // fill: none;
-              fill: rgb(122, 125, 133);
-              & > * {
-                margin: 0;
-              }
+            // svg {
+              
+            //   position: relative;
+            //   margin: 0;
+            //   // fill: none;
+            //   fill: rgb(122, 125, 133);
+            //   & > * {
+            //     margin: 0;
+            //   }
 
-              &::after {
-                z-index: 10000;
-                position: absolute;
-                top: 0;
-                height: 2px;
-                width: 2px;
-                content: "\ae";
-                font-size: 0.6rem;
-                color: #0659ff;
-              }
-              .dot-copy {
-                margin: 0;
-                fill: $grey-txt;
-                transform-origin: 0px 0px;
-              }
-            }
+            //   // &::after {
+            //   //   z-index: 10000;
+            //   //   position: absolute;
+            //   //   top: 0;
+            //   //   height: 2px;
+            //   //   width: 2px;
+            //   //   content: "\ae";
+            //   //   font-size: 0.6rem;
+            //   //   color: #0659ff;
+            //   // }
+            //   .dot-copy {
+            //     margin: 0;
+            //     fill: $grey-txt;
+            //     transform-origin: 0px 0px;
+            //   }
+            // }
           }
         }
 

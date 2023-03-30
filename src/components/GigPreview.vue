@@ -122,9 +122,9 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
         },
-        gigReviews(gig) {
-            return gig.reviews.length ? gig.reviews.length : '0'
-        }
+        // gigReviews(gig) {
+        //     return gig.reviews.length ? gig.reviews.length : '0'
+        // }
     },
     emits: ['removeGig']
 }
