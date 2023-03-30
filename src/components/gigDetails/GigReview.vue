@@ -12,7 +12,42 @@
                 <template #arrow-right>
                     <i class="fa-solid fa-angle-right"></i>
                 </template>
-                <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :content="slide.content">
+                <vueper-slide v-for="(review, i) in gig.reviews" :key="i">
+                    <template #content>
+                        <div class="review">
+                            <span class="img-user">
+                                <img :src=gig.reviews[i].user.imgUrl
+                                    alt="">
+                            </span>
+                            <div class="review-details">
+                                <div class="user-review">
+                                    <h6>{{gig.reviews[i].user.fullname}}</h6>
+                                    <div class="country">
+                                        <img class="country-flag"
+                                            :src=flag[gig.reviews[i].user.country]
+                                            alt="US" loading="lazy">
+                                            
+                                        <div class="country-name tbody-6">{{gig.reviews[i].user.country}}</div>
+                                    </div>
+                                    <div class="stars" >
+                                        <ul class="flex">
+                                            <li v-for="i in gig.reviews[i].rate">
+                                                <span class="star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                            </li>
+                                            <span class="num">
+                                                {{gig.reviews[i].rate}}
+                                            </span>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="review-description">
+                                   {{ gig.reviews[i].text }}
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </vueper-slide>
             </vueper-slides>
 
@@ -37,6 +72,12 @@ export default {
     },
     data() {
         return {
+            flag: {
+                Israel: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ee-1f1f1.png',
+                France: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1eb-1f1f7.png',
+                Sweden: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f8-1f1ea.png',
+
+            },
             // userImg: review.user.imgUrl,
             slides: [
                 {
