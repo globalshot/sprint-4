@@ -43,13 +43,13 @@
                                     <div class="orca-rating color-yellow tbody-6">
                                         <div class="stars">
                                             <ul class="flex">
-                                                <li v-for="n in review.rate">
+                                                <li v-for="n in review.rating">
                                                     <span class="star">
                                                         <i class="fa-solid fa-star"></i>
                                                     </span>
                                                 </li>
                                                 <li class="num">
-                                                    {{ review.rate }}
+                                                    {{ review.rating }}
                                                 </li>
                                                 <span class="inline-divider "></span>
                                                 <time class="text-body-2"> 2 months ago</time>
@@ -81,9 +81,6 @@ export default {
         // reviews: {
         //     type: Array,
         // }
-    },
-    created() {
-        console.log(this.reviews)
     },
     computed: {
     },

@@ -1,5 +1,6 @@
 [
   {
+    "price": 63,
     "_id": "WCCde",
     "title": "I will polish your personal statement and program application",
     "owner": {
@@ -57,6 +58,7 @@
     ]
   },
   {
+    "price": 30,
     "_id": "49q3d",
     "title": "I will polish your troll or something",
     "owner": {
@@ -114,12 +116,13 @@
     ]
   },
   {
+    "price": 40,
     "_id": "nagAS",
     "title": "sometimes logo sometimes text",
     "owner": {
       "_id": "u102",
       "fullname": "John Buy",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp",
       "level": "3",
       "rate": 5
     },
@@ -171,6 +174,7 @@
     ]
   },
   {
+    "price": 50,
     "_id": "np2W2",
     "title": "The best gig ever",
     "owner": {
@@ -228,6 +232,7 @@
     ]
   },
   {
+    "price": 100,
     "_id": "mY32e",
     "title": "1st class animations",
     "owner": {
@@ -285,6 +290,7 @@
     ]
   },
   {
+    "price": 20,
     "_id": "1Rz2z",
     "title": "Audio editing",
     "owner": {
@@ -342,6 +348,7 @@
     ]
   },
   {
+    "price": 20,
     "_id": "B2b2z",
     "title": "Portrait Photographers",
     "owner": {

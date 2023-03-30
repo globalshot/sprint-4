@@ -33,8 +33,8 @@
         <!-- xxx -->
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
-                <img src="../assets/images/profile-pic.png" alt="">
-
+                <img :src="gig.owner.imgUrl" alt="">
+                
                 <p class="user-name">{{ gig.owner.fullname }}</p>
             </div>
         </RouterLink>
@@ -49,7 +49,7 @@
                     d="M1728 647q0 22-26 48l-363 354 86 500q1 7 1 20 0 21-10.5 35.5t-30.5 14.5q-19 0-40-12l-449-236-449 236q-22 12-40 12-21 0-31.5-14.5t-10.5-35.5q0-6 2-20l86-500-364-354q-25-27-25-48 0-37 56-46l502-73 225-455q19-41 49-41t49 41l225 455 502 73q56 9 56 46z">
                 </path>
             </svg>
-            <span>5.0</span>
+            <span> {{ gig.owner.rate }}</span>
         </div>
         <div class="price-container flex">
             <svg class="like" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
             </svg>
             <div class="flex">
                 <h4>STARTING AT </h4>
-                <span class="price">US${{ gig.packages[0].price }}</span>
+                <span class="price">US${{ gig.price }}</span>
             </div>
         </div>
 
@@ -75,8 +75,8 @@ export default {
     name: 'GigPreview',
     methods: {
         loadGig() {
-            const { txt, tag } = this.$route.query
-            const filterBy = { txt, tag }
+            const { txt, tag, budget, daysToMake } = this.$route.query
+            const filterBy = { txt, tag, budget, daysToMake }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
     },
@@ -94,7 +94,7 @@ export default {
                 {
                     image: (`https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/296272891/original/01ea9956b9ccee25eee7438bc652a361bce1db0f.jpg`)
                 }
-            ]
+            ],
         }
 
 

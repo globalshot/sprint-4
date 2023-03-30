@@ -19,38 +19,44 @@
       }
     }
   }
-.vueperslide {
-&:nth-of-type(1) {
-  background-color: #1a1b1d;
-  img {
-
-    width: 100%;
+  .vueperslide {
+    &:nth-of-type(1) {
+      background-color: #1a1b1d;
+      img {
+        width: 100%;
+        left: 0;
+      }
+    }
+    &:nth-of-type(2) {
+      background-color: #023a15;
+    }
+    &:nth-of-type(3) {
+      background-color: #b64762;
+    }
+    &:nth-of-type(4) {
+      background-color: #540e1f;
+    }
+    &:nth-of-type(5) {
+      background-color: #023a15;
+    }
+    &:nth-of-type(6) {
+      background-color: #7d1a00;
+    }
+    img {
+      position: absolute;
+      left: -20%;
+      // @include for-small-layout {
+      //   background: #023a15;
+      // }
+      @include for-wide-layout {
+        left: 0%;
+      }
+      height: 100%;
+      z-index: -5;
+      object-fit: contain;
+      // width: 100%;
+    }
   }
-}
-&:nth-of-type(2) {
-  background-color:   #023a15;
-}
-&:nth-of-type(3) {
-  background-color: #b64762;
-}
-&:nth-of-type(4) {
-  background-color: #540e1f;
-}
-&:nth-of-type(5) {
-  background-color: #023a15;
-}
-&:nth-of-type(6) {
-  background-color: #7d1a00;
-}
-  img {
-    position: absolute;
-    left: 10%;
-    height: 100%;
-    z-index: -5;
-    object-fit: contain;
-    // width: 100%;
-  }
-}
 
   & .search-container {
     z-index: 50;

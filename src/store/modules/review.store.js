@@ -20,7 +20,6 @@ export const reviewStore = {
   },
   actions: {
     async getReviews({ commit }, { filterBy }) {
-      console.log('got here')
       try {
         const reviews = await reviewService.query(filterBy)
         commit({

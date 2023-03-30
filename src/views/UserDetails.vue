@@ -1,14 +1,17 @@
 <template>
+    <div v-if="user">
+
     <h3>User Details</h3>
 
-    <h1>{{ user.fullname }}</h1>
-    <div v-if="userId === this.$route.params.id" class="add-gig-container flex">
+    <h1>{{ fullname }}</h1>
+    <div class="add-gig-container flex">
         <button class="btn btn-add">
             <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
         </button>
         <span>Add gig</span>
     </div>
     <GigIndex />
+    </div>
 </template>
 
 <script>
@@ -20,7 +23,7 @@ export default {
     data() {
         return {
             user: null,
-            gigs: []
+    //         gigs: []
         };
     },
     async created() {
@@ -28,7 +31,6 @@ export default {
         this.user = (id) ?
             await userService.getById(id) :
             console.log("Wrong User");
-        console.log(this.user);
 
     },
     computed: {
@@ -41,6 +43,10 @@ export default {
         userId() {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
+        },
+        fullname() {
+            if (!this.loggedinUser) return ''
+            return this.loggedinUser.fullname
         },
     },
     components: {
