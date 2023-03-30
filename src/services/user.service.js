@@ -10,6 +10,7 @@ import data from '../../data/user.json';
 const gUsers = data
 
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+const API = 'user'
 
 export const userService = {
     login,
@@ -21,7 +22,6 @@ export const userService = {
     getById,
     remove,
     update,
-    changeScore
 }
 
 window.userService = userService
@@ -32,10 +32,10 @@ function getUsers() {
     // return httpService.get(`user`)
 }
 
-function onUserUpdate(user) {
-    showSuccessMsg(`This user ${user.fullname} just got updated from socket, new score: ${user.score}`)
-    store.dispatch({ type: 'setWatchedUser', user })
-}
+// function onUserUpdate(user) {
+//     showSuccessMsg(`This user ${user.fullname} just got updated from socket, new score: ${user.score}`)
+//     store.dispatch({ type: 'setWatchedUser', user })
+// }
 
 async function getById(userId) {
     // const user = await storageService.get('user_db', userId)
@@ -65,35 +65,36 @@ async function update({_id}) {
 
 
 async function login(userCred) {
-    const users = await storageService.query('user_db')
-    const user = users.find(user => user.username === userCred.username)
-    return saveLocalUser(user)
+    // const users = await storageService.query('user_db')
+    // const user = users.find(user => user.username === userCred.username)
+    // return saveLocalUser(user)
     // return user
-    // const user = await httpService.post('auth/login', userCred)
+    const user = await httpService.post('auth/login', userCred)
+    return saveLocalUser(user)
     // if (user) {
-    //     socketService.login(user._id)
+    //     // socketService.login(user._id)
     // }
 }
 async function signup(userCred) {
     if (!userCred.imgUrl) userCred.imgUrl = 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
     // const user = await storageService.post('user', userCred)
     const user = await httpService.post('auth/signup', userCred)
-    socketService.login(user._id)
+    // socketService.login(user._id)
     return saveLocalUser(user)
 }
 async function logout() {
     sessionStorage.removeItem(STORAGE_KEY_LOGGEDIN_USER)
     // socketService.logout()
-    // return await httpService.post('auth/logout')
+    return await httpService.post('auth/logout')
 }
 
-async function changeScore(by) {
-    const user = getLoggedinUser()
-    if (!user) throw new Error('Not loggedin')
-    user.score = user.score + by || by
-    await update(user)
-    return user.score
-}
+// async function changeScore(by) {
+//     const user = getLoggedinUser()
+//     if (!user) throw new Error('Not loggedin')
+//     user.score = user.score + by || by
+//     await update(user)
+//     return user.score
+// }
 
 
 function saveLocalUser(user) {

@@ -35,11 +35,14 @@
                             <span>
                                 <div class="stars">
                                     <ul class="flex">
-                                        <li v-for="n in gig.owner.rate">
+                                        <li v-for="n in Math.floor(+gig.owner.rate)">
                                             <span class="star">
                                                 <i class="fa-solid fa-star"></i>
                                             </span>
                                         </li>
+                                        <span class="star">
+                                            <i class="fa-solid fa-star-half" v-if="+gig.owner.rate % 1 !== 0"></i>
+                                        </span>
                                         <li class="num">
                                             {{ gig.owner.rate }}
                                         </li>

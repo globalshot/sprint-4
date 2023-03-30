@@ -2,7 +2,7 @@
     <div class="main-container full main-layout">
 
         <!--when everything from store, look at this-->
-        <StickyHeader @scrollTo="scrollTo" />
+        <!-- <StickyHeader @scrollTo="scrollTo" /> -->
 
         <div class="gig-page main-layout">
 
@@ -64,7 +64,7 @@
 
 
 <script>
-import { gigService } from './../services/gig.service.local'
+import { gigService } from './../services/gig.service.local.js'
 import SidebarContent from '../components/gigDetails/SidebarContent.vue'
 import ReviewPage from './ReviewPage.vue'
 import StickyHeader from '../components/gigDetails/StickyHeader.vue'
@@ -94,6 +94,7 @@ export default {
         //     this.gig = gig;
         //     console.log(gig);
         // });
+        scroll(0,0)
         this.getGig()
     },
     computed: {

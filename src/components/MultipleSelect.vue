@@ -121,7 +121,7 @@ export default {
                 },
                 daysToMake: 999
 
-                
+
             },
             showBudget: false,
             showDelivery: false,
@@ -151,21 +151,24 @@ export default {
     },
     methods: {
         showBudgetForm() {
-            if (this.showDelivery) {this.showDeliveryForm()}
+            if (this.showDelivery) { this.showDeliveryForm() }
             this.showBudget = !this.showBudget
         },
         showDeliveryForm() {
-            if (this.showBudget) {this.showBudgetForm()}
+            if (this.showBudget) { this.showBudgetForm() }
             this.showDelivery = !this.showDelivery
         },
         filter() {
+            let { txt, tag } = this.$route.query
+            this.filterBy.txt =  txt
+            this.filterBy.tag =  tag
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
             // this.showBudgetForm()
         },
         clearFilter() {
-            if (this.showDelivery) {this.showDeliveryForm()}
-            if (this.showBudget) {this.showBudgetForm()}
+            if (this.showDelivery) { this.showDeliveryForm() }
+            if (this.showBudget) { this.showBudgetForm() }
             this.filterBy.budget.min = 0
             this.filterBy.budget.max = 99999
             this.filterBy.daysToMake = 999
