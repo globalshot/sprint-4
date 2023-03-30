@@ -94,7 +94,7 @@ export default {
         //     this.gig = gig;
         //     console.log(gig);
         // });
-        scroll(0,0)
+        scroll(0, 0)
         this.getGig()
     },
     computed: {
@@ -103,6 +103,7 @@ export default {
         },
         reviews() {
             return this.$store.getters.getReviews
+
         },
     },
     components: {
