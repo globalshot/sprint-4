@@ -29,7 +29,11 @@ export default {
     props: {
         reviews: {
             type: Array,
-        }
+        },
+        gig: {
+            type: Object,
+            required: true
+        },
     },
     data() {
         return {
@@ -150,5 +154,8 @@ export default {
         VueperSlides,
         VueperSlide
     },
+    created() {
+        console.log(this.reviews)
+    }
 }
 </script>

@@ -19,7 +19,7 @@
 
                     <div class="main-small">
                         <!--not from store yet-->
-                        <GigReview :reviews="reviews" />
+                        <GigReview :gig="gig" :reviews="reviews" />
 
                         <!--gig description closer to finish, make it pre, check about meta-->
                         <GigDescription :gig='gig' />
