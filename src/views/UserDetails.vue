@@ -3,8 +3,8 @@
 
     <h3>User Details</h3>
 
-    <h1>{{ fullname }}</h1>
-    <div class="add-gig-container flex">
+    <h1>{{ this.user.fullname }}</h1>
+    <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
         <button class="btn btn-add">
             <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
         </button>
@@ -27,6 +27,9 @@ export default {
         };
     },
     async created() {
+        console.log(this.$route.params.id)
+        console.log(this.userId)
+
         const { id } = this.$route.params;
         this.user = (id) ?
             await userService.getById(id) :
