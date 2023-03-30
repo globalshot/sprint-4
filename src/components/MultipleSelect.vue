@@ -6,9 +6,9 @@
             <div class="word">Clear Filter</div>
         </button>
 
-        <div class="budget-container">
-            <button @click="showBudgetForm" class="budget-filter-btn flex" style="font-size: 16px; color: rgb(34, 35, 37);">
-                <div class="word">Budget</div>
+        <div class="price-container">
+            <button @click="showPriceForm" class="price-filter-btn flex" style="font-size: 16px; color: rgb(34, 35, 37);">
+                <div class="word">budget</div>
                 <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
                     fill="currentFill">
                     <path
@@ -16,12 +16,12 @@
                     </path>
                 </svg>
             </button>
-            <form @submit.prevent v-if="showBudget" class="budget-dropdown">
+            <form @submit.prevent v-if="showPrice" class="price-dropdown">
                 <div class="inputs flex">
                     <div>
                         <p class="bold">MIN.</p>
                         <div class="input-container flex">
-                            <input v-model="filterBy.budget.min" placeholder="Any">
+                            <input v-model="filterBy.price.min" placeholder="Any">
                             <div class="icon-container">
                                 <i>$</i>
                             </div>
@@ -30,7 +30,7 @@
                     <div>
                         <p class="bold">MAX.</p>
                         <div class="input-container flex">
-                            <input v-model="filterBy.budget.max" placeholder="Any">
+                            <input v-model="filterBy.price.max" placeholder="Any">
                             <div class="icon-container last">
                                 <i>$</i>
                             </div>
@@ -38,8 +38,8 @@
                     </div>
                 </div>
                 <div class="buttons flex">
-                    <div @click="clearBudget">Clear All</div>
-                    <button type="button" @click="setBudget()" class="btn-apply">Apply</button>
+                    <div @click="clearPrice">Clear All</div>
+                    <button type="button" @click="setPrice()" class="btn-apply">Apply</button>
                 </div>
             </form>
         </div>
@@ -90,7 +90,7 @@
                     <!-- <div>
                         <p class="bold">MAX.</p>
                         <div class="input-container flex">
-                            <input v-model="filterBy.budget.max" placeholder="Any">
+                            <input v-model="filterBy.price.max" placeholder="Any">
                             <div class="icon-container last">
                                 <i>$</i>
                             </div>
@@ -98,7 +98,7 @@
                     </div> -->
                 </div>
                 <div class="buttons flex">
-                    <div @click="clearBudget">Clear All</div>
+                    <div @click="clearPrice">Clear All</div>
                     <button @click="filter()" class="btn-apply">Apply</button>
                 </div>
             </form>
@@ -112,7 +112,7 @@ export default {
     data() {
         return {
             filterBy: {
-                budget: {
+                price: {
                     min: 0,
                     max: 99999,
                 },
@@ -123,7 +123,7 @@ export default {
 
                 
             },
-            showBudget: false,
+            showPrice: false,
             showDelivery: false,
             value1: ref([]),
             value2: ref([]),
@@ -150,40 +150,40 @@ export default {
         }
     },
     methods: {
-        showBudgetForm() {
+        showPriceForm() {
             if (this.showDelivery) {this.showDeliveryForm()}
-            this.showBudget = !this.showBudget
+            this.showPrice = !this.showPrice
         },
         showDeliveryForm() {
-            if (this.showBudget) {this.showBudgetForm()}
+            if (this.showPrice) {this.showPriceForm()}
             this.showDelivery = !this.showDelivery
         },
         filter() {
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
-            // this.showBudgetForm()
+            // this.showPriceForm()
         },
         clearFilter() {
             if (this.showDelivery) {this.showDeliveryForm()}
-            if (this.showBudget) {this.showBudgetForm()}
-            this.filterBy.budget.min = 0
-            this.filterBy.budget.max = 99999
+            if (this.showPrice) {this.showPriceForm()}
+            this.filterBy.price.min = 0
+            this.filterBy.price.max = 99999
             this.filterBy.daysToMake = 999
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
-        clearBudget() {
-            this.filterBy.budget.min = 0
-            this.filterBy.budget.max = 99999
+        clearPrice() {
+            this.filterBy.price.min = 0
+            this.filterBy.price.max = 99999
         },
         setDeliveryTime(timeValue) {
             this.filterBy.daysToMake = timeValue
             this.filter()
             this.showDeliveryForm()
         },
-        setBudget() {
+        setPrice() {
             this.filter()
-            this.showBudgetForm()
+            this.showPriceForm()
         }
     }
 }

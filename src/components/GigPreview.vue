@@ -75,8 +75,8 @@ export default {
     name: 'GigPreview',
     methods: {
         loadGig() {
-            const { txt, tag, budget, daysToMake } = this.$route.query
-            const filterBy = { txt, tag, budget, daysToMake }
+            const { txt, tag, price, daysToMake } = this.$route.query
+            const filterBy = { txt, tag, price, daysToMake }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
     },

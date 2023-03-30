@@ -26,7 +26,7 @@ window.cs = orderService
 async function query(filterBy = { txt: '', tag: '' }) {
     console.log(filterBy)
     // var orders = await storageService.query(STORAGE_KEY)
-    return await httpService.query(API)
+    return await httpService.get(API)
 
     // return orders = _filter(orders, filterBy)
 }
@@ -122,9 +122,9 @@ function _filter(gigs, filterBy) {
     if (filterBy.tag) {
         gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
     }
-    if (filterBy.budget) {
+    if (filterBy.price) {
         console.log(gigs[0].packages[0].price)
-        gigs = gigs.filter(gig => (gig.packages[0].price >= filterBy.budget.min && gig.packages[0].price <= filterBy.budget.max))
+        gigs = gigs.filter(gig => (gig.packages[0].price >= filterBy.price.min && gig.packages[0].price <= filterBy.price.max))
     }
     if (filterBy.daysToMake) {
         gigs = gigs.filter(gig => gig.packages[0].daysToMake <= filterBy.daysToMake)

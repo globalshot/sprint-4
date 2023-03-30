@@ -1,16 +1,17 @@
 <template>
     <div v-if="user">
 
-    <h3>User Details</h3>
+        <h3>User Details</h3>
 
-    <h1>{{ fullname }}</h1>
-    <div class="add-gig-container flex">
-        <button class="btn btn-add">
-            <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-        </button>
-        <span>Add gig</span>
-    </div>
-    <GigIndex />
+        <h1>{{ fullname }}</h1>
+        <pre v-if="orders">{{ orders }}</pre>
+        <div class="add-gig-container flex">
+            <button class="btn btn-add">
+                <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
+            </button>
+            <span>Add gig</span>
+        </div>
+        <GigIndex />
     </div>
 </template>
 
@@ -18,19 +19,22 @@
 import GigList from '../components/GigList.vue'
 import GigIndex from '../views/GigIndex.vue'
 import { userService } from '../services/user.service'
+import { orderService } from '../services/order.service'
 export default {
     name: "UserDetails",
     data() {
         return {
             user: null,
-    //         gigs: []
-        };
+            orders: null
+            //         gigs: []
+        }
     },
     async created() {
-        const { id } = this.$route.params;
+        const { id } = this.$route.params
         this.user = (id) ?
             await userService.getById(id) :
-            console.log("Wrong User");
+            console.log("Wrong User")
+        this.orders = await orderService.query()
 
     },
     computed: {
@@ -43,12 +47,12 @@ export default {
         },
 
 
-        orders() {
-            return this.$store.getters.orders
-        },
+        // orders() {
+        //     return this.$store.getters.orders
+        // },
         buyer() {
             if (!this.orders) return ''
-            console.log('orders', this.orders);
+            console.log('orders', this.orders)
             return this.orders.buyer
         },
         // buyerId() {
@@ -57,7 +61,7 @@ export default {
         // }
         buyerId() {
             if (!this.buyer) return ''
-            console.log('orders', this.buyer);
+            console.log('orders', this.buyer)
             return this.buyer.id
         }
         // orderGig() {

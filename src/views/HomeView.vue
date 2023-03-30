@@ -47,7 +47,7 @@
                                                     </path>
                                                 </svg>
                                             </span>
-                                            <h3>The best for every budget</h3>
+                                            <h3>The best for every price</h3>
                                         </h6>
                                     </section>
                                     <p>

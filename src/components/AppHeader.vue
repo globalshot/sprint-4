@@ -84,7 +84,7 @@
               <li v-if="!loggedinUser">
                 <RouterLink  class="btn btn-join" to="/signup">Join</RouterLink>
               </li>
-              <li v-else @click="logout" >
+              <li v-else @click="logout" class="logout" :style="{ color: 'black'}">
                 Logout
               </li>
             </ul>
