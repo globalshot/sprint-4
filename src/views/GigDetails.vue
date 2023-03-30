@@ -64,7 +64,7 @@
 
 
 <script>
-import { gigService } from './../services/gig.service'
+import { gigService } from './../services/gig.service.local.js'
 import SidebarContent from '../components/gigDetails/SidebarContent.vue'
 import ReviewPage from './ReviewPage.vue'
 import StickyHeader from '../components/gigDetails/StickyHeader.vue'

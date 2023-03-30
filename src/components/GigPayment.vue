@@ -146,7 +146,7 @@
 
 <script>
 import { eventBus, showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
-import { gigService } from './../services/gig.service'
+import { gigService } from './../services/gig.service.local'
 import { orderService } from './../services/order.service'
 export default {
     data() {

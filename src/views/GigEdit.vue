@@ -26,7 +26,7 @@
 
 <script>
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
-import { gigService } from '../services/gig.service'
+import { gigService } from '../services/gig.service.local'
 // import { uploadImg } from '../services/upload.service'
 
 export default {
@@ -53,12 +53,12 @@ export default {
                 ev.target.files[0] :
                 ev.dataTransfer.files[0]
 
-            try{
+            try {
                 const { url } = await uploadImg(file)
                 this.gig.imgUrl = url
                 showSuccessMsg('Image uploaded')
             }
-            catch(err) {
+            catch (err) {
                 showErrorMsg('Failed to load image')
             }
         }

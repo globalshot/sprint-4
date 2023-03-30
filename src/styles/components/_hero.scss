@@ -3,6 +3,11 @@
 .hero-container {
   position: relative;
   height: 42.5em;
+  
+  // height: rem(414px);
+  @include for-medium-layout {
+    height: 42.5em;
+  }
   margin-block-end: rem(-80px);
   min-height: rem(680px);
 
@@ -158,6 +163,10 @@
     }
 
     .categories {
+      display: none;
+      @include for-medium-layout {
+        display: flex;
+      }
       flex-wrap: wrap;
       text-decoration: none;
       align-items: center;
