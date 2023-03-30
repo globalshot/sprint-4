@@ -22,9 +22,11 @@
                                             <i class="fa-solid fa-star"></i>
                                         </span>
                                     </li>
-                                    <span class="star">
-                                        <i class="fa-solid fa-star-half" v-if="+gig.owner.rate % 1 !== 0"></i>
-                                    </span>
+                                    <li>
+                                        <span class="star">
+                                            <i class="fa-solid fa-star-half" v-if="+gig.owner.rate % 1 !== 0"></i>
+                                        </span>
+                                    </li>
                                     <span>{{ gig.owner.rate }}</span>
                                     <span class="num-reviews">({{ gig.reviews.length }})</span>
                                 </ul>

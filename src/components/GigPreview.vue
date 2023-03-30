@@ -8,7 +8,7 @@
         </div>
 
         <!-- xxx -->
-        <vueper-slides class="carousel-container no-shadow details-slides" fade>
+        <vueper-slides class="carousel-container no-shadow details-slides" fade :dragging-distance="100">
             <template #arrow-left>
                 <i class="fa-solid fa-angle-left"></i>
             </template>
@@ -17,9 +17,9 @@
             </template>
             <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i">
                 <template #content>
-                    <!-- <span>hi</span> -->
-                    <!-- <img :src="gig.imgUrl[i]" alt=""> -->
-                    <img :src="gig.imgUrl[i]" alt="">
+                    <RouterLink class="btn" :to="'/gig/' + gig._id">
+                        <img  :src="gig.imgUrl[i]" alt="">
+                    </RouterLink>
                 </template>
             </vueper-slide>
         </vueper-slides>
