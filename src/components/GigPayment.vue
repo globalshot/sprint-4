@@ -179,7 +179,7 @@ export default {
                 await this.$store.dispatch({ type:'addOrder', gigId: this.gig._id} )
                 showSuccessMsg('Order Saved')
                 console.log('got here')
-                this.$router.push('/gig')
+                this.$router.push('/user/' + this.loggedinUser._id )
             }
             catch (err) {
                 console.log(err, 'order not saved');

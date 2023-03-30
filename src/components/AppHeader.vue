@@ -54,11 +54,15 @@
             <ul class="flex items-center">
               <li>
                 <RouterLink @click="loadGig" to="/gig" class="no-style">Explore</RouterLink>
-              </li>
-
+              </li >
+                
               <li>
                 <!-- <RouterLink to="/edit">Become a seller </RouterLink> -->
                 <RouterLink to="/user/64233f238e1b02500fd244bf">Become a Seller </RouterLink>
+              </li>
+              <li v-if="loggedinUser">
+                <span @click="showOrdersForm">Orders</span>
+                <UserOrders v-if="showOrders"></UserOrders>
               </li>
 
               <li @click="signIn">
@@ -129,11 +133,13 @@
 
 <script>
 import Login from './Login.vue'
+import UserOrders from './UserOrders.vue'
 import { eventBus } from '../services/event-bus.service'
 import { userService } from '../services/user.service'
 export default {
   data() {
     return {
+      showOrders: false,
       isScrolled: false,
       isDoubleScrolled: false,
       filterBy: {
@@ -204,7 +210,10 @@ export default {
 
     toggleLogin() {
       this.login = !this.login
-    }
+    },
+    showOrdersForm() {
+            this.showOrders = !this.showOrders
+        },
 
   },
   computed: {
@@ -241,6 +250,7 @@ export default {
   },
   components: {
     Login,
+    UserOrders,
   }
 }
 </script>
