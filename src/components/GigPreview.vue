@@ -52,7 +52,7 @@
                 </path>
             </svg>
             <span>{{ gig.owner.rate }}</span>
-            <span class="num">({{ gig.reviews.length }})</span>
+            <!-- <span class="num">({{ this.gigReviews(gig) }})</span> -->
         </div>
         <div class="price-container flex">
             <svg class="like" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
@@ -120,6 +120,9 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
         },
+        gigReviews(gig){
+            return gig.reviews.length? gig.reviews.length : '0'
+        }
     },
     emits: ['removeGig']
 }

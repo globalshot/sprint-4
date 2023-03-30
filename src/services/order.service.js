@@ -24,7 +24,6 @@ window.cs = orderService
 
 
 async function query(filterBy = { txt: '', tag: '' }) {
-    console.log(filterBy)
     // var orders = await storageService.query(STORAGE_KEY)
     return await httpService.get(API)
 
@@ -133,7 +132,6 @@ function _filter(gigs, filterBy) {
 }
 
 ; (() => {
-    console.log(gOrders)
     let orders = utilService.loadFromStorage(STORAGE_KEY) || []
     if (!orders || !orders.length) {
         orders = gOrders

@@ -50,8 +50,6 @@ export default {
         this.filterBy.id = filterBy.id
         this.$store.dispatch({ type: 'loadGigs', filterBy })
 
-        console.log(this.$route.query)
-
         this.subscribe = eventBus.on('changeUserStatus', this.setUser)
 
     },

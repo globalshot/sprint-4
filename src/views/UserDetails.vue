@@ -29,8 +29,6 @@ export default {
         }
     },
     async created() {
-        console.log(this.$route.params.id)
-        console.log(this.userId)
 
         const { id } = this.$route.params;
         this.user = (id) ?
