@@ -28,8 +28,8 @@ window.userService = userService
 
 
 function getUsers() {
-    return storageService.query('user')
-    // return httpService.get(`user`)
+    // return storageService.query('user')
+    return httpService.get(`user`)
 }
 
 // function onUserUpdate(user) {
@@ -38,8 +38,8 @@ function getUsers() {
 // }
 
 async function getById(userId) {
-    const user = await storageService.get('user_db', userId)
-    // const user = await httpService.get(`user/${userId}`)
+    // const user = await storageService.get('user_db', userId)
+    const user = await httpService.get(`user/${userId}`)
 
     // socketService.emit(SOCKET_EMIT_USER_WATCH, userId)
     // socketService.off(SOCKET_EVENT_USER_UPDATED, onUserUpdate)
