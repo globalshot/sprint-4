@@ -17,9 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="buttons flex">
-            <button class="btn-apply">Apply</button>
-        </div>
+       
     </form>
 </template>
 

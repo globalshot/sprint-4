@@ -16,28 +16,30 @@
                     <template #content>
                         <div class="review">
                             <span class="img-user">
-                                <img :src=gig.reviews[i].user.imgUrl
+                                <img :src=review.user.imgUrl
                                     alt="">
                             </span>
                             <div class="review-details">
                                 <div class="user-review">
-                                    <h6>{{gig.reviews[i].user.fullname}}</h6>
+                                    <h6>{{review.user.fullname}}</h6>
                                     <div class="country">
                                         <img class="country-flag"
-                                            :src=flag[gig.reviews[i].user.country]
+                                            :src=flag[review.user.country]
                                             alt="" loading="lazy">
                                             
-                                        <div class="country-name tbody-6">{{gig.reviews[i].user.country}}</div>
+                                        <div class="country-name tbody-6">{{review.user.country}}</div>
                                     </div>
                                     <div class="stars" >
                                         <ul class="flex">
-                                            <li v-for="i in gig.reviews[i].rate">
+                                            <!-- <li v-for="i in gig.reviews[i].rate"> -->
+                                            <li v-for="n in review.rating" >
+                                                
                                                 <span class="star">
                                                     <i class="fa-solid fa-star"></i>
                                                 </span>
                                             </li>
                                             <span class="num">
-                                                {{gig.reviews[i].rate}}
+                                                {{gig.reviews[i].rating}}
                                             </span>
                                         </ul>
                                     </div>

@@ -18,7 +18,7 @@
             <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i">
                 <template #content>
                     <RouterLink class="btn" :to="'/gig/' + gig._id">
-                        <img  :src="gig.imgUrl[i]" alt="">
+                        <img :src="gig.imgUrl[i]" alt="">
                     </RouterLink>
                 </template>
             </vueper-slide>
@@ -52,6 +52,8 @@
                 </path>
             </svg>
             <span>{{ gig.owner.rate }}</span>
+            <span v-if="gig.reviews.length" class="num">({{ gig.reviews.length }})</span>
+            <span v-else class="num">(0)</span>
             <!-- <span class="num">({{ this.gigReviews(gig) }})</span> -->
         </div>
         <div class="price-container flex">
@@ -120,8 +122,8 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
         },
-        gigReviews(gig){
-            return gig.reviews.length? gig.reviews.length : '0'
+        gigReviews(gig) {
+            return gig.reviews.length ? gig.reviews.length : '0'
         }
     },
     emits: ['removeGig']
