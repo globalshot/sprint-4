@@ -1,49 +1,48 @@
 <template>
-    <form class="delivery-dropdown">
-        <div class="inputs flex">
-            <div class="radio-list">
-                <div  class="radio-item-wrapper">
-                    <label class="n3bUTho Y7LofzN radio-item">
-                        <div class="inner-radio">
-                            <span>Express 24H</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="radio-item-wrapper">
-                    <label class="n3bUTho Y7LofzN radio-item">
-                        <div class="inner-radio">
-                            <span>Up to 3 days</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="radio-item-wrapper">
-                    <label class="n3bUTho Y7LofzN radio-item">
-                        <div class="inner-radio">
-                            <span>Up to 7 days</span>
-                        </div>
-                    </label>
-                </div>
-                <div class="radio-item-wrapper">
-                    <label class="radio-item selected felx">
-                        <div class="inner-radio">
-                            <span>Anytime</span>
-                        </div>
-                    </label>
-                </div>
-            </div>
-            <!-- <div>
-                <p class="bold">MAX.</p>
-                <div class="input-container flex">
-                    <input v-model="filterBy.budget.max" placeholder="Any">
-                    <div class="icon-container last">
-                        <i>$</i>
-                    </div>
-                </div>
-            </div> -->
+    <div v-if="orders.length" v-for="order in orders">
+        <div class="flex" v-if="loggedinUser._id === order.buyer._id">
+            <h4>{{ order.gig.name }}</h4>
+            <h4>{{ order.status }}</h4>
+            <!-- <h2>{{ orders }}</h2> -->
+    
         </div>
-        <div class="buttons flex">
-            <div>Clear All</div>
-            <button class="btn-apply">Apply</button>
-        </div>
-    </form>
+    </div>
+    <div v-else>
+        <h4>no orders</h4>
+
+    </div>
 </template>
+
+<script>
+import { orderService } from '../services/order.service'
+export default {
+    name: "UserOrders",
+    data() {
+        return {
+            orders: null
+        }
+    },
+    async created() {
+        // this.orders = await orderService.query()
+        this.userOrders()
+    },
+
+    computed: {
+        loggedinUser() {
+            return this.$store.getters.loggedinUser
+        },
+        async userOrders() {
+            let orders = await orderService.query()
+            console.log(orders)
+            let newOrders = []
+            for (let i=0; i<orders.length; i++){
+                if(this.loggedinUser._id === orders[i].buyer._id) {
+                    newOrders.push(orders[i])
+                }
+            }
+            console.log(newOrders)
+            this.orders = newOrders
+        }
+    }
+}
+</script>
