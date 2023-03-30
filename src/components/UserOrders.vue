@@ -1,16 +1,26 @@
 <template>
-    <div v-if="orders.length" v-for="order in orders">
-        <div class="flex" v-if="loggedinUser._id === order.buyer._id">
-            <h4>{{ order.gig.name }}</h4>
-            <h4>{{ order.status }}</h4>
-            <!-- <h2>{{ orders }}</h2> -->
-    
+    <form class="order-dropdown">
+        <div class="inputs flex">
+            <div class="order-list">
+                <div class="order-item-wrapper" v-if="orders.length" v-for="order in orders">
+                    <label class="order-item">
+                        <div class="inner-order">
+                            <div class="flex" v-if="loggedinUser._id === order.buyer._id">
+                            <h4>{{ order.gig.name }}</h4>
+                            <h4>{{ order.status }}</h4>    
+                             </div>
+                        </div>
+                    </label>
+                </div>
+                <div v-else>
+                    <h4>no orders</h4>
+                </div>
+            </div>
         </div>
-    </div>
-    <div v-else>
-        <h4>no orders</h4>
-
-    </div>
+        <div class="buttons flex">
+            <button class="btn-apply">Apply</button>
+        </div>
+    </form>
 </template>
 
 <script>

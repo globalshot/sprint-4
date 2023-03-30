@@ -3,7 +3,7 @@
         <div class="package-review">
             <div class="reviews-wrap">
                 <ul class="reviews-list">
-                    <div v-for="review in gig.reviews">
+                    <div v-for="(review, i) in gig.reviews" :key="i">
                         <!-- <div v-if="review.gig.gigId === gig._id"> -->
                         <li class="review-item-component review-item">
                             <div class="review-header-container">
@@ -12,7 +12,7 @@
                                     <div class="user-profile-image">
                                         <label class="profile-pic" for="profile_image_7113077744648">
                                             <span class="missing-profile-image flex-center tbody-6 custom-profile-image">
-                                          <img :src= review.user.imgUrl alt="">  
+                                                <img :src=review.user.imgUrl alt="">
                                             </span>
                                             <!-- <span class="missing-profile-image flex-center tbody-6 custom-profile-image">
                                                 j
@@ -29,10 +29,7 @@
                                         </div>
                                         <div class="reviewer-sub-details flex">
                                             <div class="country flex">
-                                                <img class="country-flag"
-                                                    src="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
-                                                    alt="US" loading="lazy">
-                                                <div class="country-name tbody-6">United States</div>
+                                                <div class="country-name tbody-6">{{review.user.country}} </div>
                                             </div>
                                         </div>
                                     </div>
@@ -74,10 +71,21 @@
 import ReviewPage from '../../views/ReviewPage.vue';
 export default {
     props: {
+        
         gig: {
             type: Object,
             required: true
         },
+        data() {
+            return {
+                flag: {
+                    Israel: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ee-1f1f1.png',
+                    France: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1eb-1f1f7.png',
+                    Sweden: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f8-1f1ea.png',
+
+                },
+            }
+        }
         // reviews: {
         //     type: Array,
         // }
