@@ -52,8 +52,8 @@
                 </path>
             </svg>
             <span>{{ gig.owner.rate }}</span>
-            <span v-if="gig.reviews.length" class="num">({{ gig.reviews.length }})</span>
-            <span v-else class="num">(0)</span>
+            <span  class="num">({{ reviewsLength }})</span>
+            <!-- <span v-else class="num">(0)</span> -->
             <!-- <span class="num">({{ this.gigReviews(gig) }})</span> -->
         </div>
         <div class="price-container flex">
@@ -87,6 +87,7 @@ export default {
     },
     data() {
         return {
+            reviewsLength: 0,
             filterBy: {
                 txt: '',
             },
@@ -108,7 +109,9 @@ export default {
     props: {
         gig: Object,
     },
-    created() { },
+    async created() {
+        this.gigReviews
+     },
     components: {
         LongText,
         VueperSlides,
@@ -122,8 +125,8 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
         },
-        gigReviews(gig) {
-            return gig.reviews.length ? gig.reviews.length : '0'
+        gigReviews() {
+            this.reviewsLength = this.gig.reviews.length
         }
     },
     emits: ['removeGig']

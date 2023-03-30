@@ -2,7 +2,7 @@
     <form class="order-dropdown">
         <div class="inputs flex">
             <div class="order-list">
-                <div class="order-item-wrapper" v-if="orders.length" v-for="order in orders">
+                <div class="order-item-wrapper" v-if="ordersLength" v-for="order in orders">
                     <label class="order-item">
                         <div class="inner-order">
                             <div class="flex" v-if="loggedinUser._id === order.buyer._id">
@@ -27,12 +27,13 @@ export default {
     name: "UserOrders",
     data() {
         return {
-            orders: null
+            orders: null,
+            ordersLength: 0
         }
     },
     async created() {
         // this.orders = await orderService.query()
-        this.userOrders()
+        this.userOrders
     },
 
     computed: {
@@ -48,8 +49,10 @@ export default {
                     newOrders.push(orders[i])
                 }
             }
-            console.log(newOrders)
+            console.log(newOrders.length)
             this.orders = newOrders
+            this.ordersLength = newOrders.length
+            // return newOrders.length
         }
     }
 }
