@@ -1,5 +1,6 @@
 [
   {
+    "price": 63,
     "_id": "WCCde",
     "title": "I will polish your personal statement and program application",
     "owner": {
@@ -7,7 +8,7 @@
       "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
       "level": "3",
-      "rate": 5
+      "rate": "4.9"
     },
     "description": "Make unique logo...",
     "imgUrl": [
@@ -26,9 +27,9 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 100,
-        "description": "the most standart ever package",
+        "description": "the most standard ever package",
         "revisits": 2,
         "daysToMake": 4,
         "features": ["y", "y", "y", "n", "y", "n"]
@@ -49,6 +50,7 @@
         "user": {
           "_id": "u102",
           "fullname": "John Buy",
+          "country": "France",
           "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp"
         },
         "rate": 5,
@@ -57,6 +59,7 @@
     ]
   },
   {
+    "price": 30,
     "_id": "49q3d",
     "title": "I will polish your troll or something",
     "owner": {
@@ -64,7 +67,7 @@
       "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
       "level": "3",
-      "rate": 5
+      "rate": "4.8"
     },
     "description": "just trolling or something",
     "imgUrl": [
@@ -83,9 +86,9 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 100,
-        "description": "the most standart ever package",
+        "description": "the most standard ever package",
         "revisits": 2,
         "daysToMake": 3,
         "features": ["y", "y", "y", "n", "y", "n"]
@@ -106,6 +109,7 @@
         "user": {
           "_id": "u102",
           "fullname": "John Buy",
+          "country": "France",
           "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp"
         },
         "rating": 5,
@@ -114,14 +118,15 @@
     ]
   },
   {
+    "price": 40,
     "_id": "nagAS",
     "title": "sometimes logo sometimes text",
     "owner": {
-      "_id": "u101",
-      "fullname": "Dudu Da",
-      "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
+      "_id": "u102",
+      "fullname": "John Buy",
+      "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp",
       "level": "3",
-      "rate": 5
+      "rate": "5.0"
     },
     "description": "making the best logo or test files",
     "imgUrl": [
@@ -140,7 +145,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 80,
         "description": "can make both but max 3 of each",
         "revisits": 5,
@@ -158,12 +163,25 @@
     ],
     "reviews": [
       {
+        "_id": "1G3s2",
+        "createdAt": 1679985935783,
+        "user": {
+          "_id": "u101",
+          "fullname": "Dudu Da",
+          "country": "Sweden",
+          "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG"
+        },
+        "rate": 4,
+        "text": "Great work, the results were pretty cool and the delivery time was fast"
+      },
+      {
         "_id": "1G3sd",
         "createdAt": 1679985935783,
         "user": {
-          "_id": "u102",
-          "fullname": "John Buy",
-          "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp"
+          "_id": "u103",
+          "fullname": "Don Peru",
+          "country": "Israel",
+          "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
         },
         "rate": 3,
         "text": "didnt liked some much what i got, but he tried"
@@ -171,6 +189,7 @@
     ]
   },
   {
+    "price": 50,
     "_id": "np2W2",
     "title": "The best gig ever",
     "owner": {
@@ -178,7 +197,7 @@
       "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
       "level": "3",
-      "rate": 5
+      "rate": "4.7"
     },
     "description": "I will create the most beatiful website",
     "imgUrl": [
@@ -197,7 +216,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 70,
         "description": "7 pages Website",
         "revisits": 5,
@@ -220,6 +239,7 @@
         "user": {
           "_id": "u102",
           "fullname": "John Buy",
+          "country": "France",
           "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp"
         },
         "rate": 5,
@@ -228,6 +248,7 @@
     ]
   },
   {
+    "price": 100,
     "_id": "mY32e",
     "title": "1st class animations",
     "owner": {
@@ -235,7 +256,7 @@
       "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
       "level": "3",
-      "rate": 5
+      "rate": "4.9"
     },
     "description": "This is for creating animations and videos, can be uploaded to YouTube",
     "imgUrl": [
@@ -254,7 +275,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 200,
         "description": "3 minute video animation",
         "revisits": 5,
@@ -277,6 +298,7 @@
         "user": {
           "_id": "u102",
           "fullname": "John Buy",
+          "country": "France",
           "imgUrl": "https://qph.cf2.quoracdn.net/main-qimg-134e3bf89fff27bf56bdbd04e7dbaedf.webp"
         },
         "rate": 1,
@@ -285,6 +307,7 @@
     ]
   },
   {
+    "price": 20,
     "_id": "1Rz2z",
     "title": "Audio editing",
     "owner": {
@@ -292,7 +315,7 @@
       "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
       "level": "3",
-      "rate": 5
+      "rate": "4.6"
     },
     "description": "I will clean up denoise edit your audio or sound in video",
     "imgUrl": [
@@ -311,7 +334,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 40,
         "description": "Up to 5 minute editing",
         "revisits": 5,
@@ -334,6 +357,7 @@
         "user": {
           "_id": "u103",
           "fullname": "Don Peru",
+          "country": "Israel",
           "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
         },
         "rate": 5,
@@ -342,6 +366,7 @@
     ]
   },
   {
+    "price": 20,
     "_id": "B2b2z",
     "title": "Portrait Photographers",
     "owner": {
@@ -349,7 +374,7 @@
       "fullname": "Dudu Da",
       "imgUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Welchcorgipembroke.JPG/1280px-Welchcorgipembroke.JPG",
       "level": "3",
-      "rate": 5
+      "rate": "5.0"
     },
     "description": "I will do portrait photography in london",
     "imgUrl": [
@@ -368,7 +393,7 @@
         "features": ["y", "n", "n", "n", "y", "n"]
       },
       {
-        "type": "standart",
+        "type": "standard",
         "price": 40,
         "description": "Up to 5 minute editing",
         "revisits": 5,
@@ -391,6 +416,7 @@
         "user": {
           "_id": "u103",
           "fullname": "Don Peru",
+          "country": "Israel",
           "imgUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
         },
         "rate": 5,

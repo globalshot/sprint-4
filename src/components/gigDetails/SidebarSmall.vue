@@ -6,7 +6,7 @@
                     <!--triple input radio-->
                     <input type="radio" id="package-tab-1" v-model="selectedItem" :value="'basic'" name="package-tab-group"
                         checked>
-                    <input type="radio" id="package-tab-2" v-model="selectedItem" :value="'standart'"
+                    <input type="radio" id="package-tab-2" v-model="selectedItem" :value="'standard'"
                         name="package-tab-group">
                     <input type="radio" id="package-tab-3" v-model="selectedItem" :value="'premium'"
                         name="package-tab-group">
@@ -14,7 +14,7 @@
                         <label @click="quant = '1'" :for="'package-tab-1'"
                             :class="{ 'aria-selected': (this.selectedItem === `basic`) }">Basic</label><!--the style here i guess-->
                         <label @click="quant = '2'" :for="'package-tab-2'"
-                            :class="{ 'aria-selected': (this.selectedItem === `standart`) }">Standard</label><!--the style here i guess-->
+                            :class="{ 'aria-selected': (this.selectedItem === `standard`) }">Standard</label><!--the style here i guess-->
                         <label @click="quant = '3'" :for="'package-tab-3'"
                             :class="{ 'aria-selected': (this.selectedItem === `premium`) }">Premium</label><!--the style here i guess-->
                     </div>

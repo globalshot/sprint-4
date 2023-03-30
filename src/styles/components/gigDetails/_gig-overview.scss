@@ -45,7 +45,7 @@
 
   .seller-overview {
     .review-carousel-wrapper {
-      margin-block-end: 11rem;
+      margin-block-end: 8rem;
       .slide-img-container {
         img {
           background: transparent no-repeat 50%;
@@ -87,7 +87,7 @@
       .thumbnails .vueperslide--active {
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
         opacity: 1;
-        border-color: #000;
+        border-color: #00000000;
       }
     }
     .seller-container {

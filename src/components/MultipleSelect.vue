@@ -121,7 +121,7 @@ export default {
                 },
                 daysToMake: 999
 
-                
+
             },
             showPrice: false,
             showDelivery: false,
@@ -159,6 +159,9 @@ export default {
             this.showDelivery = !this.showDelivery
         },
         filter() {
+            let { txt, tag } = this.$route.query
+            this.filterBy.txt =  txt
+            this.filterBy.tag =  tag
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
             // this.showPriceForm()

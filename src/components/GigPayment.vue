@@ -77,8 +77,8 @@
                         <section class="gig-package-payment">
                             <section class="package-content">
                                 <section class="header flex space-between">
-                                    <div class="img-container"><img
-                                            src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/217276086/original/6a004b8b82868ab02836bdfcb42c4a0e4b042f87.png">
+                                    <div class="img-container">
+                                        <img :src="gig.imgUrl[0]" alt="">
                                     </div>
                                     <p class="title">I will provide quality essays research and summaries on any topic</p>
                                 </section>
@@ -146,7 +146,7 @@
 
 <script>
 import { eventBus, showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
-import { gigService } from './../services/gig.service'
+import { gigService } from './../services/gig.service.local'
 import { orderService } from './../services/order.service'
 export default {
     data() {
@@ -179,7 +179,7 @@ export default {
                 await this.$store.dispatch({ type:'addOrder', gigId: this.gig._id} )
                 showSuccessMsg('Order Saved')
                 console.log('got here')
-                this.$router.push('/gig')
+                this.$router.push('/user/' + this.loggedinUser._id )
             }
             catch (err) {
                 console.log(err, 'order not saved');

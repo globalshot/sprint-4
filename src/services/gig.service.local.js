@@ -103,6 +103,7 @@ function _createGig(name, tags) {
 }
 
 function _filter(gigs, filterBy) {
+    console.log(filterBy);
     if (filterBy.txt) {
         const regex = new RegExp(filterBy.txt, 'i')
         gigs = gigs.filter(gig => regex.test(gig.title) || regex.test(gig.description))
@@ -116,6 +117,9 @@ function _filter(gigs, filterBy) {
     }
     if (filterBy.daysToMake) {
         gigs = gigs.filter(gig => gig.packages[0].daysToMake <= filterBy.daysToMake)
+    }
+    if (filterBy.id) {
+        gigs = gigs.filter(gig => gig.owner._id === filterBy.id)
     }
     return gigs
 }

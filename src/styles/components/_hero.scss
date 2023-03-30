@@ -3,6 +3,11 @@
 .hero-container {
   position: relative;
   height: 42.5em;
+  
+  // height: rem(414px);
+  @include for-medium-layout {
+    height: 42.5em;
+  }
   margin-block-end: rem(-80px);
   min-height: rem(680px);
 
@@ -111,6 +116,7 @@
       span {
         font-family: "Macan-light";
         color: $tertiary-clr-light;
+        // margin: 0;
       }
     }
 
@@ -136,6 +142,9 @@
 
       span {
         padding: 0px 0px 0px 4px;
+        svg {
+          margin: 0;
+        }
       }
     }
 
@@ -154,6 +163,10 @@
     }
 
     .categories {
+      display: none;
+      @include for-medium-layout {
+        display: flex;
+      }
       flex-wrap: wrap;
       text-decoration: none;
       align-items: center;

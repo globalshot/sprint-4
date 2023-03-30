@@ -14,15 +14,19 @@
                             <RouterLink :to="'/user/' + gig.owner._id">{{ gig.owner.fullname }}</RouterLink>
                         </div>
                         <div class="one-liner flex">
-                            <p class="one-liner">Level 3 Seller(still hard coded)</p>
+                            <p class="one-liner">Level {{ gig.owner.level }} Seller</p>
                             <div class="stars">
                                 <ul class="flex">
-                                    <li v-for="n in gig.owner.rate">
-                                            <span class="star">
-                                                <i class="fa-solid fa-star"></i>
-                                            </span>
-                                        </li>
+                                    <li v-for="n in Math.floor(+gig.owner.rate)">
+                                        <span class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                    </li>
+                                    <span class="star">
+                                        <i class="fa-solid fa-star-half" v-if="+gig.owner.rate % 1 !== 0"></i>
+                                    </span>
                                     <span>{{ gig.owner.rate }}</span>
+                                    <span class="num-reviews">({{ gig.reviews.length }})</span>
                                 </ul>
                             </div>
                         </div>

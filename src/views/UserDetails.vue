@@ -3,15 +3,14 @@
 
         <h3>User Details</h3>
 
-        <h1>{{ fullname }}</h1>
-        <pre v-if="orders">{{ orders }}</pre>
-        <div class="add-gig-container flex">
-            <button class="btn btn-add">
-                <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-            </button>
-            <span>Add gig</span>
-        </div>
-        <GigIndex />
+    <h1>{{ this.user.fullname }}</h1>
+    <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
+        <button class="btn btn-add">
+            <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
+        </button>
+        <span>Add gig</span>
+    </div>
+    <GigIndex />
     </div>
 </template>
 
@@ -30,7 +29,10 @@ export default {
         }
     },
     async created() {
-        const { id } = this.$route.params
+        console.log(this.$route.params.id)
+        console.log(this.userId)
+
+        const { id } = this.$route.params;
         this.user = (id) ?
             await userService.getById(id) :
             console.log("Wrong User")
@@ -41,19 +43,16 @@ export default {
         gigs() {
             return this.$store.getters.gigs
         },
-        fullname() {
-            if (!this.user) return ''
-            return this.user.fullname
+        loggedinUser() {
+            return this.$store.getters.loggedinUser
         },
-
-
-        // orders() {
-        //     return this.$store.getters.orders
-        // },
-        buyer() {
-            if (!this.orders) return ''
-            console.log('orders', this.orders)
-            return this.orders.buyer
+        userId() {
+            if (!this.loggedinUser) return ''
+            return this.loggedinUser._id
+        },
+        fullname() {
+            if (!this.loggedinUser) return ''
+            return this.loggedinUser.fullname
         },
         // buyerId() {
         //     if (!this.orders) return ''

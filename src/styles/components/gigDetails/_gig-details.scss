@@ -47,10 +47,10 @@
   }
 
   .main-small {
-    padding:0 33px;
+    padding: 0 33px;
 
     @include for-medium-layout {
-      padding:0 ;
+      padding: 0;
     }
   }
 
@@ -68,6 +68,10 @@
   }
 
   .img-container {
+    .review-carousel-wrapper {
+      display: block;
+      height: 428.6px;
+    }
     .vueperslides {
       height: 100%;
       // max-width: rem(713px);
@@ -92,30 +96,26 @@
       .vueperslides__arrow {
         height: 48px;
         width: 48px;
-        // opacity: 1;
+        opacity: .9;
         font-size: 1.5em;
+        &:hover {
+          opacity: 1;
+        }
 
         &.vueperslides__arrow--prev {
           @include for-medium-layout {
-            
-            transform: translate(-100%, -100%);
+            transform: translate(-80%, -50%);
           }
-          transform: translate(-10%, -100%);
+          transform: translate(-10%, -50%);
           // left: rem(-20px);
         }
         &.vueperslides__arrow--next {
           @include for-medium-layout {
-            
-            transform: translate(100%, -100%);
+            transform: translate(80%, -50%);
           }
-          transform: translate(10%, -100%);
+          transform: translate(10%, -50%);
         }
       }
-    }
-
-    .review-carousel-wrapper {
-      display: block;
-      height: 428.6px;
     }
   }
 

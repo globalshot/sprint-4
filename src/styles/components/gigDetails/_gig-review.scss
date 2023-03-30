@@ -5,12 +5,17 @@
   display: block;
   margin-block-end: 9.3rem;
   height: 100px;
+  
   // max-height: rem(300px);
   .vueperslides {
+    
     height: 100px;
 
     .vueperslide {
       height: 70px;
+      padding-block-end:11em ;
+      overflow: hidden;
+      word-wrap: break-word;
 
       &__content {
         min-height: 0;
@@ -57,7 +62,7 @@
       line-height: rem(28px);
       padding-bottom: rem(25px);
       color: $secondary-clr-dark;
-      font-family: Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-family: "Macan", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 700;
     }
 
@@ -77,6 +82,7 @@
   }
 
   .carousel-container {
+    
     max-height: fit-content;
     height: 131%;
     width: 100%;
@@ -85,6 +91,7 @@
 
   .review {
     // background-color: ;
+    
     display: flex;
     outline: none;
     width: rem(677px);
@@ -117,10 +124,12 @@
       }
 
       .country {
+        border-right: 1px solid $grey-txt-light;
+
         padding: 0 0 0 rem(12px);
         display: inline-flex;
         align-items: center;
-        padding-inline-end: 1rem;
+        padding-inline-end: 0.5rem;
 
         .country-flag {
           border-radius: 4px;
@@ -133,21 +142,26 @@
           padding-inline-start: 0.5rem;
         }
       }
-
-      li {
-        font-size: rem(12px);
-        width: 20px;
-        color: #ffb33e;
-
-        &.num {
+      ul {
+        margin-inline-start: .5rem;
+        li {
+          font-size: rem(12px);
+          width: 20px;
+          color: $star-clr;
+        }
+        .num {
+          color: $star-clr;
           font-size: 0.8em;
           font-weight: 600;
         }
       }
     }
     .review-description {
+      word-wrap: break-word;
+      height: 100%;
       font-weight: 500;
-      width: 100%;
+      max-width: 100%;
+      line-height: 120%;
     }
   }
 }
