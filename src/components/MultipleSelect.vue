@@ -113,8 +113,8 @@ export default {
         return {
             filterBy: {
                 price: {
-                    min: 0,
-                    max: 99999,
+                    min: null,
+                    max: null,
                 },
                 sortBy: {
                     price: false
@@ -169,15 +169,15 @@ export default {
         clearFilter() {
             if (this.showDelivery) {this.showDeliveryForm()}
             if (this.showPrice) {this.showPriceForm()}
-            this.filterBy.price.min = 0
-            this.filterBy.price.max = 99999
+            this.filterBy.price.min = null
+            this.filterBy.price.max = null
             this.filterBy.daysToMake = 999
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
         clearPrice() {
-            this.filterBy.price.min = 0
-            this.filterBy.price.max = 99999
+            this.filterBy.price.min = null
+            this.filterBy.price.max = null
         },
         setDeliveryTime(timeValue) {
             this.filterBy.daysToMake = timeValue
