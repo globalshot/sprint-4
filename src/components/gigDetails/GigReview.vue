@@ -87,8 +87,5 @@ export default {
         VueperSlides,
         VueperSlide
     },
-    created() {
-        console.log(this.reviews)
-    }
 }
 </script>

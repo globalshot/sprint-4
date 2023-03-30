@@ -50,15 +50,15 @@
         font-size: 14px;
         padding: 10px 16px;
 
-        color: $primary-clr;
-        border: 1px solid $primary-clr;
-        &:hover {
-          color: white;
-          background-color: $primary-clr-dark;
-          border-color: $primary-clr-dark;
-        }
+      color: $primary-clr;
+      border: 1px solid $primary-clr;
+      &:hover {
+        color: white;
+        background-color: $primary-clr-dark;
+        border-color: $primary-clr-dark;
       }
     }
+  }
 
     &.header-transparent {
       .btn-join {

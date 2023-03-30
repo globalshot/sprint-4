@@ -1,4 +1,4 @@
-import { gigService } from "../../services/gig.service.local"
+import { gigService } from "../../services/gig.service"
 import { orderService } from "../../services/order.service"
 import { userService } from "../../services/user.service"
 
