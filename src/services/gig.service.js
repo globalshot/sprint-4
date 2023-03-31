@@ -39,10 +39,8 @@ async function save(gig) {
         savedGig = await httpService.put(`gig/${gig._id}`, gig)
     } else {
         gig.owner = await userService.getLoggedinUser()
-        console.log(gig);
         savedGig = await httpService.post('gig', gig)
     }
-    console.log(savedGig);
     return savedGig
 }
 

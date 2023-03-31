@@ -1,25 +1,23 @@
 <template>
     <div v-if="user" class="flex justify-between dashboard">
-        <div class="user-stats"><!--user details-->
+        <div class="user-stats"><!--user details--><!--make like 2 pages, 1 for stats, and 1 info-->
             <h3>User Details</h3>
             <h1>whyyyyyy soooo short, Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
 
             <h1>{{ this.user.fullname }}</h1>
         </div>
 
-        <div><!--the side of selling-->
+        <div class="gigs-status"><!--the side of selling--><!--2 pages, what you buy and what you sell, with orders in both ofc-->
 
             <div><!--user gigs he sell-->
                 <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
-                    <button class="btn btn-add">
-                        <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-                    </button>
-                    <span>Add gig</span>
+                    
                     <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
                 </div>
             </div>
 
             <div><!--user orders people bought-->
+                <UserSell></UserSell>
             </div>
         </div>
 
@@ -28,6 +26,7 @@
 
 <script>
 import UserGigs from '../components/UserGigs.vue'
+import UserSell from '../components/UserSell.vue'
 import { userService } from '../services/user.service'
 import { orderService } from '../services/order.service'
 import { gigService } from '../services/gig.service'
@@ -92,7 +91,8 @@ export default {
         // }
     },
     components: {
-        UserGigs
+        UserGigs,
+        UserSell
     }
 }
 </script>

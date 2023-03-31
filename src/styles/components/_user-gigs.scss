@@ -11,3 +11,9 @@
     // width: 180px;
     // height: 120px;
 }
+
+.gig-preview{
+    >* .full-size:hover{
+        cursor: pointer;
+    }
+}
