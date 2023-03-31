@@ -79,6 +79,7 @@
               <li v-else @click="logout">
                 Logout
               </li>
+           <!-- <img :src=userImg alt="">   -->
             </ul>
           </div>
         </nav>
@@ -252,6 +253,10 @@ export default {
       if (!this.loggedinUser) return ''
       return this.loggedinUser.fullname
     },
+    userImg(){
+      if (!this.loggedinUser) return ''
+      return this.loggedinUser.imgUrl
+    }
 
 
   },
