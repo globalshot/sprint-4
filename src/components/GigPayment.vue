@@ -25,10 +25,11 @@
                             <div class="credit-txt">
                                 <p>Credit &amp; Debit Cards</p>
                             </div>
-                            <div class="visa"><span><!--?xml version="1.0" ?--><svg height="50px"
-                                        style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
-                                        width="100px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <div class="visa">
+                                <span><!--?xml version="1.0" ?-->
+                                    <svg height="50px" style="enable-background:new 0 0 512 512;" version="1.1"
+                                        viewBox="0 0 512 512" width="100px" xml:space="preserve"
+                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <g id="形状_1_3_" style="enable-background:new    ;">
                                             <g id="形状_1">
                                                 <g>
@@ -47,7 +48,9 @@
                                                 </g>
                                             </g>
                                         </g>
-                                    </svg></span></div>
+                                    </svg>
+                                </span>
+                            </div>
                         </section>
                         <section class="payment-option">
                             <div class="card-info flex">
@@ -78,11 +81,11 @@
                             <section class="package-content">
                                 <section class="header flex space-between">
                                     <div class="img-container">
-                                        <img :src="gig.imgUrl[0]" alt="">
+                                        <img :src="gig.owner.imgUrl" alt="">
                                     </div>
                                     <p class="title">I will provide quality essays research and summaries on any topic</p>
                                 </section>
-                                <h3 class="price">US$67</h3>
+                                <h3 class="price">US${{ gig.packages[1].price }}</h3>
                                 <p> 1 custom logo+high resolution file+3d mockup+logo transparency+ 300dpi </p>
                                 <ul class="features clean-list">
                                     <li class="regular">
@@ -91,7 +94,33 @@
                                                     <path
                                                         d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
                                                     </path>
-                                                </svg></span></div> 1 concept included
+                                                </svg>
+                                            </span>
+                                        </div> 1 concept included
+                                    </li>
+                                    <li class="regular">
+                                        <div class="v-svg-container">
+                                            <span>
+                                                <svg width="16" height="16" viewBox="0 0 11 9"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="#1dbf73">
+                                                    <path
+                                                        d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div> Logo transparency
+                                    </li>
+                                    <li class="regular">
+                                        <div class="v-svg-container">
+                                            <span>
+                                                <svg width="16" height="16" viewBox="0 0 11 9"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="#1dbf73">
+                                                    <path
+                                                        d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div> Vector file
                                     </li>
                                     <li class="regular">
                                         <div class="v-svg-container"><span><svg width="16" height="16" viewBox="0 0 11 9"
@@ -99,36 +128,22 @@
                                                     <path
                                                         d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
                                                     </path>
-                                                </svg></span></div> Logo transparency
-                                    </li>
-                                    <li class="regular">
-                                        <div class="v-svg-container"><span><svg width="16" height="16" viewBox="0 0 11 9"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="#1dbf73">
-                                                    <path
-                                                        d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
-                                                    </path>
-                                                </svg></span></div> Printable file
-                                    </li>
-                                    <li class="regular">
-                                        <div class="v-svg-container"><span><svg width="16" height="16" viewBox="0 0 11 9"
-                                                    xmlns="http://www.w3.org/2000/svg" fill="#1dbf73">
-                                                    <path
-                                                        d="M3.645 8.102.158 4.615a.536.536 0 0 1 0-.759l.759-.758c.21-.21.549-.21.758 0l2.35 2.349L9.054.416c.21-.21.55-.21.759 0l.758.758c.21.21.21.55 0 .759L4.403 8.102c-.209.21-.549.21-.758 0Z">
-                                                    </path>
-                                                </svg></span></div> Include 3D mockup
+                                                </svg>
+                                            </span>
+                                        </div> Include 3D mockup
                                     </li>
                                 </ul>
                                 <div class="pricing">
                                     <p>Service Fee</p>
-                                    <p>US$10.05</p>
+                                    <p>US${{ service }}</p>
                                 </div>
                                 <div class="pricing">
                                     <p>VAT</p>
-                                    <p>US$9.74</p>
+                                    <p>US${{ vat }}</p>
                                 </div>
                                 <div class="pricing total">
                                     <p>Total</p>
-                                    <p>US$88.44</p>
+                                    <p>US${{ total }}</p>
                                 </div>
                                 <div class="pricing">
                                     <p class="bold">Delivery Time</p>
@@ -152,23 +167,27 @@ export default {
     data() {
         return {
             gig: null,
-            order: null
+            order: null,
+
+            service: 0,
+            vat: 0,
+            total: 0,
         }
     },
     async created() {
         this.getGig()
     },
     methods: {
-       async getGig() {
+        async getGig() {
             try {
                 const { id } = this.$route.params;
                 const gig = await gigService.getById(id)
                 this.gig = gig;
             }
-            catch(err) {
+            catch (err) {
                 showErrorMsg('Failed to get Gig')
             }
-                
+
         },
         async saveOrder() {
             if (!this.loggedinUser) {
@@ -176,10 +195,10 @@ export default {
                 return
             }
             try {
-                await this.$store.dispatch({ type:'addOrder', gigId: this.gig._id} )
+                await this.$store.dispatch({ type: 'addOrder', gigId: this.gig._id })
                 showSuccessMsg('Order Saved')
                 console.log('got here')
-                this.$router.push('/user/' + this.loggedinUser._id )
+                this.$router.push('/user/' + this.loggedinUser._id)
             }
             catch (err) {
                 console.log(err, 'order not saved');
@@ -188,9 +207,24 @@ export default {
         },
     },
     computed: {
-        loggedinUser () {
+        loggedinUser() {
             console.log(this.$store.getters.loggedinUser)
             return this.$store.getters.loggedinUser
+        },
+        service() {
+            this.service = (12 / 100) * this.gig.price
+            return Math.round((this.service * 100) / 100).toFixed(2)
+        },
+        vat() {
+            this.vat = (17 / 100) * this.gig.price
+            return Math.round((this.vat * 100) / 100).toFixed(2)
+        },
+        // num(){
+        // },
+        total() {
+
+            this.total = this.vat + this.service + this.gig.price
+            return Math.round((this.total * 100) / 100).toFixed(2)
         }
     }
 

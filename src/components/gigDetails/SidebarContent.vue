@@ -126,6 +126,7 @@ export default {
             // i: '1',
             quant: '1',
             liTxt: [
+                '1 concept included',
                 'Logo transparency',
                 'Vector file',
                 'Printable file',

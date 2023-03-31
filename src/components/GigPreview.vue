@@ -87,6 +87,7 @@ export default {
     },
     data() {
         return {
+            reviewsLength: 0,
             filterBy: {
                 txt: '',
             },
@@ -108,7 +109,8 @@ export default {
     props: {
         gig: Object,
     },
-    created() { },
+    created() {
+     },
     components: {
         LongText,
         VueperSlides,
@@ -122,9 +124,6 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
         },
-        // gigReviews(gig) {
-        //     return gig.reviews.length ? gig.reviews.length : '0'
-        // }
     },
     emits: ['removeGig']
 }
