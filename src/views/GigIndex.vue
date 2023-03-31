@@ -11,7 +11,7 @@
             </li>
             <li>
                 <span class="divider">/</span>
-                <a class="category" href="">{{ header() }}</a>
+                <a class="category">{{ header() }}</a>
             </li>
         </ul>
         <h1 class="gig-header">{{ header() }}</h1>

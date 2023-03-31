@@ -532,7 +532,7 @@ export default {
             },
             {
                 // title: 'Slide #4',
-                content: `<a href="#/gig?tag=music">
+                content: `<a href="#/gig?tag=voice-over">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741669/voiceover-2x.png) ;">
                             <span>Share your message</span>
@@ -552,7 +552,7 @@ export default {
             },
             {
                 // title: 'Slide #6',
-                content: `<a href="#/gig?tag=marketing">
+                content: `<a href="#/gig?tag=social-media">
                         <div class="subcategory-warper"
                             style="background-image: url(https://fiverr-res.cloudinary.com/q_auto,f_auto,w_255,dpr_1.0/v1/attachments/generic_asset/asset/055f758c1f5b3a1ab38c047dce553860-1598561741667/social-2x.png;">
                             <span>Reach more costumers</span>
