@@ -159,6 +159,12 @@ export default {
             this.showDelivery = !this.showDelivery
         },
         filter() {
+            if (!this.filterBy.price.min && this.filterBy.price.max) {
+                this.filterBy.price.min = 0
+            }
+            if (!this.filterBy.price.max && this.filterBy.price.min) {
+                this.filterBy.price.max = 1000
+            }
             let { txt, tag } = this.$route.query
             this.filterBy.txt =  txt
             this.filterBy.tag =  tag

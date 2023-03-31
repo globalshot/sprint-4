@@ -15,6 +15,10 @@
                     <p>Price:</p>
                     <input class="c-input" type="number" v-model="gig.price" placeholder="Gigs price">
                 </label>
+                <label class="mbe-2">
+                    <p>Description:</p>
+                    <input class="c-input" type="textbox" v-model="gig.description" placeholder="Gigs description">
+                </label>
                 <section class="flex gap-1">
                     <button class="c-btn">Save</button>
                     <router-link class="c-btn" to="/gig">Back</router-link>
