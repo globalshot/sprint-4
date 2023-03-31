@@ -50,14 +50,19 @@
           background-color: #7d1a00;
         }
         img {
+          display: none;
+          @include for-medium-layout {
+            display: block;
+          }
           position: absolute;
-          left: -20%;
+          left: -20vw;
           cursor: default;
+          width: auto;
           // @include for-small-layout {
           //   background: #023a15;
           // }
           @include for-wide-layout {
-            left: 0%;
+            left: 0vw;
           }
           height: 100%;
           z-index: -5;
@@ -66,105 +71,59 @@
         }
       }
     }
-
+    .vueperslide {
+      cursor: default;
+    }
     &.info-slides {
       position: absolute;
-      top: 65%;
-      left: 50%;
+      top: 68%;
+      display: none;
+      @include for-medium-layout {
+        display: block;
+      }
+      @include for-wide-layout {
+        left: 75vw;
+      }
+      left: 80vw;
+
       .hero-info {
         justify-content: end;
         position: relative;
         top: rem(150px);
+        .info-txt {
+          align-items: center;
+          position: relative;
+          gap: 12px;
+          .fullname {
+            color: $tertiary-clr-light;
+          }
 
-        p {
-          color: $tertiary-clr-light;
+          .expert {
+            color: $tertiary-clr-light;
+            font-weight: 600;
+          }
+        }
+
+        .stars {
           position: absolute;
+          top: -22px;
+
+          .star {
+            padding-inline-end: 0.12rem;
+            & > * {
+              font-size: 12px;
+              font-size: 12px;
+            }
+          }
         }
 
-        span {
-          font-weight: 600;
-        }
-        .rate {
-          display: flex;
-          gap: 2px;
-          font-weight: 400;
-          font-size: 0.75em;
-          margin-inline-end: 9.5em;
-          top: -1em;
-          color: $star-clr;
-        }
       }
     }
-    // &:not(.info-slides) {
-    //   &:nth-of-type(1) {
-    //     background-color: #1a1b1d;
-    //     img {
-    //       width: 100%;
-    //       left: 0;
-    //     }
-    //   }
-    //   &:nth-of-type(2) {
-    //     background-color: #023a15;
-    //   }
-    //   &:nth-of-type(3) {
-    //     background-color: #b64762;
-    //   }
-    //   &:nth-of-type(4) {
-    //     background-color: #540e1f;
-    //   }
-    //   &:nth-of-type(5) {
-    //     background-color: #023a15;
-    //   }
-    //   &:nth-of-type(6) {
-    //     background-color: #7d1a00;
-    //   }
-    //   img {
-    //     position: absolute;
-    //     left: -20%;
-    //     cursor: default;
-    //     // @include for-small-layout {
-    //     //   background: #023a15;
-    //     // }
-    //     @include for-wide-layout {
-    //       left: 0%;
-    //     }
-    //     height: 100%;
-    //     z-index: -5;
-    //     object-fit: contain;
-    //     // width: 100%;
-    //   }
-    // }
-
-    // & .info-slides {
-    //   position: absolute;
-    //   top: 150px;
-    //   .hero-info {
-    //     justify-content: end;
-    //     position: relative;
-    //     top: rem(150px);
-
-    //     p {
-    //       color: $tertiary-clr-light;
-    //       position: absolute;
-    //     }
-
-    //     span {
-    //       font-weight: 600;
-    //     }
-    //     .rate {
-    //       display: flex;
-    //       gap: 2px;
-    //       font-weight: 400;
-    //       font-size: 0.75em;
-    //       margin-inline-end: 9.5em;
-    //       top: -1em;
-    //       color: $star-clr;
-    //     }
-    //   }
-    // }
+  
   }
 
   & .search-container {
+    margin-inline-end: 2em;
     z-index: 50;
     position: absolute;
     flex-direction: column;
@@ -172,6 +131,9 @@
     color: $tertiary-clr-light;
     line-height: 1.2;
     align-self: center;
+    @include for-mobile-layout {
+      font-size: 12px;
+    }
 
     h1 {
       letter-spacing: 0.1rem;
