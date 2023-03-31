@@ -180,7 +180,14 @@ export default {
       }
     },
     logout() {
+      // console.log(this.$router.currentRoute._value);
+      // if (this.$router.currentRoute._value.matched[0].path === '/user/:id') {
+      //   console.log('hello');
+      // }
       this.$store.dispatch({ type: 'logout' })
+      if (this.$route.name === 'UserDetails') {
+        this.$router.push({ path: '/' })
+      }
     },
 
 

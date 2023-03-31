@@ -1,46 +1,67 @@
 <template>
-    <div v-if="user">
+    <div v-if="user" class="flex justify-between dashboard">
+        <div class="user-stats"><!--user details-->
+            <h3>User Details</h3>
+            <h1>whyyyyyy soooo short, Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
 
-        <h3>User Details</h3>
+            <h1>{{ this.user.fullname }}</h1>
+        </div>
 
-    <h1>{{ this.user.fullname }}</h1>
-    <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
-        <button class="btn btn-add">
-            <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-        </button>
-        <span>Add gig</span>
-    </div>
-    <GigIndex />
+        <div><!--the side of selling-->
+
+            <div><!--user gigs he sell-->
+                <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
+                    <button class="btn btn-add">
+                        <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
+                    </button>
+                    <span>Add gig</span>
+                    <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+                </div>
+            </div>
+
+            <div><!--user orders people bought-->
+            </div>
+        </div>
+
     </div>
 </template>
 
 <script>
-import GigList from '../components/GigList.vue'
-import GigIndex from '../views/GigIndex.vue'
+import UserGigs from '../components/UserGigs.vue'
 import { userService } from '../services/user.service'
 import { orderService } from '../services/order.service'
+import { gigService } from '../services/gig.service'
+
 export default {
     name: "UserDetails",
     data() {
         return {
             user: null,
-            orders: null
-            //         gigs: []
+            orders: null,
+            gigs: null
         }
+    },
+    methods: {
     },
     async created() {
 
-        const { id } = this.$route.params;
-        this.user = (id) ?
-            await userService.getById(id) :
-            console.log("Wrong User")
-        this.orders = await orderService.query()
+        try{
+
+            const { id } = this.$route.params
+            this.user = (id) ?
+            await userService.getById(id) : null
+            this.orders = await orderService.query()
+            this.gigs = await gigService.query({owner: this.loggedinUser._id})
+    }
+    catch(err){
+        console.log(err);
+    }
+    // const { owner } = this.loggedinUser
+    //   let filterBy = { owner: owner }
+    //   this.$store.dispatch({ type: 'loadGigs', filterBy })
 
     },
     computed: {
-        gigs() {
-            return this.$store.getters.gigs
-        },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
@@ -60,19 +81,18 @@ export default {
             if (!this.buyer) return ''
             console.log('orders', this.buyer)
             return this.buyer.id
-        }
-        // orderGig() {
-        //     if (!this.orders) return ''
-        //     return this.orders.gig
-        // },
+        },
+        orderGig() {//returns all the orders
+            if (!this.orders) return ''
+            return this.orders.gig
+        },
         // orderGigName() {
         //     if (!this.orders) return ''
         //     return this.orders.gig.name
         // }
     },
     components: {
-        GigList,
-        GigIndex
+        UserGigs
     }
 }
 </script>
