@@ -42,9 +42,6 @@ async function remove(orderId) {
 }
 
 async function save(gigId) {
-    // const order = await _createOrder(gigId)
-    // return await storageService.post(STORAGE_KEY, order)
-
     return await httpService.post(API + gigId)
 }
 
