@@ -64,7 +64,6 @@
       transform: translate(-110%, -100%);
     }
     @include for-mobile-layout {
-
       &.vueperslides__arrow--prev {
         transform: translate(-50%, -100%);
         // left: rem(-20px);
@@ -73,7 +72,6 @@
         transform: translate(50%, -100%);
       }
     }
-
   }
 
   a {
@@ -108,7 +106,6 @@
 
   .selling-info {
     padding-inline-end: 30%;
-
 
     .flex {
       align-items: center;
@@ -148,7 +145,6 @@
     }
 
     span {
-      
       display: block;
       width: 24px;
       height: 24px;
@@ -164,63 +160,6 @@
   }
 }
 
-svg {
-  // height: 48px;
-  // width: 48px;
-  margin: 0 auto 15px;
-  &.svg-graphic {
-    .cls-4 {
-      fill: none;
-      stroke: #4d535b;
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
-    }
-  }
-
-  &.svg-writing {
-    .cls-5 {
-      fill: none;
-      stroke: #4d535b;
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
-    }
-  }
-
-  &.svg-sound {
-    .cls-4 {
-      fill: none;
-      stroke: #4d535b;
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
-    }
-  }
-
-  &.svg-tech {
-    .cls-4 {
-      fill: none;
-      stroke: #4d535b;
-      stroke-miterlimit: 10;
-      stroke-width: 2px;
-    }
-  }
-
-  &.svg-lifestyle {
-    .cls-4 {
-      fill: none;
-      stroke: #4d535b;
-      stroke-miterlimit: 10;
-    }
-
-    .cls-4 {
-      stroke-width: 2.1px;
-    }
-  }
-  &.svg-business {
-    .cls-2 {
-      fill: #fff;
-    }
-  }
-}
 .icon-category {
   margin-block-end: 4.9rem;
   h2 {
@@ -249,11 +188,15 @@ svg {
       cursor: pointer;
       position: relative;
       font-family: $font1;
+      height: 100%;
+      margin-block-end:15px;
+      
+
 
       &.flex::after {
         content: "";
         position: absolute;
-        top: 43px;
+        top: 58px;
         right: 50%;
         transform: translate(50%);
         padding: 0 0 8px;
@@ -265,6 +208,64 @@ svg {
         border-color: $primary-clr;
         width: 90px;
         transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+      }
+
+      svg {
+        // height: 60px;
+        // width: 60px;
+        
+        &.svg-graphic {
+          .cls-4 {
+            fill: none;
+            stroke: #4d535b;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+          }
+        }
+
+        &.svg-writing {
+          .cls-5 {
+            fill: none;
+            stroke: #4d535b;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+          }
+        }
+
+        &.svg-sound {
+          .cls-4 {
+            fill: none;
+            stroke: #4d535b;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+          }
+        }
+
+        &.svg-tech {
+          .cls-4 {
+            fill: none;
+            stroke: #4d535b;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+          }
+        }
+
+        &.svg-lifestyle {
+          .cls-4 {
+            fill: none;
+            stroke: #4d535b;
+            stroke-miterlimit: 10;
+          }
+
+          .cls-4 {
+            stroke-width: 2.1px;
+          }
+        }
+        &.svg-business {
+          .cls-2 {
+            fill: #fff;
+          }
+        }
       }
     }
 

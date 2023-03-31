@@ -601,7 +601,7 @@ export default {
                     </a>`
             },
         ],
-        slidesNum: '5',
+        slidesNum: 5,
         width: window.innerWidth,
     }),
     // created() {

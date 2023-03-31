@@ -40,9 +40,11 @@
                                                 <i class="fa-solid fa-star"></i>
                                             </span>
                                         </li>
-                                        <span class="star">
-                                            <i class="fa-solid fa-star-half" v-if="+gig.owner.rate % 1 !== 0"></i>
-                                        </span>
+                                        <li>
+                                            <span class="star">
+                                                <i class="fa-solid fa-star-half" v-if="+gig.owner.rate % 1 !== 0"></i>
+                                            </span>
+                                        </li>
                                         <li class="num">
                                             {{ gig.owner.rate }}
                                         </li>
@@ -92,7 +94,7 @@
                 </span>
             </div>
             <SidebarSmall :gig='gig'></SidebarSmall>
-           <!--we need user for this-->
+            <!--we need user for this-->
         </div>
 
 
@@ -125,7 +127,7 @@ export default {
                     // image: (`https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/296272891/original/cdcef8a97d7dd47415447d0f9bb01218a79b7038/create-your-unique-art-through-ai-and-detailed-prompts.jpg`)
                 },
                 {
-      
+
                     // image: (`https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/attachments/delivery/asset/a48578535dda6059a92aaa13f8c22a64-1678831259/Human_body_fruit-removebg-preview-transformed/create-your-unique-art-through-ai-and-detailed-prompts.png`)
                 }
             ]

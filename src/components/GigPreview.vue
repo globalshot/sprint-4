@@ -8,7 +8,7 @@
         </div>
 
         <!-- xxx -->
-        <vueper-slides class="carousel-container no-shadow details-slides" fade>
+        <vueper-slides class="carousel-container no-shadow details-slides" fade :dragging-distance="100">
             <template #arrow-left>
                 <i class="fa-solid fa-angle-left"></i>
             </template>
@@ -17,9 +17,9 @@
             </template>
             <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i">
                 <template #content>
-                    <!-- <span>hi</span> -->
-                    <!-- <img :src="gig.imgUrl[i]" alt=""> -->
-                    <img :src="gig.imgUrl[i]" alt="">
+                    <RouterLink class="btn" :to="'/gig/' + gig._id">
+                        <img :src="gig.imgUrl[i]" alt="">
+                    </RouterLink>
                 </template>
             </vueper-slide>
         </vueper-slides>
@@ -52,6 +52,8 @@
                 </path>
             </svg>
             <span>{{ gig.owner.rate }}</span>
+            <span v-if="gig.reviews" class="num">({{ gig.reviews.length }})</span>
+            <span v-else class="num">(0)</span>
             <!-- <span class="num">({{ this.gigReviews(gig) }})</span> -->
         </div>
         <div class="price-container flex">
@@ -85,6 +87,7 @@ export default {
     },
     data() {
         return {
+            reviewsLength: 0,
             filterBy: {
                 txt: '',
             },
@@ -106,7 +109,8 @@ export default {
     props: {
         gig: Object,
     },
-    created() { },
+    created() {
+     },
     components: {
         LongText,
         VueperSlides,
@@ -120,9 +124,6 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser._id
         },
-        gigReviews(gig){
-            return gig.reviews.length? gig.reviews.length : '0'
-        }
     },
     emits: ['removeGig']
 }
