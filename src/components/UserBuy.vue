@@ -27,19 +27,18 @@
                                 <div class="table-entity flex justify-between">
                                     <div class="buyer-col flex">
                                         <div class="img-container">
-                                            <img :src="order.buyer.imgUrl" alt="">
+                                            <img :src="order.seller.imgUrl" alt="">
                                         </div>
-                                        <h4>{{ order.buyer.fullname }}</h4>
+                                        <h4>{{ order.seller.fullname }}</h4>
                                     </div>
                                     <div class="gig-col">
-                                        <LongText class="long-text" :txt="order.gig.name" />
-                                        <!-- <h4>{{ order.gig.name }}</h4> -->
+                                        <h4>{{ order.gig.name }}</h4>
                                     </div>
                                     <div class="due-col">
                                         <h4>code a date(rlly)</h4>
                                     </div>
                                     <div class="price-col">
-                                        <h4>$US{{ order.buyer.price }}</h4>
+                                        <h4>{{ order.buyer.price }}</h4>
                                     </div>
                                     <div class="status-col">
                                         <h4>{{ order.status }}</h4>
@@ -61,7 +60,6 @@
 </template>
 
 <script>
-import LongText from './LongText.vue'
 import { orderService } from '../services/order.service'
 export default {
     name: "UserOrders",
@@ -84,7 +82,7 @@ export default {
             let orders = await orderService.query()
             let newOrders = []
             for (let i = 0; i < orders.length; i++) {
-                if (this.loggedinUser._id === orders[i].seller._id) {
+                if (this.loggedinUser._id === orders[i].buyer._id) {
                     newOrders.push(orders[i])
                 }
             }
@@ -92,9 +90,6 @@ export default {
             this.ordersLength = newOrders.length
             // return newOrders.length
         }
-    },
-    components: {
-        LongText,
     }
 }
 </script>
