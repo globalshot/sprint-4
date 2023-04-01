@@ -33,7 +33,9 @@
         <!-- xxx -->
         <RouterLink :to="'/user/' + gig.owner._id">
             <div class="user-profile flex">
-                <img class="btn" :src="gig.owner.imgUrl" alt="">
+                <div class="img-container">
+                    <img class="btn" :src="gig.owner.imgUrl" alt="">
+                </div>
                 <div class="flex user-container">
                     <p class="btn user-name">{{ gig.owner.fullname }}</p>
                     <p class="user-level">Level {{ gig.owner.level }} Seller</p>
@@ -110,7 +112,7 @@ export default {
         gig: Object,
     },
     created() {
-     },
+    },
     components: {
         LongText,
         VueperSlides,

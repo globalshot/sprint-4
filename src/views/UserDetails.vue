@@ -77,6 +77,7 @@
             </div>
 
             <div><!--user orders people bought-->
+
             </div>
         </div>
 
@@ -85,6 +86,7 @@
 
 <script>
 import UserGigs from '../components/UserGigs.vue'
+
 import { userService } from '../services/user.service'
 import { orderService } from '../services/order.service'
 import { gigService } from '../services/gig.service'
