@@ -14,7 +14,7 @@
                                     <h4>gig</h4>
                                 </div>
                                 <div class="due-col">
-                                    <h4>due</h4>
+                                    <h4>Order Date</h4>
                                 </div>
                                 <div class="price-col">
                                     <h4>price</h4>
@@ -26,7 +26,9 @@
                             <section v-for="order in orders">
                                 <div class="table-entity flex justify-between">
                                     <div class="buyer-col flex">
-                                        <img :src="order.seller.imgUrl" alt="">
+                                        <div class="img-container">
+                                            <img :src="order.seller.imgUrl" alt="">
+                                        </div>
                                         <h4>{{ order.seller.fullname }}</h4>
                                     </div>
                                     <div class="gig-col">
@@ -36,7 +38,7 @@
                                         <h4>code a date(rlly)</h4>
                                     </div>
                                     <div class="price-col">
-                                        <h4>{{ order.buyer.price }}</h4>
+                                        <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
                                         <h4>{{ order.status }}</h4>

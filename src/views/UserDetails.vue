@@ -27,7 +27,7 @@
                                         </defs>
                                     </svg></span>Country
                             </div>
-                            <span>Sweden</span>
+                            <span>{{ user.information.country }}</span>
                         </li>
                         <li class="flex space-between">
                             <div>
@@ -49,11 +49,7 @@
                 <ul>
                     <li>
                         <h3>Description</h3>
-                        <p>Hello, this is Frederick, stand up for vividstore,I am a young and enthusiastic graphic artist
-                            and realistic pencil sketch artist. I am certified as graphic designer from George Washington
-                            University, USA. I have almost 11 years experience in this field since my university life. I
-                            really love to work with Adobe Illustrator, Adobe Photoshop, and so on as a full time online
-                            freelancer. And also passionate about sketching. Thank you.</p>
+                        <p>{{ user.description }}</p>
                     </li>
                 </ul>
             </div>
@@ -63,6 +59,12 @@
         <div>
 
             <div v-if="this.$route.params.id === userId">
+                <div class="add-gig-container flex">
+                    <h2>Your Gigs</h2>
+                    <div>
+                        <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+                    </div>
+                </div>
                 <div class="switch-button flex justify-center">
                     <span>gigs you bought</span>
                     <input type="checkbox" id="switch" />
@@ -70,22 +72,18 @@
                     <span>gigs you sell</span>
                 </div><!--the sides, seller or buyer-->
                 <div v-if="seller"><!--the side of selling-->
-                    <div class="add-gig-container flex">
-
-                        <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
-                    </div>
-                    <div><!--user orders people bought-->
+                    <div class="user-orders"><!--user orders people bought-->
                         <UserSell></UserSell>
                     </div>
                 </div>
-                <div v-else><!--page of buyer-->
+                <div v-else class="user-orders"><!--page of buyer-->
                     <UserBuy></UserBuy>
                 </div>
             </div>
-            <div v-else class="add-gig-container flex">
+        <div v-else class="add-gig-container flex">
                 <h2>{{ user.fullname }}' Gigs</h2>
-                <UserGigs :gigs="gigs" :user=user></UserGigs><!--not working yet-->
-            </div>
+                <UserGigs :gigs="gigs" :user=user></UserGigs>
+                    </div>
 
         </div>
 
@@ -123,14 +121,17 @@ export default {
     async created() {
 
         try {
-
+            console.log(this.$route.params)
+            console.log(this.user)
             const { id } = this.$route.params
-            this.user = (id) ?
-                await userService.getById(id) : null
+            // this.user = (id) ?
+            //     await userService.getById(id) : null
+            this.user = await userService.getById(id)
             this.orders = await orderService.query()
-            this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+            this.gigs = await gigService.query({ owner: this.user._id })
             // this.seller = this.$route.query.seller || false
             // this.$router.push({ query: { seller: this.seller }})
+
         }
         catch (err) {
             console.log(err)
@@ -141,6 +142,9 @@ export default {
 
     },
     computed: {
+        // user() {
+        //     return this.user
+        // },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },

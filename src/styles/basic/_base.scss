@@ -101,6 +101,7 @@ textarea {
   background-color: $primary-clr;
   &:hover {
     background-color: $primary-clr-dark;
+    z-index: 2;
     .fa-solid {
       transform: scale(1.5);
     }
