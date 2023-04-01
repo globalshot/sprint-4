@@ -8,12 +8,12 @@
 
   // max-height: rem(300px);
   .vueperslides {
-    height: 100px;
+    height: fit-content;
 
     .vueperslide {
-      height: 70px;
+      height: fit-content;
       padding-block-end: 11em;
-      overflow: hidden;
+      // overflow: hidden;
       word-wrap: break-word;
 
       &__content {
@@ -81,15 +81,14 @@
   }
 
   .carousel-container {
-    max-height: fit-content;
-    height: 131%;
+    // max-height: fit-content;
+    height: fit-content;
+
     width: 100%;
     // padding: 1rem;
   }
 
   .review {
-    // background-color: ;
-
     display: flex;
     outline: none;
     width: rem(677px);
@@ -97,9 +96,6 @@
     height: fit-content;
     min-height: 1px;
     color: $secondary-clr;
-
-    // padding: 0 rem(16px);
-
     @include for-small-layout {
       padding: 0 rem(9px);
     }
@@ -131,11 +127,14 @@
     .review-details {
       display: flex;
       flex-direction: column;
+      height: fit-content;
+
       //   align-items: center;
     }
     .user-review {
       display: flex;
       align-items: center;
+      height: fit-content;
 
       h6 {
         font-size: 1em;
@@ -176,11 +175,18 @@
       }
     }
     .review-description {
-      word-wrap: break-word;
-      height: 100%;
+      // word-wrap: break-word;
       font-weight: 500;
-      max-width: 100%;
+      height: 100%;
       line-height: 120%;
+      max-width: 400px;
+
+      @include for-normal-layout {
+        max-width: 500px;
+      }
+      @include for-normal-layout {
+        max-width: 100%;
+      }
     }
   }
 }

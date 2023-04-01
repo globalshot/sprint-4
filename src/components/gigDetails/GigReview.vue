@@ -77,6 +77,7 @@ export default {
                 Sweden: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f8-1f1ea.png',
                 Ecuador: 'https://icons.iconarchive.com/icons/twitter/twemoji-flags/128/Ecuador-Flag-icon.png',
                 Albania: 'https://icons.iconarchive.com/icons/custom-icon-design/all-country-flag/128/Albania-Flag-icon.png',
+                'United States': 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png',
             },
             // userImg: review.user.imgUrl,
 
