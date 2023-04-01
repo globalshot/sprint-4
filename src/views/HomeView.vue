@@ -604,20 +604,6 @@ export default {
         slidesNum: 5,
         width: window.innerWidth,
     }),
-    // created() {
-    //     console.log('width', width)
-
-    // },
-    //     computed: {
-    //         changeWidth() {
-    // if(width === 1300){
-    //     this.slidesNum = 3
-    // }
-    //         }
-    //     },
-    watch: {
-        // width
-    },
     components: {
         Hero,
         VueperSlides,
