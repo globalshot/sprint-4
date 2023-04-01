@@ -1,14 +1,16 @@
 <template>
     <div v-if="gigs" class="flex wrap my-gigs">
         <!-- <div v-if="filterGig" class="flex wrap justify-end my-gigs"> -->
-        <div class="nav-gig flex">
-            <div class="btn-container flex">
-                <button class="btn btn-add">
-                    <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-                </button>
-                <span>Add gig</span>
+        <!-- <div class="add-gig-container"> -->
+            <div class="nav-gig flex">
+                <div class="btn-container flex">
+                    <button class="btn btn-add">
+                        <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
+                    </button>
+                    <span>Add gig</span>
+                </div>
             </div>
-        </div>
+        <!-- </div> -->
         <div v-for="gig in filteredGigs" :key="gig._id" class="gig-preview">
 
             <img :src="gig.imgUrl[0]" alt="" class="user-gigs-img">

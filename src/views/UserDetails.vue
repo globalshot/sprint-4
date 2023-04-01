@@ -56,22 +56,35 @@
 
         </div>
 
-        <div><!--the side of selling-->
+        <div>
 
-            <div><!--user gigs he sell-->
-                <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
-                        <h2>Your Gigs</h2>
-                    <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+            <div v-if="this.$route.params.id === userId">
+                <div class="add-gig-container flex">
+                    <h2>Your Gigs</h2>
+                    <div>
+                        <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+                    </div>
                 </div>
-                <div v-else class="add-gig-container flex">
-                        <h2>{{ user.fullname }} Gigs</h2>
-                    <UserGigs :gigs="gigs" :user="user"></UserGigs>//not working yet
+                <div class="switch-button flex justify-center">
+                    <span>gigs you bought</span>
+                    <input type="checkbox" id="switch" />
+                    <label for="switch" @click="switchMode">Toggle</label>
+                    <span>gigs you sell</span>
+                </div><!--the sides, seller or buyer-->
+                <div v-if="seller"><!--the side of selling-->
+                    <div class="user-orders"><!--user orders people bought-->
+                        <UserSell></UserSell>
+                    </div>
+                </div>
+                <div v-else class="user-orders"><!--page of buyer-->
+                    <UserBuy></UserBuy>
                 </div>
             </div>
+        <div v-else class="add-gig-container flex">
+                <h2>{{ user.fullname }}' Gigs</h2>
+                <UserGigs :gigs="gigs" :user=user></UserGigs>
+                    </div>
 
-            <div class="user-orders"><!--user orders people bought-->
-                <UserSell></UserSell>
-            </div>
         </div>
 
     </div>
@@ -80,6 +93,7 @@
 <script>
 import UserGigs from '../components/UserGigs.vue'
 import UserSell from '../components/UserSell.vue'
+import UserBuy from '../components/UserBuy.vue'
 import { userService } from '../services/user.service'
 import { orderService } from '../services/order.service'
 import { gigService } from '../services/gig.service'
@@ -90,23 +104,29 @@ export default {
         return {
             user: null,
             orders: null,
-            gigs: null
+            gigs: null,
+            seller: false
         }
     },
     methods: {
+        switchMode() {
+            this.seller = !this.seller
+        }
     },
     async created() {
 
         try {
 
             const { id } = this.$route.params
-            this.user = (id) ?
-                await userService.getById(id) : null
+            // this.user = (id) ?
+            //     await userService.getById(id) : null
+            this.user = await userService.getById(id)
             this.orders = await orderService.query()
             this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+
         }
         catch (err) {
-            console.log(err);
+            console.log(err)
         }
         // const { owner } = this.loggedinUser
         //   let filterBy = { owner: owner }
@@ -114,6 +134,9 @@ export default {
 
     },
     computed: {
+        user() {
+            return this.user
+        },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
@@ -133,11 +156,6 @@ export default {
         //     if (!this.orders) return ''
         //     return this.orders.buyer.id
         // }
-        buyerId() {
-            if (!this.buyer) return ''
-            console.log('orders', this.buyer)
-            return this.buyer.id
-        },
         orderGig() {//returns all the orders
             if (!this.orders) return ''
             return this.orders.gig
@@ -149,7 +167,8 @@ export default {
     },
     components: {
         UserGigs,
-        UserSell
+        UserSell,
+        UserBuy
     }
 }
 </script>

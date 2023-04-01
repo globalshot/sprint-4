@@ -15,7 +15,7 @@
             <template #arrow-right>
                 <i class="fa-solid fa-angle-right"></i>
             </template>
-            <vueper-slide @click="loadGig" v-for="(slide, i) in slides" :key="i">
+            <vueper-slide @click="loadGig" v-for="(img, i) in gig.imgUrl" :key="i">
                 <template #content>
                     <RouterLink class="btn" :to="'/gig/' + gig._id">
                         <img :src="gig.imgUrl[i]" alt="">
