@@ -58,19 +58,21 @@
 
         <div>
 
-            <div v-if="this.$route.params.id === loggedinUser._id">
+            <div >
                 <div class="add-gig-container flex">
-                    <h2>Your Gigs</h2>
+                    <h2 v-if="this.$route.params.id === loggedinUser._id">Your Gigs</h2>
+                    <h2 v-else>{{ user.fullname }}' Gigs</h2>
                     <div>
-                        <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+                        <UserGigs :gigs="gigs" :user="user"></UserGigs>
                     </div>
                 </div>
-                <div class="switch-button flex justify-center">
+                <div class="switch-button flex justify-center" v-if="this.$route.params.id === loggedinUser._id">
                     <span>gigs you bought</span>
                     <input type="checkbox" id="switch" />
                     <label for="switch" @click="switchMode">Toggle</label>
                     <span>gigs you sell</span>
                 </div><!--the sides, seller or buyer-->
+                <div v-if="this.$route.params.id === loggedinUser._id">
                 <div v-if="seller"><!--the side of selling-->
                     <div class="user-orders"><!--user orders people bought-->
                         <UserSell></UserSell>
@@ -79,6 +81,7 @@
                 <div v-else class="user-orders"><!--page of buyer-->
                     <UserBuy></UserBuy>
                 </div>
+            </div>
             </div>
 
             <!-- <div v-else class="add-gig-container flex">

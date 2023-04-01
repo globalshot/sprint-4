@@ -148,12 +148,13 @@
         display: inline-flex;
         align-items: center;
         padding-inline-end: 0.5rem;
-
+        
         .country-flag {
           border-radius: 4px;
           height: rem(20px);
           margin-top: rem(-3px);
           width: rem(20px);
+          object-fit: cover;
         }
 
         .country-name {

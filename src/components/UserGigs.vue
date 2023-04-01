@@ -4,8 +4,8 @@
 
         <!-- <div v-if="filterGig" class="flex wrap justify-end my-gigs"> -->
         <!-- <div class="add-gig-container"> -->
-        <div class="nav-gig flex">
-            <div class="btn-container flex">
+        <div class="nav-gig flex" v-if="this.$route.params.id && this.$route.params.id === this.userId">
+            <div class="btn-container flex" >
                 <button class="btn btn-add">
                     <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
                 </button>
