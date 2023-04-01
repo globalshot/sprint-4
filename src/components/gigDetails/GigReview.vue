@@ -16,36 +16,33 @@
                     <template #content>
                         <div class="review">
                             <span class="img-user">
-                                <img :src=review.user.imgUrl
-                                    alt="">
+                                <img :src=review.user.imgUrl alt="">
                             </span>
                             <div class="review-details">
                                 <div class="user-review">
-                                    <h6>{{review.user.fullname}}</h6>
+                                    <h6>{{ review.user.fullname }}</h6>
                                     <div class="country">
-                                        <img class="country-flag"
-                                            :src=flag[review.user.country]
-                                            alt="" loading="lazy">
-                                            
-                                        <div class="country-name tbody-6">{{review.user.country}}</div>
+                                        <img class="country-flag" :src=flag[review.user.country] alt="" loading="lazy">
+
+                                        <div class="country-name tbody-6">{{ review.user.country }}</div>
                                     </div>
-                                    <div class="stars" >
+                                    <div class="stars">
                                         <ul class="flex">
                                             <!-- <li v-for="i in gig.reviews[i].rate"> -->
-                                            <li v-for="n in review.rating" >
-                                                
+                                            <li v-for="n in review.rating">
+
                                                 <span class="star">
                                                     <i class="fa-solid fa-star"></i>
                                                 </span>
                                             </li>
                                             <span class="num">
-                                                {{gig.reviews[i].rating}}
+                                                {{ gig.reviews[i].rating }}
                                             </span>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="review-description">
-                                   {{ gig.reviews[i].text }}
+                                    {{ gig.reviews[i].text }}
                                 </div>
                             </div>
                         </div>
@@ -78,10 +75,11 @@ export default {
                 Israel: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ee-1f1f1.png',
                 France: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1eb-1f1f7.png',
                 Sweden: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f8-1f1ea.png',
-
+                Ecuador: 'https://icons.iconarchive.com/icons/twitter/twemoji-flags/128/Ecuador-Flag-icon.png',
+                Albania: 'https://icons.iconarchive.com/icons/custom-icon-design/all-country-flag/128/Albania-Flag-icon.png',
             },
             // userImg: review.user.imgUrl,
-            
+
         }
     },
     components: {

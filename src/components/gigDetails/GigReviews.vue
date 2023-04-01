@@ -29,7 +29,7 @@
                                         </div>
                                         <div class="reviewer-sub-details flex">
                                             <div class="country flex">
-                                                <div class="country-name tbody-6">{{review.user.country}} </div>
+                                                <div class="country-name tbody-6">{{ review.user.country }} </div>
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
 import ReviewPage from '../../views/ReviewPage.vue';
 export default {
     props: {
-        
+
         gig: {
             type: Object,
             required: true
@@ -82,7 +82,8 @@ export default {
                     Israel: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1ee-1f1f1.png',
                     France: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1eb-1f1f7.png',
                     Sweden: 'https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1f8-1f1ea.png',
-
+                    Ecuador: 'https://icons.iconarchive.com/icons/twitter/twemoji-flags/128/Ecuador-Flag-icon.png',
+                    Albania: 'https://icons.iconarchive.com/icons/custom-icon-design/all-country-flag/128/Albania-Flag-icon.png',
                 },
             }
         }

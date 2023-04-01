@@ -62,7 +62,7 @@
 
         <div>
 
-            <div v-if="this.$route.params.id === userId">
+            <div v-if="this.$route.params.id === loggedinUser._id">
                 <div class="add-gig-container flex">
                     <h2>Your Gigs</h2>
                     <div>
@@ -84,10 +84,11 @@
                     <UserBuy></UserBuy>
                 </div>
             </div>
-        <div v-else class="add-gig-container flex">
+
+            <!-- <div v-else class="add-gig-container flex">
                 <h2>{{ user.fullname }}' Gigs</h2>
                 <UserGigs :gigs="gigs" :user=user></UserGigs>
-                    </div>
+            </div> -->
 
         </div>
 
@@ -138,15 +139,15 @@ export default {
 
     },
     computed: {
-        user() {
-            return this.user
-        },
+        // user() {
+        //     return this.user
+        // },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
         userId() {
-            if (!this.loggedinUser) return ''
-            return this.loggedinUser._id
+            if (!this.user) return ''
+            return this.user._id
         },
         fullname() {
             if (!this.loggedinUser) return ''
