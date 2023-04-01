@@ -14,7 +14,7 @@
                                     <h4>gig</h4>
                                 </div>
                                 <div class="due-col">
-                                    <h4>due</h4>
+                                    <h4>Order Date</h4>
                                 </div>
                                 <div class="price-col">
                                     <h4>price</h4>
@@ -26,17 +26,20 @@
                             <section v-for="order in orders">
                                 <div class="table-entity flex justify-between">
                                     <div class="buyer-col flex">
-                                        <img :src="order.buyer.imgUrl" alt="">
+                                        <div class="img-container">
+                                            <img :src="order.buyer.imgUrl" alt="">
+                                        </div>
                                         <h4>{{ order.buyer.fullname }}</h4>
                                     </div>
                                     <div class="gig-col">
-                                        <h4>{{ order.gig.name }}</h4>
+                                        <LongText class="long-text" :txt="order.gig.name" />
+                                        <!-- <h4>{{ order.gig.name }}</h4> -->
                                     </div>
                                     <div class="due-col">
                                         <h4>code a date(rlly)</h4>
                                     </div>
                                     <div class="price-col">
-                                        <h4>{{ order.buyer.price }}</h4>
+                                        <h4>$US{{ order.buyer.price }}</h4>
                                     </div>
                                     <div class="status-col">
                                         <h4>{{ order.status }}</h4>
@@ -58,6 +61,7 @@
 </template>
 
 <script>
+import LongText from './LongText.vue'
 import { orderService } from '../services/order.service'
 export default {
     name: "UserOrders",
@@ -70,6 +74,9 @@ export default {
     async created() {
         // this.orders = await orderService.query()
         this.userOrders
+        console.log('this.userOrders: ', this.userOrders);
+
+
     },
 
     computed: {
@@ -88,6 +95,9 @@ export default {
             this.ordersLength = newOrders.length
             // return newOrders.length
         }
+    },
+    components: {
+        LongText,
     }
 }
 </script>

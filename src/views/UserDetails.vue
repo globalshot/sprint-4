@@ -1,3 +1,4 @@
+
 <template>
     <div v-if="user" class="flex justify-between dashboard">
         <div class="user-stats"><!--user details-->
@@ -59,20 +60,16 @@
 
             <div><!--user gigs he sell-->
                 <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
-                    <div class="nav-gig flex">
                         <h2>Your Gigs</h2>
-                        <div class="btn-container">
-                            <span>Add gig</span>
-                            <button class="btn btn-add">
-                                <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-                            </button>
-                        </div>
-                    </div>
                     <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+                </div>
+                <div v-else class="add-gig-container flex">
+                        <h2>{{ user.fullname }} Gigs</h2>
+                    <UserGigs :gigs="gigs" :user="user"></UserGigs>//not working yet
                 </div>
             </div>
 
-            <div><!--user orders people bought-->
+            <div class="user-orders"><!--user orders people bought-->
                 <UserSell></UserSell>
             </div>
         </div>
