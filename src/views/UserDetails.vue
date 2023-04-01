@@ -64,16 +64,18 @@
 
             <div><!--user gigs he sell-->
                 <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
-                        <h2>Your Gigs</h2>
+                    <h2>Your Gigs</h2>
                     <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
                 </div>
+
                 <div v-else class="add-gig-container flex">
-                        <h2>{{ user.fullname }} Gigs</h2>
-                    <UserGigs :gigs="gigs" :user="user"></UserGigs>//not working yet
+                    <h2>{{ user.fullname }}' Gigs</h2>
+                    <UserGigs :gigs="gigs" :user=user></UserGigs><!--not working yet-->
                 </div>
             </div>
 
-            <div class="user-orders"><!--user orders people bought-->
+            <!--user orders people bought-->
+            <div class="user-orders">
                 <UserSell></UserSell>
             </div>
         </div>
@@ -107,7 +109,11 @@ export default {
             this.user = (id) ?
                 await userService.getById(id) : null
             this.orders = await orderService.query()
-            this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+            if (this.$route.params.id === userId){
+                this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+            } else {
+                this.gigs = await gigService.query({ owner: this.user._id })
+            }
         }
         catch (err) {
             console.log(err);
@@ -118,6 +124,9 @@ export default {
 
     },
     computed: {
+        user() {
+            return this.user
+        },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
