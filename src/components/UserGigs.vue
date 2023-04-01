@@ -1,5 +1,5 @@
 <template>
-    <div v-if="gigs" class="flex wrap justify-end my-gigs">
+    <div v-if="gigs" class="flex wrap my-gigs">
         <!-- <div v-if="filterGig" class="flex wrap justify-end my-gigs"> -->
         <div v-for="gig in filteredGigs" :key="gig._id" class="gig-preview">
 
@@ -34,7 +34,7 @@ export default {
     },
     computed: {
         filteredGigs() {
-            return this.gigs.slice(0,5)
+            return this.gigs.slice(0, 5)
         }
     },
     components: {

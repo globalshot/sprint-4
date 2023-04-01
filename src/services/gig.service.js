@@ -74,7 +74,6 @@ async function save(gig) {
         console.log(gig);
         savedGig = await httpService.post('gig', gig)
     }
-    console.log(savedGig);
     return savedGig
 }
 

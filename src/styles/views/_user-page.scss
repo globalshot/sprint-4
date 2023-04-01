@@ -1,11 +1,139 @@
-.add-gig-container {
+/** @format */
+// .main-app:has(.add-gig-container) {
+//   background-color: $tertiary-clr-light2;
+// }
+
+.dashboard {
+  padding-block-start: 3rem;
+  .add-gig-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
-}
+    margin-inline-start: 5rem;
+    border: 1px solid $grey-txt-lighter;
+    border-radius: 4px 4px 0 0;
 
 .user-stats{
     max-width: 398px;
     min-width: 398px;
+}
+
+.gigs-status{
+    width: 60%;
+}
+    .nav-gig {
+      width: 100%;
+      justify-content: center;
+      justify-items: start;
+      align-items: center;
+      padding: 1rem;
+        gap: 40px;
+      border-radius: 4px 4px 0 0;
+      background-color: $tertiary-clr-dark;
+      color: $secondary-clr-dark;
+
+      .btn-container {
+        justify-self: center;
+        span {
+          padding-inline-end: 1rem;
+          font-size: 1.2em;
+        }
+        .btn {
+          background-color: $secondary-clr-darker;
+          height: 2.8rem;
+          width: 2.8rem;
+          font-size: 1.3rem;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: $primary-clr;
+          }
+        }
+      }
+    }
+    .my-gigs {
+      padding: 1.5rem;
+      width: 100%;
+    }
+  }
+
+  .user-stats {
+    max-width: rem(398px);
+    min-width: rem(398px);
+
+    .user-info {
+      color: $secondary-clr-darker-hover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      width: 100%;
+      height: rem(363px);
+      border: 1px solid $grey-txt-lighter;
+      padding: 30px;
+      margin-bottom: 20px;
+
+      .img-container {
+        width: rem(150px);
+        height: rem(150px);
+        border-radius: 10.4375em;
+        overflow: hidden;
+        margin-bottom: rem(15px);
+        margin-left: auto;
+        margin-right: auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h2 {
+        color: $secondary-clr-dark;
+        padding-block-end: rem(20px);
+      }
+
+      .profile {
+        width: 100%;
+        padding-block-start: 1rem;
+        border-top: 1px solid $grey-txt-lighter;
+        ul {
+          li {
+            justify-content: space-between;
+            &:first-of-type {
+              padding-block-end: 1rem;
+            }
+
+            div {
+              span {
+                padding-inline-end: 0.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .description-container {
+      border: 1px solid $grey-txt-lighter;
+      width: 100%;
+      height: 450px;
+      height: fit-content;
+      padding: 30px;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          h3 {
+            margin-block-end: rem(20px);
+            color: $secondary-clr-dark;
+          }
+          p {
+            line-height: rem(24px);
+          }
+        }
+      }
+    }
+  }
 }
