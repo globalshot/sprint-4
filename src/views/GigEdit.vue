@@ -11,7 +11,7 @@
                     <label class="mbe-2 title flex">
                         <p>Title:</p>
                         <textarea class="txt-box" v-model="gig.title"
-                            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry...."
+                            placeholder="Enter a short title. to catch their eyes"
                             style="width: 512px; height: 78px;">
                                 </textarea>
                         <!-- <input class="c-input" type="text" v-model="gig.title" placeholder="Gigs name"> -->
@@ -19,7 +19,7 @@
                     <label class="mbe-2 description flex">
                         <p>Description:</p>
                         <textarea class="txt-box" v-model="gig.description"
-                            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry...."
+                            placeholder="Tell the costumers more about what you are offering"
                             style="width: 527px; height: 131px;">
                                 </textarea>
                         <!-- <input class="c-input" type="textbox" v-model="gig.description" placeholder="Gigs description"> -->
@@ -46,9 +46,7 @@
                                 on average to finish this gig</p>
                         </span>
                         <select v-model="gig.daysToMake" class="c-input" name="" id="">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <option v-for="i in 20" value="i">{{ i }}</option>
                         </select>
                     </label>
                     <label class="price flex column">
@@ -83,9 +81,10 @@ export default {
         async saveGig() {
             const type = this.gig._id ? 'updateGig' : 'addGig'
             try {
-                await this.$store.dispatch({ type, gig: { ...this.gig } })
+                console.log(this.gig);
+                // await this.$store.dispatch({ type, gig: { ...this.gig } })
                 showSuccessMsg('Gig Saved')
-                this.$router.push('/gig')
+                // this.$router.push('/gig')
             }
             catch (err) {
                 showErrorMsg('Failed to save')

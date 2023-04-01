@@ -40,7 +40,7 @@
                     <ul class="user-stats flex">
                         <li class="flex column">
                             <span class="key">From</span>
-                            <span class="value">France</span>
+                            <!-- <span class="value">{{ user.information.country }}</span> -->
                         </li>
                         <li class="flex column">
                             <span class="key">Member since</span>
@@ -72,12 +72,26 @@
 </template>
 
 <script>
+import { userService } from '../../services/user.service';
 export default {
     props: {
         gig: {
             type: Object,
             required: true
+        },
+        user: null,
+    },
+    async created() {
+        try {
+            this.user = await userService.getById(gig.owner._id)
+            console.log('user:', this.user);
+        }
+        catch (err) {
+            console.log(err)
         }
     },
+    computed: {
+
+    }
 }
 </script>

@@ -83,12 +83,6 @@
                     </div>
                 </div>
             </div>
-
-        <!-- <div v-else class="add-gig-container flex">
-                <h2>{{ user.fullname }}' Gigs</h2>
-                <UserGigs :gigs="gigs" :user=user></UserGigs>
-                </div> -->
-
         </div>
 
     </div>
@@ -110,15 +104,11 @@ export default {
             orders: null,
             gigs: null,
             seller: false
-            // seller: null
         }
     },
     methods: {
         switchMode() {
-            // console.log(this.$route.path);
             this.seller = !this.seller
-            // this.$router.push({ path: path, query: { seller: !this.seller }})
-            // this.$router.push({ query: { seller: this.seller }})
 
         }
     },
@@ -126,28 +116,19 @@ export default {
 
         try {
             console.log(this.$route.params)
+            console.log(this.user)
             const { id } = this.$route.params
-            // this.user = (id) ?
-            //     await userService.getById(id) : null
             this.user = await userService.getById(id)
             this.orders = await orderService.query()
             this.gigs = await gigService.query({ owner: this.user._id })
-            // this.seller = this.$route.query.seller || false
-            // this.$router.push({ query: { seller: this.seller }})
 
         }
         catch (err) {
             console.log(err)
         }
-        // const { owner } = this.loggedinUser
-        //   let filterBy = { owner: owner }
-        //   this.$store.dispatch({ type: 'loadGigs', filterBy })
 
     },
     computed: {
-        // user() {
-        //     return this.user
-        // },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
@@ -163,34 +144,21 @@ export default {
             if (!this.loggedinUser) return ''
             return this.loggedinUser.country
         },
-        // buyerId() {
-        //     if (!this.orders) return ''
-        //     return this.orders.buyer.id
-        // }
         orderGig() {//returns all the orders
             if (!this.orders) return ''
             return this.orders.gig
         },
-        // orderGigName() {
-        //     if (!this.orders) return ''
-        //     return this.orders.gig.name
-        // }
         amToggle() {
             return this.seller
         }
     },
+    // watch: {
+    // },
     components: {
         UserGigs,
         UserSell,
         UserBuy
     },
-    watch: {
-        '$route.params.id': {
-            handler: function () {
-                location.reload()
-            }
-        }
-    }
 
 }
 </script>

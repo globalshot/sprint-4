@@ -68,7 +68,7 @@
                         <template #arrow-right>
                             <i class="fa-solid fa-angle-right"></i>
                         </template>
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :content="slide.content">
+                        <vueper-slide v-for="(img, i) in gig.imgUrl" :key="i" >
                             <template #content>
                                 <span class="slide-img-container">
                                     <img :src="gig.imgUrl[i]" alt="">
@@ -80,10 +80,9 @@
                     <!-- SLIDE 2 -->
                     <vueper-slides class="no-shadow thumbnails" ref="vueperslides2"
                         @slide="$refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
-                        :visible-slides="slides.length" fixed-height="60px" :bullets="false" :touchable="false" :gap="2.8"
+                        :visible-slides="gig.imgUrl.length" fixed-height="60px" :bullets="false" :touchable="false" :gap="2.8"
                         :arrows="false">
-                        <vueper-slide v-for="(slide, i) in slides" :key="i" :content="slide.content"
-                            @click.native="$refs.vueperslides2.goToSlide(i)">
+                        <vueper-slide v-for="(img, i) in gig.imgUrl" :key="i" @click.native="$refs.vueperslides2.goToSlide(i)">
                             <template #content>
                                 <span class="slide2-img-container">
                                     <img :src="gig.imgUrl[i]" alt="">
