@@ -173,13 +173,13 @@
             padding-block-end: 1rem;
             justify-content: start;
             border-bottom: 1px solid $grey-txt-lighter;
-
+            gap: 0.625rem;
             & > * {
               //   width: 100%;
               text-align: center;
               width: 20%;
               min-width: 80px;
-              padding-inline-start: 2.75rem;
+              // padding-inline-start: 2.75rem;
               overflow: hidden;
               text-overflow: ellipsis;
 
@@ -192,9 +192,13 @@
                 padding-inline-start: 0.75rem;
                 min-width: rem(312px);
               }
+              &:nth-of-type(3) {
+                padding-inline-start: 2rem;
+              }
 
               &:nth-of-type(4) {
-                margin-inline-end: -2.5rem;
+                text-align: end;
+                // margin-inline-end: -2.5rem;
               }
               &:last-of-type {
                 text-align: center;
@@ -225,6 +229,10 @@
                 align-items: center;
                 gap: 10px;
                 padding-inline-end: 1rem;
+
+                .gig-col {
+                  min-width: rem(312px);
+                }
 
                 // padding: 1rem;
                 .img-container {

@@ -39,7 +39,7 @@
                                         <h4>code a date(rlly)</h4>
                                     </div>
                                     <div class="price-col">
-                                        <h4>$US{{ order.buyer.price }}</h4>
+                                        <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
                                         <h4>{{ order.status }}</h4>
