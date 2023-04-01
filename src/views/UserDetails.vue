@@ -27,7 +27,7 @@
                                         </defs>
                                     </svg></span>Country
                             </div>
-                            <span>Sweden</span>
+                            <span>{{ user.information.country }}</span>
                         </li>
                         <li class="flex space-between">
                             <div>
@@ -49,11 +49,7 @@
                 <ul>
                     <li>
                         <h3>Description</h3>
-                        <p>Hello, this is Frederick, stand up for vividstore,I am a young and enthusiastic graphic artist
-                            and realistic pencil sketch artist. I am certified as graphic designer from George Washington
-                            University, USA. I have almost 11 years experience in this field since my university life. I
-                            really love to work with Adobe Illustrator, Adobe Photoshop, and so on as a full time online
-                            freelancer. And also passionate about sketching. Thank you.</p>
+                        <p>{{ user.description }}</p>
                     </li>
                 </ul>
             </div>
@@ -121,13 +117,14 @@ export default {
     async created() {
 
         try {
-
+            console.log(this.$route.params)
+            console.log(this.user)
             const { id } = this.$route.params
             // this.user = (id) ?
             //     await userService.getById(id) : null
             this.user = await userService.getById(id)
             this.orders = await orderService.query()
-            this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+            this.gigs = await gigService.query({ owner: this.user._id })
 
         }
         catch (err) {
