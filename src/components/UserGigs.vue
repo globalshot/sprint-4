@@ -25,7 +25,10 @@
 
             <img :src="gig.imgUrl[0]" alt="" class="user-gigs-img">
             <h3 class="title">
-                <LongText class="long-text" :txt="gig.title" />
+                <RouterLink :to="'/gig/' + gig._id">
+
+                    <LongText class="long-text" :txt="gig.title" />
+                </RouterLink>
             </h3>
             <div class="price-container flex" style="justify-content: flex-end;">
                 <div class="flex">
