@@ -39,6 +39,7 @@ async function save(gig) {
         savedGig = await httpService.put(`gig/${gig._id}`, gig)
     } else {
         gig.owner = await userService.getLoggedinUser()
+        gig.owner.rate = "5.0"
         console.log(gig.owner)
         gig.imgUrl = ["https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/167094387/original/dd006e572d30979126ec55f6bd0f84e6c4ac451c.jpg",
             "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/167094387/original/d2ed29826edeca4143e2ba84cd6d149c5a25e1bf.jpg"]

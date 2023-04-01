@@ -35,7 +35,7 @@
                                         <h4>{{ order.gig.name }}</h4>
                                     </div>
                                     <div class="due-col">
-                                        <h4>code a date(rlly)</h4>
+                                        <h4>{{ order.gig.date }}</h4>
                                     </div>
                                     <div class="price-col">
                                         <h4>$US{{ order.gig.price }}</h4>
@@ -86,6 +86,7 @@ export default {
                     newOrders.push(orders[i])
                 }
             }
+            console.log(newOrders)
             this.orders = newOrders
             this.ordersLength = newOrders.length
             // return newOrders.length

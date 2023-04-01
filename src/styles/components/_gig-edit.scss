@@ -15,7 +15,6 @@
   }
   &__form {
     .top-form {
-      width: 100vw;
       display: grid;
       grid-template-rows: repeat(auto 2);
       grid-template-columns: 1fr;
@@ -69,7 +68,6 @@
     }
 
     .bottom-form {
-      width: 100vw;
       label {
         width: 100%;
         &:not(:first-child) {
@@ -92,7 +90,7 @@
     }
 
     .submit-btns {
-      width: 80vw;
+      // width: 80vw;
       margin-block-start: 4rem;
       justify-content: center;
       justify-items: center;
