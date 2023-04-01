@@ -58,7 +58,7 @@
 
         <div>
 
-            <div >
+            <div>
                 <div class="add-gig-container flex">
                     <h2 v-if="this.$route.params.id === loggedinUser._id">Your Gigs</h2>
                     <h2 v-else>{{ user.fullname }}' Gigs</h2>
@@ -73,21 +73,21 @@
                     <span>gigs you sell</span>
                 </div><!--the sides, seller or buyer-->
                 <div v-if="this.$route.params.id === loggedinUser._id">
-                <div v-if="seller"><!--the side of selling-->
-                    <div class="user-orders"><!--user orders people bought-->
-                        <UserSell></UserSell>
+                    <div v-if="seller"><!--the side of selling-->
+                        <div class="user-orders"><!--user orders people bought-->
+                            <UserSell></UserSell>
+                        </div>
+                    </div>
+                    <div v-else class="user-orders"><!--page of buyer-->
+                        <UserBuy></UserBuy>
                     </div>
                 </div>
-                <div v-else class="user-orders"><!--page of buyer-->
-                    <UserBuy></UserBuy>
-                </div>
-            </div>
             </div>
 
-            <!-- <div v-else class="add-gig-container flex">
+        <!-- <div v-else class="add-gig-container flex">
                 <h2>{{ user.fullname }}' Gigs</h2>
                 <UserGigs :gigs="gigs" :user=user></UserGigs>
-            </div> -->
+                </div> -->
 
         </div>
 
@@ -126,7 +126,6 @@ export default {
 
         try {
             console.log(this.$route.params)
-            console.log(this.user)
             const { id } = this.$route.params
             // this.user = (id) ?
             //     await userService.getById(id) : null
@@ -176,7 +175,7 @@ export default {
         //     if (!this.orders) return ''
         //     return this.orders.gig.name
         // }
-        amToggle(){
+        amToggle() {
             return this.seller
         }
     },
@@ -185,6 +184,13 @@ export default {
         UserSell,
         UserBuy
     },
+    watch: {
+        '$route.params.id': {
+            handler: function () {
+                location.reload()
+            }
+        }
+    }
 
 }
 </script>
