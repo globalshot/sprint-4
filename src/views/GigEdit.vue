@@ -28,16 +28,16 @@
                 <div class="bottom-form flex space-between"><label class="category flex column"><span
                             class="flex-column">Category <p>Choose the category most suitable for your Gig.</p>
                         </span>
-                        <select class="c-input" name="Graphics and Design" id="">
-                            <option value="Graphics &amp; Design">Graphics &amp; Design</option>
-                            <option value="Digital Marketing">Digital Marketing</option>
-                            <option value="Writing &amp; Translation">Writing &amp; Translation</option>
-                            <option value="Video &amp; Animation">Video &amp; Animation</option>
-                            <option value="Music &amp; Audio">Music &amp; Audio</option>
-                            <option value="Programming &amp; Tech">Programming &amp; Tech</option>
-                            <option value="Busines">Busines</option>
-                            <option value="Lifestyle">Lifestyle</option>
-                            <option value="Data">Data</option>
+                        <select v-model="gig.tags[0]" class="c-input" name="Graphics and Design" id="">
+                            <option value="graphics-design">Graphics &amp; Design</option>
+                            <option value="marketing">Digital Marketing</option>
+                            <option value="word-press">Writing &amp; Translation</option>
+                            <option value="video">Video &amp; Animation</option>
+                            <option value="music">Music &amp; Audio</option>
+                            <option value="programming-tech">Programming &amp; Tech</option>
+                            <option value="business">Busines</option>
+                            <option value="photography">Lifestyle</option>
+                            <option value="ai-services">Data</option>
                         </select>
                     </label>
                     <label class="days-to-make flex column">
@@ -45,7 +45,7 @@
                             <p>Days it will take you
                                 on average to finish this gig</p>
                         </span>
-                        <select class="c-input" name="" id="">
+                        <select v-model="gig.daysToMake" class="c-input" name="" id="">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -55,7 +55,7 @@
                         <span>Price <p>Price you're offering for this gig
                             </p>
                         </span>
-                        <input class="c-input" type="number" name="" id="">
+                        <input v-model="gig.price" class="c-input" type="number" name="" id="">
                     </label>
                 </div>
                 <section class="submit-btns flex gap-1">
