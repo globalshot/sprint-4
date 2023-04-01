@@ -1,3 +1,4 @@
+
 <template>
     <div v-if="user" class="flex justify-between dashboard">
         <div class="user-stats"><!--user details-->
@@ -89,8 +90,9 @@
                     <UserBuy></UserBuy>
                 </div>
             </div>
-            <div v-else><!--i guess show all of his gigs? another user, not the logged in-->
-
+            <div v-else class="add-gig-container flex">
+                <h2>{{ user.fullname }}' Gigs</h2>
+                <UserGigs :gigs="gigs" :user=user></UserGigs><!--not working yet-->
             </div>
 
         </div>
@@ -117,7 +119,7 @@ export default {
         }
     },
     methods: {
-        switchMode(){
+        switchMode() {
             this.seller = !this.seller
         }
     },

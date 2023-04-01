@@ -5,15 +5,14 @@
   display: block;
   margin-block-end: 8.3rem;
   height: fit-content;
-  
+
   // max-height: rem(300px);
   .vueperslides {
-    
     height: 100px;
 
     .vueperslide {
       height: 70px;
-      padding-block-end:11em ;
+      padding-block-end: 11em;
       overflow: hidden;
       word-wrap: break-word;
 
@@ -82,7 +81,6 @@
   }
 
   .carousel-container {
-    
     max-height: fit-content;
     height: 131%;
     width: 100%;
@@ -91,7 +89,7 @@
 
   .review {
     // background-color: ;
-    
+
     display: flex;
     outline: none;
     width: rem(677px);
@@ -107,6 +105,25 @@
     }
     @include for-medium-layout {
       padding: 0 rem(18px);
+    }
+
+    .img-user {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 10.4375em;
+      overflow: hidden;
+      // @include aspect-ratio(1, 1);
+      margin-block-start: 1rem;
+      margin-inline-end: 1rem;
+
+      img {
+        // border-radius: 50%;
+        // height: 2rem;
+        // width: 2rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     .review-details {
@@ -143,7 +160,7 @@
         }
       }
       ul {
-        margin-inline-start: .5rem;
+        margin-inline-start: 0.5rem;
         li {
           font-size: rem(12px);
           width: 20px;
