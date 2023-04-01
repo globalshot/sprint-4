@@ -8,20 +8,20 @@
             </label>
             <div class="flex column">
                 <div class="top-form">
-                    <label class="mbe-2 title">
+                    <label class="mbe-2 title flex">
                         <p>Title:</p>
-                        <input class="c-input" type="text" v-model="gig.title" placeholder="Gigs name">
-                    </label>
-                    <label class="mbe-2 price">
-                        <p>Price:</p>
-                        <input class="c-input" type="number" v-model="gig.price" placeholder="Gigs price">
+                        <textarea class="txt-box" v-model="gig.title"
+                            placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry...."
+                            style="width: 512px; height: 78px;">
+                                </textarea>
+                        <!-- <input class="c-input" type="text" v-model="gig.title" placeholder="Gigs name"> -->
                     </label>
                     <label class="mbe-2 description flex">
                         <p>Description:</p>
-                        <textarea class="txt-box"
+                        <textarea class="txt-box" v-model="gig.description"
                             placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry...."
-                            style="width: 635px; height: 165px;">
-                            </textarea>
+                            style="width: 527px; height: 131px;">
+                                </textarea>
                         <!-- <input class="c-input" type="textbox" v-model="gig.description" placeholder="Gigs description"> -->
                     </label>
                 </div>

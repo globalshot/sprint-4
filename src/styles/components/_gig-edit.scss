@@ -6,7 +6,7 @@
 
   h2 {
     padding: 1rem 1rem 1rem 2rem;
-    
+    // text-align: center;
   }
   .c-input {
     &:focus {
@@ -17,42 +17,53 @@
     .top-form {
       width: 100vw;
       display: grid;
-      grid-template-columns: 0.5fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: repeat(auto 2);
+      grid-template-columns: 1fr;
+      @include for-wide-layout {
+          grid-template-columns: 0.5fr 1fr;
+      }
+      grid-gap: rem(80px);
 
       .title {
-        p {
-          margin-block-start: 0;
+        gap: rem(20px);
+        @include for-wide-layout {
+          grid-column: 1;
+          grid-row: 1/-1;
         }
-      }
-      .price {
-        grid-column: 1;
-        grid-row: 2;
+        grid-column: 1/-1;
+        grid-row: 1;
+
+        margin: 0;
         p {
-          margin-block-start: 0;
+          margin: 0;
         }
       }
 
       .description {
-        grid-column: 2;
-        grid-row: 1/-1;
+        @include for-wide-layout {
+          grid-column: 2;
+          grid-row: 1/-1;
+        }
+        grid-column: 1/-1;
+        grid-row: 2;
         gap: rem(20px);
         width: 100%;
 
         p {
           margin: 0;
         }
+      }
+      
+      .txt-box {
+        border: 1px solid $grey-txt-light;
+        padding: 1rem;
+        color: $secondary-clr-dark;
+        border-radius: 4px;
 
-        .txt-box {
-          border: 1px solid $grey-txt-light;
-          padding: 1rem;
-          color: $secondary-clr-dark;
-          border-radius: 4px;
-
-          &:focus {
-            border: 1px solid $secondary-clr;
-            outline: 0;
-          }
+        &:focus {
+          border: 1px solid $secondary-clr;
+          outline: 0;
+          box-shadow: 0px 0px 2px 1px $tertiary-clr-dark;
         }
       }
     }
