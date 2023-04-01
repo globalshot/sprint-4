@@ -34,7 +34,7 @@ export default {
     },
     computed: {
         filteredGigs() {
-            return this.gigs.slice(0,5)
+            return this.gigs.slice(0, 5)
         }
     },
     components: {

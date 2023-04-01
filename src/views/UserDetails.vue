@@ -59,7 +59,7 @@
 
         </div>
 
-        <div class="gigs and orders"><!--the side of selling-->
+        <div><!--the side of selling-->
 
             <div><!--user gigs he sell-->
                 <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
@@ -77,6 +77,7 @@
             </div>
 
             <div><!--user orders people bought-->
+                <UserSell></UserSell>
 
             </div>
         </div>
@@ -86,7 +87,6 @@
 
 <script>
 import UserGigs from '../components/UserGigs.vue'
-
 import { userService } from '../services/user.service'
 import { orderService } from '../services/order.service'
 import { gigService } from '../services/gig.service'
@@ -155,7 +155,8 @@ export default {
         // }
     },
     components: {
-        UserGigs
+        UserGigs,
+        UserSell
     }
 }
 </script>
