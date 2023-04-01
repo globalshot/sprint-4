@@ -83,12 +83,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div v-else class="add-gig-container flex">
-                <h2>{{ user.fullname }}' Gigs</h2>
-                <UserGigs :gigs="gigs" :user=user></UserGigs>
-            </div> -->
-
         </div>
 
     </div>
@@ -122,6 +116,7 @@ export default {
 
         try {
             console.log(this.$route.params)
+            console.log(this.user)
             const { id } = this.$route.params
             this.user = await userService.getById(id)
             this.orders = await orderService.query()
@@ -153,11 +148,7 @@ export default {
             if (!this.orders) return ''
             return this.orders.gig
         },
-        // orderGigName() {
-        //     if (!this.orders) return ''
-        //     return this.orders.gig.name
-        // }
-        amToggle(){
+        amToggle() {
             return this.seller
         }
     },
@@ -168,13 +159,6 @@ export default {
         UserSell,
         UserBuy
     },
-    watch: {
-        '$route.params.id': {
-            handler: function () {
-                location.reload()
-            }
-        }
-    }
 
 }
 </script>

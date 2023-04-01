@@ -40,7 +40,7 @@
                     <ul class="user-stats flex">
                         <li class="flex column">
                             <span class="key">From</span>
-                            <span class="value">{{ user.information.country }}</span>
+                            <!-- <span class="value">{{ user.information.country }}</span> -->
                         </li>
                         <li class="flex column">
                             <span class="key">Member since</span>
