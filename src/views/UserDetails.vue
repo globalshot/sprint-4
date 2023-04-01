@@ -71,15 +71,7 @@
                 </div><!--the sides, seller or buyer-->
                 <div v-if="seller"><!--the side of selling-->
                     <div class="add-gig-container flex">
-                        <div class="nav-gig flex">
-                            <h2>Your Gigs</h2>
-                            <div class="btn-container">
-                                <span>Add gig</span>
-                                <button class="btn btn-add">
-                                    <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-                                </button>
-                            </div>
-                        </div>
+
                         <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
                     </div>
                     <div><!--user orders people bought-->
@@ -116,11 +108,16 @@ export default {
             orders: null,
             gigs: null,
             seller: false
+            // seller: null
         }
     },
     methods: {
         switchMode() {
+            // console.log(this.$route.path);
             this.seller = !this.seller
+            // this.$router.push({ path: path, query: { seller: !this.seller }})
+            // this.$router.push({ query: { seller: this.seller }})
+
         }
     },
     async created() {
@@ -132,6 +129,8 @@ export default {
                 await userService.getById(id) : null
             this.orders = await orderService.query()
             this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+            // this.seller = this.$route.query.seller || false
+            // this.$router.push({ query: { seller: this.seller }})
         }
         catch (err) {
             console.log(err)
@@ -169,11 +168,15 @@ export default {
         //     if (!this.orders) return ''
         //     return this.orders.gig.name
         // }
+        amToggle(){
+            return this.seller
+        }
     },
     components: {
         UserGigs,
         UserSell,
         UserBuy
-    }
+    },
+
 }
 </script>
