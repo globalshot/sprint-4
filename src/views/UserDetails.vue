@@ -67,6 +67,10 @@
                         <h2>Your Gigs</h2>
                     <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
                 </div>
+                <div v-else class="add-gig-container flex">
+                        <h2>{{ user.fullname }} Gigs</h2>
+                    <UserGigs :gigs="gigs" :user="user"></UserGigs>//not working yet
+                </div>
             </div>
 
             <div class="user-orders"><!--user orders people bought-->
