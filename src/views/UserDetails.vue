@@ -116,13 +116,14 @@ export default {
     async created() {
 
         try {
-
+            console.log(this.$route.params)
+            console.log(this.user)
             const { id } = this.$route.params
             // this.user = (id) ?
             //     await userService.getById(id) : null
             this.user = await userService.getById(id)
             this.orders = await orderService.query()
-            this.gigs = await gigService.query({ owner: this.loggedinUser._id })
+            this.gigs = await gigService.query({ owner: this.user._id })
 
         }
         catch (err) {
@@ -134,9 +135,9 @@ export default {
 
     },
     computed: {
-        user() {
-            return this.user
-        },
+        // user() {
+        //     return this.user
+        // },
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
