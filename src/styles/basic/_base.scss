@@ -98,7 +98,6 @@ textarea {
   border-radius: 50%;
   height: rem(40px);
   width: rem(40px);
-  color: white;
   background-color: $primary-clr;
   &:hover {
     background-color: $primary-clr-dark;
@@ -109,6 +108,11 @@ textarea {
   .fa-solid {
     transform: scale(1);
     transition: 0.2s;
+  }
+
+  a {
+    cursor: pointer;
+    color: white;
   }
 }
 
@@ -142,9 +146,9 @@ textarea {
     justify-content: center;
     align-items: center;
     // padding: .4em;
-    border-radius: 50% ;
+    border-radius: 50%;
     background-color: #fff;
-    transition: .2s;
+    transition: 0.2s;
     cursor: pointer;
     &:hover {
       background-color: $tertiary-clr-dark;
@@ -160,7 +164,7 @@ textarea {
   }
 
   .divider {
-    margin-inline-end: .5em;
+    margin-inline-end: 0.5em;
   }
 }
 
@@ -168,6 +172,6 @@ textarea {
   opacity: 1;
 
   &:hover {
-    opacity: .75;
+    opacity: 0.75;
   }
 }

@@ -27,37 +27,43 @@
   .vueperslides {
     &:not(.info-slides) {
       .vueperslide {
-        &:nth-of-type(1) {
-          background-color: #1a1b1d;
-          img {
-            width: 100%;
-            left: 0;
-          }
-        }
-        &:nth-of-type(2) {
-          background-color: #023a15;
-        }
-        &:nth-of-type(3) {
-          background-color: #b64762;
-        }
-        &:nth-of-type(4) {
-          background-color: #540e1f;
-        }
-        &:nth-of-type(5) {
-          background-color: #023a15;
-        }
-        &:nth-of-type(6) {
-          background-color: #7d1a00;
-        }
+        background-color: $secondary-clr-darker;
+
         img {
           display: none;
           @include for-medium-layout {
+            position: absolute;
+            left: -20vw;
+            cursor: default;
+            width: auto;
+
+            &:nth-of-type(1) {
+              background-color: #1a1b1d;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              left: 0;
+              // img {
+              // }
+            }
+            &:nth-of-type(2) {
+              background-color: #023a15;
+            }
+            &:nth-of-type(3) {
+              background-color: #b64762;
+            }
+            &:nth-of-type(4) {
+              background-color: #540e1f;
+            }
+            &:nth-of-type(5) {
+              background-color: #023a15;
+            }
+            &:nth-of-type(6) {
+              background-color: #7d1a00;
+            }
             display: block;
           }
-          position: absolute;
-          left: -20vw;
-          cursor: default;
-          width: auto;
+
           // @include for-small-layout {
           //   background: #023a15;
           // }
@@ -106,7 +112,7 @@
 
         .stars {
           position: absolute;
-          top: -22px;
+          top: -45%;
 
           .star {
             padding-inline-end: 0.12rem;
@@ -116,13 +122,12 @@
             }
           }
         }
-
       }
     }
-  
   }
 
   & .search-container {
+    // position: relative;
     margin-inline-end: 2em;
     z-index: 50;
     position: absolute;
@@ -153,6 +158,14 @@
     }
 
     .el-button {
+      @include for-mobile-layout {
+        // font-size: 12px;
+        position: absolute;
+        top: 300px;
+        width: 100%;
+        border-radius: 4px;
+      }
+      // position: relative;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -184,10 +197,13 @@
     }
 
     .hero-search {
+      @include for-mobile-layout {
+        // font-size: 12px;
+        flex-direction: column;
+      }
       // position: relative;
       margin-block-end: rem(24px);
       margin-block-start: rem(24px);
-      // margin: rem(24px) 0;
       height: 3rem;
       max-width: rem(650px);
       background-color: $tertiary-clr-light;

@@ -32,7 +32,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <button class="btn-contact-me">Contact Me</button>
+                        <!-- <button class="btn-contact-me">Contact Me</button> -->
                     </div>
                 </div>
 
