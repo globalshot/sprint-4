@@ -26,8 +26,8 @@
                             <section v-for="order in orders">
                                 <div class="table-entity flex justify-between">
                                     <div class="buyer-col flex">
-                                        <img :src="order.buyer.imgUrl" alt="">
-                                        <h4>{{ order.buyer.fullname }}</h4>
+                                        <img :src="order.seller.imgUrl" alt="">
+                                        <h4>{{ order.seller.fullname }}</h4>
                                     </div>
                                     <div class="gig-col">
                                         <h4>{{ order.gig.name }}</h4>
@@ -80,7 +80,7 @@ export default {
             let orders = await orderService.query()
             let newOrders = []
             for (let i = 0; i < orders.length; i++) {
-                if (this.loggedinUser._id === orders[i].seller._id) {
+                if (this.loggedinUser._id === orders[i].buyer._id) {
                     newOrders.push(orders[i])
                 }
             }

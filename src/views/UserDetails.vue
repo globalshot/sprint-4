@@ -59,26 +59,40 @@
 
         </div>
 
-        <div><!--the side of selling-->
+        <div>
 
-            <div><!--user gigs he sell-->
-                <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
-                    <div class="nav-gig flex">
-                        <h2>Your Gigs</h2>
-                        <div class="btn-container">
-                            <span>Add gig</span>
-                            <button class="btn btn-add">
-                                <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
-                            </button>
+            <div v-if="this.$route.params.id === userId">
+                <div class="switch-button flex justify-center">
+                    <span>gigs you bought</span>
+                    <input type="checkbox" id="switch" />
+                    <label for="switch" @click="switchMode">Toggle</label>
+                    <span>gigs you sell</span>
+                </div><!--the sides, seller or buyer-->
+                <div v-if="seller"><!--the side of selling-->
+                    <div class="add-gig-container flex">
+                        <div class="nav-gig flex">
+                            <h2>Your Gigs</h2>
+                            <div class="btn-container">
+                                <span>Add gig</span>
+                                <button class="btn btn-add">
+                                    <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
+                                </button>
+                            </div>
                         </div>
+                        <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
                     </div>
-                    <UserGigs :gigs="gigs" :user="loggedinUser"></UserGigs>
+                    <div><!--user orders people bought-->
+                        <UserSell></UserSell>
+                    </div>
+                </div>
+                <div v-else><!--page of buyer-->
+                    <UserBuy></UserBuy>
                 </div>
             </div>
+            <div v-else><!--i guess show all of his gigs? another user, not the logged in-->
 
-            <div><!--user orders people bought-->
-                <UserSell></UserSell>
             </div>
+
         </div>
 
     </div>
@@ -87,6 +101,7 @@
 <script>
 import UserGigs from '../components/UserGigs.vue'
 import UserSell from '../components/UserSell.vue'
+import UserBuy from '../components/UserBuy.vue'
 import { userService } from '../services/user.service'
 import { orderService } from '../services/order.service'
 import { gigService } from '../services/gig.service'
@@ -97,10 +112,14 @@ export default {
         return {
             user: null,
             orders: null,
-            gigs: null
+            gigs: null,
+            seller: false
         }
     },
     methods: {
+        switchMode(){
+            this.seller = !this.seller
+        }
     },
     async created() {
 
@@ -113,7 +132,7 @@ export default {
             this.gigs = await gigService.query({ owner: this.loggedinUser._id })
         }
         catch (err) {
-            console.log(err);
+            console.log(err)
         }
         // const { owner } = this.loggedinUser
         //   let filterBy = { owner: owner }
@@ -140,11 +159,6 @@ export default {
         //     if (!this.orders) return ''
         //     return this.orders.buyer.id
         // }
-        buyerId() {
-            if (!this.buyer) return ''
-            console.log('orders', this.buyer)
-            return this.buyer.id
-        },
         orderGig() {//returns all the orders
             if (!this.orders) return ''
             return this.orders.gig
@@ -156,7 +170,8 @@ export default {
     },
     components: {
         UserGigs,
-        UserSell
+        UserSell,
+        UserBuy
     }
 }
 </script>
