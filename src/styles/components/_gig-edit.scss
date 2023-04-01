@@ -1,0 +1,113 @@
+/** @format */
+
+.edit-view {
+  color: $secondary-clr-dark;
+  width: 100vw;
+
+  h2 {
+    padding: 1rem 1rem 1rem 2rem;
+    
+  }
+  .c-input {
+    &:focus {
+      outline: 0;
+    }
+  }
+  &__form {
+    .top-form {
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      .title {
+        p {
+          margin-block-start: 0;
+        }
+      }
+      .price {
+        grid-column: 1;
+        grid-row: 2;
+        p {
+          margin-block-start: 0;
+        }
+      }
+
+      .description {
+        grid-column: 2;
+        grid-row: 1/-1;
+        gap: rem(20px);
+        width: 100%;
+
+        p {
+          margin: 0;
+        }
+
+        .txt-box {
+          border: 1px solid $grey-txt-light;
+          padding: 1rem;
+          color: $secondary-clr-dark;
+          border-radius: 4px;
+
+          &:focus {
+            border: 1px solid $secondary-clr;
+            outline: 0;
+          }
+        }
+      }
+    }
+
+    .bottom-form {
+      width: 100vw;
+      label {
+        width: 100%;
+        &:not(:first-child) {
+          padding: 1rem;
+        }
+        &:first-child {
+          padding: 1rem 1rem 1rem 0;
+        }
+        p {
+          color: $secondary-clr;
+        }
+        .c-input {
+          max-width: rem(200px);
+          min-width: 150px;
+          &:focus {
+            border: 1px solid $secondary-clr;
+          }
+        }
+      }
+    }
+
+    .submit-btns {
+      width: 80vw;
+      margin-block-start: 4rem;
+      justify-content: center;
+      justify-items: center;
+      gap: 50px;
+
+      & > * {
+        width: rem(120px);
+        height: rem(40px);
+        text-align: center;
+        font-weight: 600;
+        font-size: em(18px);
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+      button {
+        background-color: $primary-clr;
+        color: white;
+        border: 0;
+      }
+      a {
+        background-color: $secondary-clr-darker;
+        border: 0;
+        color: white;
+      }
+    }
+  }
+}
