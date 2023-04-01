@@ -13,27 +13,38 @@
     border: 1px solid $grey-txt-lighter;
     border-radius: 4px 4px 0 0;
 
-
     .nav-gig {
-        width: 100%;
-        justify-items: start;
-        align-items: center;
-        padding: 1rem;
+      width: 100%;
+      justify-content: center;
+      justify-items: start;
+      align-items: center;
+      padding: 1rem;
         gap: 40px;
-        border-radius: 4px 4px 0 0;
-        background-color: $tertiary-clr-dark;
-        color: $secondary-clr-dark;
+      border-radius: 4px 4px 0 0;
+      background-color: $tertiary-clr-dark;
+      color: $secondary-clr-dark;
 
-        .btn-container {
-            span {
-                padding-inline-end: 1rem;
-                font-size: 1.2em;
-            }
+      .btn-container {
+        justify-self: center;
+        span {
+          padding-inline-end: 1rem;
+          font-size: 1.2em;
         }
+        .btn {
+          background-color: $secondary-clr-darker;
+          height: 2.8rem;
+          width: 2.8rem;
+          font-size: 1.3rem;
+          transition: background-color 0.2s;
+          &:hover {
+            background-color: $primary-clr;
+          }
+        }
+      }
     }
     .my-gigs {
-        padding: 1.5rem;
-        width: 100%;
+      padding: 1.5rem;
+      width: 100%;
     }
   }
 

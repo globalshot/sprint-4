@@ -16,8 +16,8 @@ export default {
     },
     computed: {
         displayTxt() {
-            const length = 50
-            if (this.txt.length > 50)
+            const length = 40
+            if (this.txt.length > 40)
                 return this.txt.slice(0, length) + '...'
             return this.txt
         }
