@@ -10,7 +10,8 @@
         <div><!--the side of selling-->
 
             <div><!--user gigs he sell-->
-                <div v-if="this.$route.params.id === userId" class="add-gig-container flex">
+                <!-- <div v-if="this.$route.params.id === userId" class="add-gig-container flex"> -->
+                <div class="add-gig-container flex">
                     <button class="btn btn-add">
                         <RouterLink to="/edit"><i class="fa-solid fa-plus"></i></RouterLink>
                     </button>
@@ -72,6 +73,10 @@ export default {
         fullname() {
             if (!this.loggedinUser) return ''
             return this.loggedinUser.fullname
+        },
+        imgUrl() {
+            if (!this.loggedinUser) return ''
+            return this.loggedinUser.imgUrl
         },
         // buyerId() {
         //     if (!this.orders) return ''
