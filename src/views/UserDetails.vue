@@ -107,11 +107,16 @@ export default {
             orders: null,
             gigs: null,
             seller: false
+            // seller: null
         }
     },
     methods: {
         switchMode() {
+            // console.log(this.$route.path);
             this.seller = !this.seller
+            // this.$router.push({ path: path, query: { seller: !this.seller }})
+            // this.$router.push({ query: { seller: this.seller }})
+
         }
     },
     async created() {
@@ -125,6 +130,8 @@ export default {
             this.user = await userService.getById(id)
             this.orders = await orderService.query()
             this.gigs = await gigService.query({ owner: this.user._id })
+            // this.seller = this.$route.query.seller || false
+            // this.$router.push({ query: { seller: this.seller }})
 
         }
         catch (err) {
@@ -166,11 +173,15 @@ export default {
         //     if (!this.orders) return ''
         //     return this.orders.gig.name
         // }
+        amToggle(){
+            return this.seller
+        }
     },
     components: {
         UserGigs,
         UserSell,
         UserBuy
-    }
+    },
+
 }
 </script>
