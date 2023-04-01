@@ -6,43 +6,60 @@
 .dashboard {
   padding-block-start: 3rem;
   margin-block-end: 2rem;
+  gap: 120px;
+
   .add-gig-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-inline-start: 5rem;
+    // margin-inline-start: 5rem;
     border: 1px solid $grey-txt-lighter;
-    border-radius: 4px 4px 0 0;
+    // border-radius: 4px 4px 0 0;
 
-.user-stats{
-    max-width: 398px;
-    min-width: 398px;
-}
+    h2 {
+      padding-block-start: 1.4rem;
+      color: $secondary-clr-dark;
+    }
 
-.gigs-status{
-    width: 60%;
-}
+    .user-stats {
+      max-width: 398px;
+      min-width: 398px;
+    }
+
+    .gigs-status {
+      width: 60%;
+    }
     .nav-gig {
       width: 100%;
+
       justify-content: center;
       justify-items: start;
       align-items: center;
       padding: 1rem;
-        gap: 40px;
-      border-radius: 4px 4px 0 0;
+      border: 1px solid $grey-txt-lighter;
       background-color: $tertiary-clr-dark;
       color: $secondary-clr-dark;
+      transition: background-color 0.4s;
+
+      &:hover {
+        background-color: #fff;
+      }
 
       .btn-container {
         justify-self: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(12px);
+
         span {
-          padding-inline-end: 1rem;
+          //   padding-inline-end: 1rem;
           font-size: 1.2em;
         }
         .btn {
           background-color: $secondary-clr-darker;
-          height: 2.8rem;
-          width: 2.8rem;
+          height: 3rem;
+          width: 3rem;
           font-size: 1.3rem;
           transition: background-color 0.2s;
           &:hover {
@@ -68,15 +85,15 @@
       align-items: center;
       background-color: #fff;
       width: 100%;
-      height: rem(371px);
+      height: rem(344px);
       border: 1px solid $grey-txt-lighter;
       padding: 30px;
       margin-bottom: 20px;
 
       .img-container {
-        width: rem(150px);
-        height: rem(150px);
-        border-radius: 10.4375em;
+        width: rem(130px);
+        height: rem(130px);
+        border-radius: 50%;
         overflow: hidden;
         margin-bottom: rem(15px);
         margin-left: auto;
@@ -118,7 +135,7 @@
     .description-container {
       border: 1px solid $grey-txt-lighter;
       width: 100%;
-      height: 450px;
+      //   height: 450px;
       height: fit-content;
       padding: 30px;
 
@@ -132,6 +149,103 @@
           }
           p {
             line-height: rem(24px);
+          }
+        }
+      }
+    }
+  }
+
+  .user-orders {
+    border: 1px solid $grey-txt-lighter;
+    padding: 1rem;
+    margin-block-start: 1.5rem;
+    width: 100%;
+
+    .order-list {
+      width: 100%;
+      .order-item {
+        width: 100%;
+        .order-table {
+          width: 100%;
+          .table-header {
+            color: $secondary-clr-dark;
+            width: 100%;
+            padding-block-end: 1rem;
+            justify-content: start;
+            border-bottom: 1px solid $grey-txt-lighter;
+
+            & > * {
+              //   width: 100%;
+              text-align: center;
+              width: 20%;
+              min-width: 80px;
+              padding-inline-start: 2.75rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              &:first-of-type {
+                text-align: start;
+                padding-inline-start: 0.75rem;
+              }
+              &:nth-of-type(2) {
+                text-align: start;
+                padding-inline-start: 0.75rem;
+                min-width: rem(312px);
+              }
+
+              &:nth-of-type(4) {
+                margin-inline-end: -2.5rem;
+              }
+              &:last-of-type {
+                text-align: center;
+              }
+            }
+          }
+
+          section {
+            padding-block-start: 1rem;
+            border-bottom: 1px solid $grey-txt-lighter;
+            border-radius: 0 0 4px 4px;
+
+            &:hover {
+              color: $secondary-clr-darker;
+              background-color: $tertiary-clr-light;
+              border-bottom: 1px solid $primary-clr;
+            }
+            .table-entity {
+              gap: rem(10px);
+              height: 80px;
+              padding: 1rem;
+              align-items: center;
+              color: $grey-txt-dark;
+
+              .buyer-col {
+                color: $grey-txt-dark;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding-inline-end: 1rem;
+
+                // padding: 1rem;
+                .img-container {
+                  height: rem(48px);
+                  width: rem(48px);
+                  border-radius: 50%;
+                  overflow: hidden;
+
+                  img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                  }
+                }
+                // align-items: center;
+              }
+
+              .gig-col {
+                min-width: rem(306px);
+              }
+            }
           }
         }
       }
