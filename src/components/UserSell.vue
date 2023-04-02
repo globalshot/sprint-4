@@ -8,19 +8,19 @@
                         <div class="order-table">
                             <div class="table-header flex justify-between">
                                 <div class="buyer-col">
-                                    <h4>buyer</h4>
+                                    <h4>Buyer</h4>
                                 </div>
                                 <div class="gig-col">
-                                    <h4>gig</h4>
+                                    <h4>Gig</h4>
                                 </div>
                                 <div class="due-col">
                                     <h4>Order Date</h4>
                                 </div>
                                 <div class="price-col">
-                                    <h4>price</h4>
+                                    <h4>Price</h4>
                                 </div>
                                 <div class="status-col">
-                                    <h4>status</h4>
+                                    <h4>Status</h4>
                                 </div>
                             </div>
                             <section v-for="order in orders">
@@ -50,21 +50,21 @@
                                                         <div @click="setStatus('finished', order)" class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
-                                                                    <span>finished</span>
+                                                                    <span>Finished</span>
                                                                 </div>
                                                             </label>
                                                         </div>
                                                         <div @click="setStatus('in progress', order)" class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
-                                                                    <span>in progress</span>
+                                                                    <span>In progress</span>
                                                                 </div>
                                                             </label>
                                                         </div>
                                                         <div @click="setStatus('rejected', order)" class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
-                                                                    <span>rejected</span>
+                                                                    <span>Rejected</span>
                                                                 </div>
                                                             </label>
                                                         </div>
@@ -79,7 +79,7 @@
                         <!-- <pre>{{ orders }}</pre> -->
                     </div>
                     <div v-else>
-                        <h4>no orders</h4>
+                        <h4>No orders</h4>
                     </div>
                 </div>
             </label>
@@ -118,7 +118,6 @@ export default {
             try {
                 await this.$store.dispatch({ type: 'updateOrder', order: {...order} })
                 showSuccessMsg('Order Updated')
-                console.log('got here')
             }
             catch (err) {
                 console.log(err, 'order not Updated');

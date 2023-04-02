@@ -1,0 +1,132 @@
+/** @format */
+
+.reviews-stat {
+  flex-direction: column;
+  margin-block-end: rem(24px);
+
+  .stat-header {
+    justify-content: space-between;
+    padding-block-end: 20px;
+    h2 {
+      margin-inline-end: 0.4em;
+      font-size: 1.25em;
+      line-height: 1.4em;
+      font-weight: 700;
+      color: $secondary-clr-dark;
+    }
+
+    .reviews-rate {
+      align-items: center;
+
+      .stars {
+        margin-block-start: 0;
+        & > * {
+          padding-inline-end: 2px;
+
+          svg {
+            fill: $star-clr;
+          }
+        }
+      }
+
+      .rating-score {
+        border: none;
+        color: $star-clr;
+        padding-inline-start: 0.2857142857em;
+        padding-inline-end: 0.5714285714em;
+        font-weight: 700;
+        padding-block-start: 0.2rem;
+      }
+    }
+  }
+
+  .stat-main {
+    .stars-counters {
+      width: 50%;
+      ul {
+        flex-direction: column;
+        li {
+          align-items: center;
+
+          .key {
+            color: $visited-clr;
+            font-weight: 700;
+            padding: 0.375em;
+            width: 25%;
+          }
+          .progress-container {
+            align-items: center;
+
+            progress {
+              //   display: flex;
+              accent-color: $star-clr;
+              position: relative;
+              //   background-color: #fff;
+              -webkit-appearance: none;
+              appearance: none;
+              margin-inline-end: 10px;
+              margin-block-start: 8px;
+              height: 8px;
+              //   margin-inline-end: 10px;
+              //   margin-block-start: 8px;
+
+              &::-webkit-progress-bar {
+                overflow: hidden;
+                accent-color: $star-clr;
+                background-color: $grey-txt-lighter;
+                border-radius: 10px;
+              }
+              &::-webkit-progress-value {
+                border-radius: 10px;
+                background-color: $star-clr;
+              }
+            }
+            .star-num {
+              color: $visited-clr;
+            }
+          }
+        }
+      }
+    }
+
+    .ranking {
+      flex: 1;
+      padding-inline-start: rem(6px);
+
+      h6 {
+        font-size: 1rem;
+        font-weight: 700;
+        padding-block-end: 1em;
+        line-height: 140%;
+        color: $secondary-clr-dark;
+      }
+
+      ul {
+        li {
+          padding-block-end: 0.5em;
+          align-items: center;
+          justify-content: space-between;
+          color: $secondary-clr-lighter;
+
+          .star-container {
+            margin-left: 12px;
+            line-height: 21px;
+            color: $star-clr;
+            font-weight: 700;
+
+            span {
+              svg {
+                fill: $star-clr;
+              }
+            }
+
+            .value {
+              padding-inline-start: 0.25em;
+            //   margin-block-start: 0.125em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
