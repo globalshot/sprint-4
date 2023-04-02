@@ -54,8 +54,8 @@
                 </path>
             </svg>
             <span>{{ gig.owner.rate }}</span>
-            <span v-if="gig.reviews" class="num">({{ gig.reviews.length }})</span>
-            <span v-else class="num">(0)</span>
+            <span v-if="gig.reviews" class="num"> ({{ gig.reviews.length }})</span>
+            <span v-else class="num"> (0)</span>
             <!-- <span class="num">({{ this.gigReviews(gig) }})</span> -->
         </div>
         <div class="price-container flex">
