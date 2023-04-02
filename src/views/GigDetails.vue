@@ -31,7 +31,7 @@
                         <AboutSeller :gig="gig" />
 
 
-
+                        <ReviewStats :gig="gig" :reviews="reviews" ref="reviews" />
                         <!-- not from store yet -->
                         <GigReviews :gig="gig" :reviews="reviews" ref="reviews" />
 
@@ -75,6 +75,7 @@ import AboutSeller from '../components/gigDetails/AboutSeller.vue'
 import GigDescription from '../components/gigDetails/GigDescription.vue'
 import GigBottom from '../components/gigDetails/GigBottom.vue'
 import SidebarSmall from '../components/gigDetails/SidebarSmall.vue'
+import ReviewStats from '../components/gigDetails/ReviewStats.vue'
 
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
@@ -117,6 +118,7 @@ export default {
         GigReviews,
         GigDescription,
         GigBottom,
+        ReviewStats,
 
         VueperSlides,
         VueperSlide,
