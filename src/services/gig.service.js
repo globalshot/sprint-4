@@ -92,7 +92,8 @@ async function save(gig) {
         savedGig = await httpService.put(`gig/${gig._id}`, gig)
     } else {
         gig.owner = await userService.getLoggedinUser()
-        gig.owner.rate = "5.0"
+        gig.owner.rate = (utilService.getRandomIntInc(45,50)/10).toString()
+        console.log(gig.owner)
         gig.imgUrl = [gigPics[utilService.getRandomIntInc(0,50)],
                       gigPics[utilService.getRandomIntInc(0,50)]]
         // gig.tags = ["logo-design", "video"]
@@ -123,7 +124,9 @@ async function save(gig) {
                 "features": ["y", "y", "y", "y", "y", "y"]
             },
         ]
-        gig.reviews = []
+        gig.reviews = [],
+        gig.reviewsCount = utilService.getRandomIntInc(100,400)
+        console.log(gig);
         savedGig = await httpService.post('gig', gig)
     }
     return savedGig

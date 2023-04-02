@@ -242,6 +242,7 @@ export default {
       let { txt, tag } = this.$route.query
       let filterBy = { txt, tag }
       this.$store.dispatch({ type: 'loadGigs', filterBy })
+      this.filterBy.txt = null
     },
     loggedinUser() {
       return this.$store.getters.loggedinUser

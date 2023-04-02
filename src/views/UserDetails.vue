@@ -101,6 +101,9 @@ export default {
     name: "UserDetails",
     data() {
         return {
+            demoUser: {
+                _id:''
+            },
             user: null,
             orders: null,
             gigs: null,
@@ -138,7 +141,11 @@ export default {
     },
     computed: {
         loggedinUser() {
-            return this.$store.getters.loggedinUser
+            if (this.$store.getters.loggedinUser)
+            {
+                return this.$store.getters.loggedinUser
+            }
+            return this.demoUser
         },
         userId() {
             if (!this.user) return ''

@@ -1,7 +1,7 @@
 <template>
     <section class="reviews-stat flex column">
         <section class="stat-header flex align-center">
-            <h2>370 Reviews </h2>
+            <h2>{{ gig.reviewsCount }} Reviews </h2>
             <section class="reviews-rate flex">
                 <ul class="stars clean-list flex">
                     <li><span class="flex justify-center align-center"><svg xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@
                                 </path>
                             </svg></span></li>
                 </ul>
-                <p class="rating-score">5</p>
+                <p class="rating-score">{{ gig.owner.rate }}</p>
             </section>
         </section>
         <section class="stat-main flex">
@@ -43,23 +43,23 @@
                 <ul class="clean-list flex column">
                     <li class="flex align-center"><span class="key">5 Stars</span>
                         <section class="progress-container flex align-center"><progress max="370"
-                                value="333"></progress><span class="star-num">(333)</span></section>
+                                value="333"></progress><span class="star-num">{{ Math.round(gig.reviewsCount * gig.owner.rate / 5) }}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">4 Stars</span>
                         <section class="progress-container flex align-center"><progress max="370"
-                                value="30"></progress><span class="star-num">(30)</span></section>
+                                value="30"></progress><span class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.75)}}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">3 Stars</span>
                         <section class="progress-container flex align-center"><progress max="370" value="6"></progress><span
-                                class="star-num">(6)</span></section>
+                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.12)}}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">2 Stars</span>
                         <section class="progress-container flex align-center"><progress max="370" value="2"></progress><span
-                                class="star-num">(2)</span></section>
+                                class="star-num">{{ Math.floor((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.08)}}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">1 Star</span>
                         <section class="progress-container flex align-center"><progress max="370" value="1"></progress><span
-                                class="star-num">(1)</span></section>
+                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.05)}}</span></section>
                     </li>
                 </ul>
             </section>
@@ -76,7 +76,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <span class="value">5</span>
+                            <span class="value">5.0</span>
                         </section>
                     </li>
                     <li class="flex align-center space-between"><span class="key">Recommend to a friend</span>
@@ -88,7 +88,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <span class="value">5</span>
+                            <span class="value">4.9</span>
                         </section>
                     </li>
                     <li class="flex align-center space-between">
@@ -101,7 +101,7 @@
                                     </path>
                                 </svg>
                             </span>
-                            <span class="value">5</span>
+                            <span class="value">5.0</span>
                         </section>
                     </li>
                 </ul>
@@ -109,3 +109,15 @@
         </section>
     </section>
 </template>
+
+<script>
+export default {
+    props: {
+
+        gig: {
+            type: Object,
+            required: true
+        },
+    }
+}
+</script>
