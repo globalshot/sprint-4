@@ -18,7 +18,8 @@ export const orderService = {
     save,
     remove,
     getEmptyOrder,
-    addOrderMsg
+    addOrderMsg,
+    update
 }
 window.cs = orderService
 
@@ -43,6 +44,10 @@ async function remove(orderId) {
 
 async function save(gigId) {
     return await httpService.post(API + gigId)
+}
+
+async function update(order) {
+    return await httpService.put(API + order._id, order)
 }
 
 async function addOrderMsg(orderId, txt) {
