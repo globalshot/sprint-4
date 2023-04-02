@@ -99,9 +99,6 @@ export default {
         this.getGig()
     },
     computed: {
-        well() {
-            return this.gig
-        },
         reviews() {
             return this.$store.getters.getReviews
 

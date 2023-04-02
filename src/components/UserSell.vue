@@ -42,7 +42,36 @@
                                         <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
-                                        <h4>{{ order.status }}</h4>
+                                        <h4 @click="toggleStatusChange">{{ order.status }}</h4>
+                                        <div class="delivery-container">
+                                            <form @submit.prevent v-if="toggleStatus" class="delivery-dropdown">
+                                                <div class="inputs flex">
+                                                    <div class="radio-list">
+                                                        <div @click="setStatus('finished', order)" class="radio-item-wrapper">
+                                                            <label class="n3bUTho Y7LofzN radio-item">
+                                                                <div class="inner-radio">
+                                                                    <span>finished</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div @click="setStatus('in progress', order)" class="radio-item-wrapper">
+                                                            <label class="n3bUTho Y7LofzN radio-item">
+                                                                <div class="inner-radio">
+                                                                    <span>in progress</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                        <div @click="setStatus('rejected', order)" class="radio-item-wrapper">
+                                                            <label class="n3bUTho Y7LofzN radio-item">
+                                                                <div class="inner-radio">
+                                                                    <span>rejected</span>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -63,19 +92,40 @@
 <script>
 import LongText from './LongText.vue'
 import { orderService } from '../services/order.service'
+import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 export default {
     name: "UserOrders",
     data() {
         return {
             orders: null,
-            ordersLength: 0
+            ordersLength: 0,
+            toggleStatus: false
         }
     },
     async created() {
         // this.orders = await orderService.query()
         this.userOrders
     },
-
+    methods: {
+        toggleStatusChange() {
+            this.toggleStatus = !this.toggleStatus
+        },
+        setStatus(status, order){
+            order.status = status
+            this.updateOrder(order)
+        },
+        async updateOrder(order) {
+            try {
+                await this.$store.dispatch({ type: 'updateOrder', order: {...order} })
+                showSuccessMsg('Order Updated')
+                console.log('got here')
+            }
+            catch (err) {
+                console.log(err, 'order not Updated');
+                showErrorMsg('Failed to update')
+            }
+        },
+    },
     computed: {
         loggedinUser() {
             return this.$store.getters.loggedinUser

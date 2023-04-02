@@ -81,10 +81,13 @@ export default {
         async saveGig() {
             const type = this.gig._id ? 'updateGig' : 'addGig'
             try {
+<<<<<<< HEAD
                 console.log(this.gig);
-                // await this.$store.dispatch({ type, gig: { ...this.gig } })
+=======
+>>>>>>> 00adffae0d1033af39919ea00ee12fc920f37286
+                await this.$store.dispatch({ type, gig: { ...this.gig } })
                 showSuccessMsg('Gig Saved')
-                // this.$router.push('/gig')
+                this.$router.push('/gig')
             }
             catch (err) {
                 showErrorMsg('Failed to save')

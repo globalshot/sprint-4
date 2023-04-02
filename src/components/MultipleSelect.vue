@@ -87,15 +87,6 @@
                             </label>
                         </div>
                     </div>
-                    <!-- <div>
-                        <p class="bold">MAX.</p>
-                        <div class="input-container flex">
-                            <input v-model="filterBy.price.max" placeholder="Any">
-                            <div class="icon-container last">
-                                <i>$</i>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="buttons flex">
                     <div @click="clearPrice">Clear All</div>
