@@ -45,6 +45,7 @@
         <RouterLink class="btn" :to="'/gig/' + gig._id">
             <h3 class="title">
                 <LongText class="long-text" :txt="gig.title" />
+                <!-- <span>{{ gig.title }}</span> -->
             </h3>
         </RouterLink>
         <div class="rating grid star">

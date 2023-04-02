@@ -29,7 +29,7 @@
                                         </div>
                                         <div class="reviewer-sub-details flex">
                                             <div class="country flex">
-                                                <img class="country-flag" :src=flag[review.user.country] alt="" loading="lazy">
+                                                <!-- <img class="country-flag" :src=flag[review.user.country] alt="" loading="lazy"> -->
                                                 <div class="country-name tbody-6">{{ review.user.country }} </div>
                                             </div>
                                         </div>

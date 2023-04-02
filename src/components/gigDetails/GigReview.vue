@@ -22,7 +22,7 @@
                                 <div class="user-review">
                                     <h6>{{ review.user.fullname }}</h6>
                                     <div class="country">
-                                        <!-- <img class="country-flag" :src=flag[review.user.country] alt="" loading="lazy"> -->
+                                        <img class="country-flag" :src=flag[review.user.country] alt="" loading="lazy">
 
                                         <div class="country-name tbody-6">{{ review.user.country }}</div>
                                     </div>

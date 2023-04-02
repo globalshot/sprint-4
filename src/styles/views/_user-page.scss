@@ -179,7 +179,7 @@
               //   width: 100%;
               text-align: center;
               width: 20%;
-              min-width: 80px;
+              min-width: rem(80px);
               // padding-inline-start: 2.75rem;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -187,22 +187,28 @@
               &:first-of-type {
                 text-align: start;
                 padding-inline-start: 0.75rem;
+                width: rem(145px);
               }
               &:nth-of-type(2) {
                 text-align: start;
-                padding-inline-start: 0.75rem;
-                min-width: rem(312px);
+                // padding-inline-start: 0.75rem;
+                // min-width: rem(312px);
+                // flex: 1;
+                flex-grow: 2;
               }
               &:nth-of-type(3) {
-                padding-inline-start: 2rem;
+                // padding-inline-start: 2rem;
+                width: rem(100px);
               }
 
               &:nth-of-type(4) {
-                text-align: end;
+                text-align: center;
                 // margin-inline-end: -2.5rem;
+                width: rem(150px);
               }
               &:last-of-type {
                 text-align: center;
+                width: rem(100px);
               }
             }
           }
@@ -219,21 +225,21 @@
             }
             .table-entity {
               gap: rem(10px);
-              height: 80px;
+              height: 100px;
               padding: 1rem;
               align-items: center;
               color: $grey-txt-dark;
+              
 
               .buyer-col {
                 color: $grey-txt-dark;
                 flex-direction: column;
-                align-items: center;
+                align-items: start;
                 gap: 10px;
-                padding-inline-end: 1rem;
+                // padding-inline-end: .2rem;
+                width: rem(130px);
 
-                .gig-col {
-                  min-width: rem(312px);
-                }
+                
 
                 // padding: 1rem;
                 .img-container {
@@ -252,8 +258,16 @@
               }
 
               .gig-col {
-                min-width: rem(306px);
+                min-width: rem(312px);
+                flex-grow: 2;
               }
+              .due-col {
+                width: rem(120px);
+              }
+              .price-col {
+                width: rem(120px);
+              }
+
             }
           }
         }

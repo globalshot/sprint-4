@@ -92,6 +92,12 @@
       -o-transition: 0.15s ease-in-out;
       transition: 0.15s ease-in-out;
       word-break: break-word;
+      
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+      white-space: pre-wrap; 
     }
   }
 
@@ -138,7 +144,7 @@
       font-family: $font1;
       padding-bottom: rem(2px);
       display: inline-block;
-      font-size: rem(16px);
+      font-size: 1em;
       font-weight: 700;
       letter-spacing: em(1px);
       padding: 6px 0 0;
@@ -172,6 +178,7 @@
 
   &:hover .title .long-text {
     color: $primary-clr;
+   
   }
   .btns-container {
     position: absolute;

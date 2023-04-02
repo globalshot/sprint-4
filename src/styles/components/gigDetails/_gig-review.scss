@@ -2,24 +2,20 @@
 
 .gig-review {
   position: relative;
-  display: block;
   margin-block-end: 8.3rem;
-  height: fit-content;
-
-  // max-height: rem(300px);
-  .vueperslides {
-    height: fit-content;
-
-    .vueperslide {
-      height: fit-content;
-      padding-block-end: 11em;
       // overflow: hidden;
-      word-wrap: break-word;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+  .vueperslides {
+    .vueperslide {
+      padding-block-end: 6em;
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
 
+      // width: rem(677px);
       &__content {
         min-height: 0;
-        // height: fit-content;
-        // width: 97%;
         color: white;
       }
     }
@@ -32,6 +28,7 @@
       right: rem(-18px);
       top: 50%;
       opacity: 1;
+      overflow-wrap: br;
     }
 
     @include for-medium-layout {
@@ -47,10 +44,6 @@
       }
     }
   }
-
-  // @include for-medium-layout {
-  //   margin-block-end: rem(64px);
-  // }
 
   header {
     justify-content: space-between;
@@ -81,20 +74,26 @@
   }
 
   .carousel-container {
-    // max-height: fit-content;
-    height: fit-content;
-
-    width: 100%;
-    // padding: 1rem;
+    width: rem(687px);
+    height: 120px;
+    // overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .review {
+    // overflow: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+    white-space: pre-wrap;
     display: flex;
     outline: none;
-    width: rem(677px);
+    width: rem(657px);
     float: left;
-    height: fit-content;
-    min-height: 1px;
     color: $secondary-clr;
     @include for-small-layout {
       padding: 0 rem(9px);
@@ -127,14 +126,11 @@
     .review-details {
       display: flex;
       flex-direction: column;
-      height: fit-content;
-
-      //   align-items: center;
     }
     .user-review {
       display: flex;
       align-items: center;
-      height: fit-content;
+      // height: fit-content;
 
       h6 {
         font-size: 1em;
@@ -148,7 +144,7 @@
         display: inline-flex;
         align-items: center;
         padding-inline-end: 0.5rem;
-        
+
         .country-flag {
           border-radius: 4px;
           height: rem(20px);
@@ -176,17 +172,19 @@
       }
     }
     .review-description {
-      // word-wrap: break-word;
       font-weight: 500;
-      height: 100%;
       line-height: 120%;
-      max-width: 400px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+      white-space: pre-wrap;
 
       @include for-normal-layout {
-        max-width: 500px;
+        width: rem(657px);
       }
       @include for-normal-layout {
-        max-width: 100%;
+        width: rem(657px);
       }
     }
   }

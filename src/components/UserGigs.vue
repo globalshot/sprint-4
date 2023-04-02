@@ -27,8 +27,8 @@
                 <img :src="gig.imgUrl[0]" alt="" class="user-gigs-img">
                 <h3 class="title">
                     <RouterLink :to="'/gig/' + gig._id">
-
-                        <LongText class="long-text" :txt="gig.title" />
+                        <span class="long-text">{{ gig.title }}</span>
+                        <!-- <LongText class="long-text" :txt="gig.title" /> -->
                     </RouterLink>
                 </h3>
                 <div class="price-container flex" style="justify-content: flex-end;">
