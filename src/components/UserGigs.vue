@@ -1,4 +1,5 @@
 <template>
+        <!-- <div v-if="loading" class="loader"></div> -->
     <div v-if="gigs" class="flex wrap my-gigs">
 
 
@@ -13,32 +14,32 @@
             </div>
         </div>
         <!-- </div> -->
-        <div v-for="gig in filteredGigs" :key="gig._id" class="gig-preview" @mouseover="showBtns = true"
-            @mouseleave="showBtns = false">
-            <div>
-                <div v-if="this.$route.params.id && this.$route.params.id === this.userId" class="btns-container">
-                    <RouterLink class="btn btn-owner" v-if="showBtns" :to="'/edit/' + gig._id"><i
-                            class="fa-solid fa-pencil"></i>
-                    </RouterLink>
-                    <button class="btn btn-owner" v-if="showBtns" @click="removeGig(gig._id)"><i
-                            class="fa-solid fa-trash-can"></i></button>
-                </div>
+        <div  v-for="gig in filteredGigs" :key="gig._id" class="gig-preview" @mouseover="showBtns = true"
+        @mouseleave="showBtns = false">
+        <div  >
+                    <div v-if="this.$route.params.id && this.$route.params.id === this.userId" class="btns-container">
+                        <RouterLink class="btn btn-owner" v-if="showBtns" :to="'/edit/' + gig._id"><i
+                                class="fa-solid fa-pencil"></i>
+                        </RouterLink>
+                        <button class="btn btn-owner" v-if="showBtns" @click="removeGig(gig._id)"><i
+                                class="fa-solid fa-trash-can"></i></button>
+                    </div>
 
-                <img :src="gig.imgUrl[0]" alt="" class="user-gigs-img">
-                <h3 class="title">
-                    <RouterLink :to="'/gig/' + gig._id">
-                        <span class="long-text">{{ gig.title }}</span>
-                        <!-- <LongText class="long-text" :txt="gig.title" /> -->
-                    </RouterLink>
-                </h3>
-                <div class="price-container flex" style="justify-content: flex-end;">
-                    <div class="flex">
-                        <h4>STARTING AT </h4>
-                        <span class="price">US${{ gig.price }}</span>
+                    <img :src="gig.imgUrl[0]" alt="" class="user-gigs-img">
+                    <h3 class="title">
+                        <RouterLink :to="'/gig/' + gig._id">
+                            <span class="long-text">{{ gig.title }}</span>
+                            <!-- <LongText class="long-text" :txt="gig.title" /> -->
+                        </RouterLink>
+                    </h3>
+                    <div class="price-container flex" style="justify-content: flex-end;">
+                        <div class="flex">
+                            <h4>STARTING AT </h4>
+                            <span class="price">US${{ gig.price }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 </template>
 
@@ -52,11 +53,19 @@ export default {
     },
     data() {
         return {
-            // user: this.loggedinUser,
+            loading: true,
             count: 10,
             showBtns: false,
             // test: this.gigs
         }
+    },
+    mounted() {
+        window.onload = () => {
+            this.loading = false;
+        };
+        setTimeout(() => {
+            this.loading = false;
+        }, 1000);
     },
     methods: {
 

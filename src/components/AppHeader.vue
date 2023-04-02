@@ -97,34 +97,35 @@
           :style="'color: ' + ['#ff5252', '#42b983'][i % 2]" />
         </vueper-slides> -->
 
-        <RouterLink to="/gig?tag=graphics-design" @click="loadGig">
+        <RouterLink to="/gig?tag=graphics-design" >
           Graphics &amp; Design
         </RouterLink>
-        <RouterLink to="/gig?tag=marketing" @click="loadGig">
+        <RouterLink to="/gig?tag=marketing" >
           Digital Marketing
         </RouterLink>
-        <RouterLink to="/gig?tag=word-press" @click="loadGig">
+        <RouterLink to="/gig?tag=word-press" >
           Writing &amp; Translation
         </RouterLink>
-        <RouterLink to="/gig?tag=video" @click="loadGig">
+        <RouterLink to="/gig?tag=video" >
           Video &amp; Animation
         </RouterLink>
-        <RouterLink to="/gig?tag=music" @click="loadGig">
+        <RouterLink to="/gig?tag=music" >
           Music &amp; Audio
         </RouterLink>
-        <RouterLink to="/gig?tag=programming-tech" @click="loadGig">
+        <RouterLink to="/gig?tag=programming-tech">
+        <!-- <RouterLink to="/gig?tag=programming-tech" @click="loadGig"> -->
           Programming &amp; Tech
         </RouterLink>
-        <RouterLink to="/gig?tag=photography" @click="loadGig">
+        <RouterLink to="/gig?tag=photography" >
           Photography
         </RouterLink>
-        <RouterLink to="/gig?tag=business" @click="loadGig">
+        <RouterLink to="/gig?tag=business" >
           Business
         </RouterLink>
         <!-- <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
           Lifestyle
         </RouterLink> -->
-        <RouterLink to="/gig?tag=ai-services" @click="loadGig">
+        <RouterLink to="/gig?tag=ai-services" >
           AI Services
         </RouterLink>
       </div>

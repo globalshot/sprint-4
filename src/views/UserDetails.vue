@@ -1,6 +1,7 @@
 
 <template>
-    <div v-if="user" class="flex justify-between dashboard">
+    <div v-if="loading" class="loader"></div>
+    <div v-else-if="user" class="flex justify-between dashboard">
         <div class="user-stats"><!--user details-->
             <div class="user-info">
 
@@ -103,7 +104,8 @@ export default {
             user: null,
             orders: null,
             gigs: null,
-            seller: false
+            seller: false,
+            loading: true,
         }
     },
     methods: {
@@ -111,6 +113,14 @@ export default {
             this.seller = !this.seller
 
         }
+    },
+    mounted() {
+        window.onload = () => {
+            this.loading = false;
+        };
+        setTimeout(() => {
+            this.loading = false;
+        }, 1000);
     },
     async created() {
 

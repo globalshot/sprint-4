@@ -1,13 +1,19 @@
 <template>
-    <user-msg />
-    <Login />
-    <div class="main-app">
-        <Header></Header>
-        <main class="main-layout">
-            <!-- <p>app vue</p> -->
-            <router-view />
-        </main>
-        <Footer class="full"></Footer>
+    <div v-cloak>
+        <div v-if="loading" class="loader"></div>
+        <div v-else>
+            <user-msg />
+            <Login />
+            <div class="main-app">
+                <Header></Header>
+                <main class="main-layout">
+                    <!-- <p>app vue</p> -->
+                    <router-view />
+                </main>
+                <Footer class="full"></Footer>
+            </div>
+            <!-- your content goes here -->
+        </div>
     </div>
 </template>
 
@@ -32,14 +38,25 @@ export default {
         VueperSlides,
         VueperSlide,
     },
+    data() {
+        return {
+            loading: true,
+        }
+    },
+    mounted() {
+        // simulate a delay to show the loader
+        window.onload = () => {
+            this.loading = false
+        }
+    },
 
     created() {
         this.$store.dispatch({ type: 'loadGigs', filterBy: null })
         this.$store.dispatch({ type: 'loadUser' })
-        socketService.on('user-ordered', (msg)=>{
+        socketService.on('user-ordered', (msg) => {
             showSuccessMsg(msg)
         })
-        socketService.on('order-status-updaate', (msg)=>{
+        socketService.on('order-status-updaate', (msg) => {
             showSuccessMsg(msg)
         })
     }

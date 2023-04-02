@@ -1,31 +1,34 @@
 
 
 <template>
-    <div v-if="!this.$route.params.id">
-        <ul class="bread-crumbles flex">
-            <li class="btn-home">
-                <a class="" href="/">
-                    <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/home-breadcrumb.2ba1681.svg"
-                        alt="Fiverr">
-                </a>
-            </li>
-            <li>
-                <span class="divider">/</span>
-                <a class="category">{{ header() }}</a>
-            </li>
-        </ul>
-        <h1 class="gig-header">{{ header() }}</h1>
-        <!-- <h1 class="gig-header" v-else>Explore</h1> -->
-        <MultipleSelect />
-        <div class="services-sort">
-            <div class="count-services">
-                <span>{{ gigs.length }} </span>
-                <span v-if="gigs.length === 1"> service available</span>
-                <span v-else> services available</span>
+    <div v-if="loading" class="loader"></div>
+    <div v-else>
+        <div v-if="!this.$route.params.id">
+            <ul class="bread-crumbles flex">
+                <li class="btn-home">
+                    <a class="" href="/">
+                        <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/search_perseus/home-breadcrumb.2ba1681.svg"
+                            alt="Fiverr">
+                    </a>
+                </li>
+                <li>
+                    <span class="divider">/</span>
+                    <a class="category">{{ header() }}</a>
+                </li>
+            </ul>
+            <h1 class="gig-header">{{ header() }}</h1>
+            <!-- <h1 class="gig-header" v-else>Explore</h1> -->
+            <MultipleSelect />
+            <div class="services-sort">
+                <div class="count-services">
+                    <span>{{ gigs.length }} </span>
+                    <span v-if="gigs.length === 1"> service available</span>
+                    <span v-else> services available</span>
+                </div>
             </div>
         </div>
+        <GigList v-if="gigs" :gigs="gigs" @removeGig="removeGig" />
     </div>
-    <GigList v-if="gigs" :gigs="gigs" @removeGig="removeGig" />
 </template>
 
 <script>
@@ -59,8 +62,17 @@ export default {
                 tag: '',
                 id: null,
             },
-            loggedinUser: null
+            loggedinUser: null,
+            loading: true,
         }
+    },
+    mounted() {
+        window.onload = () => {
+            this.loading = false;
+        };
+        setTimeout(() => {
+            this.loading = false;
+        }, 600);
     },
     methods: {
 
