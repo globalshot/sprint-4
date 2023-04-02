@@ -186,7 +186,7 @@ export default {
       //   console.log('hello');
       // }
       this.$store.dispatch({ type: 'logout' })
-      if (this.$route.name === 'UserDetails') {
+      if (this.$route.name === 'UserDetails' || this.$route.name === 'GigEdit') {
         this.$router.push({ path: '/' })
       }
     },

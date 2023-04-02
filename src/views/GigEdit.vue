@@ -46,7 +46,7 @@
                                 on average to finish this gig</p>
                         </span>
                         <select v-model="gig.daysToMake" class="c-input" name="" id="">
-                            <option v-for="i in 20" value="i">{{ i }}</option>
+                            <option v-for="i in 20" :value="i">{{ i }}</option>
                         </select>
                     </label>
                     <label class="price flex column">
