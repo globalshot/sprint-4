@@ -152,8 +152,13 @@ export default {
             return this.seller
         }
     },
-    // watch: {
-    // },
+    watch: {
+        '$route.params.id': {
+            handler: function () {
+                location.reload()
+            }
+        }
+    },
     components: {
         UserGigs,
         UserSell,

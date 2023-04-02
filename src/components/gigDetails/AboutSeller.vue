@@ -36,11 +36,11 @@
                     </div>
                 </div>
 
-                <div class="stats-desc">
+                <div v-if="user" class="stats-desc">
                     <ul class="user-stats flex">
                         <li class="flex column">
                             <span class="key">From</span>
-                            <!-- <span class="value">{{ user.information.country }}</span> -->
+                            <span class="value">{{ user.information.country }}</span>
                         </li>
                         <li class="flex column">
                             <span class="key">Member since</span>
@@ -48,14 +48,18 @@
                         </li>
                         <li class="flex column">
                             <span class="key">Avg. response time</span>
-                            <span class="value">1 hour</span>
+                            <span class="value">{{ user.information.avgResponse }}</span>
                         </li>
                         <li class="flex column"><span class="key">Last delivery</span>
-                            <span class="value">about 14 hours</span>
+                            <span class="value">{{ user.information.lastDelivery }}</span>
                         </li>
                     </ul>
                     <section class="seller-desc">
                         <p>
+                            {{ user.description }}
+
+                        </p>
+                        <!-- <p>
                             I will translate all translations sent to me within 12 hours. I can translate French to English
                             and English to French. Translations completed by a Bilingual French &amp; English speaker and an
                             experienced translator. I have extensive experience translation all kinds of projects. If you
@@ -63,7 +67,7 @@
                             have a larger project to do, don't hesitate to get in contact and we can find a solution that
                             works for you. Please send a message so I can send you a custom order.
 
-                        </p>
+                        </p> -->
                     </section>
                 </div>
             </div>
@@ -79,19 +83,23 @@ export default {
             type: Object,
             required: true
         },
-        user: null,
+        // user: null,
     },
     async created() {
         try {
-            this.user = await userService.getById(gig.owner._id)
-            console.log('user:', this.user);
+            // this.user = await userService.getById(gig.owner._id)
+            await this.$store.dispatch({ type: 'getUser', userId: this.gig.owner._id })
         }
         catch (err) {
             console.log(err)
         }
     },
     computed: {
+        user() {
+            console.log(this.$store.getters.user)
+            return this.$store.getters.user
 
+        },
     }
 }
 </script>

@@ -11,6 +11,7 @@ export const userStore = {
         watchedUser: null
     },
     getters: {
+        user({ user }) { return user },
         users({ users }) { return users },
         loggedinUser({ loggedinUser }) { return loggedinUser },
         watchedUser({ watchedUser }) { return watchedUser }
@@ -25,6 +26,9 @@ export const userStore = {
         },
         setUsers(state, { users }) {
             state.users = users
+        },
+        setUser(state, { user }) {
+            state.user = user
         },
         removeUser(state, { userId }) {
             state.users = state.users.filter(user => user._id !== userId)
@@ -71,6 +75,17 @@ export const userStore = {
                 commit({ type: 'setUsers', users })
             } catch (err) {
                 console.log('userStore: Error in loadUsers', err)
+                throw err
+            }
+        },
+        async getUser({ commit }, { userId }) {
+            try {
+                let user = await userService.getById(userId)
+                console.log(user)
+                commit({ type: 'setUser', user })
+                // return user
+            } catch (err) {
+                console.log('userStore: Error getting user', err)
                 throw err
             }
         },

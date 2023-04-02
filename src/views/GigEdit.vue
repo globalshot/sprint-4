@@ -82,9 +82,9 @@ export default {
             const type = this.gig._id ? 'updateGig' : 'addGig'
             try {
                 console.log(this.gig);
-                // await this.$store.dispatch({ type, gig: { ...this.gig } })
+                await this.$store.dispatch({ type, gig: { ...this.gig } })
                 showSuccessMsg('Gig Saved')
-                // this.$router.push('/gig')
+                this.$router.push('/gig')
             }
             catch (err) {
                 showErrorMsg('Failed to save')
