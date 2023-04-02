@@ -115,8 +115,6 @@ export default {
     async created() {
 
         try {
-            console.log(this.$route.params)
-            console.log(this.user)
             const { id } = this.$route.params
             this.user = await userService.getById(id)
             this.orders = await orderService.query()

@@ -35,7 +35,6 @@ function createSocketService() {
       }, 500)
     },
     on(eventName, cb) {
-      console.log(socket);
       socket.on(eventName, cb)
     },
     off(eventName, cb = null) {
@@ -44,7 +43,6 @@ function createSocketService() {
       else socket.off(eventName, cb)
     },
     emit(eventName, data) {
-      console.log(eventName, data);
       data = JSON.parse(JSON.stringify(data))
       socket.emit(eventName, data)
     },

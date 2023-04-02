@@ -197,18 +197,15 @@ export default {
             try {
                 await this.$store.dispatch({ type: 'addOrder', gigId: this.gig._id })
                 showSuccessMsg('Order Saved')
-                console.log('got here')
                 this.$router.push('/user/' + this.loggedinUser._id)
             }
             catch (err) {
-                console.log(err, 'order not saved');
                 showErrorMsg('Failed to save')
             }
         },
     },
     computed: {
         loggedinUser() {
-            console.log(this.$store.getters.loggedinUser)
             return this.$store.getters.loggedinUser
         },
         service() {

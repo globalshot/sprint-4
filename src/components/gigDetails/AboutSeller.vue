@@ -96,7 +96,6 @@ export default {
     },
     computed: {
         user() {
-            console.log(this.$store.getters.user)
             return this.$store.getters.user
 
         },

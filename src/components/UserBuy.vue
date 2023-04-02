@@ -41,7 +41,8 @@
                                         <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
-                                        <h4>{{ order.status }}</h4>
+                                        <h4 :class="statusClassObject(order.status)">
+                                        {{ order.status }}</h4>
                                     </div>
                                 </div>
                             </section>
@@ -74,6 +75,15 @@ export default {
     async created() {
         // this.orders = await orderService.query()
         this.userOrders
+    },
+    methods:{
+        statusClassObject(status) {//to continue for 2 others too
+            return {
+                finished: status === 'Finished'? true : false,
+                rejected: status === 'Rejected'? true : false,
+                waiting: status === 'In progress'? true : false
+            }
+        }
     },
 
     computed: {

@@ -42,13 +42,13 @@
                                         <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
-                                        <h4 @click="toggleStatusChange">
-                                        {{order.status }}</h4><!-- :class="statusClassObject(order.status)"-->
+                                        <h4 @click="toggleStatusChange(order._id)" :class="statusClassObject(order.status)" class="clickable">
+                                        {{order.status }}</h4>
                                         <div class="delivery-container">
-                                            <form @submit.prevent v-if="toggleStatus" class="delivery-dropdown">
+                                            <form @submit.prevent v-if="toggleStatus && selectedOrderId === order._id" class="delivery-dropdown">
                                                 <div class="inputs flex">
                                                     <div class="radio-list">
-                                                        <div @click="setStatus('finished', order)"
+                                                        <div @click="setStatus('Finished', order)"
                                                             class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
@@ -56,7 +56,7 @@
                                                                 </div>
                                                             </label>
                                                         </div>
-                                                        <div @click="setStatus('in progress', order)"
+                                                        <div @click="setStatus('In progress', order)"
                                                             class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
@@ -64,7 +64,7 @@
                                                                 </div>
                                                             </label>
                                                         </div>
-                                                        <div @click="setStatus('rejected', order)"
+                                                        <div @click="setStatus('Rejected', order)"
                                                             class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
@@ -104,7 +104,8 @@ export default {
         return {
             orders: null,
             ordersLength: 0,
-            toggleStatus: false
+            toggleStatus: false,
+            selectedOrderId: '',
         }
     },
     async created() {
@@ -112,8 +113,9 @@ export default {
         this.userOrders
     },
     methods: {
-        toggleStatusChange() {
+        toggleStatusChange(id) {
             this.toggleStatus = !this.toggleStatus
+            this.selectedOrderId = id
         },
         setStatus(status, order) {
             order.status = status
@@ -127,10 +129,16 @@ export default {
                 showSuccessMsg('Order Updated')
             }
             catch (err) {
-                console.log(err, 'order not Updated')
                 showErrorMsg('Failed to update')
             }
         },
+        statusClassObject(status) {//to continue for 2 others too
+            return {
+                finished: status === 'Finished'? true : false,
+                rejected: status === 'Rejected'? true : false,
+                waiting: status === 'In progress'? true : false
+            }
+        }
     },
     computed: {
         loggedinUser() {
@@ -148,14 +156,7 @@ export default {
             this.ordersLength = newOrders.length
             // return newOrders.length
         },
-        statusClassObject(status) {//to continue for 2 others too
-            return {
-                finished: status === 'finished'? true : false
-            }
-            if (status === 'finished') return finished
-            if (status === 'rejected') return rejected
-            return waiting
-        }
+        
     },
     components: {
         LongText,

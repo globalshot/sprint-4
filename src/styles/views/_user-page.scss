@@ -260,3 +260,21 @@
     }
   }
 }
+
+.finished{
+  background-color: $success-clr;
+  padding: 3px;
+  color: white;
+}
+
+.rejected{
+  background-color: $danger-clr;
+  padding: 3px;
+  color: white;
+}
+
+.waiting{
+  background-color: $star-clr;
+  padding: 3px;
+  color: white;
+}

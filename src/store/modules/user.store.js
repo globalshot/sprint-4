@@ -82,7 +82,6 @@ export const userStore = {
         async getUser({ commit }, { userId }) {
             try {
                 let user = await userService.getById(userId)
-                console.log(user)
                 commit({ type: 'setUser', user })
                 // return user
             } catch (err) {

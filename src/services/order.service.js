@@ -90,9 +90,6 @@ async function _createOrder(gigId) {
         const gig = await gigService.getById(gigId)
         const buyer = await userService.getLoggedinUser()
 
-        console.log(gig)
-        console.log(buyer)
-
         return {
             buyer: {
                 _id: buyer._id,
@@ -124,7 +121,6 @@ function _filter(gigs, filterBy) {
         gigs = gigs.filter(gig => gig.tags.includes(filterBy.tag))
     }
     if (filterBy.price) {
-        console.log(gigs[0].packages[0].price)
         gigs = gigs.filter(gig => (gig.packages[0].price >= filterBy.price.min && gig.packages[0].price <= filterBy.price.max))
     }
     if (filterBy.daysToMake) {

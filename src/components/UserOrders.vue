@@ -42,14 +42,12 @@ export default {
         },
         async userOrders() {
             let orders = await orderService.query()
-            console.log(orders)
             let newOrders = []
             for (let i=0; i<orders.length; i++){
                 if(this.loggedinUser._id === orders[i].buyer._id) {
                     newOrders.push(orders[i])
                 }
             }
-            console.log(newOrders.length)
             this.orders = newOrders
             this.ordersLength = newOrders.length
             // return newOrders.length

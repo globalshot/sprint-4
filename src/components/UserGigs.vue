@@ -62,7 +62,6 @@ export default {
 
         async removeGig(gigId) {
             try {
-                console.log(gigId)
                 await this.$store.dispatch({ type: 'removeGig', gigId })
                 showSuccessMsg('removed')
             }
