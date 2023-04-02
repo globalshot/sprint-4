@@ -260,6 +260,13 @@ export default {
 
 
   },
+  watch:{
+    '$route.params': {
+            handler: function () {
+              window.scrollTo(0, 0);
+            }
+        }
+  },
   components: {
     Login,
     UserOrders,

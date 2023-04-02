@@ -36,16 +36,18 @@
                                         <!-- <h4>{{ order.gig.name }}</h4> -->
                                     </div>
                                     <div class="due-col">
-                                        <h4>code a date(rlly)</h4>
+                                        <h4>{{ convertDate(order.gig.deadLine) }}</h4>
                                     </div>
                                     <div class="price-col">
                                         <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
-                                        <h4 @click="toggleStatusChange(order._id)" :class="statusClassObject(order.status)" class="clickable">
-                                        {{order.status }}</h4>
+                                        <h4 @click="toggleStatusChange(order._id)" :class="statusClassObject(order.status)"
+                                            class="clickable">
+                                            {{ order.status }}</h4>
                                         <div class="delivery-container">
-                                            <form @submit.prevent v-if="toggleStatus && selectedOrderId === order._id" class="delivery-dropdown">
+                                            <form @submit.prevent v-if="toggleStatus && selectedOrderId === order._id"
+                                                class="delivery-dropdown">
                                                 <div class="inputs flex">
                                                     <div class="radio-list">
                                                         <div @click="setStatus('Finished', order)"
@@ -123,6 +125,13 @@ export default {
             this.updateOrder(order)
             socketService.emit(`change-order-status`, order.buyer)
         },
+        convertDate(deadline) {
+            const date = new Date(deadline);
+            const day = date.getDate()
+            const month = date.getMonth() + 1
+            const year = date.getFullYear()
+            return `${day}/${month}/${year}`
+        },
         async updateOrder(order) {
             try {
                 await this.$store.dispatch({ type: 'updateOrder', order: { ...order } })
@@ -134,9 +143,9 @@ export default {
         },
         statusClassObject(status) {//to continue for 2 others too
             return {
-                finished: status === 'Finished'? true : false,
-                rejected: status === 'Rejected'? true : false,
-                waiting: status === 'In progress'? true : false
+                finished: status === 'Finished' ? true : false,
+                rejected: status === 'Rejected' ? true : false,
+                waiting: status === 'In progress' ? true : false
             }
         }
     },
@@ -156,7 +165,7 @@ export default {
             this.ordersLength = newOrders.length
             // return newOrders.length
         },
-        
+
     },
     components: {
         LongText,
