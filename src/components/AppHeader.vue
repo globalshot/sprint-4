@@ -76,9 +76,9 @@
               <li v-if="!loggedinUser">
                 <RouterLink class="btn btn-join" to="/signup">Join</RouterLink>
               </li>
-              <li v-else @click="logout">
+              <!-- <li v-else @click="logout">
                 Logout
-              </li>
+              </li> -->
            <!-- <img :src=userImg alt="">   -->
             </ul>
           </div>
