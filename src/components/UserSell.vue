@@ -42,26 +42,30 @@
                                         <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
-                                        <h4 @click="toggleStatusChange">{{ order.status }}</h4>
+                                        <h4 @click="toggleStatusChange">
+                                        {{order.status }}</h4><!-- :class="statusClassObject(order.status)"-->
                                         <div class="delivery-container">
                                             <form @submit.prevent v-if="toggleStatus" class="delivery-dropdown">
                                                 <div class="inputs flex">
                                                     <div class="radio-list">
-                                                        <div @click="setStatus('finished', order)" class="radio-item-wrapper">
+                                                        <div @click="setStatus('finished', order)"
+                                                            class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
                                                                     <span>Finished</span>
                                                                 </div>
                                                             </label>
                                                         </div>
-                                                        <div @click="setStatus('in progress', order)" class="radio-item-wrapper">
+                                                        <div @click="setStatus('in progress', order)"
+                                                            class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
                                                                     <span>In progress</span>
                                                                 </div>
                                                             </label>
                                                         </div>
-                                                        <div @click="setStatus('rejected', order)" class="radio-item-wrapper">
+                                                        <div @click="setStatus('rejected', order)"
+                                                            class="radio-item-wrapper">
                                                             <label class="n3bUTho Y7LofzN radio-item">
                                                                 <div class="inner-radio">
                                                                     <span>Rejected</span>
@@ -93,6 +97,7 @@
 import LongText from './LongText.vue'
 import { orderService } from '../services/order.service'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
+import { socketService } from '../services/socket.service'
 export default {
     name: "UserOrders",
     data() {
@@ -110,17 +115,19 @@ export default {
         toggleStatusChange() {
             this.toggleStatus = !this.toggleStatus
         },
-        setStatus(status, order){
+        setStatus(status, order) {
             order.status = status
+            this.toggleStatusChange()
             this.updateOrder(order)
+            socketService.emit(`change-order-status`, order.buyer)
         },
         async updateOrder(order) {
             try {
-                await this.$store.dispatch({ type: 'updateOrder', order: {...order} })
+                await this.$store.dispatch({ type: 'updateOrder', order: { ...order } })
                 showSuccessMsg('Order Updated')
             }
             catch (err) {
-                console.log(err, 'order not Updated');
+                console.log(err, 'order not Updated')
                 showErrorMsg('Failed to update')
             }
         },
@@ -140,6 +147,14 @@ export default {
             this.orders = newOrders
             this.ordersLength = newOrders.length
             // return newOrders.length
+        },
+        statusClassObject(status) {//to continue for 2 others too
+            return {
+                finished: status === 'finished'? true : false
+            }
+            if (status === 'finished') return finished
+            if (status === 'rejected') return rejected
+            return waiting
         }
     },
     components: {

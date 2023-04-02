@@ -1,5 +1,6 @@
 import { gigService } from "../../services/gig.service"
 import { orderService } from "../../services/order.service"
+import { SOCKET_EMIT_GIG_ORDERED, socketService } from "../../services/socket.service"
 import { userService } from "../../services/user.service"
 
 
@@ -61,6 +62,7 @@ export const orderStore = {
             try {
                 const order = await orderService.save(gigId)
                 context.commit(getActionAddOrder(order))
+                socketService.emit(SOCKET_EMIT_GIG_ORDERED, gigId)
                 return order
             } catch (err) {
                 console.log('orderStore: Error in addOrder', err)

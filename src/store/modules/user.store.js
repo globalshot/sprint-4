@@ -1,5 +1,5 @@
 import { userService } from '../../services/user.service'
-// import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from '../services/socket.service'
+import { socketService, SOCKET_EMIT_USER_WATCH, SOCKET_EVENT_USER_UPDATED } from '../../services/socket.service'
 
 // var localLoggedinUser = null
 // if (sessionStorage.user) localLoggedinUser = JSON.parse(sessionStorage.user || null)
@@ -42,6 +42,7 @@ export const userStore = {
             try {
                 const user = await userService.login(credentials)
                 commit({ type: 'setLoggedinUser', user })
+                socketService.login(user._id)
                 return user
             } catch (err) {
                 console.log('userStore: Error in login', err)
