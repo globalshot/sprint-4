@@ -32,7 +32,7 @@
                                         <h4>{{ order.seller.fullname }}</h4>
                                     </div>
                                     <div class="gig-col">
-                                        <h4>{{ order.gig.name }}</h4>
+                                        <LongText class="long-text" :txt="order.gig.name" />
                                     </div>
                                     <div class="due-col">
                                         <h4>{{ order.gig.date }}</h4>
@@ -61,6 +61,7 @@
 
 <script>
 import { orderService } from '../services/order.service'
+import LongText from './LongText.vue'
 export default {
     name: "UserOrders",
     data() {
@@ -91,6 +92,9 @@ export default {
             this.ordersLength = newOrders.length
             // return newOrders.length
         }
+    },
+    components: {
+        LongText
     }
 }
 </script>
