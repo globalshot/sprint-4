@@ -84,13 +84,16 @@
       position: absolute;
       top: 68%;
       display: none;
+      width: 400px;
       @include for-medium-layout {
         display: block;
       }
       @include for-wide-layout {
-        left: 75vw;
+        // left: 66vw;
+        right: 180px;
       }
-      left: 80vw;
+      // left: 70vw;
+      right: 50px;
 
       .hero-info {
         justify-content: end;
@@ -99,9 +102,11 @@
         .info-txt {
           align-items: center;
           position: relative;
+          justify-content: end;
           gap: 12px;
           .fullname {
             color: $tertiary-clr-light;
+
           }
 
           .expert {
@@ -113,6 +118,7 @@
         .stars {
           position: absolute;
           top: -45%;
+          justify-self: center;
 
           .star {
             padding-inline-end: 0.12rem;

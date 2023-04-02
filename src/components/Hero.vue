@@ -20,16 +20,18 @@
                         <template #content>
                             <div class="hero-info">
                                 <div class="info-txt flex">
-                                    <span class="fullname">{{ info.fullname[i] }},</span>
+                                    <span class="fullname flex">
+                                        <ul v-if="info.rate[i] === 5" class="stars flex">
+                                            <li v-for="n in 5">
+                                                <span class="star">
+                                                    <i class="fa-solid fa-star"></i>
+                                                </span>
+                                            </li>
+                                        </ul>{{ info.fullname[i] }},
+                                    </span>
                                     <p class="expert">{{ info.expert[i] }}</p>
                                 </div>
-                                <ul v-if="info.rate[i] === 5" class="stars flex">
-                                    <li v-for="n in 5">
-                                        <span class="star">
-                                            <i class="fa-solid fa-star"></i>
-                                        </span>
-                                    </li>
-                                </ul>
+
                             </div>
                         </template>
                     </vueper-slide>
