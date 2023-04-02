@@ -67,6 +67,16 @@ export const orderStore = {
                 throw err
             }
         },
+        async updateOrder(context, { order }) {
+            try {
+                order = await orderService.update(order)
+                context.commit(getActionUpdateOrder(order))
+                return order
+            } catch (err) {
+                console.log('orderStore: Error in updateOrder', err)
+                throw err
+            }
+        },
         // async updateGig(context, { gig }) {
         //     try {
         //         gig = await gigService.save(gig)
