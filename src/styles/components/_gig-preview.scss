@@ -92,11 +92,17 @@
       -o-transition: 0.15s ease-in-out;
       transition: 0.15s ease-in-out;
       word-break: break-word;
+      
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3; /* start showing ellipsis when 3rd line is reached */
+      white-space: pre-wrap; 
     }
   }
 
   .rating {
-    padding: rem(10px) rem(12px);
+    padding: 0 rem(12px) rem(10px) rem(12px);
     font-size: em(14px);
     font-weight: 700;
     line-height: em(21px);
@@ -110,7 +116,7 @@
     }
 
     .num {
-      margin-inline-start: -0.75rem;
+      margin-inline-start: -0.5rem;
       color: $grey-txt;
       font-weight: 400;
     }
@@ -138,7 +144,7 @@
       font-family: $font1;
       padding-bottom: rem(2px);
       display: inline-block;
-      font-size: rem(16px);
+      font-size: 1em;
       font-weight: 700;
       letter-spacing: em(1px);
       padding: 6px 0 0;
@@ -172,6 +178,7 @@
 
   &:hover .title .long-text {
     color: $primary-clr;
+   
   }
   .btns-container {
     position: absolute;
@@ -196,7 +203,7 @@
   }
 
   .vueperslides {
-    height: rem(185px);
+    height: rem(210px);
     max-width: rem(328px);
     padding: 0;
     border: 0;
