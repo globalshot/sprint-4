@@ -4,7 +4,7 @@
 }
 .reviews-list {
   margin-block-end: rem(64px);
-  border-top: 1px solid $grey-txt-lighter;
+  // border-top: 1px solid $grey-txt-lighter;
 
   .reviews-title {
     font-weight: 700;
@@ -14,6 +14,7 @@
   }
 
   .review-item-component {
+    border-top: 1px solid $grey-txt-lighter;
     padding: rem(40px) 0;
 
     .review-header-container {
