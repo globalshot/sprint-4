@@ -35,14 +35,14 @@
                                         <LongText class="long-text" :txt="order.gig.name" />
                                     </div>
                                     <div class="due-col">
-                                        <h4>{{ order.gig.date }}</h4>
+                                        <h4>{{ convertDate(order.gig.deadLine) }}</h4>
                                     </div>
                                     <div class="price-col">
                                         <h4>$US{{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
                                         <h4 :class="statusClassObject(order.status)">
-                                        {{ order.status }}</h4>
+                                            {{ order.status }}</h4>
                                     </div>
                                 </div>
                             </section>
@@ -51,7 +51,8 @@
                     </div>
                     <div v-else>
                         <h4>no orders</h4>
-                        <span @click="this.$router.push({ path: '/gig/' })">Make your first purchase here</span>
+                        <span class="clickable" @click="this.$router.push({ path: '/gig/' })">Make your first purchase
+                            here</span>
                     </div>
                 </div>
             </label>
@@ -76,14 +77,21 @@ export default {
         // this.orders = await orderService.query()
         this.userOrders
     },
-    methods:{
+    methods: {
         statusClassObject(status) {//to continue for 2 others too
             return {
-                finished: status === 'Finished'? true : false,
-                rejected: status === 'Rejected'? true : false,
-                waiting: status === 'In progress'? true : false
+                finished: status === 'Finished' ? true : false,
+                rejected: status === 'Rejected' ? true : false,
+                waiting: status === 'In progress' ? true : false
             }
-        }
+        },
+        convertDate(deadline) {
+            const date = new Date(deadline);
+            const day = date.getDate()
+            const month = date.getMonth() + 1
+            const year = date.getFullYear()
+            return `${day}/${month}/${year}`
+        },
     },
 
     computed: {
