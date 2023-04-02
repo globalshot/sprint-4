@@ -55,23 +55,23 @@
                         <section class="payment-option">
                             <div class="card-info flex">
                                 <div class="card-num-container">
-                                    <p>Card Number</p><input class="card-num" type="text" value="4580 5926 2262 7546">
+                                    <p>Card Number</p><input class="card-num c-input" type="text" value="4580 5926 2262 7546">
                                 </div>
                                 <div class="shorts-input">
                                     <div>
-                                        <p>Expiration Date</p><input class="short" type="text" value="12 / 26">
+                                        <p>Expiration Date</p><input class="short c-input" type="text" value="12 / 26">
                                     </div>
                                     <div>
-                                        <p>Security Code</p><input class="short" type="text" value="226">
+                                        <p>Security Code</p><input class="short c-input" type="text" value="226">
                                     </div>
                                 </div>
                             </div>
                             <div class="name-inputs flex">
                                 <div>
-                                    <p>First Name</p><input class="name-input" type="text">
+                                    <p>First Name</p><input class="name-input c-input" type="text" :placeholder=loggedinUser.fullname>
                                 </div>
                                 <div>
-                                    <p>Last Name</p><input class="name-input" type="text">
+                                    <p>Last Name</p><input class="name-input c-input" type="text" :placeholder=loggedinUser.fullname>
                                 </div>
                             </div>
                         </section>
@@ -81,7 +81,7 @@
                             <section class="package-content">
                                 <section class="header flex space-between">
                                     <div class="img-container">
-                                        <img :src="gig.owner.imgUrl" alt="">
+                                        <img :src="gig.imgUrl[0]" alt="">
                                     </div>
                                     <p class="title">I will provide quality essays research and summaries on any topic</p>
                                 </section>

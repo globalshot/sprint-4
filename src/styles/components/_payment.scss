@@ -5,21 +5,21 @@
   .gig-payment {
     position: relative;
     display: flex;
-    margin: 32px;
-    justify-content: space-between;
-    // min-width: rem(340px);
-    
+    // margin: 32px;
+    margin-block-start: 3rem;
+    justify-content: space-around;
 
     @include for-medium-layout {
       height: 100vh;
     }
     .payment-container {
       flex-wrap: wrap;
-
+      width: 100%;
       .payment-details-container {
         flex: 1.5;
         flex-wrap: wrap;
         min-width: rem(350px);
+        height: fit-content;
         border: 1px solid $grey-txt-lighter;
         border-radius: 0.1875em;
         padding: 1.5em;
@@ -44,6 +44,52 @@
             height: rem(50px);
           }
         }
+
+        .payment-option {
+          .card-info {
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .card-num-container {
+              .card-num {
+                font-size: 14px;
+                margin-bottom: 15px;
+                // margin-top: 40px;
+                color: $secondary-clr;
+                font-weight: 700;
+
+                &:focus {
+                  outline: 0;
+                }
+              }
+            }
+
+            .shorts-input {
+              display: flex;
+              align-items: start;
+              margin-inline-start: 130px;
+              p {
+                font-size: 14px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                font-weight: 700;
+              }
+              .short {
+                max-width: 110px;
+                margin-inline-end: 20px;
+              }
+            }
+          }
+
+          .name-inputs {
+            justify-content: space-around;
+            margin-left: -60px;
+            .name-input {
+            width: rem(192px);
+
+            }
+          }
+        }
       }
 
       .package-container {
@@ -62,7 +108,7 @@
 
           .package-content {
             border-radius: 3px;
-            padding: 2em 1.5em;
+            padding: 1.75em 1.75em;
             border: 1px solid $grey-txt-lighter;
             margin-block-end: 16px;
 
@@ -73,14 +119,14 @@
               .img-container {
                 height: 70px;
                 margin-inline-end: 10px;
-                margin-block-start: 5px;
-                border-radius: 50%;
+                border-radius: 2em;
 
                 img {
-                  border-radius: 50%;
+                  border-radius: 4px;
                   width: rem(55px);
                   height: rem(55px);
-                  object-fit: fill;
+                  object-fit: cover;
+                  box-shadow: 0px 0  2px 0px  $secondary-clr-dark ;
                 }
               }
             }
@@ -95,8 +141,9 @@
             p {
               font-size: 0.875rem;
               min-height: 63px;
+              margin-block-start: 0.2rem;
               margin-block-end: 10px;
-              line-height: 140%;
+              line-height: 150%;
               font-weight: 500;
               color: $grey-txt-dark;
             }
@@ -126,22 +173,35 @@
               display: flex;
               justify-content: space-between;
               color: $grey-txt-dark;
+              &:first-of-type {
+                margin-block-start: 3rem;
+              }
 
               p {
                 font-family: $font3;
                 font-size: 1rem;
-                min-height: rem(45px);
-                margin-block-end: rem(10px);
-                line-height: 120%;
+                min-height: rem(40px);
+                // line-height: 120%;
                 font-weight: 500;
+                margin: 0;
+                color: $secondary-clr;
               }
 
-              & .total {
+              &.total {
                 border-top: 1px solid $grey-txt-lighter;
                 padding-top: 15px;
-                color: $secondary-clr-dark;
                 p {
+                  color: $secondary-clr-dark;
                   font-weight: 700s;
+                  font-family: $font2;
+                }
+              }
+
+              &:last-of-type {
+                p {
+                  color: $secondary-clr-dark;
+                  font-weight: 700s;
+                  font-family: $font2;
                 }
               }
             }
@@ -162,7 +222,7 @@
               background-color: $secondary-clr-darker;
               color: #fff;
               opacity: 1;
-              transition: background-color .2s;
+              transition: background-color 0.2s;
 
               &:hover {
                 background-color: $primary-clr;
