@@ -8,19 +8,19 @@
                         <div class="order-table">
                             <div class="table-header flex justify-between">
                                 <div class="buyer-col">
-                                    <h4>buyer</h4>
+                                    <h4>Seller</h4>
                                 </div>
                                 <div class="gig-col">
-                                    <h4>gig</h4>
+                                    <h4>Gig</h4>
                                 </div>
                                 <div class="due-col">
                                     <h4>Order Date</h4>
                                 </div>
                                 <div class="price-col">
-                                    <h4>price</h4>
+                                    <h4>Price</h4>
                                 </div>
                                 <div class="status-col">
-                                    <h4>status</h4>
+                                    <h4>Status</h4>
                                 </div>
                             </div>
                             <section v-for="order in orders">
@@ -50,6 +50,7 @@
                     </div>
                     <div v-else>
                         <h4>no orders</h4>
+                        <span @click="this.$router.push({ path: '/gig/' })">Make your first purchase here</span>
                     </div>
                 </div>
             </label>
@@ -87,7 +88,6 @@ export default {
                     newOrders.push(orders[i])
                 }
             }
-            console.log(newOrders)
             this.orders = newOrders
             this.ordersLength = newOrders.length
             // return newOrders.length
