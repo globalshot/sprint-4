@@ -20,7 +20,10 @@
       // height: 20px;
       .flex {
         max-height: 45px;
+        width: 100%;
+        // padding-inline-end: 1rem;
         flex-direction: row;
+        // justify-content: end;
       }
     }
   }

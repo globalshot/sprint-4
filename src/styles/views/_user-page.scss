@@ -186,19 +186,21 @@
 
               &:first-of-type {
                 text-align: start;
-                padding-inline-start: 0.75rem;
-                width: rem(145px);
+                padding-inline-start: 1rem;
+                width: rem(140px);
               }
               &:nth-of-type(2) {
                 text-align: start;
                 // padding-inline-start: 0.75rem;
                 // min-width: rem(312px);
                 // flex: 1;
-                flex-grow: 2;
+                flex-grow: 3;
               }
               &:nth-of-type(3) {
+                text-align: center;
                 // padding-inline-start: 2rem;
                 width: rem(100px);
+                
               }
 
               &:nth-of-type(4) {
@@ -208,7 +210,8 @@
               }
               &:last-of-type {
                 text-align: center;
-                width: rem(100px);
+                padding-inline-end: 1.2em;
+                width: rem(120px);
               }
             }
           }
@@ -217,9 +220,11 @@
             padding-block-start: 1rem;
             border-bottom: 1px solid $grey-txt-lighter;
             border-radius: 0 0 4px 4px;
+            color: $grey-txt-dark;
+
 
             &:hover {
-              color: $secondary-clr-darker;
+              color: $secondary-clr-lighter;
               background-color: $tertiary-clr-light;
               border-bottom: 1px solid $primary-clr;
             }
@@ -228,7 +233,6 @@
               height: 100px;
               padding: 1rem;
               align-items: center;
-              color: $grey-txt-dark;
               
 
               .buyer-col {
@@ -262,10 +266,20 @@
                 flex-grow: 2;
               }
               .due-col {
-                width: rem(120px);
+                width: rem(140px);
               }
               .price-col {
-                width: rem(120px);
+                width: rem(100px);
+              }
+
+              .status-col {
+                width: rem(100px);
+                h4 {
+                  border-radius: 4px;
+                  height: 40px;
+                  text-align: center;
+                  padding-block-start: .75em;
+                }
               }
 
             }

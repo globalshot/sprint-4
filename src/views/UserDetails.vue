@@ -120,7 +120,7 @@ export default {
         };
         setTimeout(() => {
             this.loading = false;
-        }, 1000);
+        }, 800);
     },
     async created() {
 

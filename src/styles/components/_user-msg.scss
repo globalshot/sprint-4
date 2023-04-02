@@ -1,36 +1,38 @@
+/** @format */
+
 .user-msg {
-    z-index: 111;
-    display: flex;
-    align-items: center;
-    padding: rem(10px) rem(20px) rem(10px) rem(5px) ;
-    font-size: rem(12px);
-    gap: rem(10px);
-    width: max-content;
-    min-width: rem(200px);
-    border-radius: rem(10px);
-    background-color: #fff;
+  z-index: 111;
+  display: flex;
+  align-items: center;
+  padding: rem(10px) rem(20px) rem(10px) rem(5px);
+  font-size: rem(12px);
+  gap: rem(10px);
+  width: max-content;
+  min-width: rem(200px);
+  border-radius: rem(10px);
+  background-color: #fff;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: rem(10px);
+  transform: translateX(150%);
+  border: 1px solid transparent;
 
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: rem(10px);
-    transform: translateX(150%);
-    border: 1px solid transparent;
+  transition: transform 0.6s, box-shadow 0.6s;
 
-    transition: transform .6s, box-shadow .6s;
+  img {
+    width: em(30px);
+  }
 
-    img {
-        width: em(30px);
-    }
+  &.success {
+    background-color: $primary-clr;
+    border-color: $success-clr;
+    transform: translateX(0);
+  }
 
-    &.success {
-        background-color: $primary-clr;
-        border-color: $success-clr;
-        transform: translateX(0);
-    }
-    
-    &.error {
-        border-color: $danger-clr;
-        transform: translateX(0);
-    }
+  &.error {
+    border-color: $danger-clr;
+    transform: translateX(0);
+  }
 }
