@@ -23,7 +23,7 @@
                                     <h4>Status</h4>
                                 </div>
                             </div>
-                            <section v-for="order in orders">
+                            <section v-for="order in userOrders">
                                 <div class="table-entity flex justify-between">
                                     <div class="buyer-col flex">
                                         <div class="img-container">
@@ -84,7 +84,7 @@
                         </div>
                         <!-- <pre>{{ orders }}</pre> -->
                     </div>
-                    <div v-else>
+                    <div v-else class="no-order">
                         <h4>No orders</h4>
                     </div>
                 </div>
@@ -104,7 +104,7 @@ export default {
     name: "UserOrders",
     data() {
         return {
-            orders: null,
+            // orders: null,
             ordersLength: 0,
             toggleStatus: false,
             selectedOrderId: '',
@@ -153,18 +153,23 @@ export default {
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
-        async userOrders() {
-            let orders = await orderService.query()
-            let newOrders = []
-            for (let i = 0; i < orders.length; i++) {
-                if (this.loggedinUser._id === orders[i].seller._id) {
-                    newOrders.push(orders[i])
-                }
-            }
-            this.orders = newOrders
+        orders() {
+            return this.$store.getters.userOrders
+        },
+        userOrders() {
+            let newOrders = this.orders.filter((order) => {
+                return this.loggedinUser._id === order.seller._id
+            })
+            // for (let i = 0; i < this.orders.length; i++) {
+            //     if (this.loggedinUser._id === this.orders[i].seller._id) {
+            //         newOrders.push(this.orders[i])
+            //     }
+            // }
             this.ordersLength = newOrders.length
+            return newOrders
             // return newOrders.length
         },
+
 
     },
     components: {

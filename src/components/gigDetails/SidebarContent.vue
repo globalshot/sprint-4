@@ -126,13 +126,13 @@ export default {
             // i: '1',
             quant: '1',
             liTxt: [
-                '1 concept included',
-                'Logo transparency',
-                'Vector file',
-                'Printable file',
-                'Include 3D mockup',
+                '1 image',
                 'Include source file',
-                'Include social media kit'
+                // 'Vector file',
+                'Printable resolution file',
+                'Commercial use',
+                'Include 3D mockup',
+                'Include social media kit',
             ]
         }
     }

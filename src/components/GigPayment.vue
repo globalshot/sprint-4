@@ -135,19 +135,19 @@
                                 </ul>
                                 <div class="pricing">
                                     <p>Service Fee</p>
-                                    <p>US${{ service }}</p>
+                                    <p>US$ {{ service }}</p>
                                 </div>
                                 <div class="pricing">
                                     <p>VAT</p>
-                                    <p>US${{ vat }}</p>
+                                    <p>US$ {{ vat }}</p>
                                 </div>
                                 <div class="pricing total">
                                     <p>Total</p>
-                                    <p>US${{ total }}</p>
+                                    <p>US$ {{ total }}</p>
                                 </div>
                                 <div class="pricing">
                                     <p class="bold">Delivery Time</p>
-                                    <p>1 Days</p>
+                                    <p>{{this.gig.packages[1].daysToMake}} Days to make</p>
                                 </div><button @click="saveOrder" class="continue-btn">Confirm And Pay</button>
                             </section>
                         </section>
@@ -209,18 +209,18 @@ export default {
             return this.$store.getters.loggedinUser
         },
         service() {
-            this.service = (12 / 100) * this.gig.price
+            this.service = (10 / 100) * this.gig.packages[1].price
             return Math.round((this.service * 100) / 100).toFixed(2)
         },
         vat() {
-            this.vat = (17 / 100) * this.gig.price
+            this.vat = (15 / 100) * this.gig.packages[1].price
             return Math.round((this.vat * 100) / 100).toFixed(2)
         },
         // num(){
         // },
         total() {
 
-            this.total = this.vat + this.service + this.gig.price
+            this.total = this.vat + this.service + this.gig.packages[1].price
             return Math.round((this.total * 100) / 100).toFixed(2)
         }
     }

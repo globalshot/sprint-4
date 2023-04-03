@@ -130,7 +130,7 @@ export default {
         try {
             const { id } = this.$route.params
             this.user = await userService.getById(id)
-            this.orders = await orderService.query()
+            this.$store.dispatch({ type: 'loadUserOrders' })
             this.gigs = await gigService.query({ owner: this.user._id })
 
         }
