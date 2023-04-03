@@ -71,10 +71,9 @@
                 <span v-if="!loggedinUser">Sign in </span>
 
                 <!-- YES LOGIN-->
-                <span v-else class="img-container" @mouseover="profileShow = true" @mouseleave="profileShow = false">
+                <span v-else class="img-container" @click="showProfileForm">
                   <img :src=loggedinUser.imgUrl alt="">
-                  <form class="profile-dropdown" v-if="profileShow" @mouseover="profileShow = true"
-                    @mouseleave="profileShow = false">
+                  <form class="profile-dropdown" v-if="profileShow" >
                     <label class="profile-item">
                       <div class="inner-profile">
                         <div class="flex container">
