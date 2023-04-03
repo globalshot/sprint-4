@@ -28,7 +28,7 @@
                                         </span>
                                     </li>
                                     <span>{{ gig.owner.rate }}</span>
-                                    <span class="num-reviews">({{ gig.reviews.length }})</span>
+                                    <span class="num-reviews">({{ gig.reviewsCount }})</span>
                                 </ul>
                             </div>
                         </div>

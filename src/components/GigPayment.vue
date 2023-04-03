@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="name-inputs flex">
+                            <div v-if="loggedinUser" class="name-inputs flex">
                                 <div>
                                     <p>First Name</p><input class="name-input c-input" type="text" :placeholder=loggedinUser.fullname>
                                 </div>
@@ -78,7 +78,7 @@
                     </section>
                     <section class="package-container">
                         <section class="gig-package-payment">
-                            <section class="package-content">
+                            <section v-if="gig" class="package-content">
                                 <section class="header flex space-between">
                                     <div class="img-container">
                                         <img :src="gig.imgUrl[0]" alt="">
