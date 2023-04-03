@@ -23,7 +23,7 @@
                                     <h4>Status</h4>
                                 </div>
                             </div>
-                            <section v-for="order in orders">
+                            <section v-for="order in userOrders">
                                 <div class="table-entity flex justify-between">
                                     <div class="buyer-col flex">
                                         <div class="img-container">
@@ -50,7 +50,7 @@
                         <!-- <pre>{{ orders }}</pre> -->
                     </div>
                     <div class="no-order" v-else>
-                        <h4 >no orders</h4>
+                        <h4>no orders</h4>
                         <span class="clickable" @click="this.$router.push({ path: '/gig/' })">Make your first purchase
                             here</span>
                     </div>
@@ -69,13 +69,14 @@ export default {
     name: "UserOrders",
     data() {
         return {
-            orders: null,
+            // orders: null,
             ordersLength: 0
         }
     },
     async created() {
         // this.orders = await orderService.query()
         this.userOrders
+        
     },
     methods: {
         statusClassObject(status) {//to continue for 2 others too
@@ -98,18 +99,36 @@ export default {
         loggedinUser() {
             return this.$store.getters.loggedinUser
         },
-        async userOrders() {
-            let orders = await orderService.query()
-            let newOrders = []
-            for (let i = 0; i < orders.length; i++) {
-                if (this.loggedinUser._id === orders[i].buyer._id) {
-                    newOrders.push(orders[i])
-                }
-            }
-            this.orders = newOrders
+        orders() {
+            return this.$store.getters.userOrders
+        },
+        userOrders() {
+            let newOrders = this.orders.filter((order) => {
+                return this.loggedinUser._id === order.buyer._id
+            })
+            console.log('this: ', this.orders);
+            // for (let i = 0; i < this.orders.length; i++) {
+            //     if (this.loggedinUser._id === this.orders[i].seller._id) {
+            //         newOrders.push(this.orders[i])
+            //     }
+            // }
             this.ordersLength = newOrders.length
+            return newOrders
             // return newOrders.length
-        }
+        },
+
+        // async userOrders() {
+        //     let orders = await orderService.query()
+        //     let newOrders = []
+        //     for (let i = 0; i < orders.length; i++) {
+        //         if (this.loggedinUser._id === orders[i].buyer._id) {
+        //             newOrders.push(orders[i])
+        //         }
+        //     }
+        //     this.orders = newOrders
+        //     this.ordersLength = newOrders.length
+        //     // return newOrders.length
+        // }
     },
     components: {
         LongText

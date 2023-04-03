@@ -76,6 +76,7 @@ div.some-id {
   }
 
   & div.additional-info {
+    padding-block-start: 1rem;
     .delivery-container {
       display: flex;
       align-items: center;

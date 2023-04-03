@@ -56,8 +56,9 @@ export default {
         socketService.on('user-ordered', (msg) => {
             showSuccessMsg(msg)
         })
-        socketService.on('order-status-updaate', (msg) => {
+        socketService.on('order-status-update', (msg) => {
             showSuccessMsg(msg)
+            this.$store.dispatch({ type: 'loadUserOrders' })
         })
     }
 }

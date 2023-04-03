@@ -22,6 +22,12 @@ export function getActionUpdateOrder(order) {
         order
     }
 }
+export function getActionSetUserOrders(userOrders) {
+    return {
+        type: 'setUserOrders',
+        userOrders
+    }
+}
 export function getActionAddOrderMsg(orderId) {
     return {
         type: 'addOrderMsg',
@@ -32,14 +38,19 @@ export function getActionAddOrderMsg(orderId) {
 
 export const orderStore = {
     state: {
-        orders: []
+        orders: [],
+        userOrders: [],
     },
     getters: {
-        orders({orders}) { return orders },
+        orders({ orders }) { return orders },
+        userOrders({ userOrders }) { return userOrders },
     },
     mutations: {
         setOrders(state, { orders }) {
             state.orders = orders
+        },
+        setUserOrders(state, { userOrders }) {
+            state.userOrders = userOrders
         },
         addOrder(state, { order }) {
             state.orders.unshift(order)
@@ -48,6 +59,7 @@ export const orderStore = {
             const idx = state.orders.findIndex(c => c._id === order._id)
             state.orders.splice(idx, 1, order)
         },
+
         // removeGig(state, { gigId }) {
         //     state.gigs = state.gigs.filter(gig => gig._id !== gigId)
         // },
@@ -66,6 +78,17 @@ export const orderStore = {
                 return order
             } catch (err) {
                 console.log('orderStore: Error in addOrder', err)
+                throw err
+            }
+        },
+        async loadUserOrders(context) {
+            try {
+               const user = userService.getLoggedinUser()
+               const userOrders = await orderService.query()
+               context.commit(getActionSetUserOrders(userOrders))
+               return userOrders
+            } catch (error) {
+                console.log('orderStore: Error in userOrders', err)
                 throw err
             }
         },
