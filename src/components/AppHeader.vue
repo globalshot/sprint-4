@@ -5,7 +5,7 @@
       <div class="flex ">
         <!--so much not sure if thats right-->
         <nav class="header-row flex items-center header-row-wrapper"><!--main-pages bad name?-->
-          <button class="btn-nav">button</button><!--for the burger nav-->
+          <!--for the burger nav-->
           <RouterLink to="/" class="site-logo">
             <span class="main-logo">
               <svg class="svg-logo" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="-3 298.4 603.5 196.6"
@@ -16,18 +16,18 @@
                   <g class="svg-logo" fill="">
                     <g class="fiverr">
                       <path class="svg-logo" d="M395.5,564c-2.1-10.1-8-22-28.8-34.1c-20.8-12.1-51,0-51,0S290,541,284.4,572.5
-        				c-5.6,31.5,18.1,53.9,18.1,53.9s30.6,24.1,58.8,14.1c28.2-10,34.1-30.5,34.1-30.5l-30.7-8.2c-0.4-0.1-0.7,0.1-0.8,0.5
-        				c-0.4,2.3-3.1,9.8-20.9,9.8c-21-0.1-23.6-20.8-23.6-20.8h76C395.5,591,397.5,574.1,395.5,564L395.5,564z M320.4,569.4
-        				c0,0,5.1-16.7,21.6-17.4c16.5-0.6,19.1,17.4,19.1,17.4H320.4z" />
+            				c-5.6,31.5,18.1,53.9,18.1,53.9s30.6,24.1,58.8,14.1c28.2-10,34.1-30.5,34.1-30.5l-30.7-8.2c-0.4-0.1-0.7,0.1-0.8,0.5
+            				c-0.4,2.3-3.1,9.8-20.9,9.8c-21-0.1-23.6-20.8-23.6-20.8h76C395.5,591,397.5,574.1,395.5,564L395.5,564z M320.4,569.4
+            				c0,0,5.1-16.7,21.6-17.4c16.5-0.6,19.1,17.4,19.1,17.4H320.4z" />
                       <path fill="none"
                         d="M339.3,552.1c-16.5,0.6-21.6,17.4-21.6,17.4h40.7C358.4,569.4,355.8,551.5,339.3,552.1z" />
                     </g>
                     <path class="svg-logo" d="M100.3,560.2v81.1H64.9v-81.1H42.7v-33.3h22.2v-10.1c0-6.4,1.6-12.7,4.9-18.2c5.3-8.9,15.5-19.8,30.5-20.6
-        			c16.1-0.9,36.6,0,36.6,0v30.9l-27-0.2c0,0-7.9,1.7-7.7,7.6c0.2,5.9,0.5,10.6,0.5,10.6h70.5l0,114.5h-35.8v-81.8h-36.9L100.3,560.2
-        			z" />
+            			c16.1-0.9,36.6,0,36.6,0v30.9l-27-0.2c0,0-7.9,1.7-7.7,7.6c0.2,5.9,0.5,10.6,0.5,10.6h70.5l0,114.5h-35.8v-81.8h-36.9L100.3,560.2
+            			z" />
                     <path class="svg-logo"
                       d="M441.1,641.3h-37.7V526.9H441v16.3c0,0,7.8-14.1,17.3-16.3h54.5v17.2c0,0,5.8-16.9,17.5-17.2h22.5v33.3h-28
-        			c0,0-9.3,1.9-10.5,10.2s-0.6,71-0.6,71H478v-81.1h-26c0,0-9.9,4.6-9.9,10.2C442.1,576.1,441.1,641.3,441.1,641.3L441.1,641.3z" />
+            			c0,0-9.3,1.9-10.5,10.2s-0.6,71-0.6,71H478v-81.1h-26c0,0-9.9,4.6-9.9,10.2C442.1,576.1,441.1,641.3,441.1,641.3L441.1,641.3z" />
                   </g>
                   <ellipse inkscape:label="dot" class="dot" cx="570.7" cy="621.6" rx="23.1" ry="24.8">
                   </ellipse>
@@ -71,9 +71,10 @@
                 <span v-if="!loggedinUser">Sign in </span>
 
                 <!-- YES LOGIN-->
-                <span v-else class="img-container" @click="showProfileForm">
+                <span v-else class="img-container" @mouseover="profileShow = true" @mouseleave="profileShow = false">
                   <img :src=loggedinUser.imgUrl alt="">
-                  <form class="profile-dropdown" v-if="profileShow">
+                  <form class="profile-dropdown" v-if="profileShow" @mouseover="profileShow = true"
+                    @mouseleave="profileShow = false">
                     <label class="profile-item">
                       <div class="inner-profile">
                         <div class="flex container">
@@ -94,6 +95,10 @@
               </li> -->
               <!-- <img :src=userImg alt="">   -->
             </ul>
+          </div>
+          <div @mouseover="burger = true" @mouseleave="burger = false">
+            <button v-if="!burger" class="btn-nav"><i class="fa-solid fa-bars"></i></button>
+            <button v-else class="btn-nav"><i class="fa-solid fa-burger"></i></button>
           </div>
         </nav>
       </div>
@@ -159,6 +164,7 @@ export default {
       isDoubleScrolled: false,
       login: false,
       profileShow: false,
+      burger: false,
       filterBy: {
         txt: '',
       },

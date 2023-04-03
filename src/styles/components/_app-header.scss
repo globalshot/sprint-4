@@ -13,6 +13,25 @@
   .fiverr-header {
     margin-block-end: 0;
     &:not(.header-transparent) {
+      @include for-mobile-layout {
+        .btn-nav {
+          display: flex;
+          align-items: center;
+          width: rem(38px);
+          height: rem(38px);
+          font-size: 28px;
+          margin: 0;
+          margin-inline-start: 1rem;
+          border: 0;
+          background-color: #ffffff00;
+
+          &.burger {
+          }
+        }
+        div.fiverr-nav ul {
+          display: none;
+        }
+      }
       &:visited:not(:hover) {
         color: $primary-clr-dark;
       }
@@ -102,11 +121,6 @@
             }
           }
         }
-        // align-items: center;
-        // > *:hover {
-        //   color: red;
-        //   cursor: pointer;
-        // }
         li {
           & > *:not(.btn-join) {
             color: $secondary-clr;
@@ -132,7 +146,7 @@
               position: absolute;
               z-index: 100;
               box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.296);
-              top: 120%;
+              top: 100%;
               right: -80%;
               background-color: white;
               border-radius: 4px;

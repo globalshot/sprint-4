@@ -28,18 +28,18 @@
       right: rem(-18px);
       top: 50%;
       opacity: 1;
-      overflow-wrap: br;
+      // overflow-wrap: br;
     }
 
     @include for-medium-layout {
       &__arrow--prev {
         left: rem(-18px);
-        top: 50%;
+        top: 60%;
         opacity: 1;
       }
       &__arrow--next {
         right: rem(-18px);
-        top: 50%;
+        top: 60%;
         opacity: 1;
       }
     }
