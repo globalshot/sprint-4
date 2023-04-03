@@ -8,7 +8,7 @@
 
         <div class="price-container">
             <button @click="showPriceForm" class="price-filter-btn flex" style="font-size: 16px; color: rgb(34, 35, 37);">
-                <div class="word">budget</div>
+                <div class="word">Budget</div>
                 <svg class="filter-arrow" width="10" height="10" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"
                     fill="currentFill">
                     <path

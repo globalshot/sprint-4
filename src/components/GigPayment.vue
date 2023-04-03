@@ -83,7 +83,7 @@
                                     <div class="img-container">
                                         <img :src="gig.imgUrl[0]" alt="">
                                     </div>
-                                    <p class="title">I will provide quality essays research and summaries on any topic</p>
+                                    <p class="title">{{  gig.title }}</p>
                                 </section>
                                 <h3 class="price">US${{ gig.packages[1].price }}</h3>
                                 <p> 1 custom logo+high resolution file+3d mockup+logo transparency+ 300dpi </p>
