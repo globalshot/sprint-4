@@ -84,7 +84,7 @@
                         </div>
                         <!-- <pre>{{ orders }}</pre> -->
                     </div>
-                    <div v-else>
+                    <div v-else class="no-order">
                         <h4>No orders</h4>
                     </div>
                 </div>

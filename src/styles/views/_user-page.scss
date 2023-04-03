@@ -159,6 +159,7 @@
   .user-orders {
     border: 1px solid $grey-txt-lighter;
     padding: 1rem;
+    min-height: 200px;
     // margin-block-start: 1.5rem;
     width: 100%;
 
@@ -166,6 +167,7 @@
       width: 100%;
       .order-item {
         width: 100%;
+
         .order-table {
           width: 100%;
           .table-header {
@@ -200,7 +202,6 @@
                 text-align: center;
                 // padding-inline-start: 2rem;
                 width: rem(100px);
-                
               }
 
               &:nth-of-type(4) {
@@ -222,7 +223,6 @@
             border-radius: 0 0 4px 4px;
             color: $grey-txt-dark;
 
-
             &:hover {
               color: $secondary-clr-lighter;
               background-color: $tertiary-clr-light;
@@ -233,7 +233,6 @@
               height: 100px;
               padding: 1rem;
               align-items: center;
-              
 
               .buyer-col {
                 color: $grey-txt-dark;
@@ -242,8 +241,6 @@
                 gap: 10px;
                 // padding-inline-end: .2rem;
                 width: rem(130px);
-
-                
 
                 // padding: 1rem;
                 .img-container {
@@ -278,10 +275,33 @@
                   border-radius: 4px;
                   height: 40px;
                   text-align: center;
-                  padding-block-start: .75em;
+                  padding-block-start: 0.75em;
                 }
               }
-
+            }
+          }
+        }
+        .inner-order {
+          .no-order {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(20px);
+            h4 {
+              margin-block-end: 1rem;
+            }
+            span {
+              padding: 1rem .5rem;
+              justify-self: center;
+              width: 250px;
+              border-radius: 4px;
+              &:hover {
+                color: #fff;
+                background-color: $primary-clr;
+              }
             }
           }
         }
@@ -290,19 +310,19 @@
   }
 }
 
-.finished{
+.finished {
   background-color: $success-clr;
   padding: 3px;
   color: white;
 }
 
-.rejected{
+.rejected {
   background-color: $danger-clr;
   padding: 3px;
   color: white;
 }
 
-.waiting{
+.waiting {
   background-color: $star-clr;
   padding: 3px;
   color: white;

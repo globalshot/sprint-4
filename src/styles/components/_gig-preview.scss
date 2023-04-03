@@ -233,12 +233,12 @@
       transform: scale(1);
       box-shadow: 0px 0px 3px 0px $secondary-clr-darker;
     }
-
+    
     .vueperslides__parallax-wrapper {
       height: 100%;
-
       .vueperslides__track {
         .vueperslides__track-inner {
+          box-shadow:  0px  -170px  20px inset   rgba(0, 0, 0, 0.073);
           .vueperslide {
             z-index: -11;
             img {
@@ -257,7 +257,7 @@
       }
       // @include aspect-ratio($width:308.4, $height:185)
     }
-
+    
     .vueperslides__arrow {
       position: absolute;
       top: 58%;
@@ -265,11 +265,11 @@
       width: 24px;
       opacity: 0;
       transition: 0.2s;
-
+      
       i {
         font-size: 14px;
       }
-
+      
       &--next {
         right: -10%;
         border-radius: 50% 0 0 50%;

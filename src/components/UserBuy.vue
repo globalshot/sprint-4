@@ -49,8 +49,8 @@
                         </div>
                         <!-- <pre>{{ orders }}</pre> -->
                     </div>
-                    <div v-else>
-                        <h4>no orders</h4>
+                    <div class="no-order" v-else>
+                        <h4 >no orders</h4>
                         <span class="clickable" @click="this.$router.push({ path: '/gig/' })">Make your first purchase
                             here</span>
                     </div>
