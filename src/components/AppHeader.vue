@@ -5,7 +5,7 @@
       <div class="flex ">
         <!--so much not sure if thats right-->
         <nav class="header-row flex items-center header-row-wrapper"><!--main-pages bad name?-->
-          <button class="btn-nav">button</button><!--for the burger nav-->
+          <!--for the burger nav-->
           <RouterLink to="/" class="site-logo">
             <span class="main-logo">
               <svg class="svg-logo" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="-3 298.4 603.5 196.6"
@@ -95,6 +95,7 @@
               <!-- <img :src=userImg alt="">   -->
             </ul>
           </div>
+          <button class="btn-nav"><i class="fa-solid fa-bars"></i></button>
         </nav>
       </div>
     </header>

@@ -13,6 +13,20 @@
   .fiverr-header {
     margin-block-end: 0;
     &:not(.header-transparent) {
+      @include for-mobile-layout {
+        .btn-nav {
+          display: flex;
+          align-items: center;
+          width: rem(38px);
+          height: rem(38px);
+          font-size: 22px;
+          border: 0;
+          background-color: #ffffff00;
+        }
+        div.fiverr-nav ul {
+          display: none;
+        }
+      }
       &:visited:not(:hover) {
         color: $primary-clr-dark;
       }
@@ -102,11 +116,6 @@
             }
           }
         }
-        // align-items: center;
-        // > *:hover {
-        //   color: red;
-        //   cursor: pointer;
-        // }
         li {
           & > *:not(.btn-join) {
             color: $secondary-clr;
