@@ -10,24 +10,24 @@
             <span class="main-logo">
               <svg class="svg-logo" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="-3 298.4 603.5 196.6"
                 style="enable-background:new -3 298.4 603.5 196.6;" xml:space="preserve">
-                <g class="svg-logo" transform="matrix(1.0898657,0,0,1.1708895,-46.646252,-261.22504)" inkscape:label="logo"
-                  inkscape:export-ydpi="34.675816" inkscape:export-xdpi="34.675816"
+                <g class="svg-logo" transform="matrix(1.0898657,0,0,1.1708895,-46.646252,-261.22504)"
+                  inkscape:label="logo" inkscape:export-ydpi="34.675816" inkscape:export-xdpi="34.675816"
                   inkscape:export-filename="fiverr-logo2.svg">
                   <g class="svg-logo" fill="">
                     <g class="fiverr">
                       <path class="svg-logo" d="M395.5,564c-2.1-10.1-8-22-28.8-34.1c-20.8-12.1-51,0-51,0S290,541,284.4,572.5
-  				c-5.6,31.5,18.1,53.9,18.1,53.9s30.6,24.1,58.8,14.1c28.2-10,34.1-30.5,34.1-30.5l-30.7-8.2c-0.4-0.1-0.7,0.1-0.8,0.5
-  				c-0.4,2.3-3.1,9.8-20.9,9.8c-21-0.1-23.6-20.8-23.6-20.8h76C395.5,591,397.5,574.1,395.5,564L395.5,564z M320.4,569.4
-  				c0,0,5.1-16.7,21.6-17.4c16.5-0.6,19.1,17.4,19.1,17.4H320.4z" />
+      				c-5.6,31.5,18.1,53.9,18.1,53.9s30.6,24.1,58.8,14.1c28.2-10,34.1-30.5,34.1-30.5l-30.7-8.2c-0.4-0.1-0.7,0.1-0.8,0.5
+      				c-0.4,2.3-3.1,9.8-20.9,9.8c-21-0.1-23.6-20.8-23.6-20.8h76C395.5,591,397.5,574.1,395.5,564L395.5,564z M320.4,569.4
+      				c0,0,5.1-16.7,21.6-17.4c16.5-0.6,19.1,17.4,19.1,17.4H320.4z" />
                       <path fill="none"
                         d="M339.3,552.1c-16.5,0.6-21.6,17.4-21.6,17.4h40.7C358.4,569.4,355.8,551.5,339.3,552.1z" />
                     </g>
                     <path class="svg-logo" d="M100.3,560.2v81.1H64.9v-81.1H42.7v-33.3h22.2v-10.1c0-6.4,1.6-12.7,4.9-18.2c5.3-8.9,15.5-19.8,30.5-20.6
-  			c16.1-0.9,36.6,0,36.6,0v30.9l-27-0.2c0,0-7.9,1.7-7.7,7.6c0.2,5.9,0.5,10.6,0.5,10.6h70.5l0,114.5h-35.8v-81.8h-36.9L100.3,560.2
-  			z" />
+      			c16.1-0.9,36.6,0,36.6,0v30.9l-27-0.2c0,0-7.9,1.7-7.7,7.6c0.2,5.9,0.5,10.6,0.5,10.6h70.5l0,114.5h-35.8v-81.8h-36.9L100.3,560.2
+      			z" />
                     <path class="svg-logo"
                       d="M441.1,641.3h-37.7V526.9H441v16.3c0,0,7.8-14.1,17.3-16.3h54.5v17.2c0,0,5.8-16.9,17.5-17.2h22.5v33.3h-28
-  			c0,0-9.3,1.9-10.5,10.2s-0.6,71-0.6,71H478v-81.1h-26c0,0-9.9,4.6-9.9,10.2C442.1,576.1,441.1,641.3,441.1,641.3L441.1,641.3z" />
+      			c0,0-9.3,1.9-10.5,10.2s-0.6,71-0.6,71H478v-81.1h-26c0,0-9.9,4.6-9.9,10.2C442.1,576.1,441.1,641.3,441.1,641.3L441.1,641.3z" />
                   </g>
                   <ellipse inkscape:label="dot" class="dot" cx="570.7" cy="621.6" rx="23.1" ry="24.8">
                   </ellipse>
@@ -71,7 +71,20 @@
                 <span v-if="!loggedinUser">Sign in </span>
 
                 <!-- YES LOGIN-->
-                <RouterLink v-else :to="userProfile"> {{ fullname }} </RouterLink>
+                <span v-else class="img-container" @click="showProfileForm">
+                  <img :src=loggedinUser.imgUrl alt="">
+                  <form class="profile-dropdown" v-if="profileShow">
+                          <label class="profile-item">
+                            <div class="inner-profile">
+                              <div class="flex container" >
+                                <RouterLink :to="userProfile">Profile</RouterLink>
+                                <h4 @click="logout">Logout</h4>
+                              </div>
+                            </div>
+                          </label>
+                  </form>
+                </span>
+                <!-- <RouterLink v-else :to="userProfile"> {{ fullname }} </RouterLink> -->
               </li>
               <li v-if="!loggedinUser">
                 <RouterLink class="btn btn-join" to="/signup">Join</RouterLink>
@@ -79,7 +92,7 @@
               <!-- <li v-else @click="logout">
                 Logout
               </li> -->
-           <!-- <img :src=userImg alt="">   -->
+              <!-- <img :src=userImg alt="">   -->
             </ul>
           </div>
         </nav>
@@ -97,35 +110,35 @@
           :style="'color: ' + ['#ff5252', '#42b983'][i % 2]" />
         </vueper-slides> -->
 
-        <RouterLink to="/gig?tag=graphics-design" >
+        <RouterLink to="/gig?tag=graphics-design">
           Graphics &amp; Design
         </RouterLink>
-        <RouterLink to="/gig?tag=marketing" >
+        <RouterLink to="/gig?tag=marketing">
           Digital Marketing
         </RouterLink>
-        <RouterLink to="/gig?tag=word-press" >
+        <RouterLink to="/gig?tag=word-press">
           Writing &amp; Translation
         </RouterLink>
-        <RouterLink to="/gig?tag=video" >
+        <RouterLink to="/gig?tag=video">
           Video &amp; Animation
         </RouterLink>
-        <RouterLink to="/gig?tag=music" >
+        <RouterLink to="/gig?tag=music">
           Music &amp; Audio
         </RouterLink>
         <RouterLink to="/gig?tag=programming-tech">
-        <!-- <RouterLink to="/gig?tag=programming-tech" @click="loadGig"> -->
+          <!-- <RouterLink to="/gig?tag=programming-tech" @click="loadGig"> -->
           Programming &amp; Tech
         </RouterLink>
-        <RouterLink to="/gig?tag=photography" >
+        <RouterLink to="/gig?tag=photography">
           Photography
         </RouterLink>
-        <RouterLink to="/gig?tag=business" >
+        <RouterLink to="/gig?tag=business">
           Business
         </RouterLink>
         <!-- <RouterLink to="/gig?tag=lifestyle" @click="loadGig">
           Lifestyle
         </RouterLink> -->
-        <RouterLink to="/gig?tag=ai-services" >
+        <RouterLink to="/gig?tag=ai-services">
           AI Services
         </RouterLink>
       </div>
@@ -158,6 +171,7 @@ export default {
         }
       ],
       login: false,
+      profileShow: true,
     }
   },
   mounted() {
@@ -223,6 +237,9 @@ export default {
     showOrdersForm() {
       this.showOrders = !this.showOrders
     },
+    showProfileForm() {
+      this.profileShow = !this.profileShow
+    },
 
   },
   computed: {
@@ -254,19 +271,19 @@ export default {
       if (!this.loggedinUser) return ''
       return this.loggedinUser.fullname
     },
-    userImg(){
+    userImg() {
       if (!this.loggedinUser) return ''
       return this.loggedinUser.imgUrl
     }
 
 
   },
-  watch:{
+  watch: {
     '$route.params': {
-            handler: function () {
-              window.scrollTo(0, 0);
-            }
-        }
+      handler: function () {
+        window.scrollTo(0, 0);
+      }
+    }
   },
   components: {
     Login,

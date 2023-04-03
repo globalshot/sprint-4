@@ -58,13 +58,12 @@
                 }
                 & > * {
                   border-radius: 2px;
-                  padding:0.4em 0.75em;
+                  padding: 0.4em 0.75em;
                   transition: 0.2s;
                   border-bottom: 1px solid $grey-txt-lighter;
                   min-height: rem(48px);
                   align-items: center;
                   line-height: rem(22px);
-
 
                   &:hover {
                     color: $secondary-clr-darker;
@@ -116,6 +115,46 @@
               cursor: pointer;
             }
           }
+
+          .img-container {
+            // border-radius: 50%;
+            // overflow: hidden;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+            .profile-dropdown {
+              position: absolute;
+              z-index: 100;
+              box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.296);
+              top: 120%;
+              right: -50%;
+              background-color: white;
+              border-radius: 4px;
+
+              .container {
+                flex-direction: column;
+                padding: 0.8rem 1rem;
+                gap: rem(10px);
+                & > * {
+                  cursor: pointer;
+                  font-size: 0.9em;
+                  font-family: $font1;
+                  font-weight: 400;
+                  color: $secondary-clr;
+                  &:hover {
+                    color: $primary-clr;
+                  }
+                }
+              }
+            }
+          }
         }
       }
 
@@ -162,6 +201,46 @@
           color: white;
           position: relative;
 
+          .img-container {
+            // border-radius: 50%;
+            // overflow: hidden;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+            .profile-dropdown {
+              position: absolute;
+              z-index: 100;
+              box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.296);
+              top: 120%;
+              right: -50%;
+              background-color: white;
+              border-radius: 4px;
+
+              .container {
+                flex-direction: column;
+                padding: 0.8rem 1rem;
+                gap: rem(10px);
+                & > * {
+                  cursor: pointer;
+                  font-size: 0.9em;
+                  font-family: $font1;
+                  font-weight: 400;
+                  color: $secondary-clr;
+                  &:hover {
+                    color: $primary-clr;
+                  }
+                }
+              }
+            }
+          }
+
           .order-dropdown {
             color: $secondary-clr-dark;
             &:hover {
@@ -193,13 +272,12 @@
                 }
                 & > * {
                   border-radius: 2px;
-                  padding:0.4em 0.75em;
+                  padding: 0.4em 0.75em;
                   transition: 0.2s;
                   border-bottom: 1px solid $grey-txt-lighter;
                   min-height: rem(48px);
                   align-items: center;
                   line-height: rem(22px);
-
 
                   &:hover {
                     color: $secondary-clr-darker;
@@ -229,7 +307,6 @@
               }
             }
           }
-
 
           &:last-child {
             padding-inline-end: 0;
