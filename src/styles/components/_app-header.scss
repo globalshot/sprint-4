@@ -19,9 +19,14 @@
           align-items: center;
           width: rem(38px);
           height: rem(38px);
-          font-size: 22px;
+          font-size: 28px;
+          margin: 0;
+          margin-inline-start: 1rem;
           border: 0;
           background-color: #ffffff00;
+
+          &.burger {
+          }
         }
         div.fiverr-nav ul {
           display: none;
