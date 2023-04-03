@@ -40,26 +40,30 @@
         </section>
         <section class="stat-main flex">
             <section class="stars-counters">
-                <ul class="clean-list flex column">
+                <ul v-if="gigReviewsData" class="clean-list flex column">
                     <li class="flex align-center"><span class="key">5 Stars</span>
-                        <section class="progress-container flex align-center"><progress max="370"
-                                value="333"></progress><span class="star-num">{{ Math.round(gig.reviewsCount * gig.owner.rate / 5) }}</span></section>
+                        <section class="progress-container flex align-center"><progress max="369" value="362"></progress><span class="star-num">{{ Math.round(gig.reviewsCount *
+                                    gig.owner.rate / 5) }}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">4 Stars</span>
-                        <section class="progress-container flex align-center"><progress max="370"
-                                value="30"></progress><span class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.75)}}</span></section>
+                        <section class="progress-container flex align-center"><progress max="369" value="6"></progress><span
+                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5)
+                                    * 0.75) }}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">3 Stars</span>
-                        <section class="progress-container flex align-center"><progress max="370" value="6"></progress><span
-                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.12)}}</span></section>
+                        <section class="progress-container flex align-center"><progress max="369" value="1"></progress><span
+                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5)
+                                    * 0.12) }}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">2 Stars</span>
-                        <section class="progress-container flex align-center"><progress max="370" value="2"></progress><span
-                                class="star-num">{{ Math.floor((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.08)}}</span></section>
+                        <section class="progress-container flex align-center"><progress max="369" value="0"></progress><span
+                                class="star-num">{{ Math.floor((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5)
+                                    * 0.08) }}</span></section>
                     </li>
                     <li class="flex align-center"><span class="key">1 Star</span>
-                        <section class="progress-container flex align-center"><progress max="370" value="1"></progress><span
-                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5) * 0.05)}}</span></section>
+                        <section class="progress-container flex align-center"><progress max="369" value="0"></progress><span
+                                class="star-num">{{ Math.round((gig.reviewsCount - (gig.reviewsCount * gig.owner.rate) / 5)
+                                    * 0.05) }}</span></section>
                     </li>
                 </ul>
             </section>
@@ -118,6 +122,13 @@ export default {
             type: Object,
             required: true
         },
+    },
+    data() {
+        return {
+            gigReviewsData: {
+                totalReviews: this.gig.reviewsCount
+            }
+        }
     }
 }
 </script>
