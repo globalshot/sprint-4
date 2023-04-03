@@ -33,6 +33,7 @@
 
   &.error {
     border-color: $danger-clr;
+    background-color: $danger-clr;
     transform: translateX(0);
   }
 }
