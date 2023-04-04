@@ -2,30 +2,31 @@
 // .main-app:has(.add-gig-container) {
 //   background-color: $tertiary-clr-light2;
 // }
-body{
-  @include for-mobile-layout{
+body {
+  @include for-mobile-layout {
     font-size: 70%;
   }
 }
-.main-layout{
+.main-layout {
   // display: block;
-  @include for-mobile-layout{
+  @include for-mobile-layout {
     grid-template-columns: 1fr;
     overflow: auto;
   }
 }
-.sec-header{
+.sec-header {
   width: 90vw;
 }
-.switch-button{
-  @include for-mobile-layout{
-    width: 100vw
+.switch-button {
+  @include for-mobile-layout {
+    width: 100vw;
   }
 }
 .dashboard {
   padding-block-start: 3rem;
   margin-block-end: 2rem;
   gap: 120px;
+  align-items: center;
 
   .add-gig-container {
     flex-direction: column;
@@ -43,6 +44,7 @@ body{
     .user-stats {
       max-width: 398px;
       min-width: 398px;
+    
     }
 
     .gigs-status {
@@ -95,7 +97,7 @@ body{
     .my-gigs {
       padding: 1.5rem;
       width: 100%;
-      @include for-mobile-layout{
+      @include for-mobile-layout {
         justify-content: center;
       }
     }
@@ -125,9 +127,9 @@ body{
         margin-bottom: rem(15px);
         margin-left: auto;
         margin-right: auto;
-        @include for-mobile-layout{
+        @include for-mobile-layout {
           width: rem(70px);
-        height: rem(70px);
+          height: rem(70px);
         }
 
         img {
@@ -196,7 +198,7 @@ body{
     min-height: 200px;
     // margin-block-start: 1.5rem;
     width: 100%;
-    @include for-mobile-layout{
+    @include for-mobile-layout {
       padding: 0;
     }
 
@@ -216,11 +218,11 @@ body{
             justify-content: start;
             border-bottom: 1px solid $grey-txt-lighter;
             gap: 0.625rem;
-            @include for-mobile-layout{
+            @include for-mobile-layout {
               padding-block: 1rem;
             }
 
-            &>* {
+            & > * {
               //   width: 100%;
               text-align: center;
               width: 20%;
@@ -245,7 +247,7 @@ body{
                 // min-width: rem(312px);
                 // flex: 1;
                 flex-grow: 3;
-                @include for-mobile-layout{
+                @include for-mobile-layout {
                   display: none;
                 }
               }
@@ -254,7 +256,7 @@ body{
                 text-align: center;
                 // padding-inline-start: 2rem;
                 width: rem(100px);
-                @include for-mobile-layout{
+                @include for-mobile-layout {
                   width: max-content;
                 }
               }
@@ -263,8 +265,8 @@ body{
                 text-align: center;
                 // margin-inline-end: -2.5rem;
                 width: rem(150px);
-                @include for-mobile-layout{
-                  width: max-content;
+                @include for-mobile-layout {
+                  width: 100px;
                   text-align: center;
                 }
               }
@@ -337,15 +339,17 @@ body{
 
               .due-col {
                 width: rem(140px);
-                @include for-mobile-layout{
-                  width: max-content;
+                @include for-mobile-layout {
+                  width: 100px;
+                  padding-inline-start: 1rem;
                 }
               }
 
               .price-col {
                 width: rem(100px);
-                @include for-mobile-layout{
-                  width: max-content;
+                @include for-mobile-layout {
+                  width: 90px;
+                  padding-inline-start: 1rem;
                 }
               }
 
@@ -354,10 +358,13 @@ body{
 
                 h4 {
                   border-radius: 4px;
-                  border: 1px solid $secondary-clr;
+                  border: 0;
                   height: 40px;
                   text-align: center;
                   padding-block-start: 0.75em;
+                  @include for-mobile-layout {
+                    padding: 0.75rem 1rem 0.5rem 1rem;
+                  }
                 }
               }
             }
@@ -379,7 +386,8 @@ body{
             }
 
             span {
-              padding: 1rem .5rem;
+              padding: 1rem 0.5rem;
+
               justify-self: center;
               width: 250px;
               border-radius: 4px;
@@ -397,7 +405,6 @@ body{
 }
 
 .finished {
-  border: 0;
   background-color: $success-clr;
   padding: 3px;
   color: white;
@@ -427,24 +434,23 @@ body{
       justify-content: space-around;
       flex-direction: column;
       min-width: none;
+      align-items: center;
 
       .user-info {
         margin: 0;
         height: 100%;
         padding: 10px;
-        width: 50%;
+        width: 70%;
       }
 
       .description-container {
         margin: 0;
         height: 100%;
         padding: 10px;
-        width: 50%;
+        width: 70%;
       }
     }
-
   }
-
 }
 
 // saving for future
