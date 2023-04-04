@@ -39,7 +39,7 @@
                                         <h4>{{ convertDate(order.gig.deadLine) }}</h4>
                                     </div>
                                     <div class="price-col">
-                                        <h4>$US{{ order.gig.price }}</h4>
+                                        <h4>US${{ order.gig.price }}</h4>
                                     </div>
                                     <div class="status-col">
                                         <h4 @click="toggleStatusChange(order._id)" :class="statusClassObject(order.status)"

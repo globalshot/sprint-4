@@ -81,7 +81,7 @@ function getEmptyOrder(gig) {
             name: gig.description,
             price: gig.packages[0].price
         },
-        status: "pending"
+        status: "Pending"
     }
 }
 
@@ -104,7 +104,7 @@ async function _createOrder(gigId) {
                 name: gig.description,
                 price: gig.packages[0].price
             },
-            status: "pending"
+            status: "Pending"
         }
     }
     catch (err) {
