@@ -418,23 +418,21 @@ body {
 }
 
 .finished {
-  background-color: $success-clr;
   padding: 3px;
-  color: white;
+  color: $success-clr;
 }
 
 .rejected {
   border: 0;
-  background-color: $danger-clr;
   padding: 3px;
-  color: white;
+  color: $danger-clr;
 }
 
 .waiting {
   border: 0;
-  background-color: $star-clr;
+  // background-color: $star-clr;
   padding: 3px;
-  color: white;
+  color: $star-clr;
 }
 
 @media (max-width: $break-mobile) {
