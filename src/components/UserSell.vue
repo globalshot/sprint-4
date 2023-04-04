@@ -47,7 +47,7 @@
                                             {{ order.status }}</h4>
                                         <div class="delivery-container">
                                             <form @submit.prevent v-if="toggleStatus && selectedOrderId === order._id"
-                                                class="delivery-dropdown">
+                                                class="delivery-dropdown orders">
                                                 <div class="inputs flex">
                                                     <div class="radio-list">
                                                         <div @click="setStatus('Finished', order)"
