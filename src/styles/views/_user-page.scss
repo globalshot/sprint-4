@@ -18,9 +18,18 @@ body {
   width: 90vw;
 }
 .switch-button {
+  align-items: center;
   @include for-mobile-layout {
     width: 100vw;
+    span{
+      &:first-of-type {
+        margin-inline-end: -1rem;
+      }
+    }
+    
+    
   }
+  
 }
 .dashboard {
   padding-block-start: 3rem;
@@ -237,7 +246,7 @@ body {
                 width: rem(140px);
 
                 @include for-mobile-layout {
-                  width: max-content;
+                  width: 110px;
                 }
               }
 
@@ -253,11 +262,11 @@ body {
               }
 
               &:nth-of-type(3) {
-                text-align: center;
+                text-align: start;
                 // padding-inline-start: 2rem;
                 width: rem(100px);
                 @include for-mobile-layout {
-                  width: max-content;
+                  width: 100px;
                 }
               }
 
@@ -266,15 +275,18 @@ body {
                 // margin-inline-end: -2.5rem;
                 width: rem(150px);
                 @include for-mobile-layout {
-                  width: 100px;
-                  text-align: center;
+                  width: 95px;
+                  text-align: start;
                 }
               }
 
               &:last-of-type {
-                text-align: center;
+                text-align: end;
                 padding-inline-end: 1.2em;
                 width: rem(120px);
+                @include for-mobile-layout {
+                  width: 80px;
+                }
               }
             }
           }
@@ -306,7 +318,7 @@ body {
                 width: rem(130px);
 
                 @include for-mobile-layout {
-                  width: 63px;
+                  width: 80px;
                 }
 
                 // padding: 1rem;
@@ -348,7 +360,7 @@ body {
               .price-col {
                 width: rem(100px);
                 @include for-mobile-layout {
-                  width: 90px;
+                  width: 80px;
                   padding-inline-start: 1rem;
                 }
               }
@@ -363,7 +375,8 @@ body {
                   text-align: center;
                   padding-block-start: 0.75em;
                   @include for-mobile-layout {
-                    padding: 0.75rem 1rem 0.5rem 1rem;
+                    font-size: 1.05em;
+                    padding: 0.9rem 1rem 0.5rem 1rem;
                   }
                 }
               }
