@@ -79,7 +79,7 @@
                                 </div>
                             </label>
                         </div>
-                        <div @click="setDeliveryTime(999)" class="radio-item-wrapper">
+                        <div @click="setDeliveryTime(9999)" class="radio-item-wrapper">
                             <label class="radio-item selected felx">
                                 <div class="inner-radio">
                                     <span>Anytime</span>
@@ -110,7 +110,7 @@ export default {
                 sortBy: {
                     price: false
                 },
-                daysToMake: 999
+                daysToMake: 9999
 
 
             },
@@ -134,7 +134,7 @@ export default {
                     label: 'Up to 7 days',
                 },
                 {
-                    value: 999,
+                    value: 9999,
                     label: 'anytime',
                 },
             ]
@@ -154,7 +154,7 @@ export default {
                 this.filterBy.price.min = 0
             }
             if (!this.filterBy.price.max && this.filterBy.price.min) {
-                this.filterBy.price.max = 1000
+                this.filterBy.price.max = 9999
             }
             let { txt, tag } = this.$route.query
             this.filterBy.txt =  txt
@@ -168,7 +168,7 @@ export default {
             if (this.showPrice) {this.showPriceForm()}
             this.filterBy.price.min = null
             this.filterBy.price.max = null
-            this.filterBy.daysToMake = 999
+            this.filterBy.daysToMake = 9999
             let filterBy = { ...this.filterBy }
             this.$store.dispatch({ type: 'loadGigs', filterBy })
         },
